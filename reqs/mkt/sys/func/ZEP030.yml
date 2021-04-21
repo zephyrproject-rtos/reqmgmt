@@ -1,0 +1,14 @@
+active: true
+component_allocation: Sample Component 2
+derived: false
+header: ''
+level: 22.0
+links:
+- ZEP025: ouWEG6MlcvX2f8ez-zbgI1q3iAPxnzvkkLsjQBxd3Xg=
+name: Sample Name
+normative: true
+ref: ''
+reviewed: 5BGy9SLN6t1Ml0l10632iV9TP4NyqQZ1_nDJdO0qyXE=
+tag: 2.6.0
+text: |
+  Sample text
