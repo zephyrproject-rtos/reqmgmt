@@ -1,0 +1,13 @@
+active: true
+component_allocation: Sample Component 1
+derived: false
+header: ''
+level: 1.0
+links: []
+name: Sample Name
+normative: true
+ref: ''
+reviewed: a1XUqV9QDOB1gLNR3Z-bhNExHw6mCub1bQC5zafYKSU=
+tag: 2.6.0
+text: |
+  Sample text
