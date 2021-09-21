@@ -1,0 +1,28 @@
+name: doorstop
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: Set up virtualenv
+        run: |
+            python3 -m venv ./venv/
+            source ./venv/bin/activate
+            pip install -r requirements.txt
+      
+      - name: Check with doorstop
+        run: |
+            source ./venv/bin/activate
+            doorstop

@@ -1,0 +1,77 @@
+# Copyright (c) 2021 Intel limited.
+# SPDX-License-Identifier: Apache-2.0
+
+name: Documentation Build
+
+on:
+  push:
+    tags:
+      - v*
+  pull_request:
+    paths:
+    - 'reqs/**'
+
+jobs:
+  doc-build-html:
+    name: "Documentation Build (HTML)"
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+
+    - name: cache-pip
+      uses: actions/cache@v1
+      with:
+        path: ~/.cache/pip
+        key: pip-${{ hashFiles('scripts/requirements-doc.txt') }}
+
+    - name: install-pip
+      run: |
+        sudo pip3 install -U setuptools wheel pip
+        pip3 install -r scripts/requirements-doc.txt
+
+   - name: build-docs
+      run: |
+        doorstop publish all ./_build/html
+    - name: compress-docs
+      run: |
+        tar cfJ _build/requirements-html-output.tar.xz --directory=_build html
+    - name: upload-build
+      uses: actions/upload-artifact@master
+      with:
+        name: html-output
+        path: _build/requirements-html-output.tar.xz
+
+  doc-build-pdf:
+    name: "Documentation Build (PDF)"
+    runs-on: ubuntu-latest
+    container: texlive/texlive:latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+
+    - name: install-pkgs
+      run: |
+        apt-get update
+        apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra lmodern
+    - name: cache-pip
+      uses: actions/cache@v1
+      with:
+        path: ~/.cache/pip
+        key: pip-${{ hashFiles('scripts/requirements-doc.txt') }}
+
+    - name: install-pip
+      run: |
+        pip3 install -U setuptools wheel pip
+        pip3 install -r scripts/requirements-doc.txt
+    - name: build-docs
+      run: |
+        doorstop publish SYS _build/requirements.md
+        pandoc _build/requirements.md -o _build/requirements.pdf
+    - name: upload-build
+      uses: actions/upload-artifact@master
+      with:
+        name: pdf-output
+        path: _build/requirements.pdf

@@ -1,3 +1,3 @@
 # README
 
-Sample Doorstop requirements for Zephyr.
+Zephyr safety requirements repository.
