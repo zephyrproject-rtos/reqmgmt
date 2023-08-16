@@ -1,1 +1,12 @@
+# Python
 venv/
+# PyCharm
+.idea/
+# OpenOffice
+.~lock.*
+
+# Excel
+Copy of Zephyr LTS Requirements - 20220301.xlsx
+# StrictDoc output
+output/
+
