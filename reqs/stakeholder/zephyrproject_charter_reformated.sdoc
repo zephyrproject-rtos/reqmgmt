@@ -967,3 +967,15 @@ obtain exception approval.
 <<<
 
 [/SECTION]
+
+[SECTION]
+TITLE: Amendments
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-15.a
+STATEMENT: >>>
+This charter may be amended by a two-thirds vote of the entire [Zephyr Project] Governing Board,
+subject to approval by The Linux Foundation.
+<<<
+
+[/SECTION]
