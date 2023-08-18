@@ -1244,6 +1244,9 @@ As a Zephyr OS user I want to... ???
 
 [/SECTION]
 
+[SECTION]
+TITLE: Thread Scheduling
+
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Thread Mapping (should it just be scheduling) -
@@ -1482,6 +1485,8 @@ What does traditional mean?   Need to be specific
 REVIEW_COMMENT: >>>
 what does traditional mean here?   Round robin?
 <<<
+
+[/SECTION]
 
 [REQUIREMENT]
 TYPE: Functional
