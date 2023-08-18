@@ -1027,6 +1027,9 @@ DISCUSSION_DATE: >>>
 
 [/SECTION]
 
+[SECTION]
+TITLE: Data Passing
+
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: see: https://docs.zephyrproject.org/latest/reference/kernel/index.html - Data Passing
@@ -1055,6 +1058,11 @@ DISCUSSION_DATE: >>>
 2022/5/25 - need to split appart into specific requirements.   Why call out 32-bit data values.  Need to generalize?   Why limited number?
 <<<
 
+[/SECTION]
+
+[SECTION]
+TITLE: Mutex
+
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Mutex
@@ -1074,6 +1082,11 @@ DISCUSSION_DATE: >>>
 REVIEW_COMMENT: >>>
 Concern over phrase recursive.  What is it MUTEXing? Memory Management?
 <<<
+
+[/SECTION]
+
+[SECTION]
+TITLE: Power Management
 
 [REQUIREMENT]
 TYPE: Functional
@@ -1112,6 +1125,8 @@ Zephyr shall provide notification of changes to system power states.
 DISCUSSION_DATE: >>>
 2022/8/23 - split out from 114.
 <<<
+
+[/SECTION]
 
 [SECTION]
 TITLE: Thread Communication
