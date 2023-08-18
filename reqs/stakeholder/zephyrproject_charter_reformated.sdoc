@@ -788,3 +788,15 @@ any criteria, requirements or reasons other than those used for all members.
 <<<
 
 [/SECTION]
+
+[SECTION]
+TITLE: Code of Conduct
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-10.a
+STATEMENT: >>>
+The [Zephyr Project] Governing Board shall adopt a specific Zephyr code of conduct, with
+approval from The Linux Foundation.
+<<<
+
+[/SECTION]
