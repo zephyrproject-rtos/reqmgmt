@@ -507,4 +507,32 @@ ii.  non-voting representative(s) from any member.
 
 <<<
 
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-5.b
+TITLE: Committee Chair Responsibilities
+STATEMENT: >>>
+The [Zephyr Project] Marketing Committee shall elect a Marketing Committee Chair annually,
+who will drive the agenda for the Marketing Committee, coordinate with The
+Linux Foundation and provide updates to the Governing Board as requested.
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-5.c
+TITLE: Participation Restrictions
+STATEMENT: >>>
+Any member of the [Zephyr Project] technical community may participate in the Marketing
+Committee in a non-voting capacity.
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-5.d
+TITLE: Responsibilities
+STATEMENT: >>>
+The [Zephyr Project] Marketing Committee shall be responsible for designing,
+developing and executing marketing efforts on behalf of the Governing Board.
+The Marketing Committee is expected to coordinate closely with the Governing
+Board and technical communities to maximize the outreach and visibility of the
+Project throughout the industry.
+<<<
+
 [/SECTION]
