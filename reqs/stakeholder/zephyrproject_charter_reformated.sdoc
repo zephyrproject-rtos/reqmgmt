@@ -702,3 +702,68 @@ minutes of the meetings of the Security Committee will not be published.
 [/SECTION]
 
 [/SECTION]
+
+[SECTION]
+TITLE: Voting
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-8.a
+STATEMENT: >>>
+While it is the goal of the [Zephyr] project to operate as a consensus based community, if
+any decision requires a vote to move forward, the representatives of the
+Governing Board, TSC, Marketing Committee Safety Committee or Security
+Committee, as applicable, shall vote on a one vote per representative basis.
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-8.b
+STATEMENT: >>>
+Quorum for [Zephyr Project] Governing Board, TSC, Marketing Committee, Safety Committee
+and Security Committee meetings shall require 60% of the voting representatives
+of the Governing Board, TSC, Marketing Committee Safety Committee or
+Security Committee, as applicable. The Governing Board, TSC, Marketing
+Committee, Safety Committee or Security Committee may continue to meet if
+quorum is not met, but shall be prevented from making any decisions at the
+meeting. Excepted as provided under Section 14.d. or Section 15.a., decisions by
+vote at a meeting shall require a majority vote, provided quorum is met. Excepted
+as provided under Section 14.d. or Section 15.a., decisions by electronic vote
+without a meeting shall require a majority of all voting representatives. Voting
+rights for a representative who misses three consecutive meetings are subject to
+suspension and suspended representatives do not count towards the quorum
+requirement. A representative’s suspension will end and voting rights restored at
+the start of the next attended meeting.
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-8.c
+STATEMENT: >>>
+Decisions by vote shall be based on a majority vote, provided that at least sixty
+percent (60%) of the Governing Board, TSC, Marketing Committee, Safety
+Committee, Security Committee or other committee representatives, as
+applicable, must be either present or participating electronically or by written
+action in order to conduct a valid vote.
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-8.d
+STATEMENT: >>>
+In the event of a tied vote with respect to an action by the Governing Board, TSC,
+Marketing Committee, Security Committee, Safety Committee or other committee
+created by the Governing Board, the chair of such board or committee shall be
+entitled to submit a tie-breaking vote.
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-8.e
+STATEMENT: >>>
+The Chair of the Governing Board, TSC, Marketing Committee, Security
+Committee, Safety Committee or other committee created by the Governing
+Board, as applicable, may conduct any vote using an appropriate electronic voting
+mechanism including the collection of votes via email. In the case of an
+electronic vote where the topic has not been previously discussed in a meeting, if
+any two voting representatives object to the electronic vote, they shall
+automatically force the topic onto the agenda at the next meeting at which point
+the decision may then be put up for a vote.
+<<<
+
+[/SECTION]
