@@ -1586,6 +1586,9 @@ pf-ok
 
 [/SECTION]
 
+[SECTION]
+TITLE: Tracing
+
 [REQUIREMENT]
 UID: ZEP-TRACE-002
 TYPE: Functional
@@ -1669,3 +1672,5 @@ pf-ok
 REVIEW_COMMENT: >>>
 What are "normal" operations? Might make sense to rephrase this to "any other operation"
 <<<
+
+[/SECTION]
