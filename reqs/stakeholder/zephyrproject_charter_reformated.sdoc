@@ -376,4 +376,89 @@ iv.  other processes for the Project community.
 
 <<<
 
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-4.d
+TITLE: TSC Participation Qualifications
+STATEMENT: >>>
+Participation in the [Zephyr] Project, including in any TSC role, is open to all. The voting
+members of the TSC shall elect a TSC Chair every 2 years, who will be a voting
+member of the Governing Board and expected to act as a liaison between the
+Governing Board and technical leadership of the project.
+<<<
+
+[SECTION]
+TITLE: Additional Responsibilities
+
+[FREETEXT]
+The [Zephyr Project] TSC shall also be reponsible for [all of the following]:
+
+[/FREETEXT]
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-4.e.i
+STATEMENT: >>>
+[The Zephyr Project TSC shall be responsible for]
+coordinating the technical direction of the Project;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-4.e.ii
+STATEMENT: >>>
+[The Zephyr Project TSC shall be responsible for]
+approving individual sub-projects and designated maintainers according to
+a project lifecycle document to be developed by the TSC;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-4.e.iii
+STATEMENT: >>>
+[The Zephyr Project TSC shall be responsible for]
+communicating with external and industry organizations concerning
+Project technical matters;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-4.e.iv
+STATEMENT: >>>
+[The Zephyr Project TSC shall be responsible for]
+appointing representatives to work with other open source or open
+standards communities;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-4.e.v
+STATEMENT: >>>
+[The Zephyr Project TSC shall be responsible for]
+establishing election processes for roles in the technical community that
+are not within the scope of a single sub-project;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-4.e.vi
+STATEMENT: >>>
+[The Zephyr Project TSC shall be responsible for]
+creating sub-committees or working groups to focus on cross-project
+technical issues or opportunities;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-4.e.vii
+STATEMENT: >>>
+[The Zephyr Project TSC shall be responsible for,]
+subject to the approval of the Governing Board, creating and amending, as
+may be required from time to time, a process document (the “Audit and
+Contribution Process Document”) which outlines and describes the
+procedures for contributing to, maintenance of, and auditing of the
+auditable code base;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-4.e.viii
+STATEMENT: >>>
+[The Zephyr Project TSC shall be responsible for]
+voting on technical matters relating to the code base.
+<<<
+
+[/SECTION]
+
 [/SECTION]
