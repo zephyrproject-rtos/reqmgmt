@@ -184,6 +184,7 @@ Nicole:  we need to have logging in the safety scope?
 [REQUIREMENT]
 TYPE: High Level
 COMPONENT: Memory Management
+TITLE: Memory Management framework
 STATEMENT: >>>
 Zephyr shall support a memory management framework
 <<<
