@@ -369,6 +369,9 @@ NP: Now I think system means HW platform.
 
 [/SECTION]
 
+[SECTION]
+TITLE: Fatal Exception Handling
+
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Fatal Exception Handling
@@ -391,7 +394,7 @@ STATEMENT: >>>
 Zephyr shall provide default handlers for fatal errors that do not have a dedicated handler
 <<<
 USER_STORY: >>>
-=N25
+TBD: =N25
 <<<
 DISCUSSION_DATE: >>>
 2022/4/13 - ok - pq
@@ -411,6 +414,54 @@ COMPONENT: Fatal Error Handling
 TITLE: Assigning a specific handler (2)
 STATEMENT: >>>
 Zephyr shall provide an interface to assign a specific handler for a fatal error.
+<<<
+
+[/SECTION]
+
+[SECTION]
+TITLE: File System
+
+[REQUIREMENT]
+TYPE: Functional
+COMPONENT: File System
+TITLE: Create file
+STATEMENT: >>>
+Zephyr shall provide file create capabilities for files on the file system
+<<<
+USER_STORY: >>>
+As a Zephyr OS user I want to be able to create a new file or overwrite an existing file at the same filesystem location / identifier (e.g. path + name)
+<<<
+DISCUSSION_DATE: >>>
+2022/4/13 - ok -pf
+<<<
+
+[REQUIREMENT]
+TYPE: Functional
+COMPONENT: File System
+TITLE: Open files
+STATEMENT: >>>
+Zephyr shall provide file open capabilities for files on the file system
+<<<
+USER_STORY: >>>
+As a Zephyr OS user I want to be able to open a file for writing or reading.
+When opened for writing, I want to have exclusive access to the file.
+<<<
+DISCUSSION_DATE: >>>
+2022/4/13 - ok - pf
+<<<
+
+[REQUIREMENT]
+TYPE: Functional
+COMPONENT: File System
+TITLE: Read files
+STATEMENT: >>>
+Zephyr shall provide read access to files in the file system
+<<<
+USER_STORY: >>>
+As a Zephyr OS user I want to be able to read from an existing file, also while the file is read from multiple and write accessed from one other instances.
+<<<
+DISCUSSION_DATE: >>>
+2022/4/13 - ok -pf
 <<<
 
 [REQUIREMENT]
@@ -444,35 +495,6 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: File System
-TITLE: Open files
-STATEMENT: >>>
-Zephyr shall provide file open capabilities for files on the file system
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want to be able to open a file for writing or reading.
-When opened for writing, I want to have exclusive access to the file.
-<<<
-DISCUSSION_DATE: >>>
-2022/4/13 - ok - pf
-<<<
-
-[REQUIREMENT]
-TYPE: Functional
-COMPONENT: File System
-TITLE: Create file
-STATEMENT: >>>
-Zephyr shall provide file create capabilities for files on the file system
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want to be able to create a new file or overwrite an existing file at the same filesystem location / identifier (e.g. path + name)
-<<<
-DISCUSSION_DATE: >>>
-2022/4/13 - ok -pf
-<<<
-
-[REQUIREMENT]
-TYPE: Functional
-COMPONENT: File System
 TITLE: Move file
 STATEMENT: >>>
 Zephyr shall provide the capability to move files on the file system
@@ -495,19 +517,7 @@ DISCUSSION_DATE: >>>
 2022/4/13 - ok -pf
 <<<
 
-[REQUIREMENT]
-TYPE: Functional
-COMPONENT: File System
-TITLE: Read files
-STATEMENT: >>>
-Zephyr shall provide read access to files in the file system
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want to be able to read from an existing file, also while the file is read from multiple and write accessed from one other instances.
-<<<
-DISCUSSION_DATE: >>>
-2022/4/13 - ok -pf
-<<<
+[/SECTION]
 
 [REQUIREMENT]
 TYPE: Functional
