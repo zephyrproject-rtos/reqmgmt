@@ -1098,39 +1098,6 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
-TYPE: Functional
-COMPONENT: Power Management
-TITLE: Power State Control
-STATEMENT: >>>
-Zephyr shall provide control over changes to system power states.
-<<<
-USER_STORY: >>>
-See ZEP104
-+
-When the power state is changed I want to get an notification in order for specific parts of my application to react accodingly.
-<<<
-DISCUSSION_DATE: >>>
-2022/5/25 - split into two requirements.
-<<<
-
-[REQUIREMENT]
-TYPE: Functional
-COMPONENT: Power Management
-DISCUSSION_DATE: >>>
-2022/8/23 - figure out what capabilities are working here today.
-<<<
-
-[REQUIREMENT]
-TYPE: Functional
-COMPONENT: Power Management
-STATEMENT: >>>
-Zephyr shall provide notification of changes to system power states.
-<<<
-DISCUSSION_DATE: >>>
-2022/8/23 - split out from 114.
-<<<
-
-[REQUIREMENT]
 TYPE: High Level
 COMPONENT: Thread Communication
 TITLE: Mutex
