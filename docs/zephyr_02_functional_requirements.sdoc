@@ -36,21 +36,6 @@ ELEMENTS:
     REQUIRED: False
 
 [REQUIREMENT]
-UID: ZEP-ARCH-001
-TYPE: High Level
-COMPONENT: Hardware Architecture Interface (KS: Should this be Abstraction rather than Architecture?)
-TITLE: Architecture Layer Interface
-STATEMENT: >>>
-Zephyr shall provide a framework for applications running on Zephyr to communicate with the hardware architectural service available from Zephyr for the system
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want to be able to easily switch my application to a different MCU architecture (x86, ARM Cortex-M/A, RISCV etc.)
-<<<
-DISCUSSION_DATE: >>>
-2022/3/30 - ok - pf
-<<<
-
-[REQUIREMENT]
 UID: ZEP-ARCH-002
 TYPE: Functional
 COMPONENT: Hardware Architecture Interface
@@ -126,47 +111,6 @@ REVIEW_COMMENT: >>>
 What is lifecycle - power on, standby, power off?  or ???? 
 
 Clarification: Starting and Stopping, and putting it into Stand-By Mode (whatever the processor supports)
-<<<
-
-[REQUIREMENT]
-UID: ZEP-ARCH-006
-TYPE: High Level
-COMPONENT: Hardware Architecture Interface
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-ARCH-001
-TITLE: Support multiprocessor management
-STATEMENT: >>>
-Zephyr shall support multiprocessing management facilities.
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want to use Zephyr OS on multi core (SMP-)MCUs/MPUs
-<<<
-DISCUSSION_DATE: >>>
-Still need to articulate the capabilities explicitly.
-<<<
-REVIEW_COMMENT: >>>
-From the Docs: No special application code needs to be written to take advantage of this feature
-<<<
-
-[REQUIREMENT]
-UID: ZEP-CLIB-001
-TYPE: High Level
-COMPONENT: C Library
-TITLE: C Library Support
-STATEMENT: >>>
-Zephyr shall support a hooks to interface to a subset of the standard C library.
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want to have a selection of standard C library implementations e.g. a full extend and a minimal with a smaller footprint or a particular fast executing implementation.
-<<<
-DISCUSSION_DATE: >>>
-We needed to do a subset description, and need to be specific about the subset.
-<<<
-REVIEW_COMMENT: >>>
-Can we limit the type of C library implementations? Testing might be hell if we do not limit ourselfes to the ones defined? Like "miminal libc" and "newlib". Will it make sense to pull miminal Libc into the certification scope?
-
-Clarification: Would prefer to cover the scope part first. Talking about the hooks which apply to each C Library. Open, Close, Diff. Hooks that are OS dependent. C or Library dependent. ref https://github.com/zephyrproject-rtos/zephyr/blob/main/lib/libc/newlib/libc-hooks.c
 <<<
 
 [REQUIREMENT]
@@ -357,39 +301,6 @@ revisit after subset defined
 <<<
 
 [REQUIREMENT]
-TYPE: High Level
-COMPONENT: Utilities Library - Data Structures
-TITLE: Data Structures Library Utilities
-STATEMENT: >>>
-Zephyr shall provide common container data structures as library utilities   (ring buffer, linked list, red black trees, ....   see document from Anas)
-<<<
-USER_STORY: >>>
-As a Zepyhr OS developler (user) I do not want to implement common software patterns multiple time in each module again, but make use of a common library which provides it.
-<<<
-DISCUSSION_DATE: >>>
-AI: Need to be reworked;  split into several requirements;   Library utility shall provide red-black,   shall provide ...   .   Call "Utility Libraries"
-<<<
-REVIEW_COMMENT: >>>
-Possible API - It's ambiguous what is meant by common container data structures as library ulitileis.... - get pointer to code.   (Single linked list, double linked list, ....)
-
-Clarification: There are many files. Linked list, ring buffer, ...). This is an implementation. Need to look at scope. Doesn't need to be a high level requirement
-<<<
-
-[REQUIREMENT]
-TYPE: High Level
-COMPONENT: Device Driver API
-TITLE: Device Driver Abstracting
-STATEMENT: >>>
-Zephyr shall provide a framework for managing device driver behavior (note: device drivers includes peripherals)
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want my application to be portable between different MCU architectures (ARM Cortex-M/A, Intel x86, RISCV etc.) and MCU vendors (STM, NXP, Intel, etc.) without having to change the MCU peripherals access.
-<<<
-DISCUSSION_DATE: >>>
-2022/3/30 - ok - pf
-<<<
-
-[REQUIREMENT]
 TYPE: Functional
 COMPONENT: Device Driver API
 TITLE: Device Driver Abstraction
@@ -432,20 +343,6 @@ NP: Now I think system means HW platform.
 <<<
 
 [REQUIREMENT]
-TYPE: High Level
-COMPONENT: Exception Handling
-TITLE: Fatal Exception handling
-STATEMENT: >>>
-The Zephyr kernel shall provide a framework for error and exception handling.
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want errors and exeptions to handled and react according to my applications requirements (e.g. reach/establish the applications safey state).
-<<<
-DISCUSSION_DATE: >>>
-2022/4/13 - ok -pf
-<<<
-
-[REQUIREMENT]
 TYPE: Functional
 COMPONENT: Fatal Exception Handling
 TITLE: Fatal Exception Error Handler
@@ -484,20 +381,6 @@ TYPE: Functional
 COMPONENT: Fatal Error Handling
 STATEMENT: >>>
 Zephyr shall provide an interface to assign a specific handler for a fatal error.
-<<<
-
-[REQUIREMENT]
-TYPE: High Level
-COMPONENT: File Systems
-TITLE: Common File system operation support
-STATEMENT: >>>
-Zephyr shall provide a framework for managing file system access
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want a posix / c like file system access to store data.
-<<<
-DISCUSSION_DATE: >>>
-2022/4/13 - ok - p? - depends on set of expectations
 <<<
 
 [REQUIREMENT]
@@ -590,20 +473,6 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
-TYPE: High Level
-COMPONENT: Interrupts
-TITLE: Interrupt Service Routine
-STATEMENT: >>>
-Zephyr shall provide a framework for interrupt management
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want interrupts to be handled sychronously in response to a hardware or software interrupt request with a minimum latency, preemtping threads and, as far as the hardware allows, lower priority interrupt service routines.
-<<<
-DISCUSSION_DATE: >>>
-2022/4/13 - ok - pf
-<<<
-
-[REQUIREMENT]
 TYPE: Functional
 COMPONENT: Interrupts
 STATEMENT: >>>
@@ -666,23 +535,6 @@ As a Zephyr OS user I want to be able to enable and disable each individual and 
 <<<
 DISCUSSION_DATE: >>>
 2022/8/29 - ok -pf
-<<<
-
-[REQUIREMENT]
-TYPE: High Level
-COMPONENT: Logging
-TITLE: Logging
-STATEMENT: >>>
-Zephyr shall provide a framework for logging events
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want to be able to log application defined events as well as framework exceptions.
-<<<
-DISCUSSION_DATE: >>>
-2022/4/13 - ok - pf
-<<<
-REVIEW_COMMENT: >>>
-Nicole:  we need to have logging in the safety scope?
 <<<
 
 [REQUIREMENT]
@@ -774,19 +626,6 @@ As a Zephyr OS user I want a minimal influence of logging activities to the timi
 <<<
 DISCUSSION_DATE: >>>
 2022/10/25 -ok
-<<<
-
-[REQUIREMENT]
-TYPE: High Level
-COMPONENT: Memory Management
-STATEMENT: >>>
-Zephyr shall support a memory management framework
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want memory to be allocated and protected to my application threads preventing mistakenly access to foreign memory as far as the hardware allows.
-<<<
-DISCUSSION_DATE: >>>
-2022/10/25 - ok
 <<<
 
 [REQUIREMENT]
@@ -1162,20 +1001,6 @@ Concern over phrase recursive.  What is it MUTEXing? Memory Management?
 <<<
 
 [REQUIREMENT]
-TYPE: High Level
-COMPONENT: Power Management
-TITLE: Power Management
-STATEMENT: >>>
-Zephyr shall provide an interface to control framework to provide support control over hardware power states
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want to be able to control the power mode of the MCU and its peripherals to take advantage of the hardward features and to be able to implement low power or battery driven long life applications.
-<<<
-DISCUSSION_DATE: >>>
-2022/5/25 - ok pf-ok
-<<<
-
-[REQUIREMENT]
 TYPE: Functional
 COMPONENT: Power Management
 TITLE: Power State Control
@@ -1206,20 +1031,6 @@ Zephyr shall provide notification of changes to system power states.
 <<<
 DISCUSSION_DATE: >>>
 2022/8/23 - split out from 114.
-<<<
-
-[REQUIREMENT]
-TYPE: High Level
-COMPONENT: Thread Communication
-TITLE: Mutex
-STATEMENT: >>>
-Zephyr shall provide an interface framework for managing communcation between threads.
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want to able to exchange information between threads in a thread-safe manner guaranteeing data consistence.
-<<<
-DISCUSSION_DATE: >>>
-2022/5/25 - ok  - pf-ok
 <<<
 
 [REQUIREMENT]
@@ -1348,20 +1159,6 @@ As a Zephyr OS user I want to... ???
 <<<
 
 [REQUIREMENT]
-TYPE: High Level
-COMPONENT: Thread Mapping (should it just be scheduling)
-TITLE: Multiple CPU scheduling
-STATEMENT: >>>
-Zephyr shall support scheduling of OS threads on multiple hardware CPUs
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want Zephyr OS to run on MCUs/CPUs with one or more CPU cores.
-<<<
-DISCUSSION_DATE: >>>
-pf-ok
-<<<
-
-[REQUIREMENT]
 TYPE: Functional
 COMPONENT: Thread Mapping (should it just be scheduling) -
 TITLE: Support operation on more than one CPU
@@ -1400,24 +1197,6 @@ As a Zephyr OS user I want Zephyr OS to provide synchonization mechanisms betwee
 <<<
 DISCUSSION_DATE: >>>
 pf-ok
-<<<
-
-[REQUIREMENT]
-UID: ZEP-SCHED-001
-TYPE: High Level
-COMPONENT: Thread Scheduling
-TITLE: Scheduling
-STATEMENT: >>>
-Zephyr shall provide a mechanism for selecting which of many threads will be run on a given CPU   Zephyr shall provide an interface to assign a thread to a specific CPU.
-<<<
-USER_STORY: >>>
-As a Zephyr OS user, I want to be able to control which thread will run on which CPU
-<<<
-DISCUSSION_DATE: >>>
-pf-ok
-<<<
-REVIEW_COMMENT: >>>
-Zephyr shall allow scheduling of threads
 <<<
 
 [REQUIREMENT]
@@ -1612,24 +1391,6 @@ what does traditional mean here?   Round robin?
 <<<
 
 [REQUIREMENT]
-UID: ZEP-THREAD-001
-TYPE: High Level
-COMPONENT: Threads
-TITLE: Managing threads
-STATEMENT: >>>
-Zephyr shall provide a framework facilities for managing multiple threads of execution.
-<<<
-USER_STORY: >>>
-As a Zephyr OS user, I want to be able to manage the execute of multiple threads with different priorities
-<<<
-DISCUSSION_DATE: >>>
-pf-ok
-<<<
-REVIEW_COMMENT: >>>
-Nothing about priorities...
-<<<
-
-[REQUIREMENT]
 TYPE: Functional
 COMPONENT: Threads
 TITLE: Thread Support
@@ -1679,24 +1440,6 @@ TBD
 <<<
 
 [REQUIREMENT]
-UID: ZEP-TIME-001
-TYPE: High Level
-COMPONENT: Timers
-TITLE: Timers
-STATEMENT: >>>
-Zephyr shall provide a framework abstraction for managing time-based events
-<<<
-USER_STORY: >>>
-As a Zephyr OS user, I want to start, suspend, resume and stop timers which shall trigger an event on a set expiration time
-<<<
-DISCUSSION_DATE: >>>
-pf-ok
-<<<
-REVIEW_COMMENT: >>>
-Do we need requirements on scheduling latency?
-<<<
-
-[REQUIREMENT]
 UID: ZEP-TIME-002
 TYPE: Functional
 COMPONENT: Timers
@@ -1730,24 +1473,6 @@ As a Zephyr OS user, I want to be able to execute functions in the interrupt con
 <<<
 DISCUSSION_DATE: >>>
 pf-ok
-<<<
-
-[REQUIREMENT]
-UID: ZEP-TRACE-001
-TYPE: High Level
-COMPONENT: Tracing
-TITLE: Tracing
-STATEMENT: >>>
-Zepyhr shall provide a framework mechanism for tracing low level system operations  (NOTE: system calls, interrupts, kernel calls, thread, synchronization, etc.)
-<<<
-USER_STORY: >>>
-As a Zephyr OS user, I want to be able to trace different OS operations
-<<<
-DISCUSSION_DATE: >>>
-Moved
-<<<
-REVIEW_COMMENT: >>>
-What are low level system operations in this context?
 <<<
 
 [REQUIREMENT]
