@@ -591,6 +591,9 @@ DISCUSSION_DATE: >>>
 
 [/SECTION]
 
+[SECTION]
+TITLE: Logging
+
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Logging
@@ -683,6 +686,8 @@ As a Zephyr OS user I want a minimal influence of logging activities to the timi
 DISCUSSION_DATE: >>>
 2022/10/25 -ok
 <<<
+
+[/SECTION]
 
 [REQUIREMENT]
 TYPE: Functional
