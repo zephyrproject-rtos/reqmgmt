@@ -336,4 +336,19 @@ present updates from their committee.
 [SECTION]
 TITLE: Technical Steering Committee (“TSC”)
 
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-4.a
+TITLE: Composition
+STATEMENT: >>>
+The [Zephyr Project] TSC voting members shall consist of:
+
+i.   two appointed representatives from each Platinum Member;
+ii.  one appointed representative from each Silver Member;
+iii. the Security Architect, as defined in Section 6;
+iv.  the Safety Architect, as defined in Section 7; and
+v.   appointed representatives from the technical community approved by the
+     TSC at the rate of no more than one per quarter.
+
+<<<
+
 [/SECTION]
