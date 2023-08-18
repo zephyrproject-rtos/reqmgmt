@@ -800,3 +800,28 @@ approval from The Linux Foundation.
 <<<
 
 [/SECTION]
+
+[SECTION]
+TITLE: Budget
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-11.a
+STATEMENT: >>>
+The [Zephyr Project] Governing Board shall approve an annual budget and never commit to spend
+in excess of funds raised. The budget shall be consistent with the non-profit
+mission of The Linux Foundation.
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-11.b
+STATEMENT: >>>
+The Linux Foundation shall provide the [Zephyr Project] Governing Board with regular reports of
+spend levels against the budget. In no event will The Linux Foundation have any
+obligation to undertake any action on behalf of the Project or otherwise related to
+the Project that will not be covered in full by funds raised by the Project. In the
+event of any unbudgeted or otherwise unfunded obligation arises related to the
+Project, The Linux Foundation will coordinate with the Governing Board to
+address gap funding requirements.
+<<<
+
+[/SECTION]
