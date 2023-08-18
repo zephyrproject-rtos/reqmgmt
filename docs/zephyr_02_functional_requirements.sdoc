@@ -991,6 +991,9 @@ What is the difference to ZEP 136? Read & Write, while ZEP136 is just read?
 
 [/SECTION]
 
+[SECTION]
+TITLE: Memory Objects
+
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Memory Objects
@@ -1021,6 +1024,8 @@ As a Zephyr OS user I want a most efficient and least fragmentation prone dynami
 DISCUSSION_DATE: >>>
 2022/10/25 - ok
 <<<
+
+[/SECTION]
 
 [REQUIREMENT]
 TYPE: Functional
