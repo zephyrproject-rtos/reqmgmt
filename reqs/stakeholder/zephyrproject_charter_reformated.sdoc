@@ -540,4 +540,16 @@ Project throughout the industry.
 [SECTION]
 TITLE: Security Committee
 
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-6.a
+TITLE: Composition
+STATEMENT: >>>
+The [Zephyr Project] Security Committee members shall consist of:
+
+i.   one appointed voting representative from each Platinum Member, plus
+ii.  non-voting Silver Member representatives who shall not count towards
+     quorum.
+
+<<<
+
 [/SECTION]
