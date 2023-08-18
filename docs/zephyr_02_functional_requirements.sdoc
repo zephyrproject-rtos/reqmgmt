@@ -1545,6 +1545,9 @@ TBD
 
 [/SECTION]
 
+[SECTION]
+TITLE: Timers
+
 [REQUIREMENT]
 UID: ZEP-TIME-002
 TYPE: Functional
@@ -1580,6 +1583,8 @@ As a Zephyr OS user, I want to be able to execute functions in the interrupt con
 DISCUSSION_DATE: >>>
 pf-ok
 <<<
+
+[/SECTION]
 
 [REQUIREMENT]
 UID: ZEP-TRACE-002
