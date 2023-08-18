@@ -33,6 +33,9 @@ ELEMENTS:
     TYPE: String
     REQUIRED: False
 
+[SECTION]
+TITLE: Hardware Architecture Interface
+
 [REQUIREMENT]
 UID: ZEP-ARCH-002
 TYPE: Functional
@@ -110,6 +113,8 @@ What is lifecycle - power on, standby, power off?  or ????
 
 Clarification: Starting and Stopping, and putting it into Stand-By Mode (whatever the processor supports)
 <<<
+
+[/SECTION]
 
 [REQUIREMENT]
 UID: ZEP-CLIB-002
