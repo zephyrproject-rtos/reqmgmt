@@ -386,6 +386,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Fatal Error Handling
+TITLE: Default handler for fatal errors
 STATEMENT: >>>
 Zephyr shall provide default handlers for fatal errors that do not have a dedicated handler
 <<<
@@ -399,6 +400,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Fatal Error Handling
+TITLE: Assigning a specific handler
 STATEMENT: >>>
 Zephyr shall provide an interface to assign a specific handler with an exception.
 <<<
@@ -406,6 +408,7 @@ Zephyr shall provide an interface to assign a specific handler with an exception
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Fatal Error Handling
+TITLE: Assigning a specific handler (2)
 STATEMENT: >>>
 Zephyr shall provide an interface to assign a specific handler for a fatal error.
 <<<
@@ -413,6 +416,7 @@ Zephyr shall provide an interface to assign a specific handler for a fatal error
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: File System
+TITLE: Write to files
 STATEMENT: >>>
 Zephyr shall provide write access to the files in the file system
 <<<
@@ -426,6 +430,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: File System
+TITLE: Close file
 STATEMENT: >>>
 Zephyr shall provide file close capabilities for files on the file system
 <<<
@@ -439,6 +444,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: File System
+TITLE: Open files
 STATEMENT: >>>
 Zephyr shall provide file open capabilities for files on the file system
 <<<
@@ -453,6 +459,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: File System
+TITLE: Create file
 STATEMENT: >>>
 Zephyr shall provide file create capabilities for files on the file system
 <<<
@@ -466,6 +473,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: File System
+TITLE: Move file
 STATEMENT: >>>
 Zephyr shall provide the capability to move files on the file system
 <<<
@@ -476,6 +484,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: File System
+TITLE: Delete file
 STATEMENT: >>>
 Zephyr shall provide file delete capabilities for files on the file system
 <<<
@@ -489,6 +498,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: File System
+TITLE: Read files
 STATEMENT: >>>
 Zephyr shall provide read access to files in the file system
 <<<
@@ -502,11 +512,12 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Interrupts
+TITLE: Service routine for handling interrupts (ISR)
 STATEMENT: >>>
-Zephyr shall provide support a service routine for handling interrupts (ISR) .
+Zephyr shall provide support a service routine for handling interrupts (ISR).
 <<<
 USER_STORY: >>>
-Duplicate to line 30? delete?
+TBD: Duplicate to line 30? delete?
 <<<
 DISCUSSION_DATE: >>>
 2022/4/13 - ok - pq
@@ -543,6 +554,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Interrupts
+TITLE: Enabling interrupts
 STATEMENT: >>>
 Zephyr shall provide mechanisms to enable interrupts
 <<<
@@ -581,6 +593,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Logging
+TITLE: Logs available for post processing
 STATEMENT: >>>
 Zephyr logging shall produce logs that are capable of being post processed
 <<<
@@ -594,6 +607,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Logging
+TITLE: Formatting log messages
 STATEMENT: >>>
 Zephyr logging shall support formatting of log messages to enable filtering
 <<<
@@ -706,6 +720,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Memory Protection
+TITLE: Granting access to kernel objects
 STATEMENT: >>>
 Zephyr shall provide a mechanism to grant user threads access to kernel objects
 <<<
@@ -722,6 +737,7 @@ What are the conditions to a user thread to get access to a kernel object?
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Memory Protection
+TITLE: Separation between user and kernel threads for memory access
 STATEMENT: >>>
 Zephyr shall be able to differentiate between user threads and kernel threads for memory access.
 <<<
@@ -752,6 +768,7 @@ What is an "unimplemented system call"? An empty system call function? Can I cal
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Memory Protection
+TITLE: Response to invalid system call IDs
 STATEMENT: >>>
 Zephyr shall have a defined behavior when an invalid system call ID is used.
 <<<
@@ -854,6 +871,7 @@ RS: IMHO should be configurable due the to performance penalty introduced with i
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Memory Protection
+TITLE: User mode handling of detected stack overflow
 STATEMENT: >>>
 Zephyr shall support a defined mechanism for user mode handling a of detected stack overflow
 <<<
@@ -1046,6 +1064,10 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Power Management
+TITLE: Power Management - TBD
+STATEMENT: >>>
+TBD
+<<<
 DISCUSSION_DATE: >>>
 2022/8/23 - figure out what capabilities are working here today.
 <<<
@@ -1053,6 +1075,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Power Management
+TITLE: Notification of changes to system power states
 STATEMENT: >>>
 Zephyr shall provide notification of changes to system power states.
 <<<
@@ -1079,6 +1102,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Thread Communication
+TITLE: Exchanging data between threads
 STATEMENT: >>>
 Zephyr shall provide a mechanism for exchanging data between threads.
 <<<
@@ -1092,6 +1116,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Thread Communication
+TITLE: Waiting for results during communication
 STATEMENT: >>>
 Zephyr shall provide mechanisms to enable waiting for results during communication between threads.   (NOTE:  waiting for results is really bad and dangerous, want to avoid if at all possible)
 <<<
@@ -1229,6 +1254,7 @@ pf-ok
 UID: ZEP-SCHED-002
 TYPE: Functional
 COMPONENT: Thread Scheduling
+TITLE: Creating threads
 STATEMENT: >>>
 Zephyr shall provide an interface to create (start) a thread
 <<<
@@ -1239,6 +1265,7 @@ pf-ok
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Thread Scheduling
+TITLE: Setting thread priority
 STATEMENT: >>>
 Zephyr shall provide an interface to set a thread's priority
 <<<
@@ -1249,6 +1276,7 @@ pf-ok
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Thread Scheduling
+TITLE: Suspending a thread
 STATEMENT: >>>
 Zephyr shall provide an interface to suspend a thread
 <<<
@@ -1259,6 +1287,7 @@ pf-ok
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Thread Scheduling
+TITLE: Resuming a suspended thread
 STATEMENT: >>>
 Zephyr shall provide an interface to resume a suspended thread
 <<<
@@ -1267,6 +1296,7 @@ pf-ok
 <<<
 
 [REQUIREMENT]
+TITLE: Resuming a suspended thread after a timeout
 STATEMENT: >>>
 Zephyr shall provide an interface to resume a suspended thread after a timeout
 <<<
@@ -1277,8 +1307,9 @@ pf-ok
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Thread Scheduling
+TITLE: Deleting a thread
 STATEMENT: >>>
-Zephyr shall provide an interface to delete (end) a thread
+Zephyr shall provide an interface to delete (end) a thread.
 <<<
 DISCUSSION_DATE: >>>
 pf-ok
@@ -1287,11 +1318,12 @@ pf-ok
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Thread Scheduling
+TITLE: Scheduling a thread based on an event
 STATEMENT: >>>
- Zephyr shall provide an interface to schedule a thread based on an event
+Zephyr shall provide an interface to schedule a thread based on an event.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to execute work which reacts on events and interrupts the current executed work
+As a Zephyr OS user, I want to be able to execute work which reacts on events and interrupts the current executed work.
 <<<
 DISCUSSION_DATE: >>>
 pf-ok
@@ -1437,8 +1469,9 @@ Mechanism for this is mutex; so just link this here as well as others
 UID: ZEP-THREAD-002
 TYPE: Functional
 COMPONENT: Threads
+TITLE: Thread privileges
 STATEMENT: >>>
-Zephyr shall provide an interface to create theads with defined privilege
+Zephyr shall provide an interface to create threads with defined privilege.
 <<<
 DISCUSSION_DATE: >>>
 pf-ok
@@ -1448,6 +1481,7 @@ pf-ok
 UID: ZEP-THREAD-003
 TYPE: Functional
 COMPONENT: Threads
+TITLE: Scheduling multiple threads
 STATEMENT: >>>
 Zephyr shall provide an interface to schedule multiple threads
 <<<
@@ -1458,6 +1492,7 @@ pf-ok
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Threads
+TITLE: Threads - TBD
 STATEMENT: >>>
 ??? Can Zephyr change priviledge level of a thread once created??
 <<<
@@ -1505,6 +1540,7 @@ pf-ok
 UID: ZEP-TRACE-002
 TYPE: Functional
 COMPONENT: Tracing
+TITLE: Initializing a trace
 STATEMENT: >>>
 Zephyr shall provide an interface to initialize a trace.
 <<<
@@ -1516,6 +1552,7 @@ pf-ok
 UID: ZEP-TRACE-003
 TYPE: Functional
 COMPONENT: Tracing
+TITLE: Triggering a trace
 STATEMENT: >>>
 Zephyr shall provide an interface to trigger a trace.
 <<<
@@ -1527,6 +1564,7 @@ pf-ok
 UID: ZEP-TRACE-004
 TYPE: Functional
 COMPONENT: Tracing
+TITLE: Dumping trace results
 STATEMENT: >>>
 Zephyr shall provide an interface to dump results from a trace.
 <<<
@@ -1538,6 +1576,7 @@ pf-ok
 UID: ZEP-TRACE-005
 TYPE: Functional
 COMPONENT: Tracing
+TITLE: Removing trace data
 STATEMENT: >>>
 Zephyr shall provide an interface to remove trace data.
 <<<
