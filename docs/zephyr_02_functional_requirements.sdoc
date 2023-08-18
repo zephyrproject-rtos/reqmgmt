@@ -1488,6 +1488,9 @@ what does traditional mean here?   Round robin?
 
 [/SECTION]
 
+[SECTION]
+TITLE: Threads
+
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Threads
@@ -1539,6 +1542,8 @@ STATEMENT: >>>
 DISCUSSION_DATE: >>>
 TBD
 <<<
+
+[/SECTION]
 
 [REQUIREMENT]
 UID: ZEP-TIME-002
