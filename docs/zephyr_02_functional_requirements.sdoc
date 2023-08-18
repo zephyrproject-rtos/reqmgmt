@@ -1113,6 +1113,9 @@ DISCUSSION_DATE: >>>
 2022/8/23 - split out from 114.
 <<<
 
+[SECTION]
+TITLE: Thread Communication
+
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Thread Communication
@@ -1238,6 +1241,8 @@ Zephyr shall support a mailbox abstraction to enable targeted message passing be
 USER_STORY: >>>
 As a Zephyr OS user I want to... ???
 <<<
+
+[/SECTION]
 
 [REQUIREMENT]
 TYPE: Functional
