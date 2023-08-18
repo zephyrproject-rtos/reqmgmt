@@ -854,3 +854,71 @@ exempt purpose of The Linux Foundation.
 <<<
 
 [/SECTION]
+
+[SECTION]
+TITLE: General Rules and Operations
+
+[FREETEXT]
+The [Zephyr Project] Governing Board shall [accomplish all of the following]:
+
+[/FREETEXT]
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-13.a
+STATEMENT: >>>
+[The Zephyr Project Governing Board shall]
+demonstrate plans and the means to coordinate with the open source project’s
+developer community, including on topics such as branding, logos, and other
+collateral that will represent the community;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-13.b
+STATEMENT: >>>
+[The Zephyr Project Governing Board shall]
+engage in a professional manner consistent with maintaining a cohesive
+community, while also maintaining the goodwill and esteem of The Linux
+Foundation in the open source software community;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-13.c
+STATEMENT: >>>
+[The Zephyr Project Governing Board shall]
+respect the rights of all trademark owners, including any branding and usage
+guidelines;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-13.d
+STATEMENT: >>>
+[The Zephyr Project Governing Board shall]
+engage The Linux Foundation for all press and analyst relations activities;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-13.e
+STATEMENT: >>>
+[The Zephyr Project Governing Board shall]
+upon request, provide information regarding project participation, including
+information regarding attendance at project-sponsored events, to The Linux
+Foundation;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-13.f
+STATEMENT: >>>
+[The Zephyr Project Governing Board shall]
+engage The Linux Foundation for any front-facing marketing websites directly for
+the Project;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-13.g
+STATEMENT: >>>
+[The Zephyr Project Governing Board shall]
+operate under such rules and procedures as may from time to time be approved by
+the Project’s Governing Board and confirmed by The Linux Foundation.
+<<<
+
+[/SECTION]
