@@ -11,3 +11,48 @@ Updated August 21, 2023
 Original at: https://www.zephyrproject.org/wp-content/uploads/sites/38/2023/08/LF-Zephyr-Charter-2023.08.21.pdf
 
 [/FREETEXT]
+
+[SECTION]
+UID: ZEPHYRPROJECT_CHARTER-1
+TITLE: Mission of the Zephyr Project (“Zephyr,” or, alternatively, the “Project”).
+
+[FREETEXT]
+The mission of the Project is to [accomplish all of the following]:
+
+[/FREETEXT]
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-1.a
+STATEMENT: >>>
+[The Zephyr Project shall]
+deliver the best-in-class RTOS for connected resource-constrained devices, built
+to be secure and safe.
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-1.b
+STATEMENT: >>>
+[The Zephyr Project shall]
+maintain an auditable code base, while taking advantage of community
+participation;  this auditable code base is open source;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-1.c
+STATEMENT: >>>
+[The Zephyr Project shall]
+include participation of leading members of this ecosystem, including micro-
+controller manufacturers, hardware developers, software developers and other
+members of the ecosystem;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-1.d
+STATEMENT: >>>
+[The Zephyr Project shall]
+host the infrastructure for the open source [Zephyr] Project and sub-projects, establishing a
+neutral home for community meetings, events and collaborative discussions and
+providing structure around the business and technical governance of the Project.
+<<<
+
+[/SECTION]
