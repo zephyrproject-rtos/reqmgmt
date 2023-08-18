@@ -1,7 +1,5 @@
 [DOCUMENT]
 TITLE: Zephyr Requirements
-OPTIONS:
-  MARKUP: Text
 
 [GRAMMAR]
 ELEMENTS:
@@ -124,7 +122,7 @@ STATEMENT: >>>
 Zephyr shall support formatted output
 <<<
 USER_STORY: >>>
-(targets for *printf having variable argument list)
+(targets for printf having varsiable argument list)
 <<<
 DISCUSSION_DATE: >>>
 20221122.0

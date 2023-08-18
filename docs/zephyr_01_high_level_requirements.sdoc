@@ -1,7 +1,5 @@
 [DOCUMENT]
 TITLE: Zephyr Requirements
-OPTIONS:
-  MARKUP: Text
 
 [GRAMMAR]
 ELEMENTS:
