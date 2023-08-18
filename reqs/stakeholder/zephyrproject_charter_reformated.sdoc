@@ -461,4 +461,19 @@ voting on technical matters relating to the code base.
 
 [/SECTION]
 
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-4.f
+TITLE: Security Architect service to TSC
+STATEMENT: >>>
+The [Zephyr Project]
+Security Architect shall serve on the TSC as a “security maintainer,” and is
+responsible for verifying that the Project is following the processes for selected
+standards that the Security Committee recommends and that the Project is
+appropriately documenting features to move from the long term support (“LTS”)
+code base to the auditable code base. It is intended that Maintainers will seek the
+sign-off from the Security Architect prior to implementing significant changes to
+the LTS code base where such changes may result in significant changes in
+functionality between the LTS and auditable code bases.
+<<<
+
 [/SECTION]
