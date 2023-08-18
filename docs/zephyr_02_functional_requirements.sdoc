@@ -689,6 +689,9 @@ DISCUSSION_DATE: >>>
 
 [/SECTION]
 
+[SECTION]
+TITLE: Memory protection
+
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -704,37 +707,6 @@ DISCUSSION_DATE: >>>
 <<<
 REVIEW_COMMENT: >>>
 Functional it is memory management, but it also strongly relates to the architecture abstraction and memory access
-<<<
-
-[REQUIREMENT]
-TYPE: Functional
-COMPONENT: Memory Objects
-TITLE: Dynamic Memory Allocation
-STATEMENT: >>>
-Zephyr shall support a memory pool object that allow threads to dynamically allocate variable-sized memory regions from a specified range of memory region in a malloc()-like manner.
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want my application to be able to dynamically allocate memory of a application defined size.
-<<<
-DISCUSSION_DATE: >>>
-2022/10/25 - ok
-<<<
-REVIEW_COMMENT: >>>
-Is dynamic memory allocation only allowed in memory pool objects?
-<<<
-
-[REQUIREMENT]
-TYPE: Functional
-COMPONENT: Memory Objects
-TITLE: Memory Slab Object
-STATEMENT: >>>
-Zephyr shall support a memory slab object that allow threads to dynamically allocate fixed-sized memory regions from a specified range of memory.
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want a most efficient and least fragmentation prone dynamic memory allocation mechanism.
-<<<
-DISCUSSION_DATE: >>>
-2022/10/25 - ok
 <<<
 
 [REQUIREMENT]
@@ -831,7 +803,7 @@ DISCUSSION_DATE: >>>
 
 [REQUIREMENT]
 TYPE: Functional
-COMPONENT: Memory Protection --> Thread
+COMPONENT: TBD: Memory Protection --> Thread
 TITLE: Prevent user threads creating supervisor threads
 STATEMENT: >>>
 Zephyr shall prevent user threads from creating kernel supervisor threads.
@@ -845,7 +817,7 @@ DISCUSSION_DATE: >>>
 
 [REQUIREMENT]
 TYPE: Functional
-COMPONENT: Memory Protection --> Thread
+COMPONENT: TBD: Memory Protection --> Thread
 TITLE: Reduced Privilege Level Threads
 STATEMENT: >>>
 Zephyr shall allow the creation of threads that run in reduced privilege level
@@ -874,23 +846,6 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Memory Protection
-TITLE: Stack Overflow Detection
-STATEMENT: >>>
-Zephyr shall support detection of stack overflows
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want to get an indication when a stack overflow occurs at least during debugging / the development phase, and for safety applications also in a release version of my application.
-<<<
-DISCUSSION_DATE: >>>
-2022/4/26 -reviewed.     Need to determine what to handle.   Well defined hooks?   Separate Requirement
-<<<
-REVIEW_COMMENT: >>>
-RS: IMHO should be configurable due the to performance penalty introduced with it.   - DL:  THere are various modes,  canaries, and they can be turned off.  KS:  Clearly safety & security mechanism.
-<<<
-
-[REQUIREMENT]
-TYPE: Functional
-COMPONENT: Memory Protection
 TITLE: User mode handling of detected stack overflow
 STATEMENT: >>>
 Zephyr shall support a defined mechanism for user mode handling a of detected stack overflow
@@ -903,6 +858,23 @@ DISCUSSION_DATE: >>>
 <<<
 REVIEW_COMMENT: >>>
 Need for handlers and callbacks outside of thread.   Need to be able to answer "Can the safety application rely on Zephyr to reach the safe state after stack overflow occured?"   Can it handle degredaded mode.
+<<<
+
+[REQUIREMENT]
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Stack Overflow Detection
+STATEMENT: >>>
+Zephyr shall support detection of stack overflows
+<<<
+USER_STORY: >>>
+As a Zephyr OS user I want to get an indication when a stack overflow occurs at least during debugging / the development phase, and for safety applications also in a release version of my application.
+<<<
+DISCUSSION_DATE: >>>
+2022/4/26 -reviewed.     Need to determine what to handle.   Well defined hooks?   Separate Requirement
+<<<
+REVIEW_COMMENT: >>>
+RS: IMHO should be configurable due the to performance penalty introduced with it.   - DL:  THere are various modes,  canaries, and they can be turned off.  KS:  Clearly safety & security mechanism.
 <<<
 
 [REQUIREMENT]
@@ -1015,6 +987,39 @@ DISCUSSION_DATE: >>>
 <<<
 REVIEW_COMMENT: >>>
 What is the difference to ZEP 136? Read & Write, while ZEP136 is just read?
+<<<
+
+[/SECTION]
+
+[REQUIREMENT]
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Dynamic Memory Allocation
+STATEMENT: >>>
+Zephyr shall support a memory pool object that allow threads to dynamically allocate variable-sized memory regions from a specified range of memory region in a malloc()-like manner.
+<<<
+USER_STORY: >>>
+As a Zephyr OS user I want my application to be able to dynamically allocate memory of a application defined size.
+<<<
+DISCUSSION_DATE: >>>
+2022/10/25 - ok
+<<<
+REVIEW_COMMENT: >>>
+Is dynamic memory allocation only allowed in memory pool objects?
+<<<
+
+[REQUIREMENT]
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Memory Slab Object
+STATEMENT: >>>
+Zephyr shall support a memory slab object that allow threads to dynamically allocate fixed-sized memory regions from a specified range of memory.
+<<<
+USER_STORY: >>>
+As a Zephyr OS user I want a most efficient and least fragmentation prone dynamic memory allocation mechanism.
+<<<
+DISCUSSION_DATE: >>>
+2022/10/25 - ok
 <<<
 
 [REQUIREMENT]
