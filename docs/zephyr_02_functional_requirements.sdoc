@@ -519,6 +519,9 @@ DISCUSSION_DATE: >>>
 
 [/SECTION]
 
+[SECTION]
+TITLE: Interrupts
+
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Interrupts
@@ -585,6 +588,8 @@ As a Zephyr OS user I want to be able to enable and disable each individual and 
 DISCUSSION_DATE: >>>
 2022/8/29 - ok -pf
 <<<
+
+[/SECTION]
 
 [REQUIREMENT]
 TYPE: Functional
