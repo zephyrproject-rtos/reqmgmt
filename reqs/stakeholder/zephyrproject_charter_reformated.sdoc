@@ -476,4 +476,19 @@ the LTS code base where such changes may result in significant changes in
 functionality between the LTS and auditable code bases.
 <<<
 
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-4.g
+TITLE: Safety Architect service to TSC
+STATEMENT: >>>
+The [Zephyr Project]
+Safety Architect shall serve on the TSC as a “safety maintainer” and is
+responsible for verifying that the Project is following the processes for selected
+standards that the Safety Committee recommends and that the Project is
+appropriately documenting features to move from the LTS code base to the
+auditable code base. It is intended that Maintainers will seek the sign-off from the
+Safety Architect prior to implementing significant changes to the LTS code base
+where such changes may result in significant changes in functionality between the
+LTS and auditable code bases.
+<<<
+
 [/SECTION]
