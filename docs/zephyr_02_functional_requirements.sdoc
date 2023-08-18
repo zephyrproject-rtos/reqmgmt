@@ -303,6 +303,9 @@ DISCUSSION_DATE: >>>
 revisit after subset defined
 <<<
 
+[SECTION]
+TITLE: Device Driver API
+
 [REQUIREMENT]
 TYPE: Functional
 COMPONENT: Device Driver API
@@ -344,6 +347,8 @@ What does "system" mean in this context? Architecture?
 
 NP: Now I think system means HW platform.
 <<<
+
+[/SECTION]
 
 [REQUIREMENT]
 TYPE: Functional
