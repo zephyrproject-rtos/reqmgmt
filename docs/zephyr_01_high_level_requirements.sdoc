@@ -1619,42 +1619,6 @@ Do we need requirements on scheduling latency?
 <<<
 
 [REQUIREMENT]
-UID: ZEP-TIME-002
-TYPE: Functional
-COMPONENT: Timers
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-TIME-001
-TITLE: Kernel Clock
-STATEMENT: >>>
-Zephyr shall provide a interface for checking the current value of the real-time clock
-<<<
-USER_STORY: >>>
-As a Zephyr OS user, I want to be able to track the passed real time in the OS with a dedicated hardware counter and interrupt
-<<<
-DISCUSSION_DATE: >>>
-pf-ok
-<<<
-
-[REQUIREMENT]
-UID: ZEP-TIME-003
-TYPE: Functional
-COMPONENT: Timers
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-TIME-001
-TITLE: Call functions in interrupt context
-STATEMENT: >>>
-Zephyr shall provide an interface to allow schedule user mode call back function triggered by a real time clock value   provide a facility to call user-provided functions in interrupt context based on a system-maintained real-time hardware counter.
-<<<
-USER_STORY: >>>
-As a Zephyr OS user, I want to be able to execute functions in the interrupt context and the interrupt context shall be base on a real-time counter
-<<<
-DISCUSSION_DATE: >>>
-pf-ok
-<<<
-
-[REQUIREMENT]
 UID: ZEP-TRACE-001
 TYPE: High Level
 COMPONENT: Tracing
