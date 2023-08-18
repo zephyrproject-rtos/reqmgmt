@@ -496,4 +496,15 @@ LTS and auditable code bases.
 [SECTION]
 TITLE: Marketing Committee
 
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-5.a
+TITLE: Composition
+STATEMENT: >>>
+The [Zephyr Project] Marketing Committee voting members shall consist of:
+
+i.   one appointed voting representative from each Platinum Member;
+ii.  non-voting representative(s) from any member.
+
+<<<
+
 [/SECTION]
