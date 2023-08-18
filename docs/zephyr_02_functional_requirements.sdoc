@@ -1,5 +1,5 @@
 [DOCUMENT]
-TITLE: Zephyr Requirements
+TITLE: Zephyr Functional Requirements
 
 [GRAMMAR]
 ELEMENTS:
@@ -1039,10 +1039,9 @@ STATEMENT: >>>
 Zephyr shall provide mechanisms for thread synchronization for managing safe communication between threads and to enable waiting for results
 <<<
 USER_STORY: >>>
-=N78 & "
+As a Zephyr OS user I want to able to exchange information between threads in a thread-safe manner guaranteeing data consistence.
 
-+
-What does safe mean, I would not consider safe as in safety"
+What does safe mean, I would not consider safe as in safety.
 <<<
 DISCUSSION_DATE: >>>
 2022/5/25 - need a definition of what is "safe communication"
