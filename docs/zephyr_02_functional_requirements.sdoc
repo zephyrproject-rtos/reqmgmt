@@ -116,6 +116,9 @@ Clarification: Starting and Stopping, and putting it into Stand-By Mode (whateve
 
 [/SECTION]
 
+[SECTION]
+TITLE: C library
+
 [REQUIREMENT]
 UID: ZEP-CLIB-002
 TYPE: Functional
@@ -123,11 +126,12 @@ COMPONENT: C Library
 REFS:
 - TYPE: Parent
   VALUE: ZEP-CLIB-001
+TITLE: Formatted output
 STATEMENT: >>>
 Zephyr shall support formatted output
 <<<
 USER_STORY: >>>
-(targets for printf having varsiable argument list)
+(targets for printf having variable argument list)
 <<<
 DISCUSSION_DATE: >>>
 20221122.0
@@ -140,6 +144,7 @@ COMPONENT: C Library
 REFS:
 - TYPE: Parent
   VALUE: ZEP-CLIB-001
+TITLE: Math library
 STATEMENT: >>>
 Zephyr shall support floating point math libraries for processors where floating point is available.
 <<<
@@ -157,6 +162,7 @@ COMPONENT: C Library
 REFS:
 - TYPE: Parent
   VALUE: ZEP-CLIB-001
+TITLE: Boolean primitives
 STATEMENT: >>>
 Zephyr shall support boolean primitives
 <<<
@@ -174,6 +180,7 @@ COMPONENT: C Library
 REFS:
 - TYPE: Parent
   VALUE: ZEP-CLIB-001
+TITLE: Standard Unix time interface
 STATEMENT: >>>
 Zephyr shall support the standard unix time interface
 <<<
@@ -191,8 +198,9 @@ COMPONENT: C Library
 REFS:
 - TYPE: Parent
   VALUE: ZEP-CLIB-001
+TITLE: Strings support
 STATEMENT: >>>
-Zephyr shall support an interface to manage strings
+Zephyr shall support an interface to manage strings.
 <<<
 USER_STORY: >>>
 https://github.com/zephyrproject-rtos/zephyr/blob/main/lib/libc/minimal/include/strings.h
@@ -208,6 +216,7 @@ COMPONENT: C Library
 REFS:
 - TYPE: Parent
   VALUE: ZEP-CLIB-001
+TITLE: Moving/copying regions of memory
 STATEMENT: >>>
 Zephyr shall support an interface to move contents between regions of memory
 <<<
@@ -225,14 +234,18 @@ COMPONENT: C Library
 REFS:
 - TYPE: Parent
   VALUE: ZEP-CLIB-001
+TITLE: I/O based interface
 STATEMENT: >>>
-Zephyr shall support a file i/O based interface for driver communication.
+Zephyr shall support a file I/O based interface for driver communication.
 <<<
 USER_STORY: >>>
 https://github.com/zephyrproject-rtos/zephyr/blob/main/lib/libc/minimal/include/stdint.h
 <<<
 DISCUSSION_DATE: >>>
 20221122.0
+<<<
+REVIEW_COMMENT: >>>
+A wrong C header seems to be included: stdint.h does not have to do with I/O.
 <<<
 
 [REQUIREMENT]
@@ -242,6 +255,7 @@ COMPONENT: C Library
 REFS:
 - TYPE: Parent
   VALUE: ZEP-CLIB-001
+TITLE: C99 integer types
 STATEMENT: >>>
 Zephyr shall support standard C99 integer types
 <<<
@@ -259,6 +273,7 @@ COMPONENT: C Library
 REFS:
 - TYPE: Parent
   VALUE: ZEP-CLIB-001
+TITLE: Error number conventions (IEEE Std 1003.1-2017)
 STATEMENT: >>>
 Zephyr shall support standard system error numbers as defined by IEEE Std 1003.1-2017
 <<<
@@ -276,6 +291,7 @@ COMPONENT: C Library
 REFS:
 - TYPE: Parent
   VALUE: ZEP-CLIB-001
+TITLE: Selected C libraries documentation in the Zephyr Safety Manual
 STATEMENT: >>>
 The set of C Libraries supported by Zephyr needs to be defined documented in the Zephyr Safety Manual
 <<<
@@ -283,7 +299,7 @@ USER_STORY: >>>
 As a Zephyr OS user implementing a safety application I want to have documented which C library functions are supported.
 <<<
 DISCUSSION_DATE: >>>
-revisit after subset defined
+TBD: Revisit after subset defined.
 <<<
 
 [REQUIREMENT]
@@ -293,6 +309,7 @@ COMPONENT: C Library
 REFS:
 - TYPE: Parent
   VALUE: ZEP-CLIB-001
+TITLE: Support external C libraries documentation in Zephyr Safety Manual
 STATEMENT: >>>
 The Zephyr Safety Manual needs to specify how to configure the support of external C Libraries
 <<<
@@ -300,8 +317,10 @@ USER_STORY: >>>
 As a Zephyr OS user implementing a safety application I want to have documented how I am allowed to configure (KConfig) Zephyr OS.
 <<<
 DISCUSSION_DATE: >>>
-revisit after subset defined
+TBD: Revisit after subset defined.
 <<<
+
+[/SECTION]
 
 [SECTION]
 TITLE: Device Driver API
