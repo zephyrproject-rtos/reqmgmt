@@ -56,3 +56,85 @@ providing structure around the business and technical governance of the Project.
 <<<
 
 [/SECTION]
+
+[SECTION]
+TITLE: Membership.
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-2.a
+TITLE: Composition
+STATEMENT: >>>
+The [Zephyr] Project shall be composed of Platinum, Silver and Associate Members. All
+Members must be current corporate members of The Linux Foundation at any
+level to participate in the Project. Anyone may contribute to the Project’s
+technical codebase regardless of membership status. All participants in the
+Project, including Associate Members, enjoy the privileges and undertake the
+obligations described in this Charter, as from time to time amended by the
+Governing Board with the approval of The Linux Foundation and will comply
+with all such policies as The Linux Foundation Board of Directors and/or the
+Project may from time to time adopt with notice to members.
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-2.b
+TITLE: Associate Membership
+STATEMENT: >>>
+The [Zephyr Project] Associate Member category of membership is limited to non-profits,
+academic institutions, open source projects, and government entities, and requires
+approval by the Governing Board, or, if the Governing Board sets criteria for
+joining as an Associate Member, the meeting of such criteria. If the Associate
+Member is a membership organization, Associate Membership in Project does not
+confer any benefits or rights to the members of the Associate Member.
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-2.c
+TITLE: Platinum Membership
+STATEMENT: >>>
+[The Zephyr Project]
+Platinum Members shall be entitled to appoint a representative to the Governing
+Board, Security Committee, Safety Committee, Marketing Committee and any
+other committees established by the Governing Board.
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-2.d
+TITLE: Silver Membership
+STATEMENT: >>>
+[The Zephyr Project]
+Silver Members shall be entitled to annually elect one representative to the
+Governing Board for every 10 Silver Members (rounding down to the nearest
+whole number) up to a maximum of three representatives; provided there shall
+always be, when there is one or more Silver Members, at least one Silver Member
+representative, even if there are less than 10 Silver Members.
+<<<
+
+[SECTION]
+TITLE: Platinum, Silver and Assicate Membership Entitlements
+
+[FREETEXT]
+[The Zephyr Project] Platinum Members, Silver Members and Associate Members shall be entitled to [all of the following]:
+
+[/FREETEXT]
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-2.e.i
+STATEMENT: >>>
+[The Zephyr Project Platinum Members, Silver Members and Associate Members
+shall be entitled to]
+participate in Project meetings (other than meetings of the Governing
+Board and Security Committee, participation in which is limited as
+described in this Charter), initiatives, events and any other activities;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-2.e.ii
+STATEMENT: >>>
+[The Zephyr Project Platinum Members, Silver Members and Associate Members
+shall be entitled to]
+identify their company as a member of, or participant in, the Project.
+<<<
+
+[/SECTION]
+
+[/SECTION]
