@@ -598,6 +598,24 @@ Committee.
 [SECTION]
 TITLE: Conduct of Meetings
 
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-6.d.i
+STATEMENT: >>>
+[The Zephyr Project Security] Committee meetings shall be limited to the Security Committee
+representatives and invited guests and follow the requirements for quorum
+and voting outlined in this Charter. The Security Committee may decide
+whether to allow one named representative to attend as an alternate.
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-6.d.ii
+STATEMENT: >>>
+[The Zephyr Project Security] Committee meetings shall be confidential unless approved by the Security
+Committee. The Committee may invite guests to participate in Security
+Committee topics. Except as approved by the Committee, minutes of the
+meetings of the Security Committee will not be published.
+<<<
+
 [/SECTION]
 
 [/SECTION]
