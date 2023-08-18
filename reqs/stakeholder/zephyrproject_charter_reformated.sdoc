@@ -619,3 +619,86 @@ meetings of the Security Committee will not be published.
 [/SECTION]
 
 [/SECTION]
+
+[SECTION]
+TITLE: Safety Committee
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-7.a
+TITLE: Composition
+STATEMENT: >>>
+The [Zephyr Project] Safety Committee members shall consist of:
+
+i.   one appointed voting representative from each Platinum Member, plus
+ii.  non-voting Silver Member representatives who shall not count towards
+     quorum.
+
+<<<
+
+[SECTION]
+TITLE: Responsibilities
+
+[FREETEXT]
+The [Zephyr Project] Safety Commitee shall be responsible for [all of the following]:
+
+[/FREETEXT]
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-7.b.i
+STATEMENT: >>>
+[The Zephyr Project Safety Committee shall be responsible for]
+the definition of the processes to ensure an auditable code base, as well as
+any associated certification artifacts (“Safety Artifacts”);
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-7.b.ii
+STATEMENT: >>>
+[The Zephyr Project Safety Committee shall be responsible to]
+annually elect a Representative on the Safety Committee to serve as
+chair of the Safety Committee;
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-7.b.iii
+STATEMENT: >>>
+[The Zephyr Project Safety Committee shall be responsible to]
+annually elect a safety architect (the “Safety Architect”), who may be
+different from the chair of the Safety Committee.
+<<<
+
+[/SECTION]
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-7.c
+TITLE: Safety Artifacts Access
+STATEMENT: >>>
+Unless otherwise approved by the [Zephyr Project] Governing Board, only
+Platinum Members will have access to the Safety Artifacts released by the
+Committee.
+<<<
+
+[SECTION]
+TITLE: Conduct of Meetings
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-7.d.i
+STATEMENT: >>>
+[The Zephyr Project Safety] Committee meetings shall be limited to the Safety Committee
+representatives and invited guests and follow the requirements for quorum
+and voting outlined in this Charter. The Safety Committee may decide
+whether to allow one named representative to attend as an alternate.
+<<<
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-7.d.ii
+STATEMENT: >>>
+The [Zephyr Project Safety] Committee meetings shall be confidential unless approved by the
+Safety Committee. The Committee may invite guests to participate in
+Security Committee topics. Except as approved by the Safety Committee,
+minutes of the meetings of the Security Committee will not be published.
+<<<
+
+[/SECTION]
+
+[/SECTION]
