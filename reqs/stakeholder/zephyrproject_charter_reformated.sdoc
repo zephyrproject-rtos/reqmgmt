@@ -586,4 +586,13 @@ different from the chair of the Security Committee.
 
 [/SECTION]
 
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-6.c
+TITLE: Security Artifacts Access
+STATEMENT: >>>
+Unless otherwise approved by the [Zephyr Project] Governing Board, only
+Platinum Members will have access to the Security Artifacts released by the
+Committee.
+<<<
+
 [/SECTION]
