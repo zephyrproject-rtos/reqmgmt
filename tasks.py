@@ -47,6 +47,12 @@ def run_invoke(
 
 @task()
 def import_excel(context, path_to_excel):
+    """
+    This task calls into a Python script that was used to import the Zephyr
+    requirements from the original Excel table.
+    Keeping it around for some time in case if someone would want to
+    reproduce the import.
+    """
     assert os.path.isfile(path_to_excel)
     clean_command = f"""
         python tools/import_zephyr_from_excel.py "{path_to_excel}"
@@ -55,7 +61,20 @@ def import_excel(context, path_to_excel):
 
 
 @task()
-def strictdoc(context):
+def html(context):
+    """
+    This task can be used as a simple shortcut to generate the static HTML export.
+    """
     run_invoke(context, """
-        strictdoc export docs/
+        strictdoc export .
+    """)
+
+
+@task()
+def server(context):
+    """
+    This task can be used as a simple shortcut to start StrictDoc's web server.
+    """
+    run_invoke(context, """
+        strictdoc server .
     """)
