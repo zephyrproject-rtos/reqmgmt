@@ -351,4 +351,29 @@ v.   appointed representatives from the technical community approved by the
 
 <<<
 
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-4.b
+TITLE: Voting opt-out
+STATEMENT: >>>
+[The Zephyr Project]
+Platinum and Silver Members may choose to opt out of a voting seat on the TSC.
+Members who opt out and then wish to reclaim their seat later will have their
+voting rights restored at the start of the second consecutive meeting attended
+following notification to the TSC Chair.
+
+[REQUIREMENT]
+UID: ZEPHYRPROJECT_CHARTER-4.c
+TITLE: Responsibilities for defining Technical Roles and Contribution Guidelines
+STATEMENT: >>>
+The [Zephyr Project] TSC will define and maintain documented roles and contribution guidelines
+for the [Zephyr] Project technical community, including:
+
+i.   the process for assigning and revoking roles,
+ii.  the process for acceptance or rejection of contributions and releases,
+iii. procedures for the submission, approval and closure/archiving of sub-
+     projects, and
+iv.  other processes for the Project community.
+
+<<<
+
 [/SECTION]
