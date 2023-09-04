@@ -8,6 +8,9 @@ ELEMENTS:
   - TITLE: UID
     TYPE: String
     REQUIRED: False
+  - TITLE: STATUS
+    TYPE: String
+    REQUIRED: False
   - TITLE: TYPE
     TYPE: String
     REQUIRED: False
@@ -38,6 +41,7 @@ TITLE: Hardware Architecture Interface
 
 [REQUIREMENT]
 UID: ZEP-ARCH-002
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 REFS:
@@ -56,6 +60,7 @@ DISCUSSION_DATE: >>>
 
 [REQUIREMENT]
 UID: ZEP-ARCH-003
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 REFS:
@@ -74,6 +79,7 @@ DISCUSSION_DATE: >>>
 
 [REQUIREMENT]
 UID: ZEP-ARCH-004
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 REFS:
@@ -92,6 +98,7 @@ DISCUSSION_DATE: >>>
 
 [REQUIREMENT]
 UID: ZEPH-ARCH-005
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 REFS:
@@ -121,6 +128,7 @@ TITLE: C library
 
 [REQUIREMENT]
 UID: ZEP-CLIB-002
+STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
 REFS:
@@ -139,6 +147,7 @@ DISCUSSION_DATE: >>>
 
 [REQUIREMENT]
 UID: ZEP-CLIB-003
+STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
 REFS:
@@ -157,6 +166,7 @@ DISCUSSION_DATE: >>>
 
 [REQUIREMENT]
 UID: ZEP-CLIB-004
+STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
 REFS:
@@ -175,6 +185,7 @@ DISCUSSION_DATE: >>>
 
 [REQUIREMENT]
 UID: ZEP-CLIB-005
+STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
 REFS:
@@ -193,6 +204,7 @@ DISCUSSION_DATE: >>>
 
 [REQUIREMENT]
 UID: ZEP-CLIB-006
+STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
 REFS:
@@ -211,6 +223,7 @@ DISCUSSION_DATE: >>>
 
 [REQUIREMENT]
 UID: ZEP-CLIB-007
+STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
 REFS:
@@ -229,6 +242,7 @@ DISCUSSION_DATE: >>>
 
 [REQUIREMENT]
 UID: ZEP-CLIB-008
+STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
 REFS:
@@ -250,6 +264,7 @@ A wrong C header seems to be included: stdint.h does not have to do with I/O.
 
 [REQUIREMENT]
 UID: ZEP-CLIB-009
+STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
 REFS:
@@ -268,6 +283,7 @@ DISCUSSION_DATE: >>>
 
 [REQUIREMENT]
 UID: ZEP-CLIB-010
+STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
 REFS:
@@ -286,6 +302,7 @@ DISCUSSION_DATE: >>>
 
 [REQUIREMENT]
 UID: ZEP-CLIB-011
+STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
 REFS:
@@ -304,6 +321,7 @@ TBD: Revisit after subset defined.
 
 [REQUIREMENT]
 UID: ZEP-CLIB-012
+STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
 REFS:
@@ -326,6 +344,7 @@ TBD: Revisit after subset defined.
 TITLE: Device Driver API
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Device Driver API
 TITLE: Device Driver Abstraction
@@ -349,6 +368,7 @@ Clarification: Abstract API drivers, UART. Set of files asociated with that. Inc
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Device Driver API
 TITLE: Expose kernel to hardware interrupts
@@ -373,6 +393,7 @@ NP: Now I think system means HW platform.
 TITLE: Fatal Exception Handling
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Fatal Exception Handling
 TITLE: Fatal Exception Error Handler
@@ -387,6 +408,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Fatal Error Handling
 TITLE: Default handler for fatal errors
@@ -401,6 +423,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Fatal Error Handling
 TITLE: Assigning a specific handler
@@ -409,6 +432,7 @@ Zephyr shall provide an interface to assign a specific handler with an exception
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Fatal Error Handling
 TITLE: Assigning a specific handler (2)
@@ -422,6 +446,7 @@ Zephyr shall provide an interface to assign a specific handler for a fatal error
 TITLE: File System
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: File System
 TITLE: Create file
@@ -436,6 +461,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: File System
 TITLE: Open files
@@ -451,6 +477,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: File System
 TITLE: Read files
@@ -465,6 +492,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: File System
 TITLE: Write to files
@@ -479,6 +507,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: File System
 TITLE: Close file
@@ -493,6 +522,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: File System
 TITLE: Move file
@@ -504,6 +534,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: File System
 TITLE: Delete file
@@ -523,6 +554,7 @@ DISCUSSION_DATE: >>>
 TITLE: Interrupts
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Service routine for handling interrupts (ISR)
@@ -537,6 +569,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Multi-level interrupts
@@ -551,6 +584,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Associating application code with interrupts
@@ -565,6 +599,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Enabling interrupts
@@ -576,6 +611,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Enable and disable interrupts at runtime
@@ -595,6 +631,7 @@ DISCUSSION_DATE: >>>
 TITLE: Logging
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Logging
 TITLE: Dedicated Logging Thread Support
@@ -609,6 +646,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Logging
 TITLE: Logs available for post processing
@@ -623,6 +661,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Logging
 TITLE: Formatting log messages
@@ -640,6 +679,7 @@ Question: formatting in which way? length, color, tags, etc?
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Logging
 TITLE: Logging Filtering Support
@@ -657,6 +697,7 @@ Question: Filtering during runtime or a kconfig option to initially set the filt
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Logging
 TITLE: Multiple Backend Logging Support
@@ -674,6 +715,7 @@ Question: What kind of backends shall be supported? More than one at a time?   W
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Logging
 TITLE: Deferred Logging Support
@@ -693,6 +735,7 @@ DISCUSSION_DATE: >>>
 TITLE: Memory protection
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Memory Protection
@@ -710,6 +753,7 @@ Functional it is memory management, but it also strongly relates to the architec
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Granting access to kernel objects
@@ -727,6 +771,7 @@ What are the conditions to a user thread to get access to a kernel object?
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Separation between user and kernel threads for memory access
@@ -741,6 +786,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Safely handle unimplemented calls or invalid system calls
@@ -758,6 +804,7 @@ What is an "unimplemented system call"? An empty system call function? Can I cal
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Response to invalid system call IDs
@@ -772,6 +819,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Prevent user threads creating higher priority threasds
@@ -788,6 +836,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Revoking threads permissions on a kernel object
@@ -802,6 +851,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: TBD: Memory Protection --> Thread
 TITLE: Prevent user threads creating supervisor threads
@@ -816,6 +866,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: TBD: Memory Protection --> Thread
 TITLE: Reduced Privilege Level Threads
@@ -830,6 +881,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: User Mode Threads Performing Privileged Operations
@@ -844,6 +896,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: User mode handling of detected stack overflow
@@ -861,6 +914,7 @@ Need for handlers and callbacks outside of thread.   Need to be able to answer "
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Stack Overflow Detection
@@ -878,6 +932,7 @@ RS: IMHO should be configurable due the to performance penalty introduced with i
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Boot Time Memory Access Policy
@@ -895,6 +950,7 @@ What does "policy" mean in this context? Does this mean to choose between differ
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: System Call Handler Functions
@@ -912,6 +968,7 @@ I do not understand that. What kind of helper functions? Kind of plausibility ch
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: System Call C strings in user mode
@@ -934,6 +991,7 @@ Is this a helper function like mentioned in ZEP133? What does C string mean here
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Tracking kernel objects in used by usermode threads
@@ -956,6 +1014,7 @@ Does this mean that the user mode threads are monitored wrt to their usage of ke
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Granting threads access to specific memory
@@ -973,6 +1032,7 @@ What is the difference to ZEP 011?
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Assigning memory pools to act as a thread resource pool
@@ -995,6 +1055,7 @@ What is the difference to ZEP 136? Read & Write, while ZEP136 is just read?
 TITLE: Memory Objects
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Objects
 TITLE: Dynamic Memory Allocation
@@ -1012,6 +1073,7 @@ Is dynamic memory allocation only allowed in memory pool objects?
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Objects
 TITLE: Memory Slab Object
@@ -1031,6 +1093,7 @@ DISCUSSION_DATE: >>>
 TITLE: Data Passing
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: see: https://docs.zephyrproject.org/latest/reference/kernel/index.html - Data Passing
 TITLE: Traditional FIFO Queue
@@ -1045,6 +1108,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: see: https://docs.zephyrproject.org/latest/reference/kernel/index.html - Data Passing
 TITLE: Traditional LIFO queue
@@ -1064,6 +1128,7 @@ DISCUSSION_DATE: >>>
 TITLE: Mutex
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Mutex
 TITLE: Mutex Kernel Object
@@ -1089,6 +1154,7 @@ Concern over phrase recursive.  What is it MUTEXing? Memory Management?
 TITLE: Power Management
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Power Management
 TITLE: Power State Control
@@ -1105,6 +1171,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Power Management
 TITLE: Power Management - TBD
@@ -1116,6 +1183,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Power Management
 TITLE: Notification of changes to system power states
@@ -1132,6 +1200,7 @@ DISCUSSION_DATE: >>>
 TITLE: Thread Communication
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Mailbox
@@ -1148,6 +1217,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Exchanging data between threads
@@ -1162,6 +1232,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Waiting for results during communication
@@ -1176,6 +1247,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Stack
@@ -1193,6 +1265,7 @@ stack of what?
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Traditional Counting Semaphore
@@ -1206,6 +1279,7 @@ Architectural & interface REQ
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Poll Operation Support
@@ -1217,6 +1291,7 @@ As a Zephyr OS user I want my thread to wait for one of several defined events t
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Pipe Kernel Object
@@ -1231,6 +1306,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Message Queue Kernel Object
@@ -1247,6 +1323,7 @@ This might be too implementation specific. Better: Zephyr shall allow threads an
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Mailbox Abstraction
@@ -1263,6 +1340,7 @@ As a Zephyr OS user I want to... ???
 TITLE: Thread Scheduling
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Mapping (should it just be scheduling) -
 TITLE: Support operation on more than one CPU
@@ -1276,6 +1354,7 @@ Is see it as an internal hidden from the user.
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Mapping (should it just be scheduling)
 TITLE: Running threads on specific CPUs
@@ -1290,6 +1369,7 @@ pf-ok
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Mapping (should it just be scheduling?)
 TITLE: Exclusion between physical CPUs
@@ -1305,6 +1385,7 @@ pf-ok
 
 [REQUIREMENT]
 UID: ZEP-SCHED-002
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Creating threads
@@ -1316,6 +1397,7 @@ pf-ok
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Setting thread priority
@@ -1327,6 +1409,7 @@ pf-ok
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Suspending a thread
@@ -1338,6 +1421,7 @@ pf-ok
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Resuming a suspended thread
@@ -1349,6 +1433,7 @@ pf-ok
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TITLE: Resuming a suspended thread after a timeout
 STATEMENT: >>>
 Zephyr shall provide an interface to resume a suspended thread after a timeout
@@ -1358,6 +1443,7 @@ pf-ok
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Deleting a thread
@@ -1369,6 +1455,7 @@ pf-ok
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Scheduling a thread based on an event
@@ -1383,6 +1470,7 @@ pf-ok
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Meta-IRQ Priorities
@@ -1397,6 +1485,7 @@ Does this make sense in the safety scope? It is conflicting with ZEP151.
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Deadline Scheduling Priorities
@@ -1408,6 +1497,7 @@ As a Zephyr OS user, I want to be able to schedule threads by earliest deadine f
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Work Queue utility capable of running preemptible work items
@@ -1423,6 +1513,7 @@ Implementation detail.   Consider as a sub requirent?   Why do we need this?
 
 [REQUIREMENT]
 UID: ZEP-SCHED-#
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Run user supplied functions in-order in a separate thread(s)
@@ -1440,6 +1531,7 @@ Where do we put this,  thread, scheduling or???
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Organize running threads into a fixed list
@@ -1457,6 +1549,7 @@ Zephyr shall allow priorising threads
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Preemption support
@@ -1471,6 +1564,7 @@ Need to break this down to atomic level
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Un-preemptable thread priorities
@@ -1485,6 +1579,7 @@ Need to break this down to atomic level
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Time sharing of CPU resources
@@ -1507,6 +1602,7 @@ what does traditional mean here?   Round robin?
 TITLE: Threads
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Threads
 TITLE: Thread Support
@@ -1525,6 +1621,7 @@ Mechanism for this is mutex; so just link this here as well as others
 
 [REQUIREMENT]
 UID: ZEP-THREAD-002
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Threads
 TITLE: Thread privileges
@@ -1537,6 +1634,7 @@ pf-ok
 
 [REQUIREMENT]
 UID: ZEP-THREAD-003
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Threads
 TITLE: Scheduling multiple threads
@@ -1548,6 +1646,7 @@ pf-ok
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Threads
 TITLE: Threads - TBD
@@ -1565,6 +1664,7 @@ TITLE: Timers
 
 [REQUIREMENT]
 UID: ZEP-TIME-002
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Timers
 REFS:
@@ -1583,6 +1683,7 @@ pf-ok
 
 [REQUIREMENT]
 UID: ZEP-TIME-003
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Timers
 REFS:
@@ -1606,6 +1707,7 @@ TITLE: Tracing
 
 [REQUIREMENT]
 UID: ZEP-TRACE-002
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Tracing
 TITLE: Initializing a trace
@@ -1618,6 +1720,7 @@ pf-ok
 
 [REQUIREMENT]
 UID: ZEP-TRACE-003
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Tracing
 TITLE: Triggering a trace
@@ -1630,6 +1733,7 @@ pf-ok
 
 [REQUIREMENT]
 UID: ZEP-TRACE-004
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Tracing
 TITLE: Dumping trace results
@@ -1642,6 +1746,7 @@ pf-ok
 
 [REQUIREMENT]
 UID: ZEP-TRACE-005
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Tracing
 TITLE: Removing trace data
@@ -1654,6 +1759,7 @@ pf-ok
 
 [REQUIREMENT]
 UID: ZEP-TRACE-006
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Tracing
 TITLE: Tracing Object  Identification
@@ -1672,6 +1778,7 @@ What objects?   hardware devices, code, ....
 
 [REQUIREMENT]
 UID: ZEP-TRACE-007
+STATUS: Draft
 TYPE: Functional
 COMPONENT: Tracing
 TITLE: Tracing Non-Interference
