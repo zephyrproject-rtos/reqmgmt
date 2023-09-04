@@ -8,6 +8,9 @@ ELEMENTS:
   - TITLE: UID
     TYPE: String
     REQUIRED: False
+  - TITLE: STATUS
+    TYPE: String
+    REQUIRED: False
   - TITLE: TYPE
     TYPE: String
     REQUIRED: False
@@ -35,6 +38,7 @@ ELEMENTS:
 
 [REQUIREMENT]
 UID: ZEP-ARCH-001
+STATUS: Draft
 TYPE: High Level
 COMPONENT: Hardware Architecture Interface (KS: Should this be Abstraction rather than Architecture?)
 TITLE: Architecture Layer Interface
@@ -55,6 +59,7 @@ TBD: The statement seems to be too broad.
 
 [REQUIREMENT]
 UID: ZEP-ARCH-006
+STATUS: Draft
 TYPE: High Level
 COMPONENT: Hardware Architecture Interface
 REFS:
@@ -76,6 +81,7 @@ From the Docs: No special application code needs to be written to take advantage
 
 [REQUIREMENT]
 UID: ZEP-CLIB-001
+STATUS: Draft
 TYPE: High Level
 COMPONENT: C Library
 TITLE: C Library Support
@@ -97,6 +103,7 @@ TBD: The requirement needs refinement.
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: High Level
 COMPONENT: Utilities Library - Data Structures
 TITLE: Data Structures Library Utilities
@@ -116,6 +123,7 @@ Clarification: There are many files. Linked list, ring buffer, ...). This is an 
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: High Level
 COMPONENT: Device Driver API
 TITLE: Device Driver Abstracting
@@ -133,6 +141,7 @@ TBD: Title seems to need refinement. Also, this requirement's user story seems t
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: High Level
 COMPONENT: Exception Handling
 TITLE: Fatal Exception handling
@@ -147,6 +156,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: High Level
 COMPONENT: File Systems
 TITLE: Common File system operation support
@@ -161,6 +171,7 @@ TBD: 2022/4/13 - ok - p? - depends on set of expectations
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: High Level
 COMPONENT: Interrupts
 TITLE: Interrupt Service Routine
@@ -175,6 +186,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: High Level
 COMPONENT: Logging
 TITLE: Logging
@@ -192,6 +204,7 @@ Nicole: TBD: we need to have logging in the safety scope?
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: High Level
 COMPONENT: Memory Management
 TITLE: Memory Management framework
@@ -206,6 +219,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: High Level
 COMPONENT: Power Management
 TITLE: Power Management
@@ -220,6 +234,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: High Level
 COMPONENT: Thread Communication
 TITLE: Mutex
@@ -234,6 +249,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+STATUS: Draft
 TYPE: High Level
 COMPONENT: Thread Mapping (should it just be scheduling)
 TITLE: Multiple CPU scheduling
@@ -249,6 +265,7 @@ pf-ok
 
 [REQUIREMENT]
 UID: ZEP-SCHED-001
+STATUS: Draft
 TYPE: High Level
 COMPONENT: Thread Scheduling
 TITLE: Scheduling
@@ -267,6 +284,7 @@ TBD: The statement contains two separate statements.
 
 [REQUIREMENT]
 UID: ZEP-THREAD-001
+STATUS: Draft
 TYPE: High Level
 COMPONENT: Threads
 TITLE: Managing threads
@@ -285,6 +303,7 @@ TBD: Nothing about priorities...
 
 [REQUIREMENT]
 UID: ZEP-TIME-001
+STATUS: Draft
 TYPE: High Level
 COMPONENT: Timers
 TITLE: Timers
@@ -303,6 +322,7 @@ TBD: Do we need requirements on scheduling latency?
 
 [REQUIREMENT]
 UID: ZEP-TRACE-001
+STATUS: Draft
 TYPE: High Level
 COMPONENT: Tracing
 TITLE: Tracing
