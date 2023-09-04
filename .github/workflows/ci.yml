@@ -21,7 +21,7 @@ jobs:
             source ./venv/bin/activate
             pip install -r requirements.txt
       
-      - name: Check with doorstop
+      - name: Check with StrictDoc
         run: |
             source ./venv/bin/activate
-            doorstop
+            strictdoc export .
