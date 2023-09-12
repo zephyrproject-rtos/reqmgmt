@@ -40,21 +40,16 @@ ELEMENTS:
 UID: ZEP-ARCH-001
 STATUS: Draft
 TYPE: High Level
-COMPONENT: Hardware Architecture Interface (KS: Should this be Abstraction rather than Architecture?)
+COMPONENT: Hardware Architecture Interface
 TITLE: Architecture Layer Interface
 STATEMENT: >>>
-Zephyr shall provide a framework for applications running on Zephyr to communicate with the hardware architectural service available from Zephyr for the system.
+Zephyr shall provide a framework to communicate with a set of hardware architectural services
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want to be able to easily switch my application to a different MCU architecture (x86, ARM Cortex-M/A, RISCV etc.)
 <<<
 DISCUSSION_DATE: >>>
 2022/3/30 - ok - pf
-<<<
-REVIEW_COMMENT: >>>
-TBD: The COMPONENT field needs refinement.
-
-TBD: The statement seems to be too broad.
 <<<
 
 [REQUIREMENT]
@@ -67,7 +62,7 @@ REFS:
   VALUE: ZEP-ARCH-001
 TITLE: Support multiprocessor management
 STATEMENT: >>>
-Zephyr shall support multiprocessing management facilities.
+Zephyr shall support symmetric multiprocessing on multiple cores.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want to use Zephyr OS on multi core (SMP-)MCUs/MPUs.
@@ -84,9 +79,9 @@ UID: ZEP-CLIB-001
 STATUS: Draft
 TYPE: High Level
 COMPONENT: C Library
-TITLE: C Library Support
+TITLE: Support Subset of Standard C Library
 STATEMENT: >>>
-Zephyr shall support a hooks to interface to a subset of the standard C library.
+Zephyr shall support a subset of the standard C library.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want to have a selection of standard C library implementations e.g. a full extend and a minimal with a smaller footprint or a particular fast executing implementation.
@@ -308,7 +303,7 @@ TYPE: High Level
 COMPONENT: Timers
 TITLE: Timers
 STATEMENT: >>>
-Zephyr shall provide a framework abstraction for managing time-based events.
+Zephyr shall provide a framework for managing time-based events.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user, I want to start, suspend, resume and stop timers which shall trigger an event on a set expiration time.
