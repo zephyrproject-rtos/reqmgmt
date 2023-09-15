@@ -43,10 +43,10 @@ TYPE: High Level
 COMPONENT: Hardware Architecture Interface
 TITLE: Architecture Layer Interface
 STATEMENT: >>>
-Zephyr shall provide a framework to communicate with a set of hardware architectural services
+Zephyr shall provide a framework to communicate with a set of hardware architectural services.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to easily switch my application to a different MCU architecture (x86, ARM Cortex-M/A, RISCV etc.)
+As a Zephyr OS user I want to be able to easily switch my application to a different MCU architecture (x86, ARM Cortex-M/A, RISCV etc.).
 <<<
 DISCUSSION_DATE: >>>
 2022/3/30 - ok - pf
@@ -186,7 +186,7 @@ TYPE: High Level
 COMPONENT: Logging
 TITLE: Logging
 STATEMENT: >>>
-Zephyr shall provide a framework for logging events
+Zephyr shall provide a framework for logging events.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want to be able to log application defined events as well as framework exceptions.
