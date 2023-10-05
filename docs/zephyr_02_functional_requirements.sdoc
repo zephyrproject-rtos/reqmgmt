@@ -390,15 +390,15 @@ NP: Now I think system means HW platform.
 [/SECTION]
 
 [SECTION]
-TITLE: Fatal Exception Handling
+TITLE: Exception and Error Handling
 
 [REQUIREMENT]
 STATUS: Draft
 TYPE: Functional
-COMPONENT: Fatal Exception Handling
+COMPONENT: Exception and Error Handling
 TITLE: Fatal Exception Error Handler
 STATEMENT: >>>
-Zephyr shall provide default handlers for exceptions that do not have a dedicated handler.
+Zephyr shall provide default handlers for exceptions.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want execptions which I did not handle explicitely (by mistake or on purpose) to be caught by a default handler, defined either by Zephyr OS or by myself.
@@ -410,7 +410,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 STATUS: Draft
 TYPE: Functional
-COMPONENT: Fatal Error Handling
+COMPONENT: Exception and Error Handling
 TITLE: Default handler for fatal errors
 STATEMENT: >>>
 Zephyr shall provide default handlers for fatal errors that do not have a dedicated handler.
@@ -425,7 +425,7 @@ DISCUSSION_DATE: >>>
 [REQUIREMENT]
 STATUS: Draft
 TYPE: Functional
-COMPONENT: Fatal Error Handling
+COMPONENT: Exception and Error Handling
 TITLE: Assigning a specific handler
 STATEMENT: >>>
 Zephyr shall provide an interface to assign a specific handler with an exception.
@@ -434,7 +434,7 @@ Zephyr shall provide an interface to assign a specific handler with an exception
 [REQUIREMENT]
 STATUS: Draft
 TYPE: Functional
-COMPONENT: Fatal Error Handling
+COMPONENT: Exception and Error Handling
 TITLE: Assigning a specific handler (2)
 STATEMENT: >>>
 Zephyr shall provide an interface to assign a specific handler for a fatal error.
@@ -574,10 +574,10 @@ TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Multi-level interrupts
 STATEMENT: >>>
-Where supported by hardware, Zephyr shall support multi-level preemptive interrupt priorities, when supported by hardware.   Note:  detailed analysis to demonstrate non interferenace will be needed here.
+Zephyr shall support multi-level preemptive interrupt priorities, when supported by hardware. Note: detailed analysis to demonstrate non interferenace will be needed here.
 <<<
 USER_STORY: >>>
-=N37
+TBD
 <<<
 DISCUSSION_DATE: >>>
 2022/4/13 - ok - pf
@@ -589,10 +589,10 @@ TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Associating application code with interrupts
 STATEMENT: >>>
-Zephyr shall provide an interface mechanisms for associating application code with specific interrupts.  ( CLARIFY: Can it be a deferred procedure call at interrupt context?  Would be different requirement)
+Zephyr shall provide an interface for associating application code with specific interrupts. (CLARIFY: Can it be a deferred procedure call at interrupt context? Would be different requirement)
 <<<
 USER_STORY: >>>
-=N37
+TBD
 <<<
 DISCUSSION_DATE: >>>
 2022/4/13 - ok - pf
@@ -606,6 +606,9 @@ TITLE: Enabling interrupts
 STATEMENT: >>>
 Zephyr shall provide mechanisms to enable interrupts.
 <<<
+USER_STORY: >>>
+As a Zephyr OS user I want to be able to enable each individual and a global interrupt according to my applications needs during program execution.
+<<<
 DISCUSSION_DATE: >>>
 2022/8/29 - ok -pf
 <<<
@@ -614,12 +617,12 @@ DISCUSSION_DATE: >>>
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts
-TITLE: Enable and disable interrupts at runtime
+TITLE: Disabling interrupts
 STATEMENT: >>>
 Zephyr shall provide mechanisms to disable interrupts.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to enable and disable each individual and a global interrupt according to my applications needs during program execution.
+As a Zephyr OS user I want to be able to disable each individual and a global interrupt according to my applications needs during program execution.
 <<<
 DISCUSSION_DATE: >>>
 2022/8/29 - ok -pf
@@ -702,7 +705,7 @@ TYPE: Functional
 COMPONENT: Logging
 TITLE: Multiple Backend Logging Support
 STATEMENT: >>>
-Zephyr shall support logging messages to multiple hardware system resources.
+Zephyr shall support logging messages to multiple system resources.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want to be able to simultaneously log to different channels which may store / redirect the information on / to different hardware (EEPROM, Flash, FRAM, UART, Ethernet, USB etc.).
@@ -720,7 +723,7 @@ TYPE: Functional
 COMPONENT: Logging
 TITLE: Deferred Logging Support
 STATEMENT: >>>
-Zephyr shall support deferred logging    (TODO: need more detail about the constraints and limits on what can be deferred).
+Zephyr shall support deferred logging (TODO: need more detail about the constraints and limits on what can be deferred).
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want a minimal influence of logging activities to the timing behaviour of my application. Time consuming logging tasks shall be done in the background.
@@ -743,7 +746,7 @@ STATEMENT: >>>
 Zephyr shall support memory protection features to isolate a thread's memory region.
 <<<
 USER_STORY: >>>
-=N50
+As a Zephyr OS user I want memory to be allocated and protected to my application threads preventing mistakenly access to foreign memory as far as the hardware allows.
 <<<
 DISCUSSION_DATE: >>>
 2022/10/25 - ok
@@ -791,7 +794,7 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Safely handle unimplemented calls or invalid system calls
 STATEMENT: >>>
-Zephyr shall safely handle invocations of unimplemented system calls or invalid system call IDs. Zephyr shall have a defined behaviour when an invocation of an unimplemented system call is made.
+Zephyr shall have a defined behaviour when an invocation of an unimplemented system call is made.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want Zephyr OS to indicate any unimplemented system call by an appropriate error message.
@@ -856,7 +859,7 @@ TYPE: Functional
 COMPONENT: TBD: Memory Protection --> Thread
 TITLE: Prevent user threads creating supervisor threads
 STATEMENT: >>>
-Zephyr shall prevent user threads from creating kernel supervisor threads.
+Zephyr shall prevent user threads from creating kernel threads.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want to be protected against user threads creating higher privileged kernel/supervisior threads.
@@ -937,7 +940,7 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Boot Time Memory Access Policy
 STATEMENT: >>>
-Zephyr shall support a boot time memory access policy.   Zephyr shall support configurable access to memory during boot time.
+Zephyr shall support configurable access to memory during boot time.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want... ???
@@ -1019,7 +1022,7 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Granting threads access to specific memory
 STATEMENT: >>>
-Zephyr shall have mechanisms an interface to allow threads to request access to specific memory after initial allocation.
+Zephyr shall have an interface to request access to specific memory after initial allocation.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want to be able to request read-only or read-write access to a dedicated memory area/pool during runtime.
@@ -1060,7 +1063,7 @@ TYPE: Functional
 COMPONENT: Memory Objects
 TITLE: Dynamic Memory Allocation
 STATEMENT: >>>
-Zephyr shall support a memory pool object that allow threads to dynamically allocate variable-sized memory regions from a specified range of memory region in a malloc()-like manner.
+Zephyr shall allow threads to dynamically allocate variable-sized memory regions from a specified range of memory.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want my application to be able to dynamically allocate memory of a application defined size.
@@ -1078,7 +1081,7 @@ TYPE: Functional
 COMPONENT: Memory Objects
 TITLE: Memory Slab Object
 STATEMENT: >>>
-Zephyr shall support a memory slab object that allow threads to dynamically allocate fixed-sized memory regions from a specified range of memory.
+Zephyr shall allow threads to dynamically allocate fixed-sized memory regions from a specified range of memory.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want a most efficient and least fragmentation prone dynamic memory allocation mechanism.
@@ -1205,7 +1208,7 @@ TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Mailbox
 STATEMENT: >>>
-Zephyr shall provide mechanisms for thread synchronization for managing safe communication between threads and to enable waiting for results.
+Zephyr shall provide mechanisms for thread synchronization.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want to able to exchange information between threads in a thread-safe manner guaranteeing data consistence.
@@ -1296,7 +1299,7 @@ TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Pipe Kernel Object
 STATEMENT: >>>
-Zephyr shall provide a kernel object that allows a thread to transfer a block of data a byte stream to another thread.
+Zephyr shall provide a kernel object that allows a thread to transfer a block of data to another thread.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want to send a byte stream from one thread to another in a thread-safe manner.
@@ -1359,7 +1362,7 @@ TYPE: Functional
 COMPONENT: Thread Mapping (should it just be scheduling)
 TITLE: Running threads on specific CPUs
 STATEMENT: >>>
-Zephyr shall provide an interface mechanism for running threads on specific sets of CPUs ( default is 1 CPU).
+Zephyr shall provide an interface for running threads on specific sets of CPUs ( default is 1 CPU).
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want Zephyr OS to be able to specify the CPU core or the set of CPU cores on which a thead shall be executed.
@@ -1374,7 +1377,7 @@ TYPE: Functional
 COMPONENT: Thread Mapping (should it just be scheduling?)
 TITLE: Exclusion between physical CPUs
 STATEMENT: >>>
-Zephyr shall provide an interface mechanism for mutual exclusion between multiple physical CPUs using a spinlock primitive.
+Zephyr shall provide an interface for mutual exclusion between multiple physical CPUs.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want Zephyr OS to provide synchonization mechanisms between the CPU cores and the access to common resources.
@@ -1518,7 +1521,7 @@ TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Run user supplied functions in-order in a separate thread(s)
 STATEMENT: >>>
-Zephyr shall provide an interface for running user-supplied functions. A work queue mechanism for running user-supplied functions ("work items") in-order in a separate thread or threads.
+Zephyr shall provide an interface for running user-supplied functions.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user, I want to be able to run functions in-order in a sperated thread/threads.
@@ -1584,7 +1587,7 @@ TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Time sharing of CPU resources
 STATEMENT: >>>
-Zephyr shall support traditional time sharing of CPU resources among threads of the same priority.
+Zephyr shall support time sharing of CPU resources among threads of the same priority.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user, I want to be able to onfigure my RTOS in the way, that the CPU resources are shared evenly among executed threads of the same priority.
@@ -1691,7 +1694,7 @@ REFS:
   VALUE: ZEP-TIME-001
 TITLE: Call functions in interrupt context
 STATEMENT: >>>
-Zephyr shall provide an interface to allow schedule user mode call back function triggered by a real time clock value provide a facility to call user-provided functions in interrupt context based on a system-maintained real-time hardware counter.
+Zephyr shall provide an interface to schedule user mode call back function triggered by a real time clock value.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user, I want to be able to execute functions in the interrupt context and the interrupt context shall be base on a real-time counter.
@@ -1783,7 +1786,7 @@ TYPE: Functional
 COMPONENT: Tracing
 TITLE: Tracing Non-Interference
 STATEMENT: >>>
-Zepyhr shall prevent not allow the tracing functionality from interfering with normal operations of the operating system.
+Zepyhr shall prevent the tracing functionality from interfering with normal operations.
 <<<
 USER_STORY: >>>
 As a Zepyhr OS user, I want that the trace functionality do not interfere or slow down the operation system functionality.
