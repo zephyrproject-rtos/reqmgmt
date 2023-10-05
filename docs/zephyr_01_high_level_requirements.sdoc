@@ -138,8 +138,8 @@ TBD: Title seems to need refinement. Also, this requirement's user story seems t
 [REQUIREMENT]
 STATUS: Draft
 TYPE: High Level
-COMPONENT: Exception Handling
-TITLE: Fatal Exception handling
+COMPONENT: Exception and Error Handling
+TITLE: Fatal error and exception handling
 STATEMENT: >>>
 The Zephyr kernel shall provide a framework for error and exception handling.
 <<<
@@ -219,7 +219,7 @@ TYPE: High Level
 COMPONENT: Power Management
 TITLE: Power Management
 STATEMENT: >>>
-Zephyr shall provide an interface to control framework to provide support control over hardware power states.
+Zephyr shall provide an interface to control hardware power states.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want to be able to control the power mode of the MCU and its peripherals to take advantage of the hardward features and to be able to implement low power or battery driven long life applications.
@@ -234,7 +234,7 @@ TYPE: High Level
 COMPONENT: Thread Communication
 TITLE: Mutex
 STATEMENT: >>>
-Zephyr shall provide an interface framework for managing communcation between threads.
+Zephyr shall provide an interface for managing communcation between threads.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want to able to exchange information between threads in a thread-safe manner guaranteeing data consistence.
@@ -249,7 +249,7 @@ TYPE: High Level
 COMPONENT: Thread Mapping (should it just be scheduling)
 TITLE: Multiple CPU scheduling
 STATEMENT: >>>
-Zephyr shall support scheduling of OS threads on multiple hardware CPUs.
+Zephyr shall support scheduling of threads on multiple hardware CPUs.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want Zephyr OS to run on MCUs/CPUs with one or more CPU cores.
@@ -265,7 +265,7 @@ TYPE: High Level
 COMPONENT: Thread Scheduling
 TITLE: Scheduling
 STATEMENT: >>>
-Zephyr shall provide a mechanism for selecting which of many threads will be run on a given CPU   Zephyr shall provide an interface to assign a thread to a specific CPU.
+Zephyr shall provide an interface to assign a thread to a specific CPU.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user, I want to be able to control which thread will run on which CPU.
@@ -284,7 +284,7 @@ TYPE: High Level
 COMPONENT: Threads
 TITLE: Managing threads
 STATEMENT: >>>
-Zephyr shall provide a framework facilities for managing multiple threads of execution.
+Zephyr shall provide a framework for managing multiple threads of execution.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user, I want to be able to manage the execute of multiple threads with different priorities.
