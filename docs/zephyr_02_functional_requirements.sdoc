@@ -78,7 +78,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
-UID: ZEP-ARCH-004
+UID: ZEP-10
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Hardware Architecture Interface
