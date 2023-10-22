@@ -1636,7 +1636,7 @@ pf-ok
 <<<
 
 [REQUIREMENT]
-UID: ZEP-THREAD-003
+UID: ZEP-26
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Threads
