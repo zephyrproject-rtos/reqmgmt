@@ -40,7 +40,7 @@ ELEMENTS:
 TITLE: Hardware Architecture Interface
 
 [REQUIREMENT]
-UID: ZEP-ARCH-002
+UID: ZEP-8
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Hardware Architecture Interface
