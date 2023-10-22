@@ -1780,7 +1780,7 @@ What objects?   hardware devices, code, ....
 <<<
 
 [REQUIREMENT]
-UID: ZEP-TRACE-007
+UID: ZEP-34
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Tracing
