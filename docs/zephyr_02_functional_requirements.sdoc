@@ -1387,7 +1387,7 @@ pf-ok
 <<<
 
 [REQUIREMENT]
-UID: ZEP-SCHED-002
+UID: ZEP-23
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
