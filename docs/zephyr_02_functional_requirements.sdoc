@@ -1623,7 +1623,7 @@ Mechanism for this is mutex; so just link this here as well as others
 <<<
 
 [REQUIREMENT]
-UID: ZEP-THREAD-002
+UID: ZEP-25
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Threads
