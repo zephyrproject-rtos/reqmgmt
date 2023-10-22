@@ -1685,7 +1685,7 @@ pf-ok
 <<<
 
 [REQUIREMENT]
-UID: ZEP-TIME-003
+UID: ZEP-28
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Timers
