@@ -316,7 +316,7 @@ TBD: Do we need requirements on scheduling latency?
 <<<
 
 [REQUIREMENT]
-UID: ZEP-TRACE-001
+UID: ZEP-7
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Tracing
