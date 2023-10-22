@@ -75,7 +75,7 @@ From the Docs: No special application code needs to be written to take advantage
 <<<
 
 [REQUIREMENT]
-UID: ZEP-CLIB-001
+UID: ZEP-2
 STATUS: Draft
 TYPE: High Level
 COMPONENT: C Library
