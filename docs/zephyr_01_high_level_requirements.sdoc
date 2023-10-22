@@ -53,7 +53,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
-UID: ZEP-ARCH-006
+UID: ZEP-3
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Hardware Architecture Interface
