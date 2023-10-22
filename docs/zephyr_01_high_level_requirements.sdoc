@@ -297,7 +297,7 @@ TBD: Nothing about priorities...
 <<<
 
 [REQUIREMENT]
-UID: ZEP-TIME-001
+UID: ZEP-6
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Timers
