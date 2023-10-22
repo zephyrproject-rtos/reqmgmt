@@ -127,7 +127,7 @@ Clarification: Starting and Stopping, and putting it into Stand-By Mode (whateve
 TITLE: C library
 
 [REQUIREMENT]
-UID: ZEP-CLIB-002
+UID: ZEP-12
 STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
