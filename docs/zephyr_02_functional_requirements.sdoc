@@ -133,7 +133,7 @@ TYPE: Functional
 COMPONENT: C Library
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-CLIB-001
+  VALUE: ZEP-2
 TITLE: Formatted output
 STATEMENT: >>>
 Zephyr shall support formatted output.
@@ -152,7 +152,7 @@ TYPE: Functional
 COMPONENT: C Library
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-CLIB-001
+  VALUE: ZEP-2
 TITLE: Floating Point Math Support
 STATEMENT: >>>
 Zephyr shall support floating point math libraries for processors where floating point is available.
@@ -171,7 +171,7 @@ TYPE: Functional
 COMPONENT: C Library
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-CLIB-001
+  VALUE: ZEP-2
 TITLE: Boolean Primitives Support
 STATEMENT: >>>
 Zephyr shall support boolean primitives.
@@ -190,7 +190,7 @@ TYPE: Functional
 COMPONENT: C Library
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-CLIB-001
+  VALUE: ZEP-2
 TITLE: Standard Unix time interface
 STATEMENT: >>>
 Zephyr shall support the standard unix time interface.
@@ -209,7 +209,7 @@ TYPE: Functional
 COMPONENT: C Library
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-CLIB-001
+  VALUE: ZEP-2
 TITLE: Strings support
 STATEMENT: >>>
 Zephyr shall support an interface to manage strings.
@@ -228,7 +228,7 @@ TYPE: Functional
 COMPONENT: C Library
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-CLIB-001
+  VALUE: ZEP-2
 TITLE: Moving/copying regions of memory
 STATEMENT: >>>
 Zephyr shall support an interface to move contents between regions of memory.
@@ -247,7 +247,7 @@ TYPE: Functional
 COMPONENT: C Library
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-CLIB-001
+  VALUE: ZEP-2
 TITLE: I/O based interface
 STATEMENT: >>>
 Zephyr shall support a file i/O based interface for driver communication.
@@ -269,7 +269,7 @@ TYPE: Functional
 COMPONENT: C Library
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-CLIB-001
+  VALUE: ZEP-2
 TITLE: C99 integer types
 STATEMENT: >>>
 Zephyr shall support standard C99 integer types.
@@ -288,7 +288,7 @@ TYPE: Functional
 COMPONENT: C Library
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-CLIB-001
+  VALUE: ZEP-2
 TITLE: Standard System Error Numbers (IEEE Std 1003.1-2017)
 STATEMENT: >>>
 Zephyr shall support standard system error numbers as defined by IEEE Std 1003.1-2017.
@@ -307,7 +307,7 @@ TYPE: Functional
 COMPONENT: C Library
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-CLIB-001
+  VALUE: ZEP-2
 TITLE: Document set of Zephyr OS required C librariy functions in Safety Manual
 STATEMENT: >>>
 The set of C Library functions required by Zephyr needs to be documented in the Zephyr Safety Manual.
@@ -326,7 +326,7 @@ TYPE: Functional
 COMPONENT: C Library
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-CLIB-001
+  VALUE: ZEP-2
 TITLE: Support external C libraries documentation in Zephyr Safety Manual
 STATEMENT: >>>
 The Zephyr Safety Manual needs to specify how to configure the support of external C Libraries.
