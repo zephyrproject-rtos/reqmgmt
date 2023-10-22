@@ -46,7 +46,7 @@ TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-ARCH-001
+  VALUE: ZEP-1
 TITLE: Atomic Operations
 STATEMENT: >>>
 Zephyr shall provide an interface functionality to access memory while ensuring mutual exclusion. Note: Implementation by atomic variables and accessing them by APIs.
@@ -65,7 +65,7 @@ TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-ARCH-001
+  VALUE: ZEP-1
 TITLE: Thread Context Switching
 STATEMENT: >>>
 Zephyr shall provide a mechanism for context switching between threads.
@@ -84,7 +84,7 @@ TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-ARCH-001
+  VALUE: ZEP-1
 TITLE: Software Exceptions
 STATEMENT: >>>
 Zephyr shall provide an interface to implement software exceptions.
@@ -103,7 +103,7 @@ TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-ARCH-001
+  VALUE: ZEP-1
 TITLE: Processor Mode Support
 STATEMENT: >>>
 Zephyr shall provide an interface for managing processor modes.
