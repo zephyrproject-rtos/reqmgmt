@@ -320,7 +320,7 @@ TBD: Revisit after subset defined.
 <<<
 
 [REQUIREMENT]
-UID: ZEP-CLIB-012
+UID: ZEP-22
 STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
