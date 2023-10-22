@@ -1672,7 +1672,7 @@ TYPE: Functional
 COMPONENT: Timers
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-TIME-001
+  VALUE: ZEP-6
 TITLE: Kernel Clock
 STATEMENT: >>>
 Zephyr shall provide a interface for checking the current value of the real-time clock.
@@ -1691,7 +1691,7 @@ TYPE: Functional
 COMPONENT: Timers
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-TIME-001
+  VALUE: ZEP-6
 TITLE: Call functions in interrupt context
 STATEMENT: >>>
 Zephyr shall provide an interface to schedule user mode call back function triggered by a real time clock value.
