@@ -1515,7 +1515,7 @@ Implementation detail.   Consider as a sub requirent?   Why do we need this?
 <<<
 
 [REQUIREMENT]
-UID: ZEP-SCHED-#
+UID: ZEP-24
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
