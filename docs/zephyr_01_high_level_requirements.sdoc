@@ -37,7 +37,7 @@ ELEMENTS:
     REQUIRED: False
 
 [REQUIREMENT]
-UID: ZEP-ARCH-001
+UID: ZEP-1
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Hardware Architecture Interface
@@ -59,7 +59,7 @@ TYPE: High Level
 COMPONENT: Hardware Architecture Interface
 REFS:
 - TYPE: Parent
-  VALUE: ZEP-ARCH-001
+  VALUE: ZEP-1
 TITLE: Support multiprocessor management
 STATEMENT: >>>
 Zephyr shall support symmetric multiprocessing on multiple cores.
@@ -132,7 +132,7 @@ DISCUSSION_DATE: >>>
 2022/3/30 - ok - pf
 <<<
 REVIEW_COMMENT: >>>
-TBD: Title seems to need refinement. Also, this requirement's user story seems to be identical to that of ZEP-ARCH-001.
+TBD: Title seems to need refinement. Also, this requirement's user story seems to be identical to that of ZEP-1.
 <<<
 
 [REQUIREMENT]
