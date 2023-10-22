@@ -263,7 +263,7 @@ A wrong C header seems to be included: stdint.h does not have to do with I/O.
 <<<
 
 [REQUIREMENT]
-UID: ZEP-CLIB-009
+UID: ZEP-19
 STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
