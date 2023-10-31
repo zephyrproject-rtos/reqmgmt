@@ -1,5 +1,6 @@
 [DOCUMENT]
 TITLE: Zephyr High Level Requirements
+REQ_PREFIX: ZEP-
 
 [GRAMMAR]
 ELEMENTS:
@@ -97,6 +98,7 @@ TBD: The requirement needs refinement.
 <<<
 
 [REQUIREMENT]
+UID: ZEP-35
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Utilities Library - Data Structures
@@ -117,6 +119,7 @@ Clarification: There are many files. Linked list, ring buffer, ...). This is an 
 <<<
 
 [REQUIREMENT]
+UID: ZEP-36
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Device Driver API
@@ -135,6 +138,7 @@ TBD: Title seems to need refinement. Also, this requirement's user story seems t
 <<<
 
 [REQUIREMENT]
+UID: ZEP-37
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Exception and Error Handling
@@ -150,6 +154,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+UID: ZEP-38
 STATUS: Draft
 TYPE: High Level
 COMPONENT: File Systems
@@ -165,6 +170,7 @@ TBD: 2022/4/13 - ok - p? - depends on set of expectations
 <<<
 
 [REQUIREMENT]
+UID: ZEP-39
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Interrupts
@@ -180,6 +186,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+UID: ZEP-40
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Logging
@@ -198,6 +205,7 @@ Nicole: TBD: we need to have logging in the safety scope?
 <<<
 
 [REQUIREMENT]
+UID: ZEP-41
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Memory Management
@@ -213,6 +221,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+UID: ZEP-42
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Power Management
@@ -228,6 +237,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+UID: ZEP-43
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Thread Communication
@@ -243,6 +253,7 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
+UID: ZEP-44
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Thread Mapping (should it just be scheduling)
