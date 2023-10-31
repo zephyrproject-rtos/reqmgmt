@@ -17,9 +17,6 @@ ELEMENTS:
   - TITLE: COMPONENT
     TYPE: String
     REQUIRED: False
-  - TITLE: REFS
-    TYPE: Reference(ParentReqReference)
-    REQUIRED: False
   - TITLE: TITLE
     TYPE: String
     REQUIRED: False
@@ -35,6 +32,8 @@ ELEMENTS:
   - TITLE: REVIEW_COMMENT
     TYPE: String
     REQUIRED: False
+  RELATIONS:
+  - TYPE: Parent
 
 [SECTION]
 TITLE: Hardware Architecture Interface
@@ -44,9 +43,6 @@ UID: ZEP-8
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Hardware Architecture Interface
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-1
 TITLE: Atomic Operations
 STATEMENT: >>>
 Zephyr shall provide an interface functionality to access memory while ensuring mutual exclusion. Note: Implementation by atomic variables and accessing them by APIs.
@@ -57,15 +53,15 @@ As a Zephyr OS user I want to read from or write into a memory areas without bei
 DISCUSSION_DATE: >>>
 2022/3/30 - ok - pq
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-1
 
 [REQUIREMENT]
 UID: ZEP-9
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Hardware Architecture Interface
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-1
 TITLE: Thread Context Switching
 STATEMENT: >>>
 Zephyr shall provide a mechanism for context switching between threads.
@@ -76,15 +72,15 @@ As a Zephyr OS user I want to execute code concurrently in one or more threads a
 DISCUSSION_DATE: >>>
 2022/3/30 - ok - pf
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-1
 
 [REQUIREMENT]
 UID: ZEP-10
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Hardware Architecture Interface
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-1
 TITLE: Software Exceptions
 STATEMENT: >>>
 Zephyr shall provide an interface to implement software exceptions.
@@ -95,15 +91,15 @@ As a Zephyr OS user I want to catch any software exception and handle it accordi
 DISCUSSION_DATE: >>>
 2022/3/30 - ok - pq
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-1
 
 [REQUIREMENT]
 UID: ZEP-11
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Hardware Architecture Interface
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-1
 TITLE: Processor Mode Support
 STATEMENT: >>>
 Zephyr shall provide an interface for managing processor modes.
@@ -120,6 +116,9 @@ What is lifecycle - power on, standby, power off?  or ????
 
 Clarification: Starting and Stopping, and putting it into Stand-By Mode (whatever the processor supports)
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-1
 
 [/SECTION]
 
@@ -131,9 +130,6 @@ UID: ZEP-12
 STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-2
 TITLE: Formatted output
 STATEMENT: >>>
 Zephyr shall support formatted output.
@@ -144,15 +140,15 @@ As a Zephyr OS user, I want to be able to printf with various output formats.
 DISCUSSION_DATE: >>>
 20221122.0
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-2
 
 [REQUIREMENT]
 UID: ZEP-13
 STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-2
 TITLE: Floating Point Math Support
 STATEMENT: >>>
 Zephyr shall support floating point math libraries for processors where floating point is available.
@@ -163,15 +159,15 @@ As a Zephyr OS user, I want to be able to calculate with floating point numbers.
 DISCUSSION_DATE: >>>
 20221122.0
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-2
 
 [REQUIREMENT]
 UID: ZEP-14
 STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-2
 TITLE: Boolean Primitives Support
 STATEMENT: >>>
 Zephyr shall support boolean primitives.
@@ -182,15 +178,15 @@ As a Zephyr OS user, I want to be able to work with boolean values and logic.
 DISCUSSION_DATE: >>>
 20221122.0
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-2
 
 [REQUIREMENT]
 UID: ZEP-15
 STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-2
 TITLE: Standard Unix time interface
 STATEMENT: >>>
 Zephyr shall support the standard unix time interface.
@@ -201,15 +197,15 @@ As a Zephyr User, I want to be able to use system time.
 DISCUSSION_DATE: >>>
 20221122.0
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-2
 
 [REQUIREMENT]
 UID: ZEP-16
 STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-2
 TITLE: Strings support
 STATEMENT: >>>
 Zephyr shall support an interface to manage strings.
@@ -220,15 +216,15 @@ As a Zephyr OS user, I want to be able to manipulate text strings.
 DISCUSSION_DATE: >>>
 20221122.0
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-2
 
 [REQUIREMENT]
 UID: ZEP-17
 STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-2
 TITLE: Moving/copying regions of memory
 STATEMENT: >>>
 Zephyr shall support an interface to move contents between regions of memory.
@@ -239,15 +235,15 @@ As a Zephyr OS user, I want to copy the memory contents to different addresses.
 DISCUSSION_DATE: >>>
 20221122.0
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-2
 
 [REQUIREMENT]
 UID: ZEP-18
 STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-2
 TITLE: I/O based interface
 STATEMENT: >>>
 Zephyr shall support a file i/O based interface for driver communication.
@@ -261,15 +257,15 @@ DISCUSSION_DATE: >>>
 REVIEW_COMMENT: >>>
 A wrong C header seems to be included: stdint.h does not have to do with I/O.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-2
 
 [REQUIREMENT]
 UID: ZEP-19
 STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-2
 TITLE: C99 integer types
 STATEMENT: >>>
 Zephyr shall support standard C99 integer types.
@@ -280,15 +276,15 @@ As a Zephyr OS user, I want to be able to calculate with C99 Integers.
 DISCUSSION_DATE: >>>
 20221122.0
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-2
 
 [REQUIREMENT]
 UID: ZEP-20
 STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-2
 TITLE: Standard System Error Numbers (IEEE Std 1003.1-2017)
 STATEMENT: >>>
 Zephyr shall support standard system error numbers as defined by IEEE Std 1003.1-2017.
@@ -299,15 +295,15 @@ As a Zephyr OS user, I want to be able to use IEE Std 1003.1-2017 Error Numbers 
 DISCUSSION_DATE: >>>
 20221129.0
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-2
 
 [REQUIREMENT]
 UID: ZEP-21
 STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-2
 TITLE: Document set of Zephyr OS required C librariy functions in Safety Manual
 STATEMENT: >>>
 The set of C Library functions required by Zephyr needs to be documented in the Zephyr Safety Manual.
@@ -318,15 +314,15 @@ As a Zephyr user, I want to know which C library functions are being called by t
 DISCUSSION_DATE: >>>
 TBD: Revisit after subset defined.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-2
 
 [REQUIREMENT]
 UID: ZEP-22
 STATUS: Draft
 TYPE: Functional
 COMPONENT: C Library
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-2
 TITLE: Support external C libraries documentation in Zephyr Safety Manual
 STATEMENT: >>>
 The Zephyr Safety Manual needs to specify how to configure the support of external C Libraries.
@@ -337,6 +333,9 @@ As a Zephyr User, I need to understand how to configure the external C libraries
 DISCUSSION_DATE: >>>
 TBD: Revisit after subset defined.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-2
 
 [/SECTION]
 
@@ -1670,9 +1669,6 @@ UID: ZEP-27
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Timers
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-6
 TITLE: Kernel Clock
 STATEMENT: >>>
 Zephyr shall provide a interface for checking the current value of the real-time clock.
@@ -1683,15 +1679,15 @@ As a Zephyr OS user, I want to be able to track the passed real time in the OS w
 DISCUSSION_DATE: >>>
 pf-ok
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-6
 
 [REQUIREMENT]
 UID: ZEP-28
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Timers
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-6
 TITLE: Call functions in interrupt context
 STATEMENT: >>>
 Zephyr shall provide an interface to schedule user mode call back function triggered by a real time clock value.
@@ -1702,6 +1698,9 @@ As a Zephyr OS user, I want to be able to execute functions in the interrupt con
 DISCUSSION_DATE: >>>
 pf-ok
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-6
 
 [/SECTION]
 
