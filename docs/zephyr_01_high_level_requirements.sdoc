@@ -17,9 +17,6 @@ ELEMENTS:
   - TITLE: COMPONENT
     TYPE: String
     REQUIRED: False
-  - TITLE: REFS
-    TYPE: Reference(ParentReqReference)
-    REQUIRED: False
   - TITLE: TITLE
     TYPE: String
     REQUIRED: False
@@ -35,6 +32,8 @@ ELEMENTS:
   - TITLE: REVIEW_COMMENT
     TYPE: String
     REQUIRED: False
+  RELATIONS:
+  - TYPE: Parent
 
 [REQUIREMENT]
 UID: ZEP-1
@@ -57,9 +56,6 @@ UID: ZEP-3
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Hardware Architecture Interface
-REFS:
-- TYPE: Parent
-  VALUE: ZEP-1
 TITLE: Support multiprocessor management
 STATEMENT: >>>
 Zephyr shall support symmetric multiprocessing on multiple cores.
@@ -73,6 +69,9 @@ TBD: Still need to articulate the capabilities explicitly.
 REVIEW_COMMENT: >>>
 From the Docs: No special application code needs to be written to take advantage of this feature
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-1
 
 [REQUIREMENT]
 UID: ZEP-2
