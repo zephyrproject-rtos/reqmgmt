@@ -29,3 +29,8 @@ To browse/edit the requirements using StrictDoc's web interface:
 ```shell
 strictdoc server .
 ```
+
+To generate uid's for new written requirements use the command:
+```shell
+strictdoc manage auto-uid .
+```
