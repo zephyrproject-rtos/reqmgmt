@@ -1,5 +1,6 @@
 [DOCUMENT]
 TITLE: Zephyr Functional Requirements
+REQ_PREFIX: ZEP-
 
 [GRAMMAR]
 ELEMENTS:

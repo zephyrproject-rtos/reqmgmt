@@ -1,5 +1,6 @@
 [DOCUMENT]
 TITLE: Zephyr High Level Requirements
+REQ_PREFIX: ZEP-
 
 [GRAMMAR]
 ELEMENTS:
