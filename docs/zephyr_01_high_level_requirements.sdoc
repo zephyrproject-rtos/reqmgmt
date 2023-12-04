@@ -272,7 +272,7 @@ pf-ok
 UID: ZEP-4
 STATUS: Draft
 TYPE: High Level
-COMPONENT: Thread Scheduling
+COMPONENT: Scheduling
 TITLE: Scheduling
 STATEMENT: >>>
 Zephyr shall provide an interface to assign a thread to a specific CPU.
@@ -308,7 +308,7 @@ UID: ZEP-5
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Threads
-TITLE: Managing threads
+TITLE: Thread management
 STATEMENT: >>>
 Zephyr shall provide a framework for managing multiple threads of execution.
 <<<
