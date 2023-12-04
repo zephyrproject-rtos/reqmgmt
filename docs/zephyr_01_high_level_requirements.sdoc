@@ -287,6 +287,22 @@ REVIEW_COMMENT: >>>
 TBD: The statement contains two separate statements.
 <<<
 
+[SECTION]
+TITLE: Threads
+
+[REQUIREMENT]
+UID: ZEP-123
+STATUS: Draft
+TYPE: High Level
+COMPONENT: Threads
+TITLE: Thread support
+STATEMENT: >>>
+Zephyr shall support threads.
+<<<
+USER_STORY: >>>
+As a Zephyr OS user, I want to be able to have support for the kernel objects named threads for processing work.
+<<<
+
 [REQUIREMENT]
 UID: ZEP-5
 STATUS: Draft
@@ -305,6 +321,21 @@ pf-ok
 REVIEW_COMMENT: >>>
 TBD: Nothing about priorities...
 <<<
+
+[REQUIREMENT]
+UID: ZEP-122
+STATUS: Draft
+TYPE: High Level
+COMPONENT: Threads
+TITLE: Thread priority
+STATEMENT: >>>
+Threads shall have a priority.
+<<<
+USER_STORY: >>>
+As a Zephyr OS user, I want to be able to give my threads different priorities for execution.
+<<<
+
+[/SECTION]
 
 [REQUIREMENT]
 UID: ZEP-6

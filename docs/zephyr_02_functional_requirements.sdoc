@@ -1699,6 +1699,62 @@ Mechanism for this is mutex; so just link this here as well as others
 <<<
 
 [REQUIREMENT]
+UID: ZEP-124
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Thread states
+STATEMENT: >>>
+Threads shall have different states to fulfill the Lifecycle of a thread
+<<<
+USER_STORY: >>>
+As a Zephyr OS user, I want to know in what state a specific thread is.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
+
+[REQUIREMENT]
+UID: ZEP-98
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Thread stack objects
+STATEMENT: >>>
+Every Thread shall have it's own stack.
+<<<
+USER_STORY: >>>
+As a Zephyr OS user I want to be able to configure the stack size of a thread. And every thread shall have it's own dedicated stack.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
+
+[REQUIREMENT]
+UID: ZEP-113
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Meta-IRQ Priorities
+STATEMENT: >>>
+The Zephyr kernel shall support running threads in Meta-IRQ priorities.
+<<<
+REVIEW_COMMENT: >>>
+Does this make sense in the safety scope? It is conflicting with ZEP151.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
+- TYPE: Parent
+  VALUE: ZEP-122
+
+[REQUIREMENT]
 UID: ZEP-25
 STATUS: Draft
 TYPE: Functional
@@ -1736,6 +1792,42 @@ STATEMENT: >>>
 DISCUSSION_DATE: >>>
 TBD
 <<<
+
+[REQUIREMENT]
+UID: ZEP-125
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Thread Options
+STATEMENT: >>>
+The Zephyr kernel shall support a set of thread options.
+<<<
+USER_STORY: >>>
+As a Zephyr OS user, I want to be able to pass specific option to a thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
+
+[REQUIREMENT]
+UID: ZEP-126
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Thread Custom Data
+STATEMENT: >>>
+Every thread shall have a custom data area.
+<<<
+USER_STORY: >>>
+As a Zephyr OS user, I want to be able to set a thread specific custom area for every thread I create and which can be used only by the thread itself or the can be used by the application
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
 
 [/SECTION]
 
