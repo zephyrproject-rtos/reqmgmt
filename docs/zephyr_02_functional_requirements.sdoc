@@ -1460,6 +1460,11 @@ Zephyr shall provide an interface to create (start) a thread.
 DISCUSSION_DATE: >>>
 pf-ok
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
 
 [REQUIREMENT]
 UID: ZEP-107
@@ -1473,6 +1478,9 @@ Zephyr shall provide an interface to set a thread's priority.
 DISCUSSION_DATE: >>>
 pf-ok
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-122
 
 [REQUIREMENT]
 UID: ZEP-108
@@ -1486,6 +1494,11 @@ Zephyr shall provide an interface to suspend a thread.
 DISCUSSION_DATE: >>>
 pf-ok
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
 
 [REQUIREMENT]
 UID: ZEP-109
@@ -1499,6 +1512,11 @@ Zephyr shall provide an interface to resume a suspended thread.
 DISCUSSION_DATE: >>>
 pf-ok
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
 
 [REQUIREMENT]
 UID: ZEP-110
@@ -1510,6 +1528,11 @@ Zephyr shall provide an interface to resume a suspended thread after a timeout.
 DISCUSSION_DATE: >>>
 pf-ok
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
 
 [REQUIREMENT]
 UID: ZEP-111
@@ -1523,6 +1546,11 @@ Zephyr shall provide an interface to delete (end) a thread.
 DISCUSSION_DATE: >>>
 pf-ok
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
 
 [REQUIREMENT]
 UID: ZEP-112
@@ -1539,6 +1567,9 @@ As a Zephyr OS user, I want to be able to execute work which reacts on events an
 DISCUSSION_DATE: >>>
 pf-ok
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
 
 [REQUIREMENT]
 UID: ZEP-113
@@ -1766,6 +1797,11 @@ Zephyr shall provide an interface to create threads with defined privilege.
 DISCUSSION_DATE: >>>
 pf-ok
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
 
 [REQUIREMENT]
 UID: ZEP-26
@@ -1779,6 +1815,9 @@ Zephyr shall provide an interface to schedule multiple threads.
 DISCUSSION_DATE: >>>
 pf-ok
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-5
 
 [REQUIREMENT]
 UID: ZEP-121
