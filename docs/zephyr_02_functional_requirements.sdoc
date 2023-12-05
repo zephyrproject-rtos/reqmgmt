@@ -1303,25 +1303,6 @@ DISCUSSION_DATE: >>>
 <<<
 
 [REQUIREMENT]
-UID: ZEP-98
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Thread Communication
-TITLE: Stack
-STATEMENT: >>>
-The Zephyr kernel shall provide a stack.
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want to... ???,
-<<<
-DISCUSSION_DATE: >>>
-2022/5/25 - needs to be clarified what stack refers to
-<<<
-REVIEW_COMMENT: >>>
-stack of what?
-<<<
-
-[REQUIREMENT]
 UID: ZEP-99
 STATUS: Draft
 TYPE: Functional
@@ -1449,110 +1430,6 @@ pf-ok
 <<<
 
 [REQUIREMENT]
-UID: ZEP-23
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Thread Scheduling
-TITLE: Creating threads
-STATEMENT: >>>
-Zephyr shall provide an interface to create (start) a thread.
-<<<
-DISCUSSION_DATE: >>>
-pf-ok
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-123
-- TYPE: Parent
-  VALUE: ZEP-5
-
-[REQUIREMENT]
-UID: ZEP-107
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Thread Scheduling
-TITLE: Setting thread priority
-STATEMENT: >>>
-Zephyr shall provide an interface to set a thread's priority.
-<<<
-DISCUSSION_DATE: >>>
-pf-ok
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-122
-
-[REQUIREMENT]
-UID: ZEP-108
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Thread Scheduling
-TITLE: Suspending a thread
-STATEMENT: >>>
-Zephyr shall provide an interface to suspend a thread.
-<<<
-DISCUSSION_DATE: >>>
-pf-ok
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-123
-- TYPE: Parent
-  VALUE: ZEP-5
-
-[REQUIREMENT]
-UID: ZEP-109
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Thread Scheduling
-TITLE: Resuming a suspended thread
-STATEMENT: >>>
-Zephyr shall provide an interface to resume a suspended thread.
-<<<
-DISCUSSION_DATE: >>>
-pf-ok
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-123
-- TYPE: Parent
-  VALUE: ZEP-5
-
-[REQUIREMENT]
-UID: ZEP-110
-STATUS: Draft
-TITLE: Resuming a suspended thread after a timeout
-STATEMENT: >>>
-Zephyr shall provide an interface to resume a suspended thread after a timeout.
-<<<
-DISCUSSION_DATE: >>>
-pf-ok
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-123
-- TYPE: Parent
-  VALUE: ZEP-5
-
-[REQUIREMENT]
-UID: ZEP-111
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Thread Scheduling
-TITLE: Deleting a thread
-STATEMENT: >>>
-Zephyr shall provide an interface to delete (end) a thread.
-<<<
-DISCUSSION_DATE: >>>
-pf-ok
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-123
-- TYPE: Parent
-  VALUE: ZEP-5
-
-[REQUIREMENT]
 UID: ZEP-112
 STATUS: Draft
 TYPE: Functional
@@ -1570,22 +1447,6 @@ pf-ok
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-123
-
-[REQUIREMENT]
-UID: ZEP-113
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Thread Scheduling
-TITLE: Meta-IRQ Priorities
-STATEMENT: >>>
-The Zephyr kernel shall support running threads in Meta-IRQ Priorities.
-<<<
-USER_STORY: >>>
-TBD Page is not available anymore
-<<<
-REVIEW_COMMENT: >>>
-Does this make sense in the safety scope? It is conflicting with ZEP151.
-<<<
 
 [REQUIREMENT]
 UID: ZEP-114
@@ -1711,23 +1572,109 @@ what does traditional mean here?   Round robin?
 TITLE: Threads
 
 [REQUIREMENT]
-UID: ZEP-120
+UID: ZEP-23
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Threads
-TITLE: Thread Support
+TITLE: Creating threads
 STATEMENT: >>>
-Zephyr shall support multiple threads of execution.
-<<<
-USER_STORY: >>>
-As a Zephyr OS user, I want to be able to execute multiple threads which are managed by priorities or other mechanisms.
+Zephyr shall provide an interface to create (start) a thread.
 <<<
 DISCUSSION_DATE: >>>
-pf-pq
+pf-ok
 <<<
-REVIEW_COMMENT: >>>
-Mechanism for this is mutex; so just link this here as well as others
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
+
+[REQUIREMENT]
+UID: ZEP-107
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Setting thread priority
+STATEMENT: >>>
+Zephyr shall provide an interface to set a thread's priority.
 <<<
+DISCUSSION_DATE: >>>
+pf-ok
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-122
+
+[REQUIREMENT]
+UID: ZEP-108
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Suspending a thread
+STATEMENT: >>>
+Zephyr shall provide an interface to suspend a thread.
+<<<
+DISCUSSION_DATE: >>>
+pf-ok
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
+
+[REQUIREMENT]
+UID: ZEP-109
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Resuming a suspended thread
+STATEMENT: >>>
+Zephyr shall provide an interface to resume a suspended thread.
+<<<
+DISCUSSION_DATE: >>>
+pf-ok
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
+
+[REQUIREMENT]
+UID: ZEP-110
+STATUS: Draft
+TYPE: Functional
+TITLE: Resuming a suspended thread after a timeout
+STATEMENT: >>>
+Zephyr shall provide an interface to resume a suspended thread after a timeout.
+<<<
+DISCUSSION_DATE: >>>
+pf-ok
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
+
+[REQUIREMENT]
+UID: ZEP-111
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Deleting a thread
+STATEMENT: >>>
+Zephyr shall provide an interface to delete (end) a thread.
+<<<
+DISCUSSION_DATE: >>>
+pf-ok
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-123
+- TYPE: Parent
+  VALUE: ZEP-5
 
 [REQUIREMENT]
 UID: ZEP-124
@@ -1766,26 +1713,6 @@ RELATIONS:
   VALUE: ZEP-5
 
 [REQUIREMENT]
-UID: ZEP-113
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Threads
-TITLE: Meta-IRQ Priorities
-STATEMENT: >>>
-The Zephyr kernel shall support running threads in Meta-IRQ priorities.
-<<<
-REVIEW_COMMENT: >>>
-Does this make sense in the safety scope? It is conflicting with ZEP151.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-123
-- TYPE: Parent
-  VALUE: ZEP-5
-- TYPE: Parent
-  VALUE: ZEP-122
-
-[REQUIREMENT]
 UID: ZEP-25
 STATUS: Draft
 TYPE: Functional
@@ -1818,19 +1745,6 @@ pf-ok
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-5
-
-[REQUIREMENT]
-UID: ZEP-121
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Threads
-TITLE: Threads - TBD
-STATEMENT: >>>
-??? Can Zephyr change priviledge level of a thread once created??
-<<<
-DISCUSSION_DATE: >>>
-TBD
-<<<
 
 [REQUIREMENT]
 UID: ZEP-125
