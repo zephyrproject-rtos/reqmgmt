@@ -1645,6 +1645,7 @@ RELATIONS:
 UID: ZEP-110
 STATUS: Draft
 TYPE: Functional
+COMPONENT: Threads
 TITLE: Resuming a suspended thread after a timeout
 STATEMENT: >>>
 Zephyr shall provide an interface to resume a suspended thread after a timeout.
