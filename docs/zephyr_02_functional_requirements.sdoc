@@ -478,6 +478,15 @@ STATEMENT: >>>
 Zephyr shall use no more than the published amount of the CPU stack inherited from the prior executable.
 <<<
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Sustain hardware watchdog inherited from preceding executable
+STATEMENT: >>>
+Zephyr shall sustain the active hardware watchdog inherited from the preceding executable.
+<<<
+
 [/SECTION]
 
 [SECTION]
