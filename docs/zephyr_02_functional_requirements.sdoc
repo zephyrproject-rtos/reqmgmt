@@ -624,6 +624,15 @@ STATEMENT: >>>
 Zephyr shall support transitioning to the main execution thread through an optional CPU-architecture specific hook.
 <<<
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Default transition to main execution thread uses inherited stack
+STATEMENT: >>>
+Zephyr shall run the main execution thread on the CPU stack inherited from the preceding executable.
+<<<
+
 [/SECTION]
 
 [SECTION]
