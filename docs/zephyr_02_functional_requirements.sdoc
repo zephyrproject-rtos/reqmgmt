@@ -615,6 +615,15 @@ Zephyr shall initialize and start the timing functions needed during System Init
 [SECTION]
 TITLE: Where Configured without Multi-Threading Support
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: CPU architecture-specific hook to transition to main execution thread
+STATEMENT: >>>
+Zephyr shall support transitioning to the main execution thread through an optional CPU-architecture specific hook.
+<<<
+
 [/SECTION]
 
 [SECTION]
