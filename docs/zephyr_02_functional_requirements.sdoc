@@ -777,6 +777,17 @@ TITLE: System Shutdown
 [SECTION]
 TITLE: Where Configured w/o Multi-Threading Support
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: System Shutdown Disables Interrupts
+STATEMENT: >>>
+When the System Shutdown logic is executed,
+
+Zephyr shall disable interrupts.
+<<<
+
 [/SECTION]
 
 [SECTION]
