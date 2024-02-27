@@ -594,6 +594,15 @@ Zephyr System Initialization shall publish an notification to each registered co
 - any transition to the main execution thread.
 <<<
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Stack overflow/underflow detection
+STATEMENT: >>>
+Zephyr shall initialize each CPU stack in a way to support detecting stack overflow and stack underflow.
+<<<
+
 [/SECTION]
 
 [/SECTION]
