@@ -469,6 +469,15 @@ STATEMENT: >>>
 Zephyr shall expose the data provided by the preceding executable throughout the initialization of the Zephyr OS.
 <<<
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Inherited CPU stack usage kept within published limits
+STATEMENT: >>>
+Zephyr shall use no more than the published amount of the CPU stack inherited from the prior executable.
+<<<
+
 [/SECTION]
 
 [SECTION]
