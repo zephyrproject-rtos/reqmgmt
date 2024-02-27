@@ -460,6 +460,15 @@ STATEMENT: >>>
 Zephyr shall initialize the system following the order of component dependencies.
 <<<
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Data provided from preceding executable available throughout initialization process
+STATEMENT: >>>
+Zephyr shall expose the data provided by the preceding executable throughout the initialization of the Zephyr OS.
+<<<
+
 [/SECTION]
 
 [SECTION]
