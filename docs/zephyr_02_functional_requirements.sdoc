@@ -504,6 +504,15 @@ before any CPU-architecture specific initialization.
 [SECTION]
 TITLE: CPU Architecture Specific Initialization
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: CPU-architecture initialization invalidates CPU caches
+STATEMENT: >>>
+Zephyr shall invalidate the CPU caches during system initialization.
+<<<
+
 [/SECTION]
 
 [/SECTION]
