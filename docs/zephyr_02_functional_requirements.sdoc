@@ -638,6 +638,15 @@ Zephyr shall run the main execution thread on the CPU stack inherited from the p
 [SECTION]
 TITLE: Where Configured with Multi-Threading Support
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Multi-threading configuration releases inherited CPU stack upon entering main execution thread
+STATEMENT: >>>
+Zephyr shall not use the inherited CPU stack once the main executable thread has been entered.
+<<<
+
 [/SECTION]
 
 [/SECTION]
