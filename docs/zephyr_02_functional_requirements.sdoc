@@ -717,6 +717,15 @@ STATEMENT: >>>
 Zephyr shall initialize the SMP support after any CPU-architecture memory coherence initialization and before completing the System Initialization.
 <<<
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Symmetric Multi-Processing Initialization notification
+STATEMENT: >>>
+Zephyr System Initialization shall publish an notification to each registered component after all non-delayed SMP initialization is completed and before completing the System Initialization.
+<<<
+
 [/SECTION]
 
 [/SECTION]
