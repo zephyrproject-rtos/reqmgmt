@@ -672,6 +672,15 @@ STATEMENT: >>>
 Zephyr System Initialization shall publish an notification to each registered component after the Kernel is initialized and before any C++ static object initialization.
 <<<
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Boot banner printed upon completion of post-kernel notifications
+STATEMENT: >>>
+Zephyr shall print the boot banner upon completion of the post-kernel initialization notifications and before any C++ static object initialization.
+<<<
+
 [/SECTION]
 
 [/SECTION]
