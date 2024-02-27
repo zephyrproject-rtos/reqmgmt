@@ -740,6 +740,17 @@ Zephyr shall notify the memory management unit at the completion of the System I
 [SECTION]
 TITLE: Running Main Application
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Main exec thread calls `main()` upon System Init completion
+STATEMENT: >>>
+When the System Initialization is complete,
+
+Zephyr shall call `main(void)` on the main execution thread.
+<<<
+
 [/SECTION]
 
 [/SECTION]
