@@ -449,6 +449,11 @@ Zephyr shall provide an interface to assign a specific handler for a fatal error
 [/SECTION]
 
 [SECTION]
+TITLE: System Initialization
+
+[/SECTION]
+
+[SECTION]
 TITLE: File System
 
 [REQUIREMENT]
