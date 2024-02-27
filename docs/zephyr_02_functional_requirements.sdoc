@@ -522,6 +522,11 @@ STATEMENT: >>>
 Zephyr shall disable the CPU memory protection mechanisms inherited from the preceding executable.
 <<<
 
+[SECTION]
+TITLE: CPU Architecture Specific Initializations
+
+[/SECTION]
+
 [/SECTION]
 
 [/SECTION]
