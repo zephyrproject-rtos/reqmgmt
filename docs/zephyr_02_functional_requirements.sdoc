@@ -681,6 +681,15 @@ STATEMENT: >>>
 Zephyr shall print the boot banner upon completion of the post-kernel initialization notifications and before any C++ static object initialization.
 <<<
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: C++ Static Object Initialization
+STATEMENT: >>>
+Zephyr shall initialize the C++ static objects after the Post-Kernel initialization notifications are completed and before the Application initialization notifications are started.
+<<<
+
 [/SECTION]
 
 [/SECTION]
