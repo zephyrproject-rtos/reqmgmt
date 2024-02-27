@@ -651,6 +651,11 @@ Zephyr shall not use the inherited CPU stack once the main executable thread has
 
 [/SECTION]
 
+[SECTION]
+TITLE: Initialization under Main Executable Thread
+
+[/SECTION]
+
 [/SECTION]
 
 [SECTION]
