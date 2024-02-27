@@ -603,6 +603,15 @@ STATEMENT: >>>
 Zephyr shall initialize each CPU stack in a way to support detecting stack overflow and stack underflow.
 <<<
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Timing functionality during System Init
+STATEMENT: >>>
+Zephyr shall initialize and start the timing functions needed during System Initialization after the pre-kernel initialization and before entering the main execution thread.
+<<<
+
 [/SECTION]
 
 [/SECTION]
