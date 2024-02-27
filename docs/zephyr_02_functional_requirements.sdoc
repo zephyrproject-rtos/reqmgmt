@@ -525,6 +525,11 @@ Zephyr shall disable the CPU memory protection mechanisms inherited from the pre
 [SECTION]
 TITLE: CPU Architecture Specific Initializations
 
+[SECTION]
+TITLE: ARC CPU Architecture Initialization
+
+[/SECTION]
+
 [/SECTION]
 
 [/SECTION]
