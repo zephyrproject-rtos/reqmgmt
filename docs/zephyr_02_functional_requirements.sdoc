@@ -513,6 +513,15 @@ STATEMENT: >>>
 Zephyr shall invalidate the CPU caches during system initialization.
 <<<
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: CPU-architecture initialization disables memory protection config inherited from preceding executable
+STATEMENT: >>>
+Zephyr shall disable the CPU memory protection mechanisms inherited from the preceding executable.
+<<<
+
 [/SECTION]
 
 [/SECTION]
