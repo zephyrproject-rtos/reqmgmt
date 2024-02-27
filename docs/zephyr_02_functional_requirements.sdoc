@@ -760,6 +760,15 @@ STATEMENT: >>>
 Zephyr shall explicitly ignore the return value of the call to `main()`.
 <<<
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Code Coverage Data Dumped Upon Return from Top-Level Application
+STATEMENT: >>>
+Zephyr shall dump code coverage data upon returning from the C function `main()` and before starting the System Shutdown.
+<<<
+
 [/SECTION]
 
 [SECTION]
