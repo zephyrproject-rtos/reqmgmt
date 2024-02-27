@@ -765,6 +765,11 @@ Zephyr shall explicitly ignore the return value of the call to `main()`.
 [SECTION]
 TITLE: System Shutdown
 
+[SECTION]
+TITLE: Where Configured w/o Multi-Threading Support
+
+[/SECTION]
+
 [/SECTION]
 
 [/SECTION]
