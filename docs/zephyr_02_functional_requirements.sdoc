@@ -579,6 +579,21 @@ TITLE: XTENSA 32b Architecture Initialization
 
 [/SECTION]
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Pre-Kernel Initialization notification
+STATEMENT: >>>
+Zephyr System Initialization shall publish an notification to each registered component after all CPU-architecture specific initialization and before any of the following:
+
+- any CPU stack(s) are initialized with usage markers,
+
+- any kernel timing services are initialized,
+
+- any transition to the main execution thread.
+<<<
+
 [/SECTION]
 
 [/SECTION]
