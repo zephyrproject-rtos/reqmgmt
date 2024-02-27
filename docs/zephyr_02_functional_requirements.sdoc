@@ -490,6 +490,17 @@ Zephyr shall sustain the active hardware watchdog inherited from the preceding e
 [SECTION]
 TITLE: Initialization on Inherited CPU Stack
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Pre-CPU Architecture Initialization notification
+STATEMENT: >>>
+Zephyr shall publish an notification to each registered component
+after the C domain has been set up and
+before any CPU-architecture specific initialization.
+<<<
+
 [/SECTION]
 
 [/SECTION]
