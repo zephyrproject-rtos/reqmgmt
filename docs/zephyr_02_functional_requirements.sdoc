@@ -699,6 +699,15 @@ STATEMENT: >>>
 Zephyr shall initialize static threads after completing the Application initialization notifications and before completing the System Initialization
 <<<
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: CPU-Architecture Memory Coherence Initialization
+STATEMENT: >>>
+Zephyr shall initialize the CPU-architecture specific memory coherence support after static thread initialization and before completing the System Initialization.
+<<<
+
 [/SECTION]
 
 [/SECTION]
