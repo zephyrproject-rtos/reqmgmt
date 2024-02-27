@@ -663,6 +663,15 @@ STATEMENT: >>>
 Zephyr shall initialize the MMU within the Kernel Initialization Phase.
 <<<
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Post-Kernel Initialization Notification
+STATEMENT: >>>
+Zephyr System Initialization shall publish an notification to each registered component after the Kernel is initialized and before any C++ static object initialization.
+<<<
+
 [/SECTION]
 
 [/SECTION]
