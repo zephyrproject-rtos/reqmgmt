@@ -654,6 +654,15 @@ Zephyr shall not use the inherited CPU stack once the main executable thread has
 [SECTION]
 TITLE: Initialization under Main Executable Thread
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Initialize memory management
+STATEMENT: >>>
+Zephyr shall initialize the MMU within the Kernel Initialization Phase.
+<<<
+
 [/SECTION]
 
 [/SECTION]
