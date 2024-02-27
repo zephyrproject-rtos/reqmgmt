@@ -451,6 +451,15 @@ Zephyr shall provide an interface to assign a specific handler for a fatal error
 [SECTION]
 TITLE: System Initialization
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Initialization follows dependency order
+STATEMENT: >>>
+Zephyr shall initialize the system following the order of component dependencies.
+<<<
+
 [/SECTION]
 
 [SECTION]
