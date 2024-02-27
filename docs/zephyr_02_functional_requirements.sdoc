@@ -690,6 +690,15 @@ STATEMENT: >>>
 Zephyr shall initialize the C++ static objects after the Post-Kernel initialization notifications are completed and before the Application initialization notifications are started.
 <<<
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Multi-Threading Static Thread Initialization
+STATEMENT: >>>
+Zephyr shall initialize static threads after completing the Application initialization notifications and before completing the System Initialization
+<<<
+
 [/SECTION]
 
 [/SECTION]
