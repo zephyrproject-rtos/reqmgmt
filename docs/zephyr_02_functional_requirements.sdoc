@@ -487,6 +487,11 @@ STATEMENT: >>>
 Zephyr shall sustain the active hardware watchdog inherited from the preceding executable.
 <<<
 
+[SECTION]
+TITLE: Initialization on Inherited CPU Stack
+
+[/SECTION]
+
 [/SECTION]
 
 [SECTION]
