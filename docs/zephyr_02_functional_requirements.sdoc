@@ -501,6 +501,11 @@ after the C domain has been set up and
 before any CPU-architecture specific initialization.
 <<<
 
+[SECTION]
+TITLE: CPU Architecture Specific Initialization
+
+[/SECTION]
+
 [/SECTION]
 
 [/SECTION]
