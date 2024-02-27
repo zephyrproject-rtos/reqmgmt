@@ -762,6 +762,11 @@ Zephyr shall explicitly ignore the return value of the call to `main()`.
 
 [/SECTION]
 
+[SECTION]
+TITLE: System Shutdown
+
+[/SECTION]
+
 [/SECTION]
 
 [SECTION]
