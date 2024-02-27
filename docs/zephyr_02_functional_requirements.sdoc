@@ -751,6 +751,15 @@ When the System Initialization is complete,
 Zephyr shall call `main(void)` on the main execution thread.
 <<<
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Top-Level Application Return Value Ignored
+STATEMENT: >>>
+Zephyr shall explicitly ignore the return value of the call to `main()`.
+<<<
+
 [/SECTION]
 
 [/SECTION]
