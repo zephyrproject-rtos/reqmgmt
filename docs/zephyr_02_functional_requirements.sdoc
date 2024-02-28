@@ -850,6 +850,17 @@ TITLE: Where Configured with Multi-Threading Support
 
 [/SECTION]
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: System Shutdown Completion Ends in Infinite Loop not sustaining HW watchdogs.
+STATEMENT: >>>
+When the System Shutdown logic is completed,
+
+Zephyr shall spin in an infinite loop that does not feed any hardware watchdogs.
+<<<
+
 [/SECTION]
 
 [/SECTION]
