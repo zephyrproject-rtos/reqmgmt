@@ -791,6 +791,11 @@ Zephyr shall disable interrupts.
 [SECTION]
 TITLE: CPU Architecture Specific Shutdowns
 
+[SECTION]
+TITLE: ARC CPU Architecture Shutdown
+
+[/SECTION]
+
 [/SECTION]
 
 [/SECTION]
