@@ -788,6 +788,11 @@ When the System Shutdown logic is executed,
 Zephyr shall disable interrupts.
 <<<
 
+[SECTION]
+TITLE: CPU Architecture Specific Shutdowns
+
+[/SECTION]
+
 [/SECTION]
 
 [SECTION]
