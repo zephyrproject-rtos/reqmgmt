@@ -553,6 +553,15 @@ TITLE: NIOS2 32b CPU Architecture Initialization
 [SECTION]
 TITLE: POSIX "CPU Architecture" Initialization
 
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Builds for POSIX Platforms need custom `busy_wait()`
+STATEMENT: >>>
+Zephyr shall be built with a custom `busy_wait` implementation.
+<<<
+
 [/SECTION]
 
 [SECTION]
