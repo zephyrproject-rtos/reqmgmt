@@ -451,6 +451,32 @@ Zephyr shall provide an interface to assign a specific handler for a fatal error
 [SECTION]
 TITLE: System Initialization
 
+[FREETEXT]
+Secure devices need to establish and maintain trust in the executable images. This requires attestation and authentication of each image, beginning with the check of the first-stage executable. This executable must only be entered after it has passed the attestation and authentication checks. This establishes trust in the first-stage executable, which then is accountable for establishing trust in every image it directly executes.
+
+Each stage of execution terminates in only one of the following ways:
+- through handling a catastrophic error, requiring an MCU reset to restore secure execution, or
+- through a controlled transfer of the MCU to a trusted next-stage executable, or
+- through a controlled system shutdown and MCU reset, or
+- through a hardware watchdog asychronously resetting the MCU.
+
+Only the first-stage image inherits the MCU coming from a HW reset. The successive stage(s) inherit a running MCU, any conditions reported by the preceding stage.
+
+  EXAMPLE: A secure IoT device contains the following images:
+
+  1. an immutable first-stage boot loader image, which transfers execution to
+  2. a updatable second-stage boot loader image too large to be made immutable, which transfers execution to
+  3. an updatable application image.
+
+  The first-stage boot loader reports to the successive image power-up conditions of specific inputs (e.g., buttons, test points).  Each stage ensures a hardware watchdog is enabled while handing off execution so that the system can autonomously recover from a misbehaving next-stage.
+
+NOTE: A first-stage executable image may be directly verified by either:
+  - MCU hardware prior to each execution, or
+  - the device manufacturing process immediately before making first-stage image immutable.
+
+NOTE: Some MCUs do not allow the enabled hardware watchdog to be disabled or reconfigured. Successive stages must sustain the inherited hardware watchdog configuration in order to prevent an MCU reset.
+[/FREETEXT]
+
 [REQUIREMENT]
 STATUS: Draft
 TYPE: Functional
