@@ -517,6 +517,16 @@ Zephyr shall sustain the active hardware watchdog inherited from the preceding e
 TITLE: Initialization on Inherited CPU Stack
 
 [REQUIREMENT]
+UID: ZEP-127
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Build-time Registrations for System Initialization Notifications
+STATEMENT: >>>
+Zephyr shall expose an interface to build-time registration for system initialization notifications.
+<<<
+
+[REQUIREMENT]
 STATUS: Draft
 TYPE: Functional
 COMPONENT: System Initialization
