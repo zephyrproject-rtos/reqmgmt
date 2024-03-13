@@ -1383,6 +1383,18 @@ If the Counting Semaphore initialization is configured with an invalid set of in
 the Counting Semaphore initialization shall report the reason for the failure.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-132
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Counting Semaphore Exposes Current Count
+STATEMENT: >>>
+When the Counting Semaphore current count is requested,
+
+Zephyr shall report the current count of the Counting Semaphore.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
