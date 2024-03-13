@@ -1455,6 +1455,23 @@ the Counting Semaphore shall do all of the following:
 - indicate to the Giving thread that the Give request was successful.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-137
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Counting Semaphore Give without pending Take increases count by 1
+STATEMENT: >>>
+While no thread is blocked waiting to Take from this Counting Semaphore,
+
+When the Counting Semaphore Give is requested,
+
+the Counting Semaphore shall do all of the following:
+
+- increase the count of this semaphore by 1, up to the configured limit of this Semaphore; and
+- indicate to the Giving thread that the Give request was successful.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
