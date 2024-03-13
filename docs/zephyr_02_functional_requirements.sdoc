@@ -1320,6 +1320,16 @@ Architectural & interface REQ
 [SECTION]
 TITLE: Counting Semaphores
 
+[REQUIREMENT]
+UID: ZEP-127
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Build-time registration for pre-kernel init phase notification
+STATEMENT: >>>
+Zephyr Counting Semaphores shall build-time register with Zephyr System Initialization for notification of running in the Zephyr Pre-Kernel initialization phase.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
