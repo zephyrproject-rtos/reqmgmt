@@ -1424,6 +1424,20 @@ Zephyr shall do all of the following:
 - abort all other outstanding attempts to interact with the Counting Semaphore.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-135
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Counting Semaphore Reset Request Invalid Parameter is Catastrophic Error
+STATEMENT: >>>
+When the Counting Semaphore reset is requested,
+
+If the Counting Semaphore reset parameters are invalid,
+
+Zephyr shall report a catastrophic failure.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
