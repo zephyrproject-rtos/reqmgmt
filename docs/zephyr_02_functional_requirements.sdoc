@@ -1317,6 +1317,11 @@ As a Zephyr OS user I want to... ???,
 Architectural & interface REQ
 <<<
 
+[SECTION]
+TITLE: Counting Semaphores
+
+[/SECTION]
+
 [REQUIREMENT]
 UID: ZEP-100
 STATUS: Draft
