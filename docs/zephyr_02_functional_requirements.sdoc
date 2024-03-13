@@ -1355,6 +1355,20 @@ Zephyr Counting Semaphores shall expose an interface to dynamically initialize a
 - limit of the Counting Semaphore.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-130
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Counting Semaphores Static Object Init Failures Cause Build Errors
+STATEMENT: >>>
+While a Counting Semaphore is statically allocated,
+
+If the Counting Semaphore is configured with an invalid set of initialization parameter values,
+
+the Zephyr Build System shall fail the build and report the point of failure.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
