@@ -1369,6 +1369,20 @@ If the Counting Semaphore is configured with an invalid set of initialization pa
 the Zephyr Build System shall fail the build and report the point of failure.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-131
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Counting Semaphore Dynamic Object Init Failures Reports Failure Reason
+STATEMENT: >>>
+While a Counting Semaphore is dynamically allocated,
+
+If the Counting Semaphore initialization is configured with an invalid set of initialization parameter values,
+
+the Counting Semaphore initialization shall report the reason for the failure.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
