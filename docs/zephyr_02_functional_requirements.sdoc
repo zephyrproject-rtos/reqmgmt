@@ -1517,6 +1517,18 @@ When the Counting Semaphore Take is requested,
 the Counting Semaphore shall block the thread requesting a Counting Semaphore Take.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-141
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Counting Semaphore Take times out
+STATEMENT: >>>
+When a Counting Semaphore Take request timeout has expired,
+
+the Counting Semaphore shall unblock the waiting thread indicating the Take request failed due to a timeout.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
