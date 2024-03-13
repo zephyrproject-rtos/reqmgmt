@@ -1543,6 +1543,20 @@ If the Counting Semaphore Take parameters are invalid,
 Zephyr shall report a catastrophic failure.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-143
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Counting Semaphore Take Request From Interrupt Context with Non-Immediate Timeout is Catastrophic Error
+STATEMENT: >>>
+When the Counting Semaphore Take is requested from Interrupt Context,
+
+If the Counting Semaphore Take timeout is non-immediate,
+
+Zephyr shall report a catastrophic failure.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
