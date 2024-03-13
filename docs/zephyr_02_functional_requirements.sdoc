@@ -1486,6 +1486,23 @@ If the Counting Semaphore Give parameters are invalid,
 Zephyr shall report a catastrophic failure.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-139
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Counting Semaphore Take when Count is >0
+STATEMENT: >>>
+While the Count of this Counting Semaphore is > 0,
+
+When the Counting Semaphore Take is requested,
+
+the Counting Semaphore shall do all of the following:
+
+- atomically reduce the Count of this Counting Semaphore by 1; and
+- indicate to the Taking thread that the Take request was successful.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
