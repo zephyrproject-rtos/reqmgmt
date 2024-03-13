@@ -1342,6 +1342,19 @@ When the Counting Semaphores service is notified of the Zephyr Pre-Kernel System
 Zephyr Counting Semaphores shall initialize all statically defined semaphores.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-129
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Counting Semaphore dynamic initialization
+STATEMENT: >>>
+Zephyr Counting Semaphores shall expose an interface to dynamically initialize a Counting Semaphore which requires the following information:
+
+- initial count of the Counting Semaphore; and
+- limit of the Counting Semaphore.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
