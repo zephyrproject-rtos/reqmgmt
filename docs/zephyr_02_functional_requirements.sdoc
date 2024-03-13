@@ -1472,6 +1472,20 @@ the Counting Semaphore shall do all of the following:
 - indicate to the Giving thread that the Give request was successful.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-138
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Counting Semaphore Give Request Invalid Parameter is Catastrophic Error
+STATEMENT: >>>
+When the Counting Semaphore Give is requested,
+
+If the Counting Semaphore Give parameters are invalid,
+
+Zephyr shall report a catastrophic failure.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
