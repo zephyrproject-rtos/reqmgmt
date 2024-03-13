@@ -1409,6 +1409,21 @@ If the Counting Semaphore current count parameters are invalid,
 Zephyr shall report a catastrophic failure.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-134
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Counting Semaphores Exposes Ability to Reset Count to Zero
+STATEMENT: >>>
+When the Counting Semaphore reset is requested,
+
+Zephyr shall do all of the following:
+
+- set to zero the current count of the Counting Semaphore, and
+- abort all other outstanding attempts to interact with the Counting Semaphore.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
