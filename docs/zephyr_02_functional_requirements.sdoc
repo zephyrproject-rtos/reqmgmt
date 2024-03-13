@@ -1503,6 +1503,20 @@ the Counting Semaphore shall do all of the following:
 - indicate to the Taking thread that the Take request was successful.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-140
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Counting Semaphore Take blocked when Count is 0
+STATEMENT: >>>
+While the Count of this Counting Semaphore is 0,
+
+When the Counting Semaphore Take is requested,
+
+the Counting Semaphore shall block the thread requesting a Counting Semaphore Take.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
