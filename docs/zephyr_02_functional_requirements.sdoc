@@ -1529,6 +1529,20 @@ When a Counting Semaphore Take request timeout has expired,
 the Counting Semaphore shall unblock the waiting thread indicating the Take request failed due to a timeout.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-142
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Counting Semaphore Take Request Invalid Parameter is Catastrophic Error
+STATEMENT: >>>
+When the Counting Semaphore Take is requested,
+
+If the Counting Semaphore Take parameters are invalid,
+
+Zephyr shall report a catastrophic failure.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
