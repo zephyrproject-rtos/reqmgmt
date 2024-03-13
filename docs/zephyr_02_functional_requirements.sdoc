@@ -1330,6 +1330,18 @@ STATEMENT: >>>
 Zephyr Counting Semaphores shall build-time register with Zephyr System Initialization for notification of running in the Zephyr Pre-Kernel initialization phase.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-128
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Count Semaphore pre-Kernel notification initializes statically defined semaphore objects
+STATEMENT: >>>
+When the Counting Semaphores service is notified of the Zephyr Pre-Kernel System Initialization phase,
+
+Zephyr Counting Semaphores shall initialize all statically defined semaphores.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
