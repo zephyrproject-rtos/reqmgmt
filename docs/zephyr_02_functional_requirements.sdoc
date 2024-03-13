@@ -1395,6 +1395,20 @@ When the Counting Semaphore current count is requested,
 Zephyr shall report the current count of the Counting Semaphore.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-133
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Counting Semaphore Current Count Request Invalid Parameter is Catastrophic Error
+STATEMENT: >>>
+When the Counting Semaphore current count is requested,
+
+If the Counting Semaphore current count parameters are invalid,
+
+Zephyr shall report a catastrophic failure.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
