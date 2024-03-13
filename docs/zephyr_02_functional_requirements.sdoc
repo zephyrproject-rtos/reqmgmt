@@ -1438,6 +1438,23 @@ If the Counting Semaphore reset parameters are invalid,
 Zephyr shall report a catastrophic failure.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-136
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphores
+TITLE: Counting Semaphore Give unblocks pending Take by another thread
+STATEMENT: >>>
+While a thread is blocked waiting to Take from this Counting Semaphore,
+
+When the Counting Semaphore Give is requested,
+
+the Counting Semaphore shall do all of the following:
+
+- unblock the waiting thread indicating the Take request was successful; and
+- indicate to the Giving thread that the Give request was successful.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
