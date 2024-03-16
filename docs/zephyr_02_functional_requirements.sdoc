@@ -1147,17 +1147,9 @@ UID: ZEP-102
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
-TITLE: Message Queue Kernel Object
+TITLE: Message Queue
 STATEMENT: >>>
-Zephyr shall provide a kernel object that implements a simple message queue, allowing threads and ISRs to asynchronously send and receive fixed-size data items.
-<<<
-USER_STORY: >>>
-=N71 & "
-
-(from K68)"
-<<<
-REVIEW_COMMENT: >>>
-This might be too implementation specific. Better: Zephyr shall allow threads and ISRs to asynchronously exchange fixed-size data items.
+Zephyr shall provide a a communcation premitive that allow threads and ISRs to asynchronously exchange fixed-size data items.
 <<<
 
 [REQUIREMENT]
