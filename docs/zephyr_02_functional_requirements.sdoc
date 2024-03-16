@@ -1134,9 +1134,10 @@ UID: ZEP-101
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
-TITLE: Pipe Kernel Object
+TITLE: Pipe Communication Primitive
 STATEMENT: >>>
-Zephyr shall provide a kernel object that allows a thread to transfer a block of data to another thread.
+Zephyr shall provide a communication primitive that allows a thread to transfer a block of
+data to another thread.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want to send a byte stream from one thread to another in a thread-safe manner.
@@ -1157,12 +1158,15 @@ UID: ZEP-103
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
-TITLE: Mailbox Abstraction
+TITLE: Mailbox Kernel Primitive
 STATEMENT: >>>
-Zephyr shall support a mailbox abstraction to enable targeted message passing between threads.
+Zephyr shall a communication primitive that allows tasks or threads to exchange messages of varying sizes asynchronously or synchronously.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to... ???
+As a Zephyr OS user I want a sending task to deposit a message into the mailbox,
+and a receiving task to be able to retrieve the message at its convenience. This
+allows for asynchronous communication, where tasks do not need to synchronize their
+execution explicitly.
 <<<
 
 [/SECTION]
