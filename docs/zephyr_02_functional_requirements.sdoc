@@ -639,7 +639,7 @@ STATEMENT: >>>
 Zephyr shall support deferred logging (TODO: need more detail about the constraints and limits on what can be deferred).
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want a minimal influence of logging activities to the timing behaviour of my application. Time consuming logging tasks shall be done in the background.
+As a Zephyr OS user I want a minimal influence of logging activities to the timing behaviour of my application. Time consuming logging threads shall be done in the background.
 <<<
 
 [/SECTION]
@@ -1061,21 +1061,6 @@ Zephyr shall provide notification of changes to system power states.
 TITLE: Thread Communication
 
 [REQUIREMENT]
-UID: ZEP-95
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Thread Communication
-TITLE: Mailbox
-STATEMENT: >>>
-Zephyr shall provide mechanisms for thread synchronization.
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want to able to exchange information between threads in a thread-safe manner guaranteeing data consistence.
-
-What does safe mean, I would not consider safe as in safety.
-<<<
-
-[REQUIREMENT]
 UID: ZEP-96
 STATUS: Draft
 TYPE: Functional
@@ -1099,21 +1084,6 @@ Zephyr shall provide mechanisms to enable waiting for results during communicati
 <<<
 USER_STORY: >>>
 =N73
-<<<
-
-[REQUIREMENT]
-UID: ZEP-99
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Thread Communication
-TITLE: Traditional Counting Semaphore
-STATEMENT: >>>
-Zephyr shall provide a counting semaphore abstraction for queuing and mutual exclusion.
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want to... ???,
-
-Architectural & interface REQ
 <<<
 
 [REQUIREMENT]
@@ -1160,12 +1130,12 @@ TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Mailbox Kernel Primitive
 STATEMENT: >>>
-Zephyr shall a communication primitive that allows tasks or threads to exchange messages of varying sizes asynchronously or synchronously.
+Zephyr shall provide a communication primitive that allows threadss to exchange messages of varying sizes asynchronously or synchronously.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want a sending task to deposit a message into the mailbox,
-and a receiving task to be able to retrieve the message at its convenience. This
-allows for asynchronous communication, where tasks do not need to synchronize their
+As a Zephyr OS user I want a sending thread to deposit a message into the mailbox,
+and a receiving thread to be able to retrieve the message at its convenience. This
+allows for asynchronous communication, where threads do not need to synchronize their
 execution explicitly.
 <<<
 

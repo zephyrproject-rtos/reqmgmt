@@ -107,10 +107,10 @@ Clarification: There are many files. Linked list, ring buffer, ...). This is an 
 UID: ZEP-36
 STATUS: Draft
 TYPE: High Level
-COMPONENT: Device Driver API
-TITLE: Device Driver Abstracting
+COMPONENT: Device Drivers
+TITLE: Device Driver Abstraction
 STATEMENT: >>>
-Zephyr shall provide a framework for managing device driver behavior (note: device drivers includes peripherals).
+Zephyr shall provide a framework for managing device drivers and peripherals.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want my application to be portable between different MCU architectures (ARM Cortex-M/A, Intel x86, RISCV etc.) and MCU vendors (STM, NXP, Intel, etc.) without having to change the MCU peripherals access.
@@ -201,19 +201,6 @@ As a Zephyr OS user I want to be able to control the power mode of the MCU and i
 <<<
 
 [REQUIREMENT]
-UID: ZEP-43
-STATUS: Draft
-TYPE: High Level
-COMPONENT: Thread Communication
-TITLE: Mutex
-STATEMENT: >>>
-Zephyr shall provide an interface for managing communcation between threads.
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want to able to exchange information between threads in a thread-safe manner guaranteeing data consistence.
-<<<
-
-[REQUIREMENT]
 UID: ZEP-44
 STATUS: Draft
 TYPE: High Level
@@ -241,6 +228,37 @@ As a Zephyr OS user, I want to be able to control which thread will run on which
 REVIEW_COMMENT: >>>
 TBD: The statement contains two separate statements.
 <<<
+
+[SECTION]
+TITLE: Thread Synchronization
+
+[REQUIREMENT]
+UID: ZEP-43
+STATUS: Draft
+TYPE: High Level
+COMPONENT: Mutex
+TITLE: Mutex
+STATEMENT: >>>
+Zephyr shall provide an interface for managing communcation between threads.
+<<<
+USER_STORY: >>>
+As a Zephyr OS user I want to able to exchange information between threads in a thread-safe manner guaranteeing data consistence.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-99
+STATUS: Draft
+TYPE: High Level
+COMPONENT: Semaphore
+TITLE: Counting Semaphore
+STATEMENT: >>>
+The system shall implement a semaphore synchronization primitive for coordinating access to shared resources among multiple threads.
+<<<
+USER_STORY: >>>
+As a software developer threaded with implementing resource management in our real-time operating system (RTOS), I want to integrate a semaphore synchronization primitive to facilitate coordinated access to shared resources among multiple threads.
+<<<
+
+[/SECTION]
 
 [SECTION]
 TITLE: Threads
