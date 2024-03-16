@@ -98,7 +98,7 @@ If MCU power state was meant here:
 As a Zephyr OS user I want to control the MCU's power saving mode such e.g. operation, sleep, deep sleep or similar as supported by the selected MCU.
 <<<
 REVIEW_COMMENT: >>>
-What is lifecycle - power on, standby, power off?  or ???? 
+What is lifecycle - power on, standby, power off?  or ????
 
 Clarification: Starting and Stopping, and putting it into Stand-By Mode (whatever the processor supports)
 <<<
@@ -1182,7 +1182,7 @@ TITLE: Thread Scheduling
 UID: ZEP-104
 STATUS: Draft
 TYPE: Functional
-COMPONENT: Thread Mapping (should it just be scheduling) -
+COMPONENT: Multi Core
 TITLE: Support operation on more than one CPU
 STATEMENT: >>>
 The Zephyr kernel shall support operation on more than one physical CPU sharing the same kernel state.
@@ -1197,7 +1197,7 @@ Is see it as an internal hidden from the user.
 UID: ZEP-105
 STATUS: Draft
 TYPE: Functional
-COMPONENT: Thread Mapping (should it just be scheduling)
+COMPONENT: Multi Core
 TITLE: Running threads on specific CPUs
 STATEMENT: >>>
 Zephyr shall provide an interface for running threads on specific sets of CPUs ( default is 1 CPU).
@@ -1210,7 +1210,7 @@ As a Zephyr OS user I want Zephyr OS to be able to specify the CPU core or the s
 UID: ZEP-106
 STATUS: Draft
 TYPE: Functional
-COMPONENT: Thread Mapping (should it just be scheduling?)
+COMPONENT: Multi Core
 TITLE: Exclusion between physical CPUs
 STATEMENT: >>>
 Zephyr shall provide an interface for mutual exclusion between multiple physical CPUs.
@@ -1218,6 +1218,11 @@ Zephyr shall provide an interface for mutual exclusion between multiple physical
 USER_STORY: >>>
 As a Zephyr OS user I want Zephyr OS to provide synchonization mechanisms between the CPU cores and the access to common resources.
 <<<
+
+[/SECTION]
+
+[SECTION]
+TITLE: Thread Scheduling
 
 [REQUIREMENT]
 UID: ZEP-112
