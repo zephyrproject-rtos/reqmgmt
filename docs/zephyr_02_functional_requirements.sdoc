@@ -969,7 +969,7 @@ TITLE: Data Passing
 UID: ZEP-89
 STATUS: Draft
 TYPE: Functional
-COMPONENT: see: https://docs.zephyrproject.org/latest/reference/kernel/index.html - Data Passing
+COMPONENT: Data Passing
 TITLE: Traditional FIFO Queue
 STATEMENT: >>>
 Zephyr shall provide a kernel object that implements a traditional first in, first out (FIFO) queue, allowing threads and ISRs to add and remove a limited number of 32-bit data values.
@@ -982,7 +982,7 @@ As a Zephyr OS user I want to be able to exchange 1 to N data objects between di
 UID: ZEP-90
 STATUS: Draft
 TYPE: Functional
-COMPONENT: see: https://docs.zephyrproject.org/latest/reference/kernel/index.html - Data Passing
+COMPONENT: Data Passing
 TITLE: Traditional LIFO queue
 STATEMENT: >>>
 Zephyr shall provide a kernel object that implements a traditional last in, first out (LIFO) queue, allowing threads and ISRs to add and remove a limited number of 32-bit data values.
@@ -1284,7 +1284,7 @@ TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Organize running threads into a fixed list
 STATEMENT: >>>
-Zephyr shall organize running threads into a fixed list of numeric priorities (see: https://docs.zephyrproject.org/latest/kernel/services/threads/index.html#thread-priorities).
+Zephyr shall organize running threads into a fixed list of numeric priorities.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user, I want that the OS organize running threads in a fixed list of numeric priorities.
