@@ -200,11 +200,14 @@ USER_STORY: >>>
 As a Zephyr OS user I want to be able to control the power mode of the MCU and its peripherals to take advantage of the hardward features and to be able to implement low power or battery driven long life applications.
 <<<
 
+[SECTION]
+TITLE: Multicore and SMP
+
 [REQUIREMENT]
 UID: ZEP-44
 STATUS: Draft
 TYPE: High Level
-COMPONENT: Thread Mapping (should it just be scheduling)
+COMPONENT: SMP and Multicore
 TITLE: Multiple CPU scheduling
 STATEMENT: >>>
 Zephyr shall support scheduling of threads on multiple hardware CPUs.
@@ -217,7 +220,7 @@ As a Zephyr OS user I want Zephyr OS to run on MCUs/CPUs with one or more CPU co
 UID: ZEP-4
 STATUS: Draft
 TYPE: High Level
-COMPONENT: Scheduling
+COMPONENT: SMP and Multicore
 TITLE: Scheduling
 STATEMENT: >>>
 Zephyr shall provide an interface to assign a thread to a specific CPU.
@@ -228,6 +231,8 @@ As a Zephyr OS user, I want to be able to control which thread will run on which
 REVIEW_COMMENT: >>>
 TBD: The statement contains two separate statements.
 <<<
+
+[/SECTION]
 
 [SECTION]
 TITLE: Thread Synchronization
