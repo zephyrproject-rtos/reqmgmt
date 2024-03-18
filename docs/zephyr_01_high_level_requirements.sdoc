@@ -86,24 +86,6 @@ TBD: The requirement needs refinement.
 <<<
 
 [REQUIREMENT]
-UID: ZEP-35
-STATUS: Draft
-TYPE: High Level
-COMPONENT: Utilities Library - Data Structures
-TITLE: Data Structures Library Utilities
-STATEMENT: >>>
-Zephyr shall provide common container data structures as library utilities   (ring buffer, linked list, red black trees, ....   see document from Anas)
-<<<
-USER_STORY: >>>
-As a Zepyhr OS developler (user) I do not want to implement common software patterns multiple time in each module again, but make use of a common library which provides it.
-<<<
-REVIEW_COMMENT: >>>
-Possible API - It's ambiguous what is meant by common container data structures as library ulitileis.... - get pointer to code.   (Single linked list, double linked list, ....)
-
-Clarification: There are many files. Linked list, ring buffer, ...). This is an implementation. Need to look at scope. Doesn't need to be a high level requirement
-<<<
-
-[REQUIREMENT]
 UID: ZEP-36
 STATUS: Draft
 TYPE: High Level
