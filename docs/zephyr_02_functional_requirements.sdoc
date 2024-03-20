@@ -27,9 +27,6 @@ ELEMENTS:
   - TITLE: USER_STORY
     TYPE: String
     REQUIRED: False
-  - TITLE: DISCUSSION_DATE
-    TYPE: String
-    REQUIRED: False
   - TITLE: REVIEW_COMMENT
     TYPE: String
     REQUIRED: False
