@@ -1318,6 +1318,19 @@ Architectural & interface REQ
 <<<
 
 [REQUIREMENT]
+UID: ZEP-127
+STATUS: Draft
+TYPE: Interface
+COMPONENT: Counting Semaphore
+TITLE: Counting Semaphore dynamic initialization
+STATEMENT: >>>
+Counting Semaphore shall expose an interface to dynamically initialize a Counting Semaphore which requires the following information:
+
+- initial count of this Counting Semaphore; and
+- limit of this Counting Semaphore.
+<<<
+
+[REQUIREMENT]
 UID: ZEP-100
 STATUS: Draft
 TYPE: Functional
