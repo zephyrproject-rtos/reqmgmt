@@ -210,9 +210,6 @@ Zephyr shall provide an interface to assign a thread to a specific CPU.
 USER_STORY: >>>
 As a Zephyr OS user, I want to be able to control which thread will run on which CPU.
 <<<
-REVIEW_COMMENT: >>>
-TBD: The statement contains two separate statements.
-<<<
 
 [/SECTION]
 
@@ -305,9 +302,6 @@ Zephyr shall provide a framework for managing time-based events.
 <<<
 USER_STORY: >>>
 As a Zephyr OS user, I want to start, suspend, resume and stop timers which shall trigger an event on a set expiration time.
-<<<
-REVIEW_COMMENT: >>>
-TBD: Do we need requirements on scheduling latency?
 <<<
 
 [REQUIREMENT]
