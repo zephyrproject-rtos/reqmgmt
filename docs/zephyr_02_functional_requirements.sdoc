@@ -306,11 +306,6 @@ Zephyr shall provide abstraction of device drivers with common functionalities a
 
 Proposal for replacement: Zephyr shall provide an interface between application and individual device drivers to provide an abstraction of device drivers with common functionalities.
 <<<
-USER_STORY: >>>
-=N21 & "
-
-Remark: What is the difference to ZEP006?"
-<<<
 REVIEW_COMMENT: >>>
 What are common functionalities?
 
@@ -361,9 +356,6 @@ COMPONENT: Exception and Error Handling
 TITLE: Default handler for fatal errors
 STATEMENT: >>>
 Zephyr shall provide default handlers for fatal errors that do not have a dedicated handler.
-<<<
-USER_STORY: >>>
-TBD: =N25
 <<<
 
 [REQUIREMENT]
@@ -494,9 +486,6 @@ TITLE: Service routine for handling interrupts (ISR)
 STATEMENT: >>>
 Zephyr shall provide support a service routine for handling interrupts (ISR).
 <<<
-USER_STORY: >>>
-TBD: Duplicate to line 30? delete?
-<<<
 
 [REQUIREMENT]
 UID: ZEP-59
@@ -507,9 +496,6 @@ TITLE: Multi-level interrupts
 STATEMENT: >>>
 Zephyr shall support multi-level preemptive interrupt priorities, when supported by hardware. Note: detailed analysis to demonstrate non interferenace will be needed here.
 <<<
-USER_STORY: >>>
-TBD
-<<<
 
 [REQUIREMENT]
 UID: ZEP-60
@@ -519,9 +505,6 @@ COMPONENT: Interrupts
 TITLE: Associating application code with interrupts
 STATEMENT: >>>
 Zephyr shall provide an interface for associating application code with specific interrupts. (CLARIFY: Can it be a deferred procedure call at interrupt context? Would be different requirement)
-<<<
-USER_STORY: >>>
-TBD
 <<<
 
 [REQUIREMENT]
@@ -730,11 +713,6 @@ TITLE: Prevent user threads creating higher priority threasds
 STATEMENT: >>>
 Zephyr shall prevent user threads from creating new threads that are higher priority than the caller.
 <<<
-USER_STORY: >>>
-As a Zephyr OS user I want ... ???
-
-(Sorry I still do not see the reason for such a requirement, if I, as a user, do not want to get swapped out of my thread creating thread, I can take care of that myself. If there are security (safety?) thought behind, it would be nice to understand them and document them here.)
-<<<
 
 [REQUIREMENT]
 UID: ZEP-75
@@ -829,9 +807,6 @@ TITLE: Boot Time Memory Access Policy
 STATEMENT: >>>
 Zephyr shall support configurable access to memory during boot time.
 <<<
-USER_STORY: >>>
-As a Zephyr OS user I want... ???
-<<<
 REVIEW_COMMENT: >>>
 What does "policy" mean in this context? Does this mean to choose between different start up sequences?
 <<<
@@ -884,12 +859,6 @@ Zephyr shall track kernel objects that are used by user mode threads.
 
 Note: this means Zephyr shall track the resources used by the user mode thread (associate this with a user story).
 <<<
-USER_STORY: >>>
-I do not see a direct user story behind.
-
-This is a sub-requirement to 102a,b,c.
-and on architecture / interface level.
-<<<
 REVIEW_COMMENT: >>>
 Does this mean that the user mode threads are monitored wrt to their usage of kernel objects?  Example/User story would help.
 <<<
@@ -905,9 +874,6 @@ Zephyr shall have an interface to request access to specific memory after initia
 <<<
 USER_STORY: >>>
 As a Zephyr OS user I want to be able to request read-only or read-write access to a dedicated memory area/pool during runtime.
-<<<
-REVIEW_COMMENT: >>>
-What is the difference to ZEP 011?
 <<<
 
 [REQUIREMENT]
@@ -1152,11 +1118,6 @@ COMPONENT: Multi Core
 TITLE: Support operation on more than one CPU
 STATEMENT: >>>
 The Zephyr kernel shall support operation on more than one physical CPU sharing the same kernel state.
-<<<
-USER_STORY: >>>
-As a Zephyr OS user I want to ...???
-
-Is see it as an internal hidden from the user.
 <<<
 
 [REQUIREMENT]
