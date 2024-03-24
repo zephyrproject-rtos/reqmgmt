@@ -960,25 +960,184 @@ As a Zephyr OS user I want to be able to exchange 1 to N data objects between di
 [/SECTION]
 
 [SECTION]
-TITLE: Mutex
+TITLE: Thread Syncronization
 
 [REQUIREMENT]
-UID: ZEP-91
+UID: ZEP-MUTEX-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mutex
-TITLE: Mutex Kernel Object
+TITLE: Initialization of Mutex at Compile time
 STATEMENT: >>>
-Zephyr shall support resource synchronization. (Note synchronization can be for memory access, and mutex may be one implementation, but not the only one).
+The Zephyr RTOS shall provide a mechanism for defining and initializing mutexes
+at compile time.
 <<<
-USER_STORY: >>>
-As a Zephyr OS user I want to be able to sychonize threads when accessing common resources, where the thread shall have the option to:
-- wait eternally until the resources becomes available.
-- immediately return with a negative message if the resource is not available and allow the thread to continue.
-- wait for a given time for the resource to become available or return with a negative message.
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Initialization of Mutex at Runtime
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for defining and initializing mutexes
+at runtime time.
 <<<
-REVIEW_COMMENT: >>>
-Concern over phrase recursive.  What is it MUTEXing? Memory Management?
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Locking of a Mutex
+STATEMENT: >>>
+While a thread needs exclusive access to a shared resource, the Zephyr RTOS
+shall provide a mechanism to lock a mutex.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Exclusive Locking of a Mutex
+STATEMENT: >>>
+When a mutex is successfully locked by a thread, the Zephyr RTOS shall ensure
+that the mutex becomes unavailable for locking by other threads until it is
+unlocked.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Unlocking of a Mutex
+STATEMENT: >>>
+While a thread no longer requires exclusive access to a shared resource, the
+Zephyr RTOS shall provide a mechanism to unlock a mutex.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Availability of a Mutex after Unlocking
+STATEMENT: >>>
+When a mutex is successfully unlocked by a thread, the Zephyr RTOS shall ensure
+that the mutex becomes available for locking by other threads.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Timed locking of a Mutex
+STATEMENT: >>>
+Mutexes shall support timed locking, where threads can specify a timeout period for waiting on the mutex.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Indifinite locking of a Mutex
+STATEMENT: >>>
+Mutexes shall support indefinite locking allowing threads to wait indefinitely until the mutex becomes available.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Reentrant locking
+STATEMENT: >>>
+The Zephyr RTOS shall support reentrant locking, allowing a thread to lock a mutex it has already locked without causing a deadlock.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Lock count
+STATEMENT: >>>
+Mutexes shall maintain a lock count to track the number of times a thread has locked the mutex.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Priority Inheritance
+STATEMENT: >>>
+When using mutexes for resource synchronization, the Zephyr RTOS shall implement priority inheritance protocols to prevent priority inversion scenarios.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Priority Inheritance - priority elevation
+STATEMENT: >>>
+When a higher-priority thread begins waiting on the mutex, the Zephyr RTOS shall temporarily elevate the priority of the owning thread.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Mutex Ownership
+STATEMENT: >>>
+Mutexes shall track the owning thread when locked to ensure exclusive access to the associated resource.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Mutex Ownership - Unlock
+STATEMENT: >>>
+The Zephyr RTOS shall allow only the owning thread to unlock the mutex.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Priority Ceiling
+STATEMENT: >>>
+The Zephyr RTOS shall implement priority ceiling protocols to limit the extent of priority elevation during priority inheritance.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Error Handling
+STATEMENT: >>>
+When attempting to lock an uninitialized mutex the Zephyr RTOS shall emit an
+error.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-MUTEX-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Mutex Ownership - Unlock Error
+STATEMENT: >>>
+When attempting to unlock a mutex not owned by the calling thread, the Zephyr RTOS shall emit an error.
 <<<
 
 [/SECTION]
