@@ -1,0 +1,95 @@
+[DOCUMENT]
+TITLE: File system
+REQ_PREFIX: ZEP-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[REQUIREMENT]
+UID: ZEP-51
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Create file
+STATEMENT: >>>
+Zephyr shall provide file create capabilities for files on the file system.
+<<<
+USER_STORY: >>>
+As a Zephyr OS user I want to be able to create a new file or overwrite an existing file at the same filesystem location / identifier (e.g. path + name).
+<<<
+
+[REQUIREMENT]
+UID: ZEP-52
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Open files
+STATEMENT: >>>
+Zephyr shall provide file open capabilities for files on the file system.
+<<<
+USER_STORY: >>>
+As a Zephyr OS user I want to be able to open a file for writing or reading.
+When opened for writing, I want to have exclusive access to the file.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-53
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Read files
+STATEMENT: >>>
+Zephyr shall provide read access to files in the file system.
+<<<
+USER_STORY: >>>
+As a Zephyr OS user I want to be able to read from an existing file, also while the file is read from multiple and write accessed from one other instances.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-54
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Write to files
+STATEMENT: >>>
+Zephyr shall provide write access to the files in the file system.
+<<<
+USER_STORY: >>>
+As a Zephyr OS user I want to be able to write to a file either from the beginning of the file or appending at the end.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-55
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Close file
+STATEMENT: >>>
+Zephyr shall provide file close capabilities for files on the file system.
+<<<
+USER_STORY: >>>
+As a Zephyr OS user I want to be able to close a file after being finished with my file operations, unlocking any access restrictions.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-56
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Move file
+STATEMENT: >>>
+Zephyr shall provide the capability to move files on the file system.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-57
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Delete file
+STATEMENT: >>>
+Zephyr shall provide file delete capabilities for files on the file system.
+<<<
+USER_STORY: >>>
+As a Zephyr OS user I want to be able to delete an existing file.
+<<<
