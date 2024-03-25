@@ -1,0 +1,78 @@
+[DOCUMENT]
+TITLE: Tracing
+REQ_PREFIX: ZEP-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[REQUIREMENT]
+UID: ZEP-29
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Tracing
+TITLE: Initializing a trace
+STATEMENT: >>>
+Zephyr shall provide an interface to initialize a trace.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-30
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Tracing
+TITLE: Triggering a trace
+STATEMENT: >>>
+Zephyr shall provide an interface to trigger a trace.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-31
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Tracing
+TITLE: Dumping trace results
+STATEMENT: >>>
+Zephyr shall provide an interface to dump results from a trace.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-32
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Tracing
+TITLE: Removing trace data
+STATEMENT: >>>
+Zephyr shall provide an interface to remove trace data.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-33
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Tracing
+TITLE: Tracing Object  Identification
+STATEMENT: >>>
+Zephyr shall provide an interface to identify the objects being traced.
+<<<
+USER_STORY: >>>
+As a Zepyhr OS user, I want to be able to give each object which I create a name / label in order to be able to identify them in a trace log.
+<<<
+REVIEW_COMMENT: >>>
+What objects?   hardware devices, code, ....
+<<<
+
+[REQUIREMENT]
+UID: ZEP-34
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Tracing
+TITLE: Tracing Non-Interference
+STATEMENT: >>>
+Zepyhr shall prevent the tracing functionality from interfering with normal operations.
+<<<
+USER_STORY: >>>
+As a Zepyhr OS user, I want that the trace functionality do not interfere or slow down the operation system functionality.
+<<<
+REVIEW_COMMENT: >>>
+What are "normal" operations? Might make sense to rephrase this to "any other operation"
+<<<

@@ -1,37 +1,9 @@
 [DOCUMENT]
-TITLE: Zephyr Functional Requirements
+TITLE: Zephyr Software Requirements
 REQ_PREFIX: ZEP-
 
 [GRAMMAR]
-ELEMENTS:
-- TAG: REQUIREMENT
-  FIELDS:
-  - TITLE: UID
-    TYPE: String
-    REQUIRED: False
-  - TITLE: STATUS
-    TYPE: String
-    REQUIRED: False
-  - TITLE: TYPE
-    TYPE: String
-    REQUIRED: False
-  - TITLE: COMPONENT
-    TYPE: String
-    REQUIRED: False
-  - TITLE: TITLE
-    TYPE: String
-    REQUIRED: False
-  - TITLE: STATEMENT
-    TYPE: String
-    REQUIRED: False
-  - TITLE: USER_STORY
-    TYPE: String
-    REQUIRED: False
-  - TITLE: REVIEW_COMMENT
-    TYPE: String
-    REQUIRED: False
-  RELATIONS:
-  - TYPE: Parent
+IMPORT_FROM_FILE: software_requirements.sgra
 
 [SECTION]
 TITLE: Hardware Architecture Interface
@@ -380,99 +352,8 @@ The Zephyr RTOS shall provide an interface to assign a specific handler for a fa
 
 [/SECTION]
 
-[SECTION]
-TITLE: File System
-
-[REQUIREMENT]
-UID: ZEP-51
-STATUS: Draft
-TYPE: Functional
-COMPONENT: File System
-TITLE: Create file
-STATEMENT: >>>
-The Zephyr RTOS shall provide file create capabilities for files on the file system.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want to be able to create a new file or overwrite an existing file at the same file system location / identifier (e.g. path + name).
-<<<
-
-[REQUIREMENT]
-UID: ZEP-52
-STATUS: Draft
-TYPE: Functional
-COMPONENT: File System
-TITLE: Open files
-STATEMENT: >>>
-The Zephyr RTOS shall provide file open capabilities for files on the file system.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want to be able to open a file for writing or reading.
-When opened for writing, I want to have exclusive access to the file.
-<<<
-
-[REQUIREMENT]
-UID: ZEP-53
-STATUS: Draft
-TYPE: Functional
-COMPONENT: File System
-TITLE: Read files
-STATEMENT: >>>
-The Zephyr RTOS shall provide read access to files in the file system.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want to be able to read from an existing file, also while the file is read from multiple and write accessed from one other instances.
-<<<
-
-[REQUIREMENT]
-UID: ZEP-54
-STATUS: Draft
-TYPE: Functional
-COMPONENT: File System
-TITLE: Write to files
-STATEMENT: >>>
-The Zephyr RTOS shall provide write access to the files in the file system.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want to be able to write to a file either from the beginning of the file or appending at the end.
-<<<
-
-[REQUIREMENT]
-UID: ZEP-55
-STATUS: Draft
-TYPE: Functional
-COMPONENT: File System
-TITLE: Close file
-STATEMENT: >>>
-The Zephyr RTOS shall provide file close capabilities for files on the file system.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want to be able to close a file after being finished with my file operations, unlocking any access restrictions.
-<<<
-
-[REQUIREMENT]
-UID: ZEP-56
-STATUS: Draft
-TYPE: Functional
-COMPONENT: File System
-TITLE: Move file
-STATEMENT: >>>
-The Zephyr RTOS shall provide the capability to move files on the file system.
-<<<
-
-[REQUIREMENT]
-UID: ZEP-57
-STATUS: Draft
-TYPE: Functional
-COMPONENT: File System
-TITLE: Delete file
-STATEMENT: >>>
-The Zephyr RTOS shall provide file delete capabilities for files on the file system.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want to be able to delete an existing file.
-<<<
-
-[/SECTION]
+[DOCUMENT_FROM_FILE]
+FILE: file_system.sdoc
 
 [SECTION]
 TITLE: Interrupts
@@ -1499,79 +1380,5 @@ RELATIONS:
 
 [/SECTION]
 
-[SECTION]
-TITLE: Tracing
-
-[REQUIREMENT]
-UID: ZEP-29
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Tracing
-TITLE: Initializing a trace
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to initialize a trace.
-<<<
-
-[REQUIREMENT]
-UID: ZEP-30
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Tracing
-TITLE: Triggering a trace
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to trigger a trace.
-<<<
-
-[REQUIREMENT]
-UID: ZEP-31
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Tracing
-TITLE: Dumping trace results
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to dump results from a trace.
-<<<
-
-[REQUIREMENT]
-UID: ZEP-32
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Tracing
-TITLE: Removing trace data
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to remove trace data.
-<<<
-
-[REQUIREMENT]
-UID: ZEP-33
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Tracing
-TITLE: Tracing Object  Identification
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to identify the objects being traced.
-<<<
-USER_STORY: >>>
-As a Zepyhr OS user, I want to be able to give each object which I create a name / label in order to be able to identify them in a trace log.
-<<<
-REVIEW_COMMENT: >>>
-What objects?   hardware devices, code, ....
-<<<
-
-[REQUIREMENT]
-UID: ZEP-34
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Tracing
-TITLE: Tracing Non-Interference
-STATEMENT: >>>
-Zepyhr shall prevent the tracing functionality from interfering with normal operations.
-<<<
-USER_STORY: >>>
-As a Zepyhr OS user, I want that the trace functionality do not interfere or slow down the operation system functionality.
-<<<
-REVIEW_COMMENT: >>>
-What are "normal" operations? Might make sense to rephrase this to "any other operation"
-<<<
-
-[/SECTION]
+[DOCUMENT_FROM_FILE]
+FILE: tracing.sdoc
