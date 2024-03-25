@@ -40,10 +40,10 @@ TYPE: High Level
 COMPONENT: Hardware Architecture Interface
 TITLE: Architecture Layer Interface
 STATEMENT: >>>
-Zephyr shall provide a framework to communicate with a set of hardware architectural services.
+The Zephyr RTOS shall provide a framework to communicate with a set of hardware architectural services.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to easily switch my application to a different MCU architecture (x86, ARM Cortex-M/A, RISCV etc.).
+As a Zephyr RTOS user I want to be able to easily switch my application to a different MCU architecture (x86, ARM Cortex-M/A, RISCV etc.).
 <<<
 
 [REQUIREMENT]
@@ -53,10 +53,10 @@ TYPE: High Level
 COMPONENT: Hardware Architecture Interface
 TITLE: Support multiprocessor management
 STATEMENT: >>>
-Zephyr shall support symmetric multiprocessing on multiple cores.
+The Zephyr RTOS shall support symmetric multiprocessing on multiple cores.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to use Zephyr OS on multi core (SMP-)MCUs/MPUs.
+As a Zephyr RTOS user I want to use Zephyr OS on multi core (SMP-)MCUs/MPUs.
 <<<
 REVIEW_COMMENT: >>>
 From the Docs: No special application code needs to be written to take advantage of this feature
@@ -72,10 +72,10 @@ TYPE: High Level
 COMPONENT: C Library
 TITLE: Support Subset of Standard C Library
 STATEMENT: >>>
-Zephyr shall support a subset of the standard C library.
+The Zephyr RTOS shall support a subset of the standard C library.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to have a selection of standard C library implementations e.g. a full extend and a minimal with a smaller footprint or a particular fast executing implementation.
+As a Zephyr RTOS user I want to have a selection of standard C library implementations e.g. a full extend and a minimal with a smaller footprint or a particular fast executing implementation.
 <<<
 REVIEW_COMMENT: >>>
 Can we limit the type of C library implementations? Testing might be hell if we do not limit ourselfes to the ones defined? Like "miminal libc" and "newlib". Will it make sense to pull miminal Libc into the certification scope?
@@ -92,10 +92,10 @@ TYPE: High Level
 COMPONENT: Device Drivers
 TITLE: Device Driver Abstraction
 STATEMENT: >>>
-Zephyr shall provide a framework for managing device drivers and peripherals.
+The Zephyr RTOS shall provide a framework for managing device drivers and peripherals.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want my application to be portable between different MCU architectures (ARM Cortex-M/A, Intel x86, RISCV etc.) and MCU vendors (STM, NXP, Intel, etc.) without having to change the MCU peripherals access.
+As a Zephyr RTOS user I want my application to be portable between different MCU architectures (ARM Cortex-M/A, Intel x86, RISCV etc.) and MCU vendors (STM, NXP, Intel, etc.) without having to change the MCU peripherals access.
 <<<
 REVIEW_COMMENT: >>>
 TBD: Title seems to need refinement. Also, this requirement's user story seems to be identical to that of ZEP-1.
@@ -108,10 +108,10 @@ TYPE: High Level
 COMPONENT: Exception and Error Handling
 TITLE: Fatal error and exception handling
 STATEMENT: >>>
-The Zephyr kernel shall provide a framework for error and exception handling.
+The Zephyr RTOS shall provide a framework for error and exception handling.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want errors and exeptions to handled and react according to my applications requirements (e.g. reach/establish the applications safey state).
+As a Zephyr RTOS user I want errors and exeptions to handled and react according to my applications requirements (e.g. reach/establish the applications safey state).
 <<<
 
 [REQUIREMENT]
@@ -121,10 +121,10 @@ TYPE: High Level
 COMPONENT: File Systems
 TITLE: Common File system operation support
 STATEMENT: >>>
-Zephyr shall provide a framework for managing file system access.
+The Zephyr RTOS shall provide a framework for managing file system access.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want a posix / c like file system access to store data.
+As a Zephyr RTOS user I want a posix / c like file system access to store data.
 <<<
 
 [REQUIREMENT]
@@ -134,10 +134,10 @@ TYPE: High Level
 COMPONENT: Interrupts
 TITLE: Interrupt Service Routine
 STATEMENT: >>>
-Zephyr shall provide a framework for interrupt management.
+The Zephyr RTOS shall provide a framework for interrupt management.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want interrupts to be handled sychronously in response to a hardware or software interrupt request with a minimum latency, preemtping threads and, as far as the hardware allows, lower priority interrupt service routines.
+As a Zephyr RTOS user I want interrupts to be handled sychronously in response to a hardware or software interrupt request with a minimum latency, preemtping threads and, as far as the hardware allows, lower priority interrupt service routines.
 <<<
 
 [REQUIREMENT]
@@ -147,10 +147,10 @@ TYPE: High Level
 COMPONENT: Logging
 TITLE: Logging
 STATEMENT: >>>
-Zephyr shall provide a framework for logging events.
+The Zephyr RTOS shall provide a framework for logging events.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to log application defined events as well as framework exceptions.
+As a Zephyr RTOS user I want to be able to log application defined events as well as framework exceptions.
 <<<
 REVIEW_COMMENT: >>>
 Nicole: TBD: we need to have logging in the safety scope?
@@ -163,10 +163,10 @@ TYPE: High Level
 COMPONENT: Memory Management
 TITLE: Memory Management framework
 STATEMENT: >>>
-Zephyr shall support a memory management framework.
+The Zephyr RTOS shall support a memory management framework.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want memory to be allocated and protected to my application threads preventing mistakenly access to foreign memory as far as the hardware allows.
+As a Zephyr RTOS user I want memory to be allocated and protected to my application threads preventing mistakenly access to foreign memory as far as the hardware allows.
 <<<
 
 [REQUIREMENT]
@@ -176,10 +176,10 @@ TYPE: High Level
 COMPONENT: Power Management
 TITLE: Power Management
 STATEMENT: >>>
-Zephyr shall provide an interface to control hardware power states.
+The Zephyr RTOS shall provide an interface to control hardware power states.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to control the power mode of the MCU and its peripherals to take advantage of the hardward features and to be able to implement low power or battery driven long life applications.
+As a Zephyr RTOS user I want to be able to control the power mode of the MCU and its peripherals to take advantage of the hardward features and to be able to implement low power or battery driven long life applications.
 <<<
 
 [SECTION]
@@ -192,10 +192,10 @@ TYPE: High Level
 COMPONENT: SMP and Multicore
 TITLE: Multiple CPU scheduling
 STATEMENT: >>>
-Zephyr shall support scheduling of threads on multiple hardware CPUs.
+The Zephyr RTOS shall support scheduling of threads on multiple hardware CPUs.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want Zephyr OS to run on MCUs/CPUs with one or more CPU cores.
+As a Zephyr RTOS user I want Zephyr OS to run on MCUs/CPUs with one or more CPU cores.
 <<<
 
 [REQUIREMENT]
@@ -205,10 +205,10 @@ TYPE: High Level
 COMPONENT: SMP and Multicore
 TITLE: Scheduling
 STATEMENT: >>>
-Zephyr shall provide an interface to assign a thread to a specific CPU.
+The Zephyr RTOS shall provide an interface to assign a thread to a specific CPU.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to control which thread will run on which CPU.
+As a Zephyr RTOS user, I want to be able to control which thread will run on which CPU.
 <<<
 
 [/SECTION]
@@ -223,10 +223,10 @@ TYPE: High Level
 COMPONENT: Mutex
 TITLE: Mutex
 STATEMENT: >>>
-Zephyr shall provide an interface for managing communcation between threads.
+The Zephyr RTOS shall provide an interface for managing communcation between threads.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to able to exchange information between threads in a thread-safe manner guaranteeing data consistence.
+As a Zephyr RTOS user I want to able to exchange information between threads in a thread-safe manner guaranteeing data consistence.
 <<<
 
 [REQUIREMENT]
@@ -254,10 +254,10 @@ TYPE: High Level
 COMPONENT: Threads
 TITLE: Thread support
 STATEMENT: >>>
-Zephyr shall support threads.
+The Zephyr RTOS shall support threads.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to have support for the kernel objects named threads for processing work.
+As a Zephyr RTOS user, I want to be able to have support for the kernel objects named threads for processing work.
 <<<
 
 [REQUIREMENT]
@@ -267,10 +267,10 @@ TYPE: High Level
 COMPONENT: Threads
 TITLE: Thread management
 STATEMENT: >>>
-Zephyr shall provide a framework for managing multiple threads of execution.
+The Zephyr RTOS shall provide a framework for managing multiple threads of execution.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to manage the execute of multiple threads with different priorities.
+As a Zephyr RTOS user, I want to be able to manage the execute of multiple threads with different priorities.
 <<<
 REVIEW_COMMENT: >>>
 TBD: Nothing about priorities...
@@ -286,7 +286,7 @@ STATEMENT: >>>
 Threads shall have a priority.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to give my threads different priorities for execution.
+As a Zephyr RTOS user, I want to be able to give my threads different priorities for execution.
 <<<
 
 [/SECTION]
@@ -298,10 +298,10 @@ TYPE: High Level
 COMPONENT: Timers
 TITLE: Timers
 STATEMENT: >>>
-Zephyr shall provide a framework for managing time-based events.
+The Zephyr RTOS shall provide a framework for managing time-based events.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to start, suspend, resume and stop timers which shall trigger an event on a set expiration time.
+As a Zephyr RTOS user, I want to start, suspend, resume and stop timers which shall trigger an event on a set expiration time.
 <<<
 
 [REQUIREMENT]
@@ -314,7 +314,7 @@ STATEMENT: >>>
 Zepyhr shall provide a framework mechanism for tracing low level system operations  (NOTE: system calls, interrupts, kernel calls, thread, synchronization, etc.).
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to trace different OS operations.
+As a Zephyr RTOS user, I want to be able to trace different OS operations.
 <<<
 REVIEW_COMMENT: >>>
 TBD: What are low level system operations in this context?

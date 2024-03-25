@@ -43,10 +43,10 @@ TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 TITLE: Atomic Operations
 STATEMENT: >>>
-Zephyr shall provide an interface functionality to access memory while ensuring mutual exclusion. Note: Implementation by atomic variables and accessing them by APIs.
+The Zephyr RTOS shall provide an interface functionality to access memory while ensuring mutual exclusion. Note: Implementation by atomic variables and accessing them by APIs.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to read from or write into a memory areas without being disturbed by other threads or ISRs.
+As a Zephyr RTOS user I want to read from or write into a memory areas without being disturbed by other threads or ISRs.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -59,10 +59,10 @@ TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 TITLE: Thread Context Switching
 STATEMENT: >>>
-Zephyr shall provide a mechanism for context switching between threads.
+The Zephyr RTOS shall provide a mechanism for context switching between threads.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to execute code concurrently in one or more threads and when interrupted at a code location in a thread, to continue at the very same location.
+As a Zephyr RTOS user I want to execute code concurrently in one or more threads and when interrupted at a code location in a thread, to continue at the very same location.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -75,10 +75,10 @@ TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 TITLE: Software Exceptions
 STATEMENT: >>>
-Zephyr shall provide an interface to implement software exceptions.
+The Zephyr RTOS shall provide an interface to implement software exceptions.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to catch any software exception and handle it according to my application needs.
+As a Zephyr RTOS user I want to catch any software exception and handle it according to my application needs.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -91,11 +91,11 @@ TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 TITLE: Processor Mode Support
 STATEMENT: >>>
-Zephyr shall provide an interface for managing processor modes.
+The Zephyr RTOS shall provide an interface for managing processor modes.
 <<<
 USER_STORY: >>>
 If MCU power state was meant here:
-As a Zephyr OS user I want to control the MCU's power saving mode such e.g. operation, sleep, deep sleep or similar as supported by the selected MCU.
+As a Zephyr RTOS user I want to control the MCU's power saving mode such e.g. operation, sleep, deep sleep or similar as supported by the selected MCU.
 <<<
 REVIEW_COMMENT: >>>
 What is lifecycle - power on, standby, power off?  or ????
@@ -118,10 +118,10 @@ TYPE: Functional
 COMPONENT: C Library
 TITLE: Formatted output
 STATEMENT: >>>
-Zephyr shall support formatted output.
+The Zephyr RTOS shall support formatted output.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to printf with various output formats.
+As a Zephyr RTOS user, I want to be able to printf with various output formats.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -134,10 +134,10 @@ TYPE: Functional
 COMPONENT: C Library
 TITLE: Floating Point Math Support
 STATEMENT: >>>
-Zephyr shall support floating point math libraries for processors where floating point is available.
+The Zephyr RTOS shall support floating point math libraries for processors where floating point is available.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to calculate with floating point numbers.
+As a Zephyr RTOS user, I want to be able to calculate with floating point numbers.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -150,10 +150,10 @@ TYPE: Functional
 COMPONENT: C Library
 TITLE: Boolean Primitives Support
 STATEMENT: >>>
-Zephyr shall support boolean primitives.
+The Zephyr RTOS shall support boolean primitives.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to work with boolean values and logic.
+As a Zephyr RTOS user, I want to be able to work with boolean values and logic.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -166,7 +166,7 @@ TYPE: Functional
 COMPONENT: C Library
 TITLE: Standard Unix time interface
 STATEMENT: >>>
-Zephyr shall support the standard unix time interface.
+The Zephyr RTOS shall support the standard unix time interface.
 <<<
 USER_STORY: >>>
 As a Zephyr User, I want to be able to use system time.
@@ -182,10 +182,10 @@ TYPE: Functional
 COMPONENT: C Library
 TITLE: Strings support
 STATEMENT: >>>
-Zephyr shall support an interface to manage strings.
+The Zephyr RTOS shall support an interface to manage strings.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to manipulate text strings.
+As a Zephyr RTOS user, I want to be able to manipulate text strings.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -198,10 +198,10 @@ TYPE: Functional
 COMPONENT: C Library
 TITLE: Moving/copying regions of memory
 STATEMENT: >>>
-Zephyr shall support an interface to move contents between regions of memory.
+The Zephyr RTOS shall support an interface to move contents between regions of memory.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to copy the memory contents to different addresses.
+As a Zephyr RTOS user, I want to copy the memory contents to different addresses.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -214,10 +214,10 @@ TYPE: Functional
 COMPONENT: C Library
 TITLE: I/O based interface
 STATEMENT: >>>
-Zephyr shall support a file i/O based interface for driver communication.
+The Zephyr RTOS shall support a file i/O based interface for driver communication.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to use File I/O functions.
+As a Zephyr RTOS user, I want to be able to use File I/O functions.
 <<<
 REVIEW_COMMENT: >>>
 A wrong C header seems to be included: stdint.h does not have to do with I/O.
@@ -233,10 +233,10 @@ TYPE: Functional
 COMPONENT: C Library
 TITLE: C99 integer types
 STATEMENT: >>>
-Zephyr shall support standard C99 integer types.
+The Zephyr RTOS shall support standard C99 integer types.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to calculate with C99 Integers.
+As a Zephyr RTOS user, I want to be able to calculate with C99 Integers.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -249,10 +249,10 @@ TYPE: Functional
 COMPONENT: C Library
 TITLE: Standard System Error Numbers (IEEE Std 1003.1-2017)
 STATEMENT: >>>
-Zephyr shall support standard system error numbers as defined by IEEE Std 1003.1-2017.
+The Zephyr RTOS shall support standard system error numbers as defined by IEEE Std 1003.1-2017.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to use IEE Std 1003.1-2017 Error Numbers for Interoperability.
+As a Zephyr RTOS user, I want to be able to use IEE Std 1003.1-2017 Error Numbers for Interoperability.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -302,7 +302,7 @@ TYPE: Functional
 COMPONENT: Device Driver API
 TITLE: Device Driver Abstraction
 STATEMENT: >>>
-Zephyr shall provide abstraction of device drivers with common functionalities as an intermediate interface between applications and device drivers, where such interface is implemented by individual device drivers.
+The Zephyr RTOS shall provide abstraction of device drivers with common functionalities as an intermediate interface between applications and device drivers, where such interface is implemented by individual device drivers.
 
 Proposal for replacement: Zephyr shall provide an interface between application and individual device drivers to provide an abstraction of device drivers with common functionalities.
 <<<
@@ -319,10 +319,10 @@ TYPE: Functional
 COMPONENT: Device Driver API
 TITLE: Expose kernel to hardware interrupts
 STATEMENT: >>>
-Zephyr shall provide an interface for managing a defined set of hardware exceptions (including interupts) across all systems.
+The Zephyr RTOS shall provide an interface for managing a defined set of hardware exceptions (including interupts) across all systems.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want hardware exeptions (hardware failures, programming mistakes) to be handled gracefully (no program crashes as far as possible).
+As a Zephyr RTOS user I want hardware exeptions (hardware failures, programming mistakes) to be handled gracefully (no program crashes as far as possible).
 <<<
 REVIEW_COMMENT: >>>
 What does "system" mean in this context? Architecture?
@@ -342,10 +342,10 @@ TYPE: Functional
 COMPONENT: Exception and Error Handling
 TITLE: Fatal Exception Error Handler
 STATEMENT: >>>
-Zephyr shall provide default handlers for exceptions.
+The Zephyr RTOS shall provide default handlers for exceptions.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want execptions which I did not handle explicitely (by mistake or on purpose) to be caught by a default handler, defined either by Zephyr OS or by myself.
+As a Zephyr RTOS user I want execptions which I did not handle explicitely (by mistake or on purpose) to be caught by a default handler, defined either by Zephyr OS or by myself.
 <<<
 
 [REQUIREMENT]
@@ -355,7 +355,7 @@ TYPE: Functional
 COMPONENT: Exception and Error Handling
 TITLE: Default handler for fatal errors
 STATEMENT: >>>
-Zephyr shall provide default handlers for fatal errors that do not have a dedicated handler.
+The Zephyr RTOS shall provide default handlers for fatal errors that do not have a dedicated handler.
 <<<
 
 [REQUIREMENT]
@@ -365,7 +365,7 @@ TYPE: Functional
 COMPONENT: Exception and Error Handling
 TITLE: Assigning a specific handler
 STATEMENT: >>>
-Zephyr shall provide an interface to assign a specific handler with an exception.
+The Zephyr RTOS shall provide an interface to assign a specific handler with an exception.
 <<<
 
 [REQUIREMENT]
@@ -375,7 +375,7 @@ TYPE: Functional
 COMPONENT: Exception and Error Handling
 TITLE: Assigning a specific handler (2)
 STATEMENT: >>>
-Zephyr shall provide an interface to assign a specific handler for a fatal error.
+The Zephyr RTOS shall provide an interface to assign a specific handler for a fatal error.
 <<<
 
 [/SECTION]
@@ -390,10 +390,10 @@ TYPE: Functional
 COMPONENT: File System
 TITLE: Create file
 STATEMENT: >>>
-Zephyr shall provide file create capabilities for files on the file system.
+The Zephyr RTOS shall provide file create capabilities for files on the file system.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to create a new file or overwrite an existing file at the same filesystem location / identifier (e.g. path + name).
+As a Zephyr RTOS user I want to be able to create a new file or overwrite an existing file at the same filesystem location / identifier (e.g. path + name).
 <<<
 
 [REQUIREMENT]
@@ -403,10 +403,10 @@ TYPE: Functional
 COMPONENT: File System
 TITLE: Open files
 STATEMENT: >>>
-Zephyr shall provide file open capabilities for files on the file system.
+The Zephyr RTOS shall provide file open capabilities for files on the file system.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to open a file for writing or reading.
+As a Zephyr RTOS user I want to be able to open a file for writing or reading.
 When opened for writing, I want to have exclusive access to the file.
 <<<
 
@@ -417,10 +417,10 @@ TYPE: Functional
 COMPONENT: File System
 TITLE: Read files
 STATEMENT: >>>
-Zephyr shall provide read access to files in the file system.
+The Zephyr RTOS shall provide read access to files in the file system.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to read from an existing file, also while the file is read from multiple and write accessed from one other instances.
+As a Zephyr RTOS user I want to be able to read from an existing file, also while the file is read from multiple and write accessed from one other instances.
 <<<
 
 [REQUIREMENT]
@@ -430,10 +430,10 @@ TYPE: Functional
 COMPONENT: File System
 TITLE: Write to files
 STATEMENT: >>>
-Zephyr shall provide write access to the files in the file system.
+The Zephyr RTOS shall provide write access to the files in the file system.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to write to a file either from the beginning of the file or appending at the end.
+As a Zephyr RTOS user I want to be able to write to a file either from the beginning of the file or appending at the end.
 <<<
 
 [REQUIREMENT]
@@ -443,10 +443,10 @@ TYPE: Functional
 COMPONENT: File System
 TITLE: Close file
 STATEMENT: >>>
-Zephyr shall provide file close capabilities for files on the file system.
+The Zephyr RTOS shall provide file close capabilities for files on the file system.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to close a file after being finished with my file operations, unlocking any access restrictions.
+As a Zephyr RTOS user I want to be able to close a file after being finished with my file operations, unlocking any access restrictions.
 <<<
 
 [REQUIREMENT]
@@ -456,7 +456,7 @@ TYPE: Functional
 COMPONENT: File System
 TITLE: Move file
 STATEMENT: >>>
-Zephyr shall provide the capability to move files on the file system.
+The Zephyr RTOS shall provide the capability to move files on the file system.
 <<<
 
 [REQUIREMENT]
@@ -466,10 +466,10 @@ TYPE: Functional
 COMPONENT: File System
 TITLE: Delete file
 STATEMENT: >>>
-Zephyr shall provide file delete capabilities for files on the file system.
+The Zephyr RTOS shall provide file delete capabilities for files on the file system.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to delete an existing file.
+As a Zephyr RTOS user I want to be able to delete an existing file.
 <<<
 
 [/SECTION]
@@ -484,7 +484,7 @@ TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Service routine for handling interrupts (ISR)
 STATEMENT: >>>
-Zephyr shall provide support a service routine for handling interrupts (ISR).
+The Zephyr RTOS shall provide support a service routine for handling interrupts (ISR).
 <<<
 
 [REQUIREMENT]
@@ -494,7 +494,7 @@ TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Multi-level interrupts
 STATEMENT: >>>
-Zephyr shall support multi-level preemptive interrupt priorities, when supported by hardware. Note: detailed analysis to demonstrate non interferenace will be needed here.
+The Zephyr RTOS shall support multi-level preemptive interrupt priorities, when supported by hardware. Note: detailed analysis to demonstrate non interferenace will be needed here.
 <<<
 
 [REQUIREMENT]
@@ -504,7 +504,7 @@ TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Associating application code with interrupts
 STATEMENT: >>>
-Zephyr shall provide an interface for associating application code with specific interrupts. (CLARIFY: Can it be a deferred procedure call at interrupt context? Would be different requirement)
+The Zephyr RTOS shall provide an interface for associating application code with specific interrupts. (CLARIFY: Can it be a deferred procedure call at interrupt context? Would be different requirement)
 <<<
 
 [REQUIREMENT]
@@ -514,10 +514,10 @@ TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Enabling interrupts
 STATEMENT: >>>
-Zephyr shall provide mechanisms to enable interrupts.
+The Zephyr RTOS shall provide mechanisms to enable interrupts.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to enable each individual and a global interrupt according to my applications needs during program execution.
+As a Zephyr RTOS user I want to be able to enable each individual and a global interrupt according to my applications needs during program execution.
 <<<
 
 [REQUIREMENT]
@@ -527,10 +527,10 @@ TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Disabling interrupts
 STATEMENT: >>>
-Zephyr shall provide mechanisms to disable interrupts.
+The Zephyr RTOS shall provide mechanisms to disable interrupts.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to disable each individual and a global interrupt according to my applications needs during program execution.
+As a Zephyr RTOS user I want to be able to disable each individual and a global interrupt according to my applications needs during program execution.
 <<<
 
 [/SECTION]
@@ -545,10 +545,10 @@ TYPE: Functional
 COMPONENT: Logging
 TITLE: Dedicated Logging Thread Support
 STATEMENT: >>>
-Zephyr shall support isolation of logging from other functionality.
+The Zephyr RTOS shall support isolation of logging from other functionality.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to configure logging of events so the execution of logging activities does have no or only a minimal impact to the timing behaviour of my application.
+As a Zephyr RTOS user I want to be able to configure logging of events so the execution of logging activities does have no or only a minimal impact to the timing behaviour of my application.
 <<<
 
 [REQUIREMENT]
@@ -558,10 +558,10 @@ TYPE: Functional
 COMPONENT: Logging
 TITLE: Logs available for post processing
 STATEMENT: >>>
-Zephyr logging shall produce logs that are capable of being post processed.
+The Zephyr RTOS logging shall produce logs that are capable of being post processed.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want the logging information to be stored in a format which allows to be read possibly converted or displayed by COTS tools.
+As a Zephyr RTOS user I want the logging information to be stored in a format which allows to be read possibly converted or displayed by COTS tools.
 <<<
 
 [REQUIREMENT]
@@ -571,10 +571,10 @@ TYPE: Functional
 COMPONENT: Logging
 TITLE: Formatting log messages
 STATEMENT: >>>
-Zephyr logging shall support formatting of log messages to enable filtering.
+The Zephyr RTOS logging shall support formatting of log messages to enable filtering.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able my application to format texts (printf alike) into the log message.
+As a Zephyr RTOS user I want to be able my application to format texts (printf alike) into the log message.
 <<<
 REVIEW_COMMENT: >>>
 Question: formatting in which way? length, color, tags, etc?
@@ -587,10 +587,10 @@ TYPE: Functional
 COMPONENT: Logging
 TITLE: Logging Filtering Support
 STATEMENT: >>>
-Zephyr logging system shall support filtering based on severity level.
+The Zephyr RTOS logging system shall support filtering based on severity level.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to distinguish between different severity level for my log messages (e.g. DEBUG, INFO, WARN, ERROR, PANIC).
+As a Zephyr RTOS user I want to be able to distinguish between different severity level for my log messages (e.g. DEBUG, INFO, WARN, ERROR, PANIC).
 <<<
 REVIEW_COMMENT: >>>
 Question: Filtering during runtime or a kconfig option to initially set the filter for logging
@@ -603,10 +603,10 @@ TYPE: Functional
 COMPONENT: Logging
 TITLE: Multiple Backend Logging Support
 STATEMENT: >>>
-Zephyr shall support logging messages to multiple system resources.
+The Zephyr RTOS shall support logging messages to multiple system resources.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to simultaneously log to different channels which may store / redirect the information on / to different hardware (EEPROM, Flash, FRAM, UART, Ethernet, USB etc.).
+As a Zephyr RTOS user I want to be able to simultaneously log to different channels which may store / redirect the information on / to different hardware (EEPROM, Flash, FRAM, UART, Ethernet, USB etc.).
 <<<
 REVIEW_COMMENT: >>>
 Question: What kind of backends shall be supported? More than one at a time?   Word choices.... backends/devices/channels/destinations/resources (devices, memory, ....) )
@@ -619,10 +619,10 @@ TYPE: Functional
 COMPONENT: Logging
 TITLE: Deferred Logging Support
 STATEMENT: >>>
-Zephyr shall support deferred logging (TODO: need more detail about the constraints and limits on what can be deferred).
+The Zephyr RTOS shall support deferred logging (TODO: need more detail about the constraints and limits on what can be deferred).
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want a minimal influence of logging activities to the timing behaviour of my application. Time consuming logging threads shall be done in the background.
+As a Zephyr RTOS user I want a minimal influence of logging activities to the timing behaviour of my application. Time consuming logging threads shall be done in the background.
 <<<
 
 [/SECTION]
@@ -637,10 +637,10 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Memory Protection
 STATEMENT: >>>
-Zephyr shall support memory protection features to isolate a thread's memory region.
+The Zephyr RTOS shall support memory protection features to isolate a thread's memory region.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want memory to be allocated and protected to my application threads preventing mistakenly access to foreign memory as far as the hardware allows.
+As a Zephyr RTOS user I want memory to be allocated and protected to my application threads preventing mistakenly access to foreign memory as far as the hardware allows.
 <<<
 REVIEW_COMMENT: >>>
 Functional it is memory management, but it also strongly relates to the architecture abstraction and memory access
@@ -653,10 +653,10 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Granting access to kernel objects
 STATEMENT: >>>
-Zephyr shall provide a mechanism to grant user threads access to kernel objects.
+The Zephyr RTOS shall provide a mechanism to grant user threads access to kernel objects.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want, from the user space, under certain condidtions, access to kernel objects.
+As a Zephyr RTOS user I want, from the user space, under certain condidtions, access to kernel objects.
 <<<
 REVIEW_COMMENT: >>>
 What are the conditions to a user thread to get access to a kernel object?
@@ -669,10 +669,10 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Separation between user and kernel threads for memory access
 STATEMENT: >>>
-Zephyr shall be able to differentiate between user threads and kernel threads for memory access.
+The Zephyr RTOS shall be able to differentiate between user threads and kernel threads for memory access.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want, from the kernel space, unconditoned access to kernel objects.
+As a Zephyr RTOS user I want, from the kernel space, unconditoned access to kernel objects.
 <<<
 
 [REQUIREMENT]
@@ -682,10 +682,10 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Safely handle unimplemented calls or invalid system calls
 STATEMENT: >>>
-Zephyr shall have a defined behaviour when an invocation of an unimplemented system call is made.
+The Zephyr RTOS shall have a defined behaviour when an invocation of an unimplemented system call is made.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want Zephyr OS to indicate any unimplemented system call by an appropriate error message.
+As a Zephyr RTOS user I want Zephyr OS to indicate any unimplemented system call by an appropriate error message.
 <<<
 REVIEW_COMMENT: >>>
 What is an "unimplemented system call"? An empty system call function? Can I call something that is not there it all? Isn't this more a topic for security? - makes sense to handle this from the safety perspective, but still raises some quesitions here.
@@ -698,10 +698,10 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Response to invalid system call IDs
 STATEMENT: >>>
-Zephyr shall have a defined behavior when an invalid system call ID is used.
+The Zephyr RTOS shall have a defined behavior when an invalid system call ID is used.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want Zephyr OS to indicate invalid system call by an appropriate error message.
+As a Zephyr RTOS user I want Zephyr OS to indicate invalid system call by an appropriate error message.
 <<<
 
 [REQUIREMENT]
@@ -711,7 +711,7 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Prevent user threads creating higher priority threasds
 STATEMENT: >>>
-Zephyr shall prevent user threads from creating new threads that are higher priority than the caller.
+The Zephyr RTOS shall prevent user threads from creating new threads that are higher priority than the caller.
 <<<
 
 [REQUIREMENT]
@@ -721,10 +721,10 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Revoking threads permissions on a kernel object
 STATEMENT: >>>
-Zephyr shall support revoking permission to a kernel object. User mode threads may only revoke their own access to an object.
+The Zephyr RTOS shall support revoking permission to a kernel object. User mode threads may only revoke their own access to an object.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be protected against other user threads changing access to kernel objects of my thread.
+As a Zephyr RTOS user I want to be protected against other user threads changing access to kernel objects of my thread.
 <<<
 
 [REQUIREMENT]
@@ -734,10 +734,10 @@ TYPE: Functional
 COMPONENT: TBD: Memory Protection --> Thread
 TITLE: Prevent user threads creating supervisor threads
 STATEMENT: >>>
-Zephyr shall prevent user threads from creating kernel threads.
+The Zephyr RTOS shall prevent user threads from creating kernel threads.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be protected against user threads creating higher privileged kernel/supervisior threads.
+As a Zephyr RTOS user I want to be protected against user threads creating higher privileged kernel/supervisior threads.
 <<<
 
 [REQUIREMENT]
@@ -747,10 +747,10 @@ TYPE: Functional
 COMPONENT: TBD: Memory Protection --> Thread
 TITLE: Reduced Privilege Level Threads
 STATEMENT: >>>
-Zephyr shall allow the creation of threads that run in reduced privilege level.
+The Zephyr RTOS shall allow the creation of threads that run in reduced privilege level.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to create lower privilegded threads than my own.
+As a Zephyr RTOS user I want to be able to create lower privilegded threads than my own.
 <<<
 
 [REQUIREMENT]
@@ -760,10 +760,10 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: User Mode Threads Performing Privileged Operations
 STATEMENT: >>>
-Zephyr shall provide system calls to allow user mode threads to perform privileged operations.
+The Zephyr RTOS shall provide system calls to allow user mode threads to perform privileged operations.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to perform privileged operations in the kernel mode through a well defined interface.
+As a Zephyr RTOS user I want to be able to perform privileged operations in the kernel mode through a well defined interface.
 <<<
 
 [REQUIREMENT]
@@ -773,10 +773,10 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: User mode handling of detected stack overflow
 STATEMENT: >>>
-Zephyr shall support a defined mechanism for user mode handling a of detected stack overflow.
+The Zephyr RTOS shall support a defined mechanism for user mode handling a of detected stack overflow.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want, when a stack overlow is detected, to be able to implement a graceful, application defined handling of the exception.
+As a Zephyr RTOS user I want, when a stack overlow is detected, to be able to implement a graceful, application defined handling of the exception.
 <<<
 REVIEW_COMMENT: >>>
 Need for handlers and callbacks outside of thread.   Need to be able to answer "Can the safety application rely on Zephyr to reach the safe state after stack overflow occured?"   Can it handle degredaded mode.
@@ -789,10 +789,10 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Stack Overflow Detection
 STATEMENT: >>>
-Zephyr shall support detection of stack overflows.
+The Zephyr RTOS shall support detection of stack overflows.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to get an indication when a stack overflow occurs at least during debugging / the development phase, and for safety applications also in a release version of my application.
+As a Zephyr RTOS user I want to get an indication when a stack overflow occurs at least during debugging / the development phase, and for safety applications also in a release version of my application.
 <<<
 REVIEW_COMMENT: >>>
 RS: IMHO should be configurable due the to performance penalty introduced with it.   - DL:  THere are various modes,  canaries, and they can be turned off.  KS:  Clearly safety & security mechanism.
@@ -805,7 +805,7 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Boot Time Memory Access Policy
 STATEMENT: >>>
-Zephyr shall support configurable access to memory during boot time.
+The Zephyr RTOS shall support configurable access to memory during boot time.
 <<<
 REVIEW_COMMENT: >>>
 What does "policy" mean in this context? Does this mean to choose between different start up sequences?
@@ -818,10 +818,10 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: System Call Handler Functions
 STATEMENT: >>>
-Zephyr shall provide helper functions for system call handler functions to validate the inputs passed in from user mode before invoking the implementation function to protect the kernel.
+The Zephyr RTOS shall provide helper functions for system call handler functions to validate the inputs passed in from user mode before invoking the implementation function to protect the kernel.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want Zepyhr OS to validate system call parameters passed from the user mode to the kernel mode to avoid crashes and undefined behaviour.
+As a Zephyr RTOS user I want Zepyhr OS to validate system call parameters passed from the user mode to the kernel mode to avoid crashes and undefined behaviour.
 <<<
 REVIEW_COMMENT: >>>
 I do not understand that. What kind of helper functions? Kind of plausibility checks? Does it make sense to provide this functionality on OS level?   David:  These are likely just validation that the parameters are not going to be dangerous (security/safety).
@@ -834,10 +834,10 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: System Call C strings in user mode
 STATEMENT: >>>
-Zephyr shall support system calls to be able to safely accept C strings passed in from user mode.
+The Zephyr RTOS shall support system calls to be able to safely accept C strings passed in from user mode.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want Zepyhr OS to validate system call string type parameters passed from the user mode to the kernel mode to avoid crashes and undefined behaviour.
+As a Zephyr RTOS user I want Zepyhr OS to validate system call string type parameters passed from the user mode to the kernel mode to avoid crashes and undefined behaviour.
 
 e.g.
 
@@ -855,7 +855,7 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Tracking kernel objects in used by usermode threads
 STATEMENT: >>>
-Zephyr shall track kernel objects that are used by user mode threads.
+The Zephyr RTOS shall track kernel objects that are used by user mode threads.
 
 Note: this means Zephyr shall track the resources used by the user mode thread (associate this with a user story).
 <<<
@@ -870,10 +870,10 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Granting threads access to specific memory
 STATEMENT: >>>
-Zephyr shall have an interface to request access to specific memory after initial allocation.
+The Zephyr RTOS shall have an interface to request access to specific memory after initial allocation.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to request read-only or read-write access to a dedicated memory area/pool during runtime.
+As a Zephyr RTOS user I want to be able to request read-only or read-write access to a dedicated memory area/pool during runtime.
 <<<
 
 [REQUIREMENT]
@@ -883,10 +883,10 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: Assigning memory pools to act as a thread resource pool
 STATEMENT: >>>
-Zephyr shall support assigning a memory pool to act as that thread's resource pool.
+The Zephyr RTOS shall support assigning a memory pool to act as that thread's resource pool.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able, during runtime from the kernel, to request a memory area/pool which is exclusively available to the requesting thread protected against access from other threads.
+As a Zephyr RTOS user I want to be able, during runtime from the kernel, to request a memory area/pool which is exclusively available to the requesting thread protected against access from other threads.
 <<<
 REVIEW_COMMENT: >>>
 What is the difference to ZEP 136? Read & Write, while ZEP136 is just read?
@@ -904,10 +904,10 @@ TYPE: Functional
 COMPONENT: Memory Objects
 TITLE: Dynamic Memory Allocation
 STATEMENT: >>>
-Zephyr shall allow threads to dynamically allocate variable-sized memory regions from a specified range of memory.
+The Zephyr RTOS shall allow threads to dynamically allocate variable-sized memory regions from a specified range of memory.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want my application to be able to dynamically allocate memory of a application defined size.
+As a Zephyr RTOS user I want my application to be able to dynamically allocate memory of a application defined size.
 <<<
 REVIEW_COMMENT: >>>
 Is dynamic memory allocation only allowed in memory pool objects?
@@ -920,10 +920,10 @@ TYPE: Functional
 COMPONENT: Memory Objects
 TITLE: Memory Slab Object
 STATEMENT: >>>
-Zephyr shall allow threads to dynamically allocate fixed-sized memory regions from a specified range of memory.
+The Zephyr RTOS shall allow threads to dynamically allocate fixed-sized memory regions from a specified range of memory.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want a most efficient and least fragmentation prone dynamic memory allocation mechanism.
+As a Zephyr RTOS user I want a most efficient and least fragmentation prone dynamic memory allocation mechanism.
 <<<
 
 [/SECTION]
@@ -938,10 +938,10 @@ TYPE: Functional
 COMPONENT: Data Passing
 TITLE: Traditional FIFO Queue
 STATEMENT: >>>
-Zephyr shall provide a kernel object that implements a traditional first in, first out (FIFO) queue, allowing threads and ISRs to add and remove a limited number of 32-bit data values.
+The Zephyr RTOS shall provide a kernel object that implements a traditional first in, first out (FIFO) queue, allowing threads and ISRs to add and remove a limited number of 32-bit data values.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to exchange 1 to N data objects between different threads and ISR in a thread-safe manner with a first-in-first-out (queue) behaviour.
+As a Zephyr RTOS user I want to be able to exchange 1 to N data objects between different threads and ISR in a thread-safe manner with a first-in-first-out (queue) behaviour.
 <<<
 
 [REQUIREMENT]
@@ -951,10 +951,10 @@ TYPE: Functional
 COMPONENT: Data Passing
 TITLE: Traditional LIFO queue
 STATEMENT: >>>
-Zephyr shall provide a kernel object that implements a traditional last in, first out (LIFO) queue, allowing threads and ISRs to add and remove a limited number of 32-bit data values.
+The Zephyr RTOS shall provide a kernel object that implements a traditional last in, first out (LIFO) queue, allowing threads and ISRs to add and remove a limited number of 32-bit data values.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to exchange 1 to N data objects between different threads and ISR in a thread-safe manner with a last-in-first-out (stack) behaviour.
+As a Zephyr RTOS user I want to be able to exchange 1 to N data objects between different threads and ISR in a thread-safe manner with a last-in-first-out (stack) behaviour.
 <<<
 
 [/SECTION]
@@ -969,10 +969,10 @@ TYPE: Functional
 COMPONENT: Mutex
 TITLE: Mutex Kernel Object
 STATEMENT: >>>
-Zephyr shall support resource synchronization. (Note synchronization can be for memory access, and mutex may be one implementation, but not the only one).
+The Zephyr RTOS shall support resource synchronization. (Note synchronization can be for memory access, and mutex may be one implementation, but not the only one).
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to sychonize threads when accessing common resources, where the thread shall have the option to:
+As a Zephyr RTOS user I want to be able to sychonize threads when accessing common resources, where the thread shall have the option to:
 - wait eternally until the resources becomes available.
 - immediately return with a negative message if the resource is not available and allow the thread to continue.
 - wait for a given time for the resource to become available or return with a negative message.
@@ -993,7 +993,7 @@ TYPE: Functional
 COMPONENT: Power Management
 TITLE: Power State Control
 STATEMENT: >>>
-Zephyr shall provide control over changes to system power states.
+The Zephyr RTOS shall provide control over changes to system power states.
 <<<
 USER_STORY: >>>
 See ZEP104
@@ -1018,7 +1018,7 @@ TYPE: Functional
 COMPONENT: Power Management
 TITLE: Notification of changes to system power states
 STATEMENT: >>>
-Zephyr shall provide notification of changes to system power states.
+The Zephyr RTOS shall provide notification of changes to system power states.
 <<<
 
 [/SECTION]
@@ -1033,7 +1033,7 @@ TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Exchanging data between threads
 STATEMENT: >>>
-Zephyr shall provide a mechanism for exchanging data between threads.
+The Zephyr RTOS shall provide a mechanism for exchanging data between threads.
 <<<
 USER_STORY: >>>
 (Note: copying data may be needed here - what is Zephyr doing? is it configurable?)
@@ -1046,7 +1046,7 @@ TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Waiting for results during communication
 STATEMENT: >>>
-Zephyr shall provide mechanisms to enable waiting for results during communication between threads. (NOTE:  waiting for results is really bad and dangerous, want to avoid if at all possible).
+The Zephyr RTOS shall provide mechanisms to enable waiting for results during communication between threads. (NOTE:  waiting for results is really bad and dangerous, want to avoid if at all possible).
 <<<
 USER_STORY: >>>
 =N73
@@ -1059,10 +1059,10 @@ TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Poll Operation Support
 STATEMENT: >>>
-Zephyr shall support a poll operation which enables waiting concurrently for any one of multiple conditions to be fulfilled.
+The Zephyr RTOS shall support a poll operation which enables waiting concurrently for any one of multiple conditions to be fulfilled.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want my thread to wait for one of several defined events to occur and only continue when one of them has occured.
+As a Zephyr RTOS user I want my thread to wait for one of several defined events to occur and only continue when one of them has occured.
 <<<
 
 [REQUIREMENT]
@@ -1072,11 +1072,11 @@ TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Pipe Communication Primitive
 STATEMENT: >>>
-Zephyr shall provide a communication primitive that allows a thread to transfer a block of
+The Zephyr RTOS shall provide a communication primitive that allows a thread to transfer a block of
 data to another thread.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to send a byte stream from one thread to another in a thread-safe manner.
+As a Zephyr RTOS user I want to send a byte stream from one thread to another in a thread-safe manner.
 <<<
 
 [REQUIREMENT]
@@ -1086,7 +1086,7 @@ TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Message Queue
 STATEMENT: >>>
-Zephyr shall provide a a communcation premitive that allow threads and ISRs to asynchronously exchange fixed-size data items.
+The Zephyr RTOS shall provide a a communcation premitive that allow threads and ISRs to asynchronously exchange fixed-size data items.
 <<<
 
 [REQUIREMENT]
@@ -1096,10 +1096,10 @@ TYPE: Functional
 COMPONENT: Thread Communication
 TITLE: Mailbox Kernel Primitive
 STATEMENT: >>>
-Zephyr shall provide a communication primitive that allows threadss to exchange messages of varying sizes asynchronously or synchronously.
+The Zephyr RTOS shall provide a communication primitive that allows threadss to exchange messages of varying sizes asynchronously or synchronously.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want a sending thread to deposit a message into the mailbox,
+As a Zephyr RTOS user I want a sending thread to deposit a message into the mailbox,
 and a receiving thread to be able to retrieve the message at its convenience. This
 allows for asynchronous communication, where threads do not need to synchronize their
 execution explicitly.
@@ -1117,7 +1117,7 @@ TYPE: Functional
 COMPONENT: Multi Core
 TITLE: Support operation on more than one CPU
 STATEMENT: >>>
-The Zephyr kernel shall support operation on more than one physical CPU sharing the same kernel state.
+The Zephyr RTOS shall support operation on more than one physical CPU sharing the same kernel state.
 <<<
 
 [REQUIREMENT]
@@ -1127,10 +1127,10 @@ TYPE: Functional
 COMPONENT: Multi Core
 TITLE: Running threads on specific CPUs
 STATEMENT: >>>
-Zephyr shall provide an interface for running threads on specific sets of CPUs ( default is 1 CPU).
+The Zephyr RTOS shall provide an interface for running threads on specific sets of CPUs ( default is 1 CPU).
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want Zephyr OS to be able to specify the CPU core or the set of CPU cores on which a thead shall be executed.
+As a Zephyr RTOS user I want Zephyr OS to be able to specify the CPU core or the set of CPU cores on which a thead shall be executed.
 <<<
 
 [REQUIREMENT]
@@ -1140,10 +1140,10 @@ TYPE: Functional
 COMPONENT: Multi Core
 TITLE: Exclusion between physical CPUs
 STATEMENT: >>>
-Zephyr shall provide an interface for mutual exclusion between multiple physical CPUs.
+The Zephyr RTOS shall provide an interface for mutual exclusion between multiple physical CPUs.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want Zephyr OS to provide synchonization mechanisms between the CPU cores and the access to common resources.
+As a Zephyr RTOS user I want Zephyr OS to provide synchonization mechanisms between the CPU cores and the access to common resources.
 <<<
 
 [/SECTION]
@@ -1158,10 +1158,10 @@ TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Scheduling a thread based on an event
 STATEMENT: >>>
-Zephyr shall provide an interface to schedule a thread based on an event.
+The Zephyr RTOS shall provide an interface to schedule a thread based on an event.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to execute work which reacts on events and interrupts the current executed work.
+As a Zephyr RTOS user, I want to be able to execute work which reacts on events and interrupts the current executed work.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -1174,10 +1174,10 @@ TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Deadline Scheduling Priorities
 STATEMENT: >>>
-Zephyr shall organize running threads by earliest deadline first priority.
+The Zephyr RTOS shall organize running threads by earliest deadline first priority.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to schedule threads by earliest deadine first.
+As a Zephyr RTOS user, I want to be able to schedule threads by earliest deadine first.
 <<<
 
 [REQUIREMENT]
@@ -1187,10 +1187,10 @@ TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Work Queue utility capable of running preemptible work items
 STATEMENT: >>>
-Zephyr shall provide a thread-pooled work queue utility capable of running preemptible work items with specific scheduler priorities.
+The Zephyr RTOS shall provide a thread-pooled work queue utility capable of running preemptible work items with specific scheduler priorities.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to add work items in a thread work queue with different priorities and these shall be scheduled accoding their priorities.
+As a Zephyr RTOS user, I want to be able to add work items in a thread work queue with different priorities and these shall be scheduled accoding their priorities.
 <<<
 
 [REQUIREMENT]
@@ -1200,10 +1200,10 @@ TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Run user supplied functions in-order in a separate thread(s)
 STATEMENT: >>>
-Zephyr shall provide an interface for running user-supplied functions.
+The Zephyr RTOS shall provide an interface for running user-supplied functions.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to run functions in-order in a sperated thread/threads.
+As a Zephyr RTOS user, I want to be able to run functions in-order in a sperated thread/threads.
 <<<
 REVIEW_COMMENT: >>>
 Where do we put this,  thread, scheduling or???
@@ -1216,13 +1216,13 @@ TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Organize running threads into a fixed list
 STATEMENT: >>>
-Zephyr shall organize running threads into a fixed list of numeric priorities.
+The Zephyr RTOS shall organize running threads into a fixed list of numeric priorities.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want that the OS organize running threads in a fixed list of numeric priorities.
+As a Zephyr RTOS user, I want that the OS organize running threads in a fixed list of numeric priorities.
 <<<
 REVIEW_COMMENT: >>>
-Zephyr shall allow priorising threads
+The Zephyr RTOS shall allow priorising threads
 <<<
 
 [REQUIREMENT]
@@ -1232,10 +1232,10 @@ TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Preemption support
 STATEMENT: >>>
-Zephyr shall support preemption of a running thread by a higher priority thread.
+The Zephyr RTOS shall support preemption of a running thread by a higher priority thread.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want that the OS preempt running threads by a thread with higher priority.
+As a Zephyr RTOS user, I want that the OS preempt running threads by a thread with higher priority.
 <<<
 
 [REQUIREMENT]
@@ -1245,10 +1245,10 @@ TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Un-preemptable thread priorities
 STATEMENT: >>>
-Zephyr shall support thread priorities which cannot be preempted by other user threads.
+The Zephyr RTOS shall support thread priorities which cannot be preempted by other user threads.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to configure thread prioriteies which cannot be preempted by other user threads.
+As a Zephyr RTOS user, I want to be able to configure thread prioriteies which cannot be preempted by other user threads.
 <<<
 
 [REQUIREMENT]
@@ -1258,10 +1258,10 @@ TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Time sharing of CPU resources
 STATEMENT: >>>
-Zephyr shall support time sharing of CPU resources among threads of the same priority.
+The Zephyr RTOS shall support time sharing of CPU resources among threads of the same priority.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to onfigure my RTOS in the way, that the CPU resources are shared evenly among executed threads of the same priority.
+As a Zephyr RTOS user, I want to be able to onfigure my RTOS in the way, that the CPU resources are shared evenly among executed threads of the same priority.
 <<<
 REVIEW_COMMENT: >>>
 what does traditional mean here?   Round robin?
@@ -1279,7 +1279,7 @@ TYPE: Functional
 COMPONENT: Threads
 TITLE: Creating threads
 STATEMENT: >>>
-Zephyr shall provide an interface to create (start) a thread.
+The Zephyr RTOS shall provide an interface to create (start) a thread.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -1294,7 +1294,7 @@ TYPE: Functional
 COMPONENT: Threads
 TITLE: Setting thread priority
 STATEMENT: >>>
-Zephyr shall provide an interface to set a thread's priority.
+The Zephyr RTOS shall provide an interface to set a thread's priority.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -1307,7 +1307,7 @@ TYPE: Functional
 COMPONENT: Threads
 TITLE: Suspending a thread
 STATEMENT: >>>
-Zephyr shall provide an interface to suspend a thread.
+The Zephyr RTOS shall provide an interface to suspend a thread.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -1322,7 +1322,7 @@ TYPE: Functional
 COMPONENT: Threads
 TITLE: Resuming a suspended thread
 STATEMENT: >>>
-Zephyr shall provide an interface to resume a suspended thread.
+The Zephyr RTOS shall provide an interface to resume a suspended thread.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -1337,7 +1337,7 @@ TYPE: Functional
 COMPONENT: Threads
 TITLE: Resuming a suspended thread after a timeout
 STATEMENT: >>>
-Zephyr shall provide an interface to resume a suspended thread after a timeout.
+The Zephyr RTOS shall provide an interface to resume a suspended thread after a timeout.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -1352,7 +1352,7 @@ TYPE: Functional
 COMPONENT: Threads
 TITLE: Deleting a thread
 STATEMENT: >>>
-Zephyr shall provide an interface to delete (end) a thread.
+The Zephyr RTOS shall provide an interface to delete (end) a thread.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -1370,7 +1370,7 @@ STATEMENT: >>>
 Threads shall have different states to fulfill the Lifecycle of a thread
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to know in what state a specific thread is.
+As a Zephyr RTOS user, I want to know in what state a specific thread is.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -1388,7 +1388,7 @@ STATEMENT: >>>
 Every Thread shall have it's own stack.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user I want to be able to configure the stack size of a thread. And every thread shall have it's own dedicated stack.
+As a Zephyr RTOS user I want to be able to configure the stack size of a thread. And every thread shall have it's own dedicated stack.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -1403,7 +1403,7 @@ TYPE: Functional
 COMPONENT: Threads
 TITLE: Thread privileges
 STATEMENT: >>>
-Zephyr shall provide an interface to create threads with defined privilege.
+The Zephyr RTOS shall provide an interface to create threads with defined privilege.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -1418,7 +1418,7 @@ TYPE: Functional
 COMPONENT: Threads
 TITLE: Scheduling multiple threads
 STATEMENT: >>>
-Zephyr shall provide an interface to schedule multiple threads.
+The Zephyr RTOS shall provide an interface to schedule multiple threads.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -1431,10 +1431,10 @@ TYPE: Functional
 COMPONENT: Threads
 TITLE: Thread Options
 STATEMENT: >>>
-The Zephyr kernel shall support a set of thread options.
+The Zephyr RTOS shall support a set of thread options.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to pass specific option to a thread.
+As a Zephyr RTOS user, I want to be able to pass specific option to a thread.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -1452,7 +1452,7 @@ STATEMENT: >>>
 Every thread shall have a custom data area.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to set a thread specific custom area for every thread I create and which can be used only by the thread itself or the can be used by the application
+As a Zephyr RTOS user, I want to be able to set a thread specific custom area for every thread I create and which can be used only by the thread itself or the can be used by the application
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -1472,10 +1472,10 @@ TYPE: Functional
 COMPONENT: Timers
 TITLE: Kernel Clock
 STATEMENT: >>>
-Zephyr shall provide a interface for checking the current value of the real-time clock.
+The Zephyr RTOS shall provide a interface for checking the current value of the real-time clock.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to track the passed real time in the OS with a dedicated hardware counter and interrupt.
+As a Zephyr RTOS user, I want to be able to track the passed real time in the OS with a dedicated hardware counter and interrupt.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -1488,10 +1488,10 @@ TYPE: Functional
 COMPONENT: Timers
 TITLE: Call functions in interrupt context
 STATEMENT: >>>
-Zephyr shall provide an interface to schedule user mode call back function triggered by a real time clock value.
+The Zephyr RTOS shall provide an interface to schedule user mode call back function triggered by a real time clock value.
 <<<
 USER_STORY: >>>
-As a Zephyr OS user, I want to be able to execute functions in the interrupt context and the interrupt context shall be base on a real-time counter.
+As a Zephyr RTOS user, I want to be able to execute functions in the interrupt context and the interrupt context shall be base on a real-time counter.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -1509,7 +1509,7 @@ TYPE: Functional
 COMPONENT: Tracing
 TITLE: Initializing a trace
 STATEMENT: >>>
-Zephyr shall provide an interface to initialize a trace.
+The Zephyr RTOS shall provide an interface to initialize a trace.
 <<<
 
 [REQUIREMENT]
@@ -1519,7 +1519,7 @@ TYPE: Functional
 COMPONENT: Tracing
 TITLE: Triggering a trace
 STATEMENT: >>>
-Zephyr shall provide an interface to trigger a trace.
+The Zephyr RTOS shall provide an interface to trigger a trace.
 <<<
 
 [REQUIREMENT]
@@ -1529,7 +1529,7 @@ TYPE: Functional
 COMPONENT: Tracing
 TITLE: Dumping trace results
 STATEMENT: >>>
-Zephyr shall provide an interface to dump results from a trace.
+The Zephyr RTOS shall provide an interface to dump results from a trace.
 <<<
 
 [REQUIREMENT]
@@ -1539,7 +1539,7 @@ TYPE: Functional
 COMPONENT: Tracing
 TITLE: Removing trace data
 STATEMENT: >>>
-Zephyr shall provide an interface to remove trace data.
+The Zephyr RTOS shall provide an interface to remove trace data.
 <<<
 
 [REQUIREMENT]
@@ -1549,7 +1549,7 @@ TYPE: Functional
 COMPONENT: Tracing
 TITLE: Tracing Object  Identification
 STATEMENT: >>>
-Zephyr shall provide an interface to identify the objects being traced.
+The Zephyr RTOS shall provide an interface to identify the objects being traced.
 <<<
 USER_STORY: >>>
 As a Zepyhr OS user, I want to be able to give each object which I create a name / label in order to be able to identify them in a trace log.
