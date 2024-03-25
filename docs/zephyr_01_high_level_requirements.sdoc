@@ -78,7 +78,7 @@ USER_STORY: >>>
 As a Zephyr RTOS user I want to have a selection of standard C library implementations e.g. a full extend and a minimal with a smaller footprint or a particular fast executing implementation.
 <<<
 REVIEW_COMMENT: >>>
-Can we limit the type of C library implementations? Testing might be hell if we do not limit ourselfes to the ones defined? Like "miminal libc" and "newlib". Will it make sense to pull miminal Libc into the certification scope?
+Can we limit the type of C library implementations? Testing might be hell if we do not limit ourselves to the ones defined? Like "minimal libc" and "newlib". Will it make sense to pull minimal Libc into the certification scope?
 
 Clarification: Would prefer to cover the scope part first. Talking about the hooks which apply to each C Library. Open, Close, Diff. Hooks that are OS dependent. C or Library dependent. ref https://github.com/zephyrproject-rtos/zephyr/blob/main/lib/libc/newlib/libc-hooks.c
 
@@ -111,7 +111,7 @@ STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for error and exception handling.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS user I want errors and exeptions to handled and react according to my applications requirements (e.g. reach/establish the applications safey state).
+As a Zephyr RTOS user I want errors and exceptions to handled and react according to my applications requirements (e.g. reach/establish the applications safety state).
 <<<
 
 [REQUIREMENT]
@@ -137,7 +137,7 @@ STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for interrupt management.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS user I want interrupts to be handled sychronously in response to a hardware or software interrupt request with a minimum latency, preemtping threads and, as far as the hardware allows, lower priority interrupt service routines.
+As a Zephyr RTOS user I want interrupts to be handled synchronously in response to a hardware or software interrupt request with a minimum latency, preempting threads and, as far as the hardware allows, lower priority interrupt service routines.
 <<<
 
 [REQUIREMENT]
@@ -179,17 +179,17 @@ STATEMENT: >>>
 The Zephyr RTOS shall provide an interface to control hardware power states.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS user I want to be able to control the power mode of the MCU and its peripherals to take advantage of the hardward features and to be able to implement low power or battery driven long life applications.
+As a Zephyr RTOS user I want to be able to control the power mode of the MCU and its peripherals to take advantage of the hardware features and to be able to implement low power or battery driven long life applications.
 <<<
 
 [SECTION]
-TITLE: Multicore and SMP
+TITLE: Multi core and SMP
 
 [REQUIREMENT]
 UID: ZEP-44
 STATUS: Draft
 TYPE: High Level
-COMPONENT: SMP and Multicore
+COMPONENT: SMP and Multi core
 TITLE: Multiple CPU scheduling
 STATEMENT: >>>
 The Zephyr RTOS shall support scheduling of threads on multiple hardware CPUs.
@@ -202,7 +202,7 @@ As a Zephyr RTOS user I want Zephyr OS to run on MCUs/CPUs with one or more CPU 
 UID: ZEP-4
 STATUS: Draft
 TYPE: High Level
-COMPONENT: SMP and Multicore
+COMPONENT: SMP and Multi core
 TITLE: Scheduling
 STATEMENT: >>>
 The Zephyr RTOS shall provide an interface to assign a thread to a specific CPU.
@@ -223,7 +223,7 @@ TYPE: High Level
 COMPONENT: Mutex
 TITLE: Mutex
 STATEMENT: >>>
-The Zephyr RTOS shall provide an interface for managing communcation between threads.
+The Zephyr RTOS shall provide an interface for managing communication between threads.
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user I want to able to exchange information between threads in a thread-safe manner guaranteeing data consistence.
