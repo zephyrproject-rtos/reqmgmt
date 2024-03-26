@@ -66,26 +66,6 @@ RELATIONS:
   VALUE: ZEP-1
 
 [REQUIREMENT]
-UID: ZEP-2
-STATUS: Draft
-TYPE: High Level
-COMPONENT: C Library
-TITLE: Support Subset of Standard C Library
-STATEMENT: >>>
-The Zephyr RTOS shall support a subset of the standard C library.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want to have a selection of standard C library implementations e.g. a full extend and a minimal with a smaller footprint or a particular fast executing implementation.
-<<<
-REVIEW_COMMENT: >>>
-Can we limit the type of C library implementations? Testing might be hell if we do not limit ourselfes to the ones defined? Like "miminal libc" and "newlib". Will it make sense to pull miminal Libc into the certification scope?
-
-Clarification: Would prefer to cover the scope part first. Talking about the hooks which apply to each C Library. Open, Close, Diff. Hooks that are OS dependent. C or Library dependent. ref https://github.com/zephyrproject-rtos/zephyr/blob/main/lib/libc/newlib/libc-hooks.c
-
-TBD: The requirement needs refinement.
-<<<
-
-[REQUIREMENT]
 UID: ZEP-36
 STATUS: Draft
 TYPE: High Level
