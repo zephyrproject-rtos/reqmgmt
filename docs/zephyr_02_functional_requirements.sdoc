@@ -381,6 +381,468 @@ The Zephyr RTOS shall provide an interface to assign a specific handler for a fa
 [/SECTION]
 
 [SECTION]
+TITLE: System Initialization
+
+[FREETEXT]
+Secure devices need to establish and maintain trust in the executable images. This requires attestation and authentication of each image, beginning with the check of the first-stage executable. This executable must only be entered after it has passed the attestation and authentication checks. This establishes trust in the first-stage executable, which then is accountable for establishing trust in every image it directly executes.
+
+Each stage of execution terminates in only one of the following ways:
+- through handling a catastrophic error, requiring an MCU reset to restore secure execution, or
+- through a controlled transfer of the MCU to a trusted next-stage executable, or
+- through a controlled system shutdown and MCU reset, or
+- through a hardware watchdog asychronously resetting the MCU.
+
+Only the first-stage image inherits the MCU coming from a HW reset. The successive stage(s) inherit a running MCU, any conditions reported by the preceding stage.
+
+  EXAMPLE: A secure IoT device contains the following images:
+
+  1. an immutable first-stage boot loader image, which transfers execution to
+  2. a updatable second-stage boot loader image too large to be made immutable, which transfers execution to
+  3. an updatable application image.
+
+  The first-stage boot loader reports to the successive image power-up conditions of specific inputs (e.g., buttons, test points).  Each stage ensures a hardware watchdog is enabled while handing off execution so that the system can autonomously recover from a misbehaving next-stage.
+
+NOTE: A first-stage executable image may be directly verified by either:
+  - MCU hardware prior to each execution, or
+  - the device manufacturing process immediately before making first-stage image immutable.
+
+NOTE: Some MCUs do not allow the enabled hardware watchdog to be disabled or reconfigured. Successive stages must sustain the inherited hardware watchdog configuration in order to prevent an MCU reset.
+[/FREETEXT]
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Initialization follows dependency order
+STATEMENT: >>>
+Zephyr shall initialize the system following the order of component dependencies.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Data provided from preceding executable available throughout initialization process
+STATEMENT: >>>
+Zephyr shall expose the data provided by the preceding executable throughout the initialization of the Zephyr OS.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Inherited CPU stack usage kept within published limits
+STATEMENT: >>>
+Zephyr shall use no more than the published amount of the CPU stack inherited from the prior executable.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Sustain hardware watchdog inherited from preceding executable
+STATEMENT: >>>
+Zephyr shall sustain the active hardware watchdog inherited from the preceding executable.
+<<<
+
+[SECTION]
+TITLE: Initialization on Inherited CPU Stack
+
+[REQUIREMENT]
+UID: ZEP-127
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Build-time Registrations for System Initialization Notifications
+STATEMENT: >>>
+Zephyr shall expose an interface to build-time registration for system initialization notifications.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Pre-CPU Architecture Initialization notification
+STATEMENT: >>>
+Zephyr shall publish an notification to each registered component
+after the C domain has been set up and
+before any CPU-architecture specific initialization.
+<<<
+
+[SECTION]
+TITLE: CPU Architecture Specific Initialization
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: CPU-architecture initialization invalidates CPU caches
+STATEMENT: >>>
+Zephyr shall invalidate the CPU caches during system initialization.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: CPU-architecture initialization disables memory protection config inherited from preceding executable
+STATEMENT: >>>
+Zephyr shall disable the CPU memory protection mechanisms inherited from the preceding executable.
+<<<
+
+[SECTION]
+TITLE: CPU Architecture Specific Initializations
+
+[SECTION]
+TITLE: ARC CPU Architecture Initialization
+
+[/SECTION]
+
+[SECTION]
+TITLE: ARM 32b CPU Architecture Initialization
+
+[/SECTION]
+
+[SECTION]
+TITLE: ARM 64b CPU Architecture Initialization
+
+[/SECTION]
+
+[SECTION]
+TITLE: MIPS 32b CPU Architecture Initialization
+
+[/SECTION]
+
+[SECTION]
+TITLE: NIOS2 32b CPU Architecture Initialization
+
+[/SECTION]
+
+[SECTION]
+TITLE: POSIX "CPU Architecture" Initialization
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Builds for POSIX Platforms need custom `busy_wait()`
+STATEMENT: >>>
+Zephyr shall be built with a custom `busy_wait` implementation.
+<<<
+
+[/SECTION]
+
+[SECTION]
+TITLE: RISCV 32b CPU Architecture Initialization
+
+[/SECTION]
+
+[SECTION]
+TITLE: SPARC 32b CPU Architecture Initialization
+
+[/SECTION]
+
+[SECTION]
+TITLE: x86 32b CPU Architecture Initialization
+
+[/SECTION]
+
+[SECTION]
+TITLE: XTENSA 32b Architecture Initialization
+
+[/SECTION]
+
+[/SECTION]
+
+[/SECTION]
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Pre-Kernel Initialization notification
+STATEMENT: >>>
+Zephyr System Initialization shall publish an notification to each registered component after all CPU-architecture specific initialization and before any of the following:
+
+- any CPU stack(s) are initialized with usage markers,
+
+- any kernel timing services are initialized,
+
+- any transition to the main execution thread.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Stack overflow/underflow detection
+STATEMENT: >>>
+Zephyr shall initialize each CPU stack in a way to support detecting stack overflow and stack underflow.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Timing functionality during System Init
+STATEMENT: >>>
+Zephyr shall initialize and start the timing functions needed during System Initialization after the pre-kernel initialization and before entering the main execution thread.
+<<<
+
+[SECTION]
+TITLE: Where Configured without Multi-Threading Support
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: CPU architecture-specific hook to transition to main execution thread
+STATEMENT: >>>
+Zephyr shall support transitioning to the main execution thread through an optional CPU-architecture specific hook.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Default transition to main execution thread uses inherited stack
+STATEMENT: >>>
+Zephyr shall run the main execution thread on the CPU stack inherited from the preceding executable.
+<<<
+
+[/SECTION]
+
+[SECTION]
+TITLE: Where Configured with Multi-Threading Support
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Multi-threading configuration releases inherited CPU stack upon entering main execution thread
+STATEMENT: >>>
+Zephyr shall not use the inherited CPU stack once the main executable thread has been entered.
+<<<
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Initialization under Main Executable Thread
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Initialize memory management
+STATEMENT: >>>
+Zephyr shall initialize the MMU within the Kernel Initialization Phase.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Post-Kernel Initialization Notification
+STATEMENT: >>>
+Zephyr System Initialization shall publish an notification to each registered component after the Kernel is initialized and before any C++ static object initialization.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Boot banner printed upon completion of post-kernel notifications
+STATEMENT: >>>
+Zephyr shall print the boot banner upon completion of the post-kernel initialization notifications and before any C++ static object initialization.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: C++ Static Object Initialization
+STATEMENT: >>>
+Zephyr shall initialize the C++ static objects after the Post-Kernel initialization notifications are completed and before the Application initialization notifications are started.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Multi-Threading Static Thread Initialization
+STATEMENT: >>>
+Zephyr shall initialize static threads after completing the Application initialization notifications and before completing the System Initialization
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: CPU-Architecture Memory Coherence Initialization
+STATEMENT: >>>
+Zephyr shall initialize the CPU-architecture specific memory coherence support after static thread initialization and before completing the System Initialization.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Symmetric Multi-Processing Support Initialization
+STATEMENT: >>>
+Zephyr shall initialize the SMP support after any CPU-architecture memory coherence initialization and before completing the System Initialization.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Symmetric Multi-Processing Initialization notification
+STATEMENT: >>>
+Zephyr System Initialization shall publish an notification to each registered component after all non-delayed SMP initialization is completed and before completing the System Initialization.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: System Init finished notification to MMU component
+STATEMENT: >>>
+Zephyr shall notify the memory management unit at the completion of the System Initialization.
+<<<
+
+[/SECTION]
+
+[SECTION]
+TITLE: Running Main Application
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Main exec thread calls `main()` upon System Init completion
+STATEMENT: >>>
+When the System Initialization is complete,
+
+Zephyr shall call `main(void)` on the main execution thread.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Top-Level Application Return Value Ignored
+STATEMENT: >>>
+Zephyr shall explicitly ignore the return value of the call to `main()`.
+<<<
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Code Coverage Data Dumped Upon Return from Top-Level Application
+STATEMENT: >>>
+Zephyr shall dump code coverage data upon returning from the C function `main()` and before starting the System Shutdown.
+<<<
+
+[/SECTION]
+
+[SECTION]
+TITLE: System Shutdown
+
+[SECTION]
+TITLE: Where Configured w/o Multi-Threading Support
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: System Shutdown Disables Interrupts
+STATEMENT: >>>
+When the System Shutdown logic is executed,
+
+Zephyr shall disable interrupts.
+<<<
+
+[SECTION]
+TITLE: CPU Architecture Specific Shutdowns
+
+[SECTION]
+TITLE: ARC CPU Architecture Shutdown
+
+[/SECTION]
+
+[SECTION]
+TITLE: ARM 32b CPU Architecture Shutdown
+
+[/SECTION]
+
+[SECTION]
+TITLE: ARM 64b CPU Architecture Shutdown
+
+[/SECTION]
+
+[SECTION]
+TITLE: MIPS 32b CPU Architecture Shutdown
+
+[/SECTION]
+
+[SECTION]
+TITLE: NIOS2 32b CPU Architecture Shutdown
+
+[/SECTION]
+
+[SECTION]
+TITLE: POSIX "CPU Architecture" Shutdown
+
+[/SECTION]
+
+[SECTION]
+TITLE: RISCV 32b CPU Architecture Shutdown
+
+[/SECTION]
+
+[SECTION]
+TITLE: SPARC 32b CPU Architecture Shutdown
+
+[/SECTION]
+
+[SECTION]
+TITLE: x86 32b CPU Architecture Shutdown
+
+[/SECTION]
+
+[SECTION]
+TITLE: XTENSA 32b Architecture Shutdown
+
+[/SECTION]
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Where Configured with Multi-Threading Support
+
+[/SECTION]
+
+[REQUIREMENT]
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: System Shutdown Completion Ends in Infinite Loop not sustaining HW watchdogs.
+STATEMENT: >>>
+When the System Shutdown logic is completed,
+
+Zephyr shall spin in an infinite loop that does not feed any hardware watchdogs.
+<<<
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
 TITLE: File System
 
 [REQUIREMENT]
