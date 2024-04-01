@@ -109,6 +109,16 @@ RELATIONS:
 [SECTION]
 TITLE: Interrupt Management
 
+[REQUIREMENT]
+UID: ZEP-127
+STATUS: Draft
+TYPE: Interface
+COMPONENT: HW Architecture 
+TITLE: Interrupts Lock
+STATEMENT: >>>
+The Zephyr RTOS shall expose an interface declaration for HW Architecture-specific logic to lock interrupt processing. 
+<<<
+
 [/SECTION]
 
 [/SECTION]
