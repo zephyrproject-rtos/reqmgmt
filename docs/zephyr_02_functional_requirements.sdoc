@@ -119,6 +119,16 @@ STATEMENT: >>>
 The Zephyr RTOS shall expose an interface declaration for HW Architecture-specific logic to lock interrupt processing. 
 <<<
 
+[REQUIREMENT]
+UID: ZEP-128
+STATUS: Draft
+TYPE: Interface
+COMPONENT: HW Architecture 
+TITLE: Interrupts Unlock
+STATEMENT: >>>
+The Zephyr RTOS shall expose an interface declaration for HW Architecture-specific logic to unlock interrupt processing. 
+<<<
+
 [/SECTION]
 
 [/SECTION]
