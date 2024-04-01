@@ -140,6 +140,16 @@ The Zephyr RTOS shall expose an interface declaration for HW Architecture-specif
 <<<
 
 [REQUIREMENT]
+UID: ZEP-131
+STATUS: Draft
+TYPE: Interface
+COMPONENT: HW Architecture 
+TITLE: Interrupts Enable
+STATEMENT: >>>
+The Zephyr RTOS shall expose an interface declaration for HW Architecture-specific logic to enable interrupt processing. 
+<<<
+
+[REQUIREMENT]
 UID: ZEP-130
 STATUS: Draft
 TYPE: Interface
