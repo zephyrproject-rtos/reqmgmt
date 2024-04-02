@@ -1203,6 +1203,22 @@ the Zephyr RTOS shall accomplish all of the following:
 - enter the waiting period with a duration TIMEOUT.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-132
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Semaphore Take Unblocked by Giving Thread
+STATEMENT: >>>
+When the waiting thread is unblocked by a giving thread,
+
+the Zephyr RTOS shall accomplish all of the following:
+
+- deactivate the waiting period;
+- indicate SUCCESS to the waiting thread;
+- reschedule the waiting thread.
+<<<
+
 [/SECTION]
 
 [SECTION]
