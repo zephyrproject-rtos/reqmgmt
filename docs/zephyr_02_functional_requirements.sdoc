@@ -1172,6 +1172,23 @@ the Zephyr RTOS shall accomplish all of the following:
 - indicate SUCCESS to the taking thread.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-130
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Semaphore Take with TIMEOUT > 0 blocks if not Available
+STATEMENT: >>>
+While a Counting Semaphore count is 0,
+
+When a thread takes that Counting Semaphore with a waiting TIMEOUT > 0,
+
+the Zephyr RTOS shall accomplish all of the following:
+
+- block the taking thread waiting for the availability of that Counting Semaphore;
+- enter the waiting period with a duration TIMEOUT.
+<<<
+
 [/SECTION]
 
 [SECTION]
