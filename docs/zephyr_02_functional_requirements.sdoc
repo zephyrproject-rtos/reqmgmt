@@ -1266,6 +1266,18 @@ the Zephyr RTOS shall accomplish all of the following:
 [SECTION]
 TITLE: Semaphore Count
 
+[REQUIREMENT]
+UID: ZEP-136
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Current Count
+STATEMENT: >>>
+When the Counting Semaphore current count is requested,
+
+the Zephyr RTOS shall report the current count of the Counting Semaphore.
+<<<
+
 [/SECTION]
 
 [/SECTION]
