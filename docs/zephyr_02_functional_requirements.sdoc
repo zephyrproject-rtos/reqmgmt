@@ -1105,6 +1105,11 @@ allows for asynchronous communication, where threads do not need to synchronize 
 execution explicitly.
 <<<
 
+[SECTION]
+TITLE: Counting Semaphore
+
+[/SECTION]
+
 [/SECTION]
 
 [SECTION]
