@@ -1111,6 +1111,19 @@ TITLE: Counting Semaphore
 [SECTION]
 TITLE: Initialization
 
+[REQUIREMENT]
+UID: ZEP-134
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Build-Time Allocation and Initialization
+STATEMENT: >>>
+The Zephyr RTOS shall expose an interface for a Counting Semaphore to accomplish all of the following at build-time:
+
+- statically allocating the Counting Semaphore;
+- statically initialize the Counting Semaphore with the provided count limit and initial count.
+<<<
+
 [/SECTION]
 
 [SECTION]
