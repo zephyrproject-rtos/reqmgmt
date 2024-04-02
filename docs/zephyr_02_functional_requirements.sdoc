@@ -1155,6 +1155,23 @@ the Zephyr RTOS shall accomplish all of the following:
 [SECTION]
 TITLE: Semaphore Take
 
+[REQUIREMENT]
+UID: ZEP-129
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Semaphore Take while Available
+STATEMENT: >>>
+While a Counting Semaphore count is > 0,
+
+When a takes that Counting Semaphore,
+
+the Zephyr RTOS shall accomplish all of the following:
+
+- decrement by 1 the count of that Counting Semaphore;
+- indicate SUCCESS to the taking thread.
+<<<
+
 [/SECTION]
 
 [SECTION]
