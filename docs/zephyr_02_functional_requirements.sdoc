@@ -1219,6 +1219,22 @@ the Zephyr RTOS shall accomplish all of the following:
 - reschedule the waiting thread.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-133
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Semaphore Take Unblocked by Waiting Period Timeout
+STATEMENT: >>>
+When the waiting thread is unblocked by the expiration of the waiting period,
+
+the Zephyr RTOS shall accomplish all of the following:
+
+- resume the waiting thread;
+- indicate TIMEDOUT to the waiting thread;
+- reschedule the waiting thread.
+<<<
+
 [/SECTION]
 
 [SECTION]
