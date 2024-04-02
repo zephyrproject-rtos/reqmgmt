@@ -116,7 +116,7 @@ TYPE: Interface
 COMPONENT: HW Architecture 
 TITLE: Interrupts Lock
 STATEMENT: >>>
-The Zephyr RTOS shall expose an interface declaration for HW Architecture-specific logic to lock interrupt processing. 
+The Zephyr RTOS shall expose an interface declaration for HW Architecture-specific logic to lock interrupt processing.
 <<<
 
 [REQUIREMENT]
@@ -126,7 +126,7 @@ TYPE: Interface
 COMPONENT: HW Architecture 
 TITLE: Interrupts Unlock
 STATEMENT: >>>
-The Zephyr RTOS shall expose an interface declaration for HW Architecture-specific logic to unlock interrupt processing. 
+The Zephyr RTOS shall expose an interface declaration for HW Architecture-specific logic to unlock interrupt processing.
 <<<
 
 [REQUIREMENT]
@@ -136,7 +136,7 @@ TYPE: Interface
 COMPONENT: HW Architecture 
 TITLE: Interrupts Lock Status
 STATEMENT: >>>
-The Zephyr RTOS shall expose an interface declaration for HW Architecture-specific logic to report the lock status of interrupt processing. 
+The Zephyr RTOS shall expose an interface declaration for HW Architecture-specific logic to report the lock status of interrupt processing.
 <<<
 
 [REQUIREMENT]
@@ -146,7 +146,7 @@ TYPE: Interface
 COMPONENT: HW Architecture 
 TITLE: Interrupts Enable
 STATEMENT: >>>
-The Zephyr RTOS shall expose an interface declaration for HW Architecture-specific logic to enable interrupt processing. 
+The Zephyr RTOS shall expose an interface declaration for HW Architecture-specific logic to enable interrupt processing.
 <<<
 
 [REQUIREMENT]
@@ -156,7 +156,7 @@ TYPE: Interface
 COMPONENT: HW Architecture 
 TITLE: Interrupts Disable
 STATEMENT: >>>
-The Zephyr RTOS shall expose an interface declaration for HW Architecture-specific logic to disable interrupt processing. 
+The Zephyr RTOS shall expose an interface declaration for HW Architecture-specific logic to disable interrupt processing.
 <<<
 
 [REQUIREMENT]
@@ -173,6 +173,16 @@ The Zephyr RTOS shall expose an interface declaration for HW Architecture-specif
 
 [SECTION]
 TITLE: Misc
+
+[REQUIREMENT]
+UID: ZEP-133
+STATUS: Draft
+TYPE: Interface
+COMPONENT: HW Architecture
+TITLE: NOP
+STATEMENT: >>>
+The Zephyr RTOS shall expose an interface declaration for HW Architecture-specific logic to consume execution cycles.
+<<<
 
 [/SECTION]
 
