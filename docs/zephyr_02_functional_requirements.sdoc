@@ -1117,6 +1117,23 @@ TITLE: Initialization
 TITLE: Semaphore Give
 
 [REQUIREMENT]
+UID: ZEP-128
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Semaphore Give without Waiting Threads
+STATEMENT: >>>
+While no thread is waiting for a Counting Semaphore,
+
+When a thread gives that Counting Semaphore,
+
+the Zephyr RTOS shall accomplish all of the following:
+
+- increase the Semaphore Count by 1;
+- indicate SUCCESS to the giving thread.
+<<<
+
+[REQUIREMENT]
 UID: ZEP-127
 STATUS: Draft
 TYPE: Functional
