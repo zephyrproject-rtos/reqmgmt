@@ -1124,6 +1124,19 @@ The Zephyr RTOS shall expose an interface for a Counting Semaphore to accomplish
 - statically initialize the Counting Semaphore with the provided count limit and initial count.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-135
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Dynamic Initialization
+STATEMENT: >>>
+The Zephyr RTOS shall expose an interface to dynamically initialize a Counting Semaphore which requires the following information:
+
+- initial count of the Counting Semaphore;
+- count limit of the Counting Semaphore.
+<<<
+
 [/SECTION]
 
 [SECTION]
