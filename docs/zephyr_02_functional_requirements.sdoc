@@ -1173,6 +1173,20 @@ the Zephyr RTOS shall accomplish all of the following:
 <<<
 
 [REQUIREMENT]
+UID: ZEP-131
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Semaphore Take w/o blocking when not Available
+STATEMENT: >>>
+While a Counting Semaphore count is 0,
+
+When a thread takes that Counting Semaphore without allowing blocking,
+
+the Zephyr RTOS shall indicate NOT AVAILABLE to the taking thread.
+<<<
+
+[REQUIREMENT]
 UID: ZEP-130
 STATUS: Draft
 TYPE: Functional
