@@ -529,42 +529,8 @@ RELATIONS:
 
 [/SECTION]
 
-[SECTION]
-TITLE: Timers
-
-[REQUIREMENT]
-UID: ZEP-27
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Timers
-TITLE: Kernel Clock
-STATEMENT: >>>
-The Zephyr RTOS shall provide a interface for checking the current value of the real-time clock.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user, I want to be able to track the passed real time in the OS with a dedicated hardware counter and interrupt.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-6
-
-[REQUIREMENT]
-UID: ZEP-28
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Timers
-TITLE: Call functions in interrupt context
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to schedule user mode call back function triggered by a real time clock value.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user, I want to be able to execute functions in the interrupt context and the interrupt context shall be base on a real-time counter.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-6
-
-[/SECTION]
+[DOCUMENT_FROM_FILE]
+FILE: timers.sdoc
 
 [DOCUMENT_FROM_FILE]
 FILE: tracing.sdoc
