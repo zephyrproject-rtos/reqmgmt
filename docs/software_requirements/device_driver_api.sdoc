@@ -1,0 +1,41 @@
+[DOCUMENT]
+TITLE: Device Driver API
+REQ_PREFIX: ZEP-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[REQUIREMENT]
+UID: ZEP-45
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Device Driver API
+TITLE: Device Driver Abstraction
+STATEMENT: >>>
+The Zephyr RTOS shall provide abstraction of device drivers with common functionalities as an intermediate interface between applications and device drivers, where such interface is implemented by individual device drivers.
+
+Proposal for replacement: Zephyr shall provide an interface between application and individual device drivers to provide an abstraction of device drivers with common functionalities.
+<<<
+REVIEW_COMMENT: >>>
+What are common functionalities?
+
+Clarification: Abstract API drivers, UART. Set of files associated with that. Include drivers. 50+ files. Best place to look at is the documentation (not the files).
+<<<
+
+[REQUIREMENT]
+UID: ZEP-46
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Device Driver API
+TITLE: Expose kernel to hardware interrupts
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface for managing a defined set of hardware exceptions (including interrupts) across all systems.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want hardware exceptions (hardware failures, programming mistakes) to be handled gracefully (no program crashes as far as possible).
+<<<
+REVIEW_COMMENT: >>>
+What does "system" mean in this context? Architecture?
+
+NP: Now I think system means HW platform.
+<<<
