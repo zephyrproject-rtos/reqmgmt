@@ -1,0 +1,62 @@
+[DOCUMENT]
+TITLE: Interrupts
+REQ_PREFIX: ZEP-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[REQUIREMENT]
+UID: ZEP-58
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Interrupts
+TITLE: Service routine for handling interrupts (ISR)
+STATEMENT: >>>
+The Zephyr RTOS shall provide support a service routine for handling interrupts (ISR).
+<<<
+
+[REQUIREMENT]
+UID: ZEP-59
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Interrupts
+TITLE: Multi-level interrupts
+STATEMENT: >>>
+The Zephyr RTOS shall support multi-level preemptive interrupt priorities, when supported by hardware. Note: detailed analysis to demonstrate non interference will be needed here.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-60
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Interrupts
+TITLE: Associating application code with interrupts
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface for associating application code with specific interrupts. (CLARIFY: Can it be a deferred procedure call at interrupt context? Would be different requirement)
+<<<
+
+[REQUIREMENT]
+UID: ZEP-61
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Interrupts
+TITLE: Enabling interrupts
+STATEMENT: >>>
+The Zephyr RTOS shall provide mechanisms to enable interrupts.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want to be able to enable each individual and a global interrupt according to my applications needs during program execution.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-62
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Interrupts
+TITLE: Disabling interrupts
+STATEMENT: >>>
+The Zephyr RTOS shall provide mechanisms to disable interrupts.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want to be able to disable each individual and a global interrupt according to my applications needs during program execution.
+<<<
