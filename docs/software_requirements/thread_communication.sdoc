@@ -1,0 +1,85 @@
+[DOCUMENT]
+TITLE: Thread Communication
+REQ_PREFIX: ZEP-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[REQUIREMENT]
+UID: ZEP-96
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Communication
+TITLE: Exchanging data between threads
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for exchanging data between threads.
+<<<
+USER_STORY: >>>
+(Note: copying data may be needed here - what is Zephyr doing? is it configurable?)
+<<<
+
+[REQUIREMENT]
+UID: ZEP-97
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Communication
+TITLE: Waiting for results during communication
+STATEMENT: >>>
+The Zephyr RTOS shall provide mechanisms to enable waiting for results during communication between threads. (NOTE:  waiting for results is really bad and dangerous, want to avoid if at all possible).
+<<<
+USER_STORY: >>>
+=N73
+<<<
+
+[REQUIREMENT]
+UID: ZEP-100
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Communication
+TITLE: Poll Operation Support
+STATEMENT: >>>
+The Zephyr RTOS shall support a poll operation which enables waiting concurrently for any one of multiple conditions to be fulfilled.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want my thread to wait for one of several defined events to occur and only continue when one of them has occurred.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-101
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Communication
+TITLE: Pipe Communication Primitive
+STATEMENT: >>>
+The Zephyr RTOS shall provide a communication primitive that allows a thread to transfer a block of
+data to another thread.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want to send a byte stream from one thread to another in a thread-safe manner.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-102
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Communication
+TITLE: Message Queue
+STATEMENT: >>>
+The Zephyr RTOS shall provide a a communication primitive that allow threads and ISRs to asynchronously exchange fixed-size data items.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-103
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Communication
+TITLE: Mailbox Kernel Primitive
+STATEMENT: >>>
+The Zephyr RTOS shall provide a communication primitive that allows threads to exchange messages of varying sizes asynchronously or synchronously.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want a sending thread to deposit a message into the mailbox,
+and a receiving thread to be able to retrieve the message at its convenience. This
+allows for asynchronous communication, where threads do not need to synchronize their
+execution explicitly.
+<<<
