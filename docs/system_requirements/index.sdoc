@@ -3,35 +3,7 @@ TITLE: Zephyr System Requirements
 REQ_PREFIX: ZEP-
 
 [GRAMMAR]
-ELEMENTS:
-- TAG: REQUIREMENT
-  FIELDS:
-  - TITLE: UID
-    TYPE: String
-    REQUIRED: False
-  - TITLE: STATUS
-    TYPE: String
-    REQUIRED: False
-  - TITLE: TYPE
-    TYPE: String
-    REQUIRED: False
-  - TITLE: COMPONENT
-    TYPE: String
-    REQUIRED: False
-  - TITLE: TITLE
-    TYPE: String
-    REQUIRED: False
-  - TITLE: STATEMENT
-    TYPE: String
-    REQUIRED: False
-  - TITLE: USER_STORY
-    TYPE: String
-    REQUIRED: False
-  - TITLE: REVIEW_COMMENT
-    TYPE: String
-    REQUIRED: False
-  RELATIONS:
-  - TYPE: Parent
+IMPORT_FROM_FILE: system_requirements.sgra
 
 [REQUIREMENT]
 UID: ZEP-1
