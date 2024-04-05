@@ -304,53 +304,8 @@ NP: Now I think system means HW platform.
 
 [/SECTION]
 
-[SECTION]
-TITLE: Exception and Error Handling
-
-[REQUIREMENT]
-UID: ZEP-47
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Exception and Error Handling
-TITLE: Fatal Exception Error Handler
-STATEMENT: >>>
-The Zephyr RTOS shall provide default handlers for exceptions.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want exceptions which I did not handle explicitly (by mistake or on purpose) to be caught by a default handler, defined either by Zephyr OS or by myself.
-<<<
-
-[REQUIREMENT]
-UID: ZEP-48
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Exception and Error Handling
-TITLE: Default handler for fatal errors
-STATEMENT: >>>
-The Zephyr RTOS shall provide default handlers for fatal errors that do not have a dedicated handler.
-<<<
-
-[REQUIREMENT]
-UID: ZEP-49
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Exception and Error Handling
-TITLE: Assigning a specific handler
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to assign a specific handler with an exception.
-<<<
-
-[REQUIREMENT]
-UID: ZEP-50
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Exception and Error Handling
-TITLE: Assigning a specific handler (2)
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to assign a specific handler for a fatal error.
-<<<
-
-[/SECTION]
+[DOCUMENT_FROM_FILE]
+FILE: exception_and_error_handling.sdoc
 
 [DOCUMENT_FROM_FILE]
 FILE: file_system.sdoc
