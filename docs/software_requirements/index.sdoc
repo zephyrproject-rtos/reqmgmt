@@ -775,39 +775,8 @@ What is the difference to ZEP 136? Read & Write, while ZEP136 is just read?
 
 [/SECTION]
 
-[SECTION]
-TITLE: Memory Objects
-
-[REQUIREMENT]
-UID: ZEP-87
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Memory Objects
-TITLE: Dynamic Memory Allocation
-STATEMENT: >>>
-The Zephyr RTOS shall allow threads to dynamically allocate variable-sized memory regions from a specified range of memory.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want my application to be able to dynamically allocate memory of a application defined size.
-<<<
-REVIEW_COMMENT: >>>
-Is dynamic memory allocation only allowed in memory pool objects?
-<<<
-
-[REQUIREMENT]
-UID: ZEP-88
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Memory Objects
-TITLE: Memory Slab Object
-STATEMENT: >>>
-The Zephyr RTOS shall allow threads to dynamically allocate fixed-sized memory regions from a specified range of memory.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want a most efficient and least fragmentation prone dynamic memory allocation mechanism.
-<<<
-
-[/SECTION]
+[DOCUMENT_FROM_FILE]
+FILE: memory_objects.sdoc
 
 [SECTION]
 TITLE: Data Passing
