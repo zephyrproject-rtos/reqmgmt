@@ -1,0 +1,32 @@
+[DOCUMENT]
+TITLE: Data Passing
+REQ_PREFIX: ZEP-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[REQUIREMENT]
+UID: ZEP-89
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Data Passing
+TITLE: Traditional FIFO Queue
+STATEMENT: >>>
+The Zephyr RTOS shall provide a kernel object that implements a traditional first in, first out (FIFO) queue, allowing threads and ISRs to add and remove a limited number of 32-bit data values.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want to be able to exchange 1 to N data objects between different threads and ISR in a thread-safe manner with a first-in-first-out (queue) behaviour.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-90
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Data Passing
+TITLE: Traditional LIFO queue
+STATEMENT: >>>
+The Zephyr RTOS shall provide a kernel object that implements a traditional last in, first out (LIFO) queue, allowing threads and ISRs to add and remove a limited number of 32-bit data values.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want to be able to exchange 1 to N data objects between different threads and ISR in a thread-safe manner with a last-in-first-out (stack) behaviour.
+<<<
