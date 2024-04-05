@@ -625,45 +625,8 @@ Concern over phrase recursive.  What is it MUTEXing? Memory Management?
 
 [/SECTION]
 
-[SECTION]
-TITLE: Power Management
-
-[REQUIREMENT]
-UID: ZEP-92
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Power Management
-TITLE: Power State Control
-STATEMENT: >>>
-The Zephyr RTOS shall provide control over changes to system power states.
-<<<
-USER_STORY: >>>
-See ZEP104
-+
-When the power state is changed I want to get an notification in order for specific parts of my application to react accordingly.
-<<<
-
-[REQUIREMENT]
-UID: ZEP-93
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Power Management
-TITLE: Power Management - TBD
-STATEMENT: >>>
-TBD
-<<<
-
-[REQUIREMENT]
-UID: ZEP-94
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Power Management
-TITLE: Notification of changes to system power states
-STATEMENT: >>>
-The Zephyr RTOS shall provide notification of changes to system power states.
-<<<
-
-[/SECTION]
+[DOCUMENT_FROM_FILE]
+FILE: power_management.sdoc
 
 [SECTION]
 TITLE: Thread Communication
