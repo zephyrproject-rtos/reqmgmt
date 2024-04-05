@@ -1,0 +1,12 @@
+[DOCUMENT]
+TITLE: System Initialization
+REQ_PREFIX: ZEP-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[FREETEXT]
+
+TBD
+
+[/FREETEXT]

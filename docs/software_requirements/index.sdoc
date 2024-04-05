@@ -18,6 +18,9 @@ FILE: device_driver_api.sdoc
 FILE: exception_and_error_handling.sdoc
 
 [DOCUMENT_FROM_FILE]
+FILE: system_initialization.sdoc
+
+[DOCUMENT_FROM_FILE]
 FILE: file_system.sdoc
 
 [DOCUMENT_FROM_FILE]
