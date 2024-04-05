@@ -5,80 +5,8 @@ REQ_PREFIX: ZEP-
 [GRAMMAR]
 IMPORT_FROM_FILE: software_requirements.sgra
 
-[SECTION]
-TITLE: Hardware Architecture Interface
-
-[REQUIREMENT]
-UID: ZEP-8
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Hardware Architecture Interface
-TITLE: Atomic Operations
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface functionality to access memory while ensuring mutual exclusion. Note: Implementation by atomic variables and accessing them by APIs.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want to read from or write into a memory areas without being disturbed by other threads or ISRs.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-1
-
-[REQUIREMENT]
-UID: ZEP-9
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Hardware Architecture Interface
-TITLE: Thread Context Switching
-STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism for context switching between threads.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want to execute code concurrently in one or more threads and when interrupted at a code location in a thread, to continue at the very same location.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-1
-
-[REQUIREMENT]
-UID: ZEP-10
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Hardware Architecture Interface
-TITLE: Software Exceptions
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to implement software exceptions.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want to catch any software exception and handle it according to my application needs.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-1
-
-[REQUIREMENT]
-UID: ZEP-11
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Hardware Architecture Interface
-TITLE: Processor Mode Support
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface for managing processor modes.
-<<<
-USER_STORY: >>>
-If MCU power state was meant here:
-As a Zephyr RTOS user I want to control the MCU's power saving mode such e.g. operation, sleep, deep sleep or similar as supported by the selected MCU.
-<<<
-REVIEW_COMMENT: >>>
-What is life cycle - power on, standby, power off?  or ????
-
-Clarification: Starting and Stopping, and putting it into Stand-By Mode (whatever the processor supports)
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-1
-
-[/SECTION]
+[DOCUMENT_FROM_FILE]
+FILE: hw_arch_interface.sdoc
 
 [SECTION]
 TITLE: C library
