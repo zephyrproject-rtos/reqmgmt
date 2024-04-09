@@ -644,3 +644,6 @@ RELATIONS:
 
 [DOCUMENT_FROM_FILE]
 FILE: tracing.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: semaphore.sdoc

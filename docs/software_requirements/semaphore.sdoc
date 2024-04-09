@@ -1,0 +1,354 @@
+[DOCUMENT]
+TITLE: Semaphore
+REQ_PREFIX: ZEP-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[SECTION]
+TITLE: Interface requirements
+
+[SECTION]
+TITLE: Initialize semaphore
+
+[REQUIREMENT]
+UID: ZEP-134
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Build-Time Allocation and Initialization
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a semaphore at compile time.
+
+----
+
+The Zephyr RTOS shall expose an interface for a Counting Semaphore to accomplish all of the following at build-time:
+
+- statically allocating the Counting Semaphore;
+- statically initialize the Counting Semaphore with the provided count limit and initial count.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-135
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Dynamic Initialization
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a semaphore at runtime.
+
+----
+
+The Zephyr RTOS shall expose an interface to dynamically initialize a Counting Semaphore which requires the following information:
+
+- initial count of the Counting Semaphore;
+- count limit of the Counting Semaphore.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SEMAPHORE-003
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Semaphore
+TITLE: Maximum limit of a semaphore
+STATEMENT: >>>
+When a semaphore is used for counting purposes and when the semaphore does not have an explicit
+maximum limit, the Zephyr RTOS shall define the maximum limit of a semaphore to
+be used when the semaphore is initialized.
+<<<
+
+[/SECTION]
+
+[SECTION]
+TITLE: Take semaphore
+
+[REQUIREMENT]
+UID: ZEP-SEMAPHORE-005
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Semaphore
+TITLE: Semaphore acquisition
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism allowing threads to take (acquire) a semaphore, ensuring atomic and thread-safe operations for
+semaphore acquisition.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-99
+
+[REQUIREMENT]
+UID: ZEP-SEMAPHORE-007
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Semaphore
+TITLE: Semaphore Timeout
+STATEMENT: >>>
+When attempting to take (acquire) a semaphore, the Zephyr RTOS shall accept options that specify timeout periods, allowing threads to set a maximum wait time for semaphore acquisition.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-99
+
+[/SECTION]
+
+[SECTION]
+TITLE: Give semaphore
+
+[REQUIREMENT]
+UID: ZEP-SEMAPHORE-010
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Semaphore
+TITLE: Semaphore release
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism allowing threads to give (release) a semaphore, ensuring atomic and thread-safe operations for
+semaphore release.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-99
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Functional requirements
+
+[SECTION]
+TITLE: Initialize semaphore
+
+[REQUIREMENT]
+UID: ZEP-SEMAPHORE-004
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Semaphore
+TITLE: Initialialization with inital semaphore value
+STATEMENT: >>>
+When initializing a counting semaphore, the initial semaphore value shall be set.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-99
+
+[REQUIREMENT]
+UID: ZEP-SEMAPHORE-016
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Semaphore
+TITLE: Initialialization with maximum count value
+STATEMENT: >>>
+When initializing a counting semaphore, the maximum permitted count a semaphore
+can have shall be set.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-99
+
+[REQUIREMENT]
+UID: ZEP-SEMAPHORE-017
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Semaphore
+TITLE: Semaphore Initialization Option Validation
+STATEMENT: >>>
+When initializing a counting semaphore, where the maximum permitted count of a semaphore is invalid,
+the Zephyr RTOS shall return an error indicating invalid values.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-99
+
+[/SECTION]
+
+[SECTION]
+TITLE: Take semaphore
+
+[REQUIREMENT]
+UID: ZEP-129
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Semaphore Take while Available
+STATEMENT: >>>
+While a Counting Semaphore count is > 0,
+
+When a takes that Counting Semaphore,
+
+the Zephyr RTOS shall accomplish all of the following:
+
+- decrement by 1 the count of that Counting Semaphore;
+- indicate SUCCESS to the taking thread.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-131
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Semaphore Take w/o blocking when not Available
+STATEMENT: >>>
+While a Counting Semaphore count is 0,
+
+When a thread takes that Counting Semaphore without allowing blocking,
+
+the Zephyr RTOS shall indicate NOT AVAILABLE to the taking thread.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-130
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Semaphore Take with TIMEOUT > 0 blocks if not Available
+STATEMENT: >>>
+While a Counting Semaphore count is 0,
+
+When a thread takes that Counting Semaphore with a waiting TIMEOUT > 0,
+
+the Zephyr RTOS shall accomplish all of the following:
+
+- block the taking thread waiting for the availability of that Counting Semaphore;
+- enter the waiting period with a duration TIMEOUT.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-132
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Semaphore Take Unblocked by Giving Thread
+STATEMENT: >>>
+When the waiting thread is unblocked by a giving thread,
+
+the Zephyr RTOS shall accomplish all of the following:
+
+- deactivate the waiting period;
+- indicate SUCCESS to the waiting thread;
+- reschedule the waiting thread.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-133
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Semaphore Take Unblocked by Waiting Period Timeout
+STATEMENT: >>>
+When the waiting thread is unblocked by the expiration of the waiting period,
+
+the Zephyr RTOS shall accomplish all of the following:
+
+- resume the waiting thread;
+- indicate TIMEDOUT to the waiting thread;
+- reschedule the waiting thread.
+
+----
+
+When attempting to take (acquire) a semaphore, where the semaphore is not acquired within the specified time, the Zephyr RTOS shall return an error indicating a timeout.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SEMAPHORE-009
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Semaphore
+TITLE: Semaphore no wait error handling
+STATEMENT: >>>
+When attempting to take (acquire) a semaphore, where the current count is zero and no waiting time was provided, the Zephyr RTOS
+shall return an error indicating the semaphore is busy.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-99
+
+[/SECTION]
+
+[SECTION]
+TITLE: Give semaphore
+
+[REQUIREMENT]
+UID: ZEP-128
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Semaphore Give without Waiting Threads
+STATEMENT: >>>
+While no thread is waiting for a Counting Semaphore,
+
+When a thread gives that Counting Semaphore,
+
+the Zephyr RTOS shall accomplish all of the following:
+
+- increase the Semaphore Count by 1;
+- indicate SUCCESS to the giving thread.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-127
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Semaphore Give while Thread Waiting
+STATEMENT: >>>
+While a thread is waiting for a Counting Semaphore,
+
+When a thread gives that Counting Semaphore,
+
+the Zephyr RTOS shall accomplish all of the following:
+
+- unblock the highest priority thread waiting for that Counting Semaphore;
+- indicate SUCCESS to the giving thread.
+<<<
+
+[/SECTION]
+
+[SECTION]
+TITLE: Get semaphore count
+
+[REQUIREMENT]
+UID: ZEP-136
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Counting Semaphore
+TITLE: Current Count
+STATEMENT: >>>
+When the Counting Semaphore current count is requested,
+
+the Zephyr RTOS shall report the current count of the Counting Semaphore.
+<<<
+
+[/SECTION]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Safety requirements
+
+[REQUIREMENT]
+UID: ZEP-SEMAPHORE-011
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Semaphore
+TITLE: Prevent overflows/underflows of semaphore count
+STATEMENT: >>>
+The Zephyr RTOS shall prevent overflows or underflows of the semaphore count.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-99
+
+[REQUIREMENT]
+UID: ZEP-SEMAPHORE-006
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Semaphore
+TITLE: Semaphore Counting
+STATEMENT: >>>
+The Zephyr RTOS shall track resource usage of a semaphore.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-99
+
+[/SECTION]
