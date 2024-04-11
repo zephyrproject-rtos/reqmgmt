@@ -90,6 +90,20 @@ STATEMENT: >>>
 The Zephyr RTOS shall initialize the system following the order of component dependencies.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-132
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Pre-CPU Architecture Initialization Notification
+STATEMENT: >>>
+While the CPU Architecture-specific initialization has not begun,
+
+When the C language execution environment has been initialized,
+
+the Zephyr RTOS shall publish a notification to each component registered for this event notification.
+<<<
+
 [/SECTION]
 
 [SECTION]
