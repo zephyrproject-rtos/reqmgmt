@@ -118,6 +118,20 @@ When the CPU Architecture has been initialized,
 the Zephyr RTOS shall publish a notification to each component registered for the Pre-Kernel Initialization event notification.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-134
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Post-Kernel Initialization Notification
+STATEMENT: >>>
+While the C++ static objects have not been initialized,
+
+When the RTOS Kernel initialization is complete,
+
+the Zephyr RTOS shall publish a notification to each component registered for the Post-Kernel Initialization event notification.
+<<<
+
 [/SECTION]
 
 [SECTION]
