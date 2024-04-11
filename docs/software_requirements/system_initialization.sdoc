@@ -80,6 +80,16 @@ While the Zephyr RTOS is in any system initialization phase,
 the Zephyr RTOS shall allow read access to the data provided by the preceding executable.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-131
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Initialization follows component dependency order
+STATEMENT: >>>
+The Zephyr RTOS shall initialize the system following the order of component dependencies.
+<<<
+
 [/SECTION]
 
 [SECTION]
