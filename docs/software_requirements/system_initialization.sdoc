@@ -91,6 +91,16 @@ The Zephyr RTOS shall initialize the system following the order of component dep
 <<<
 
 [REQUIREMENT]
+UID: ZEP-137
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Initialization Notifications given in Registration Priority Order
+STATEMENT: >>>
+The Zephyr RTOS shall publish notifications for an event following the notification priority indicated in the event registration.
+<<<
+
+[REQUIREMENT]
 UID: ZEP-132
 STATUS: Draft
 TYPE: Functional
