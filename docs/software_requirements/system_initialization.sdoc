@@ -46,6 +46,18 @@ TBD
 
 [/FREETEXT]
 
+[REQUIREMENT]
+UID: ZEP-128
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Sustain hardware watchdog inherited from preceding executable
+STATEMENT: >>>
+Where the Zephyr RTOS inherits an active hardware watchdog that cannot be reconfigured,
+
+the Zephyr RTOS shall sustain the active hardware watchdog.
+<<<
+
 [/SECTION]
 
 [SECTION]
