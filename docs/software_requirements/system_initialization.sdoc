@@ -104,6 +104,20 @@ When the C language execution environment has been initialized,
 the Zephyr RTOS shall publish a notification to each component registered for this event notification.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-133
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Pre-Kernel Initialization Notification
+STATEMENT: >>>
+While the RTOS Kernel initialization has not begun,
+
+When the CPU Architecture has been initialized,
+
+the Zephyr RTOS shall publish a notification to each component registered for the Pre-Kernel Initialization event notification.
+<<<
+
 [/SECTION]
 
 [SECTION]
