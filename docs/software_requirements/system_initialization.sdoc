@@ -10,3 +10,36 @@ IMPORT_FROM_FILE: software_requirements.sgra
 TBD
 
 [/FREETEXT]
+
+[SECTION]
+TITLE: Interface Requirements
+
+[FREETEXT]
+
+TBD
+
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Functional Requirements
+
+[FREETEXT]
+
+TBD
+
+[/FREETEXT]
+
+[/SECTION]
+
+[SECTION]
+TITLE: Non-Functional Requirements
+
+[FREETEXT]
+
+TBD
+
+[/FREETEXT]
+
+[/SECTION]
