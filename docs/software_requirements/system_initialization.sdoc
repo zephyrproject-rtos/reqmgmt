@@ -68,6 +68,18 @@ STATEMENT: >>>
 The Zephyr RTOS shall use no more than the published amount of the initial CPU stack.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-130
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Preceding executable data availability
+STATEMENT: >>>
+While the Zephyr RTOS is in any system initialization phase,
+
+the Zephyr RTOS shall allow read access to the data provided by the preceding executable.
+<<<
+
 [/SECTION]
 
 [SECTION]
