@@ -146,6 +146,24 @@ When all C++ static objects have been initialized,
 the Zephyr RTOS shall publish a notification to each component registered for the Application Initialization event notification.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-136
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Symmetric Multi-Processing Initialized Notification
+STATEMENT: >>>
+Where the Symmetric Multi-Processing feature is enabled,
+
+Where the Non-Delayed SMP Initialization feature is enabled,
+
+While the Zephyr RTOS is in the initialization state,
+
+When the SMP initialization is complete,
+
+the Zephyr RTOS shall publish a notification to each component registered for the SMP Initialized notification event.
+<<<
+
 [/SECTION]
 
 [SECTION]
