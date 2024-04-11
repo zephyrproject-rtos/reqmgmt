@@ -20,6 +20,21 @@ TBD
 
 [/FREETEXT]
 
+[REQUIREMENT]
+UID: ZEP-127
+STATUS: Draft
+TYPE: Interface
+COMPONENT: System Initialization
+TITLE: Build-time Registration for System Initialization Notifications
+STATEMENT: >>>
+The Zephyr RTOS shall expose an interface to build-time registration for the following system initialization notifications:
+
+- Pre-CPU Architecture Initialization
+- Pre-Kernel Initialization
+- Post-Kernel Initialized
+- Application Initialization
+<<<
+
 [/SECTION]
 
 [SECTION]
