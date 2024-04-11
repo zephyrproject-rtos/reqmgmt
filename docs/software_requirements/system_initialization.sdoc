@@ -58,6 +58,16 @@ Where the Zephyr RTOS inherits an active hardware watchdog that cannot be reconf
 the Zephyr RTOS shall sustain the active hardware watchdog.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-129
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Initial CPU stack usage kept within published limits
+STATEMENT: >>>
+The Zephyr RTOS shall use no more than the published amount of the initial CPU stack.
+<<<
+
 [/SECTION]
 
 [SECTION]
