@@ -132,6 +132,20 @@ When the RTOS Kernel initialization is complete,
 the Zephyr RTOS shall publish a notification to each component registered for the Post-Kernel Initialization event notification.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-135
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Application Initialization Notification
+STATEMENT: >>>
+While the CPU memory coherence has not been established,
+
+When all C++ static objects have been initialized,
+
+the Zephyr RTOS shall publish a notification to each component registered for the Application Initialization event notification.
+<<<
+
 [/SECTION]
 
 [SECTION]
