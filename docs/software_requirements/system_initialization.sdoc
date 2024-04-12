@@ -117,6 +117,20 @@ STATEMENT: >>>
 The Zephyr RTOS shall explicitly ignore the return value of the call to `int main(void)`.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-140
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Code Coverage Data Dumped Upon Return from `main()`
+STATEMENT: >>>
+While the Zephyr RTOS shutdown sequence has not begun,
+
+When the call to `main(void)` returns,
+
+the Zephyr RTOS shall dump code coverage data.
+<<<
+
 [SECTION]
 TITLE: Initialization Notifications
 
