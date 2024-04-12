@@ -35,6 +35,20 @@ The Zephyr RTOS shall expose an interface to build-time registration for the fol
 - Application Initialization
 <<<
 
+[REQUIREMENT]
+UID: ZEP-143
+STATUS: Draft
+TYPE: Interface
+COMPONENT: System Initialization
+TITLE: Build-time Registration for SMP-Initialized Notification
+STATEMENT: >>>
+Where the Symmetric Multi-Processing feature is enabled,
+
+the Zephyr RTOS shall expose an interface to build-time registration for the following system initialization notifications:
+
+- Symmetric Multi-Processing Initialized.
+<<<
+
 [/SECTION]
 
 [SECTION]
