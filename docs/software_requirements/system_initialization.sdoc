@@ -143,6 +143,18 @@ When the System Shutdown is entered,
 the Zephyr RTOS shall disable all interrupts.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-142
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Shutdown ends in empty infinite loop.
+STATEMENT: >>>
+When the System Shutdown sequence is completed,
+
+the Zephyr RTOS shall spin in an empty infinite loop.
+<<<
+
 [SECTION]
 TITLE: Initialization Notifications
 
