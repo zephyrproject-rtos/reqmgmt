@@ -91,6 +91,23 @@ The Zephyr RTOS shall initialize the system following the order of component dep
 <<<
 
 [REQUIREMENT]
+UID: ZEP-138
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Initialization ends with call to `main(void)`
+STATEMENT: >>>
+When all of the following has been established,
+
+the Zephyr RTOS shall call the C function `main(void)` on the system initialization stack:
+
+- each C++ static object has been initialized; and
+- each SMP context has been initialized; and
+- each System Initialization notification has been published; and
+- each memory access protection has been established.
+<<<
+
+[REQUIREMENT]
 UID: ZEP-137
 STATUS: Draft
 TYPE: Functional
