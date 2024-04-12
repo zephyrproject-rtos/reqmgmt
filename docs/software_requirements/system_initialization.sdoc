@@ -107,6 +107,16 @@ the Zephyr RTOS shall call the C function `main(void)` on the system initializat
 - each memory access protection has been established.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-139
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Return value of `int main(void)` ignored
+STATEMENT: >>>
+The Zephyr RTOS shall explicitly ignore the return value of the call to `int main(void)`.
+<<<
+
 [SECTION]
 TITLE: Initialization Notifications
 
