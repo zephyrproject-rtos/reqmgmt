@@ -107,6 +107,15 @@ the Zephyr RTOS shall call the C function `main(void)` on the system initializat
 - each memory access protection has been established.
 <<<
 
+[SECTION]
+TITLE: Initialization Notifications
+
+[FREETEXT]
+
+TBD
+
+[/FREETEXT]
+
 [REQUIREMENT]
 UID: ZEP-137
 STATUS: Draft
@@ -190,6 +199,8 @@ When the SMP initialization is complete,
 
 the Zephyr RTOS shall publish a notification to each component registered for the SMP Initialized notification event.
 <<<
+
+[/SECTION]
 
 [/SECTION]
 
