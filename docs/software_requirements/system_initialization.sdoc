@@ -131,6 +131,18 @@ When the call to `main(void)` returns,
 the Zephyr RTOS shall dump code coverage data.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-141
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: System Shutdown Disables Interrupts
+STATEMENT: >>>
+When the System Shutdown is entered,
+
+the Zephyr RTOS shall disable all interrupts.
+<<<
+
 [SECTION]
 TITLE: Initialization Notifications
 
