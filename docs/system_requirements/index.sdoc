@@ -86,6 +86,51 @@ USER_STORY: >>>
 As a Zephyr RTOS user I want errors and exceptions to handled and react according to my applications requirements (e.g. reach/establish the applications safety state).
 <<<
 
+[SECTION]
+TITLE: System Initialization
+
+[FREETEXT]
+TBD
+[/FREETEXT]
+
+[REQUIREMENT]
+UID: ZEP-144
+STATUS: Draft
+TYPE: High Level
+COMPONENT: System Initialization
+TITLE: Extensible System Initialization
+STATEMENT: >>>
+The Zephyr RTOS initialization sequence shall be extensible.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-145
+STATUS: Draft
+TYPE: High Level
+COMPONENT: System Initialization
+TITLE: System Initialization Hooks
+STATEMENT: >>>
+The Zephyr RTOS shall execute registered initialization hooks at the requested point of the System Initialization sequence.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-144
+
+[REQUIREMENT]
+UID: ZEP-146
+STATUS: Draft
+TYPE: High Level
+COMPONENT: System Initialization
+TITLE: Build Time Registration of System Initialization Hooks
+STATEMENT: >>>
+The Zephyr RTOS shall expose an interface for build-time registration of an initialization hook to be executed at a specific point in the system initialization sequence.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-144
+
+[/SECTION]
+
 [REQUIREMENT]
 UID: ZEP-38
 STATUS: Draft
