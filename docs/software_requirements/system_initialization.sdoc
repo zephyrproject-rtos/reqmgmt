@@ -34,6 +34,9 @@ The Zephyr RTOS shall expose an interface to build-time registration for the fol
 - Post-Kernel Initialized
 - Application Initialization
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-146
 
 [REQUIREMENT]
 UID: ZEP-143
@@ -48,6 +51,9 @@ the Zephyr RTOS shall expose an interface to build-time registration for the fol
 
 - Symmetric Multi-Processing Initialized.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-146
 
 [/SECTION]
 
@@ -187,6 +193,9 @@ TITLE: Initialization Notifications given in Registration Priority Order
 STATEMENT: >>>
 The Zephyr RTOS shall publish notifications for an event following the notification priority indicated in the event registration.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-145
 
 [REQUIREMENT]
 UID: ZEP-132
@@ -201,6 +210,9 @@ When the C language execution environment has been initialized,
 
 the Zephyr RTOS shall publish a notification to each component registered for this event notification.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-135
 
 [REQUIREMENT]
 UID: ZEP-133
@@ -215,6 +227,9 @@ When the CPU Architecture has been initialized,
 
 the Zephyr RTOS shall publish a notification to each component registered for the Pre-Kernel Initialization event notification.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-135
 
 [REQUIREMENT]
 UID: ZEP-134
@@ -229,6 +244,9 @@ When the RTOS Kernel initialization is complete,
 
 the Zephyr RTOS shall publish a notification to each component registered for the Post-Kernel Initialization event notification.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-135
 
 [REQUIREMENT]
 UID: ZEP-135
@@ -243,6 +261,9 @@ When all C++ static objects have been initialized,
 
 the Zephyr RTOS shall publish a notification to each component registered for the Application Initialization event notification.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-145
 
 [REQUIREMENT]
 UID: ZEP-136
@@ -261,6 +282,9 @@ When the SMP initialization is complete,
 
 the Zephyr RTOS shall publish a notification to each component registered for the SMP Initialized notification event.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-135
 
 [/SECTION]
 
