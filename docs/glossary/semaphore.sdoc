@@ -1,0 +1,10 @@
+[DOCUMENT]
+TITLE: semaphore
+
+[FREETEXT]
+semaphore.
+
+(1) shared variable used to synchronize concurrent processes by indicating whether an action has been completed or an event has occurred (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+See Also: flag, indicator
+[/FREETEXT]

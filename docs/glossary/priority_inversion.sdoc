@@ -1,0 +1,8 @@
+[DOCUMENT]
+TITLE: priority inversion
+
+[FREETEXT]
+priority inversion.
+
+(1) case where a task's execution is delayed because a lower priority task is blocking it (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+[/FREETEXT]

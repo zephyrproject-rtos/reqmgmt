@@ -1,0 +1,8 @@
+[DOCUMENT]
+TITLE: initial program loader
+
+[FREETEXT]
+initial program loader.
+
+(1) bootstrap loader used to load that part of an operating system needed to load the remainder of the operating system (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+[/FREETEXT]

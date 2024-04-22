@@ -1,0 +1,12 @@
+[DOCUMENT]
+TITLE: deadlock
+
+[FREETEXT]
+deadlock.
+
+(1) situation in which computer processing is suspended because two or more devices or processes are each awaiting resources assigned to the others (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+(2) situation in which two or more tasks are suspended indefinitely because each task is waiting for a resource acquired by another task (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+See Also: lockout
+[/FREETEXT]

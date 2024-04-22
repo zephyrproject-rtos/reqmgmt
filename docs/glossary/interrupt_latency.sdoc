@@ -1,0 +1,10 @@
+[DOCUMENT]
+TITLE: interrupt latency
+
+[FREETEXT]
+interrupt latency.
+
+(1) delay between a computer system's receipt of an interrupt request and its handling of the request (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+See Also: interrupt priority
+[/FREETEXT]

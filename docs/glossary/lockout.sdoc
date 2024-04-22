@@ -1,0 +1,10 @@
+[DOCUMENT]
+TITLE: lockout
+
+[FREETEXT]
+lockout.
+
+(1) computer resource allocation technique in which shared resources (especially data) are protected by permitting access by only one device or process at a time (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+See Also: deadlock, semaphore
+[/FREETEXT]

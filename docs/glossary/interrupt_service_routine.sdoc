@@ -1,0 +1,10 @@
+[DOCUMENT]
+TITLE: interrupt service routine
+
+[FREETEXT]
+interrupt service routine.
+
+(1) routine that responds to interrupt requests by storing the contents of critical registers, performing the processing required by the interrupt request, restoring the register contents, and restarting the interrupted process (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+Syn: ISR
+[/FREETEXT]

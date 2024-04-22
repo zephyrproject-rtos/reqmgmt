@@ -1,0 +1,14 @@
+[DOCUMENT]
+TITLE: kernel
+
+[FREETEXT]
+kernel.
+
+(1) that portion of an operating system that is kept in main memory at all times (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+(2) a software module that encapsulates an elementary function or functions of a system (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+Syn: resident control program
+
+See Also: nucleus, supervisory program
+[/FREETEXT]

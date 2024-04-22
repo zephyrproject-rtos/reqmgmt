@@ -1,0 +1,8 @@
+[DOCUMENT]
+TITLE: security kernel
+
+[FREETEXT]
+security kernel.
+
+(1) small, self-contained collection of key security-related statements that works as a privileged part of an operating system, specifying and enforcing criteria that must be met for programs and data to be accessed (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+[/FREETEXT]

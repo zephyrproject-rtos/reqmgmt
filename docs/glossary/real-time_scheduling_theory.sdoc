@@ -1,0 +1,10 @@
+[DOCUMENT]
+TITLE: real-time scheduling theory
+
+[FREETEXT]
+real-time scheduling theory.
+
+(1) theory for priority-based scheduling of concurrent tasks with hard deadlines (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+Note: It addresses how to determine whether a group of tasks, whose individual CPU utilization is known, will meet their deadlines.
+[/FREETEXT]

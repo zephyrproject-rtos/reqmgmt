@@ -1,0 +1,12 @@
+[DOCUMENT]
+TITLE: microcontroller (unit) (MCU)
+
+[FREETEXT]
+microcontroller (unit) (MCU).
+
+(1) unit with application control function on a single chip (ISO/IEC/IEEE 24765c:2014)
+
+Note: It contains a processor, RAM, ROM, clock, register, and I/O control unit.
+
+Syn: single chip microcomputer
+[/FREETEXT]

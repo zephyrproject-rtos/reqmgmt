@@ -1,0 +1,10 @@
+[DOCUMENT]
+TITLE: multitasking
+
+[FREETEXT]
+multitasking.
+
+(1) mode of operation in which two or more tasks are executed in an interleaved manner (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+See Also: multiprocessing, multiprogramming, time sharing
+[/FREETEXT]

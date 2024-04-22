@@ -1,0 +1,8 @@
+[DOCUMENT]
+TITLE: critical section
+
+[FREETEXT]
+critical section.
+
+(1) section of a task's internal logic that is executed mutually exclusively with other tasks (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+[/FREETEXT]

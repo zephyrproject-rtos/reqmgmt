@@ -1,0 +1,10 @@
+[DOCUMENT]
+TITLE: mutual exclusion
+
+[FREETEXT]
+mutual exclusion.
+
+(1) giving access to shared data only to one task at a time (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+Note: can be enforced by means of binary semaphores or by using monitors.
+[/FREETEXT]

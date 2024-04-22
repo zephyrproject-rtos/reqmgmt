@@ -1,0 +1,10 @@
+[DOCUMENT]
+TITLE: priority ceiling protocol
+
+[FREETEXT]
+priority ceiling protocol.
+
+(1) algorithm that provides bounded priority inversion (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+Note: that is, at most one lower-priority task can block a higher-priority task
+[/FREETEXT]

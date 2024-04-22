@@ -1,0 +1,12 @@
+[DOCUMENT]
+TITLE: real-time
+
+[FREETEXT]
+real-time.
+
+(1) problem, system, or application that is concurrent and has timing constraints whereby incoming events must be processed within a given timeframe (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+(2) pertaining to a system or mode of operation in which computation is performed during the actual time that an external process occurs, in order that the computation results can be used to control, monitor, or respond in a timely manner to the external process (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+Syn: realtime, real time
+[/FREETEXT]

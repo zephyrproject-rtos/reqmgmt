@@ -1,0 +1,8 @@
+[DOCUMENT]
+TITLE: rate-monotonic algorithm
+
+[FREETEXT]
+rate-monotonic algorithm.
+
+(1) real-time scheduling algorithm that assigns higher priorities to tasks with shorter periods (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+[/FREETEXT]

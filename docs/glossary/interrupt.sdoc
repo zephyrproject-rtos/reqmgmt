@@ -1,0 +1,16 @@
+[DOCUMENT]
+TITLE: interrupt
+
+[FREETEXT]
+interrupt.
+
+(1) suspension of a process to handle an event external to the process (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+(2) to cause the suspension of a process (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+(3) loosely, an interrupt request (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+Syn: interruption
+
+See Also: interrupt latency, interrupt mask, interrupt priority, interrupt service routine, priority interrupt
+[/FREETEXT]

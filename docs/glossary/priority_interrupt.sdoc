@@ -1,0 +1,8 @@
+[DOCUMENT]
+TITLE: priority interrupt
+
+[FREETEXT]
+priority interrupt.
+
+(1) interrupt performed to permit execution of a process that has a higher priority than the process currently executing (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+[/FREETEXT]

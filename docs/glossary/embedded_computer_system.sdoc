@@ -1,0 +1,14 @@
+[DOCUMENT]
+TITLE: embedded computer system
+
+[FREETEXT]
+embedded computer system.
+
+(1) computer system that is part of a larger system and performs some of the requirements of that system (ISO/IEC/IEEE 24765:2017 Systems and software engineering-Vocabulary)
+
+Example: a computer system used in an aircraft or rapid transit system
+
+Note: The hardware and software of an embedded system are usually minimized and optimized for specific functions. The embedded system includes at least one microcontroller, microprocessor or digital signal processor. The embedded system designed to optimize reliability, cost, size and power saving for applications.
+
+Syn: embedded system
+[/FREETEXT]

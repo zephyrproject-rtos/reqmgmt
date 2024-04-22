@@ -1,0 +1,126 @@
+[DOCUMENT]
+TITLE: Glossary
+
+[FREETEXT]
+TBD
+[/FREETEXT]
+
+[DOCUMENT_FROM_FILE]
+FILE: boot.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: bootstrap.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: central_processing_unit_(CPU).sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: core.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: critical_section.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: deadlock.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: embedded_computer_system.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: embedded_operating_system.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: embedded_software.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: initial_program_loader.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: interrupt_controller.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: interrupt_latency.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: interrupt_request.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: interrupt.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: interrupt_service_routine.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: kernel.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: lockout.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: main_program.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: microcontroller_(unit)_(MCU).sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: microprocessor.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: multi-core.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: multitasking.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: mutual_exclusion.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: operating_system.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: priority_ceiling_protocol.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: priority_interrupt.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: priority_inversion.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: rate-monotonic_algorithm.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: real-time_clock_(RTC).sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: real-time_operating_system_(RTOS).sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: real-time_scheduling_theory.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: real-time.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: scheduler.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: security_kernel.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: semaphore.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: task_priority_criteria.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: task.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: timer_event.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: user.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: Zephyr_RTOS.sdoc

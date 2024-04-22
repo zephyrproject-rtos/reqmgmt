@@ -1,0 +1,35 @@
+[DOCUMENT]
+TITLE: user
+
+[FREETEXT]
+user.
+
+(1) individual or group that interacts with a system or benefits from a system during its utilization (ISO/IEC/IEEE 12207:2017 Systems and software engineering--Software life cycle processes, 3.1.70) (ISO/IEC/IEEE 15939:2017 Systems and software engineering--Measurement process, 3.40) (ISO/IEC 25010:2011 Systems and software engineering--Systems and software Quality Requirements and Evaluation (SQuaRE)--System and software quality models, 4.3.16) (ISO/IEC/IEEE 15288:2023 Systems and software engineering--System life cycle processes, 3.53) (ISO/IEC/IEEE 24748-1:2018 Systems and software engineering--Life cycle management--Part 1: Guidelines for life cycle management, 3.60)
+
+(2) person who interacts with a system, product or service (ISO/IEC 25064:2013 Systems and software engineering--Software product Quality Requirements and Evaluation (SQuaRE)--Common Industry Format (CIF) for usability: User needs report, 4.17)
+
+(3) the person (or persons) who operates or interacts directly with a software-intensive system
+
+(4) any person or thing that communicates or interacts with the software at any time (ISO/IEC 19761:2011 Software engineering -- COSMIC: a functional size measurement method, 2.27) (ISO/IEC 20926:2009 Software and systems engineering -- Software measurement -- IFPUG functional size measurement method 2009, 3.50) (ISO/IEC 24570:2018 Software engineering -- NESMA functional size measurement method -- Definitions and counting guidelines for the application of function point analysis, B) (ISO/IEC 14143-1:2007 Information technology--Software measurement--Functional size measurement; Part 1: Definition of concepts) (ISO/IEC 29881:2010 Information technology--Software and systems engineering--FiSMA 1.1 functional size measurement method, 3.9)
+
+(5) individual or group that benefits from a system during its utilization (ISO/IEC 25022:2016, Systems and software engineering -- Systems and software quality requirements and evaluation (SQuaRE) -- Measurement of quality in use, 4.26)
+
+(6) person who performs one or more tasks with an automated system; a member of a specific audience (ISO/IEC/IEEE 26512:2018 Systems and software engineering--Requirements for acquirers and suppliers of information for users, 3.25)
+(7) person (or instance) who uses the functions of a CBSS via a terminal (or an equivalent machine-user-interface) by submitting tasks and receiving the computed results (ISO/IEC 14756:1999 Information technology -- Measurement and rating of performance of computer-based software systems, 4.31)
+(8) individual or group that benefits from a ready to use software product during its utilization (ISO/IEC 25051:2014 Software engineering -- Software product Quality Requirements and Evaluation (SQuaRE) -- Requirements for quality of Ready to Use Software Product (RUSP) and instructions for testing, 4.1.26)
+
+(9) individual or organization that uses the system or software to perform a specific function (ISO/IEC 25000:2014 Systems and software Engineering--Systems and software product Quality Requirements and Evaluation (SQuaRE) -- Guide to SQuaRE, 4.40)
+
+(10) individual who or group that benefits from a system during its utilization (INCOSE Systems Engineering Handbook, 5th ed.)
+
+(11) person who interacts with an autonomous/intelligent system (IEEE 7010-2020, IEEE Recommended Practice for Assessing the Impact of Autonomous and Intelligent Systems on Human Well-Being, 2.1)
+
+(12) person who interacts with the product (IEC/IEEE 82079-1:2019 Preparation of information for use (instructions for use) of products: Part 1: Principles and general requirements, 3.47)
+
+Example: operators, recipients of the results of operating the system or software; a bank customer who visits a branch, receives a paper statement, or carries out telephone banking using a call center
+
+Note: User can include persons who install, operate, service, maintain, or dispose of the product. The user can perform other roles, such as acquirer or maintainer. The role of user and the role of operator can be vested, simultaneously or sequentially, in the same individual or organization.
+
+See Also: developer, end user, functional user, indirect user, operator, secondary user
+
+[/FREETEXT]

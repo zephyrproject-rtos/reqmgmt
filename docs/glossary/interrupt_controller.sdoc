@@ -1,0 +1,8 @@
+[DOCUMENT]
+TITLE: interrupt controller
+
+[FREETEXT]
+interrupt controller.
+
+(1) functional unit (integrated circuit) that determines the source and priority of interrupt requests and manages their execution (ISO/IEC/IEEE 24765d:2015)
+[/FREETEXT]
