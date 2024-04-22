@@ -102,6 +102,12 @@ FILE: real-time_scheduling_theory.sdoc
 FILE: real-time.sdoc
 
 [DOCUMENT_FROM_FILE]
+FILE: reuse.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: reused_source_statement.sdoc
+
+[DOCUMENT_FROM_FILE]
 FILE: scheduler.sdoc
 
 [DOCUMENT_FROM_FILE]
