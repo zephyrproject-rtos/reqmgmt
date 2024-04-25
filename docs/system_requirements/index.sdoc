@@ -94,9 +94,9 @@ TITLE: Common File system operation support
 STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for managing file system access.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want a posix / c like file system access to store data.
-<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-132
 
 [REQUIREMENT]
 UID: ZEP-39
