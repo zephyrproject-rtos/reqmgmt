@@ -109,3 +109,12 @@ TITLE: Memory Management framework
 STATEMENT: >>>
 As a Zephyr RTOS user I want memory to be allocated and protected to my application threads preventing mistakenly access to foreign memory as far as the hardware allows.
 <<<
+
+[STAKEHOLDER_NEED]
+UID: ZEP-136
+STATUS: Draft
+TYPE: Need
+TITLE: Power Management
+STATEMENT: >>>
+As a Zephyr RTOS user I want to be able to control the power mode of the MCU and its peripherals to take advantage of the hardware features and to be able to implement low power or battery driven long life applications.
+<<<
