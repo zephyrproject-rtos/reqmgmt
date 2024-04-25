@@ -14,9 +14,9 @@ TITLE: Architecture Layer Interface
 STATEMENT: >>>
 The Zephyr RTOS shall provide a framework to communicate with a set of hardware architectural services.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want to be able to easily switch my application to a different MCU architecture (x86, ARM Cortex-M/A, RISCV etc.).
-<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-127
 
 [REQUIREMENT]
 UID: ZEP-3
