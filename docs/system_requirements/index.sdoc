@@ -196,9 +196,9 @@ TITLE: Mutex
 STATEMENT: >>>
 The Zephyr RTOS shall provide an interface for managing communication between threads.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want to able to exchange information between threads in a thread-safe manner guaranteeing data consistence.
-<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-139
 
 [REQUIREMENT]
 UID: ZEP-99

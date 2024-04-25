@@ -136,3 +136,12 @@ TITLE: Scheduling
 STATEMENT: >>>
 As a Zephyr RTOS user, I want to be able to control which thread will run on which CPU.
 <<<
+
+[STAKEHOLDER_NEED]
+UID: ZEP-139
+STATUS: Draft
+TYPE: Need
+TITLE: Mutex
+STATEMENT: >>>
+As a Zephyr RTOS user I want to able to exchange information between threads in a thread-safe manner guaranteeing data consistence.
+<<<
