@@ -81,9 +81,9 @@ TITLE: Fatal error and exception handling
 STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for error and exception handling.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want errors and exceptions to handled and react according to my applications requirements (e.g. reach/establish the applications safety state).
-<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-131
 
 [REQUIREMENT]
 UID: ZEP-38

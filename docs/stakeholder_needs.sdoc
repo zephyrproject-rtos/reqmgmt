@@ -64,3 +64,12 @@ TITLE: Device Driver Abstraction
 STATEMENT: >>>
 As a Zephyr RTOS user I want my application to be portable between different MCU architectures (ARM Cortex-M/A, Intel x86, RISCV etc.) and MCU vendors (STM, NXP, Intel, etc.) without having to change the MCU peripherals access.
 <<<
+
+[STAKEHOLDER_NEED]
+UID: ZEP-131
+STATUS: Draft
+TYPE: Need
+TITLE: Fatal error and exception handling
+STATEMENT: >>>
+As a Zephyr RTOS user I want errors and exceptions to handled and react according to my applications requirements (e.g. reach/establish the applications safety state).
+<<<
