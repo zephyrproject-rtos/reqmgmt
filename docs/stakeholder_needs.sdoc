@@ -118,3 +118,12 @@ TITLE: Power Management
 STATEMENT: >>>
 As a Zephyr RTOS user I want to be able to control the power mode of the MCU and its peripherals to take advantage of the hardware features and to be able to implement low power or battery driven long life applications.
 <<<
+
+[STAKEHOLDER_NEED]
+UID: ZEP-137
+STATUS: Draft
+TYPE: Need
+TITLE: Multiple CPU scheduling
+STATEMENT: >>>
+As a Zephyr RTOS user I want Zephyr OS to run on MCUs/CPUs with one or more CPU cores.
+<<<
