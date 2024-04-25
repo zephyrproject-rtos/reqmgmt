@@ -27,15 +27,14 @@ TITLE: Support multiprocessor management
 STATEMENT: >>>
 The Zephyr RTOS shall support symmetric multiprocessing on multiple cores.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want to use Zephyr OS on multi core (SMP-)MCUs/MPUs.
-<<<
 REVIEW_COMMENT: >>>
 From the Docs: No special application code needs to be written to take advantage of this feature
 <<<
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-1
+- TYPE: Parent
+  VALUE: ZEP-128
 
 [REQUIREMENT]
 UID: ZEP-2

@@ -37,3 +37,12 @@ TITLE: Architecture Layer Interface
 STATEMENT: >>>
 As a Zephyr RTOS user I want to be able to easily switch my application to a different MCU architecture (x86, ARM Cortex-M/A, RISCV etc.).
 <<<
+
+[STAKEHOLDER_NEED]
+UID: ZEP-128
+STATUS: Draft
+TYPE: Need
+TITLE: Support multiprocessor management
+STATEMENT: >>>
+As a Zephyr RTOS user I want to use Zephyr OS on multi core (SMP-)MCUs/MPUs.
+<<<
