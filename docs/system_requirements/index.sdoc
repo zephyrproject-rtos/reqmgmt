@@ -256,9 +256,9 @@ TITLE: Thread priority
 STATEMENT: >>>
 Threads shall have a priority.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user, I want to be able to give my threads different priorities for execution.
-<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-143
 
 [/SECTION]
 

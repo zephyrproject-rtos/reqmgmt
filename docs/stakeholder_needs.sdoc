@@ -172,3 +172,12 @@ TITLE: Thread management
 STATEMENT: >>>
 As a Zephyr RTOS user, I want to be able to manage the execute of multiple threads with different priorities.
 <<<
+
+[STAKEHOLDER_NEED]
+UID: ZEP-143
+STATUS: Draft
+TYPE: Need
+TITLE: Thread priority
+STATEMENT: >>>
+As a Zephyr RTOS user, I want to be able to give my threads different priorities for execution.
+<<<
