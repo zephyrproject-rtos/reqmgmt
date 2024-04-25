@@ -163,3 +163,12 @@ TITLE: Thread support
 STATEMENT: >>>
 As a Zephyr RTOS user, I want to be able to have support for the kernel objects named threads for processing work.
 <<<
+
+[STAKEHOLDER_NEED]
+UID: ZEP-142
+STATUS: Draft
+TYPE: Need
+TITLE: Thread management
+STATEMENT: >>>
+As a Zephyr RTOS user, I want to be able to manage the execute of multiple threads with different priorities.
+<<<

@@ -240,12 +240,12 @@ TITLE: Thread management
 STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for managing multiple threads of execution.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user, I want to be able to manage the execute of multiple threads with different priorities.
-<<<
 REVIEW_COMMENT: >>>
 TBD: Nothing about priorities...
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-142
 
 [REQUIREMENT]
 UID: ZEP-122
