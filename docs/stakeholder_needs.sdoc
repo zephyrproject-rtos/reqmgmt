@@ -181,3 +181,12 @@ TITLE: Thread priority
 STATEMENT: >>>
 As a Zephyr RTOS user, I want to be able to give my threads different priorities for execution.
 <<<
+
+[STAKEHOLDER_NEED]
+UID: ZEP-144
+STATUS: Draft
+TYPE: Need
+TITLE: Timers
+STATEMENT: >>>
+As a Zephyr RTOS user, I want to start, suspend, resume and stop timers which shall trigger an event on a set expiration time.
+<<<

@@ -271,9 +271,9 @@ TITLE: Timers
 STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for managing time-based events.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user, I want to start, suspend, resume and stop timers which shall trigger an event on a set expiration time.
-<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-144
 
 [REQUIREMENT]
 UID: ZEP-7
