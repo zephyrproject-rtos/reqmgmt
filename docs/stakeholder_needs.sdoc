@@ -1,0 +1,30 @@
+[DOCUMENT]
+TITLE: Zephyr Stakeholder Needs
+REQ_PREFIX: ZEP-
+
+[GRAMMAR]
+ELEMENTS:
+- TAG: STAKEHOLDER_NEED
+  FIELDS:
+  - TITLE: UID
+    TYPE: String
+    REQUIRED: False
+  - TITLE: STATUS
+    TYPE: String
+    REQUIRED: False
+  - TITLE: TYPE
+    TYPE: String
+    REQUIRED: False
+  - TITLE: TITLE
+    TYPE: String
+    REQUIRED: False
+  - TITLE: STATEMENT
+    TYPE: String
+    REQUIRED: False
+  RELATIONS:
+  - TYPE: Parent
+  - TYPE: File
+
+[FREETEXT]
+TBD
+[/FREETEXT]
