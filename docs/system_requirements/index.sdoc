@@ -107,9 +107,9 @@ TITLE: Interrupt Service Routine
 STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for interrupt management.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want interrupts to be handled synchronously in response to a hardware or software interrupt request with a minimum latency, preempting threads and, as far as the hardware allows, lower priority interrupt service routines.
-<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-133
 
 [REQUIREMENT]
 UID: ZEP-40
