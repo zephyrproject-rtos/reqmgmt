@@ -209,9 +209,9 @@ TITLE: Counting Semaphore
 STATEMENT: >>>
 The system shall implement a semaphore synchronization primitive for coordinating access to shared resources among multiple threads.
 <<<
-USER_STORY: >>>
-As a software developer threaded with implementing resource management in our real-time operating system (RTOS), I want to integrate a semaphore synchronization primitive to facilitate coordinated access to shared resources among multiple threads.
-<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-140
 
 [/SECTION]
 
