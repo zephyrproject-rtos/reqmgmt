@@ -136,9 +136,9 @@ TITLE: Memory Management framework
 STATEMENT: >>>
 The Zephyr RTOS shall support a memory management framework.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want memory to be allocated and protected to my application threads preventing mistakenly access to foreign memory as far as the hardware allows.
-<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-135
 
 [REQUIREMENT]
 UID: ZEP-42

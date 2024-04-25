@@ -100,3 +100,12 @@ TITLE: Logging
 STATEMENT: >>>
 As a Zephyr RTOS user I want to be able to log application defined events as well as framework exceptions.
 <<<
+
+[STAKEHOLDER_NEED]
+UID: ZEP-135
+STATUS: Draft
+TYPE: Need
+TITLE: Memory Management framework
+STATEMENT: >>>
+As a Zephyr RTOS user I want memory to be allocated and protected to my application threads preventing mistakenly access to foreign memory as far as the hardware allows.
+<<<
