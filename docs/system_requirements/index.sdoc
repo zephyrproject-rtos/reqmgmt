@@ -284,9 +284,9 @@ TITLE: Tracing
 STATEMENT: >>>
 Zepyhr shall provide a framework mechanism for tracing low level system operations  (NOTE: system calls, interrupts, kernel calls, thread, synchronization, etc.).
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user, I want to be able to trace different OS operations.
-<<<
 REVIEW_COMMENT: >>>
 TBD: What are low level system operations in this context?
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-145

@@ -190,3 +190,12 @@ TITLE: Timers
 STATEMENT: >>>
 As a Zephyr RTOS user, I want to start, suspend, resume and stop timers which shall trigger an event on a set expiration time.
 <<<
+
+[STAKEHOLDER_NEED]
+UID: ZEP-145
+STATUS: Draft
+TYPE: Need
+TITLE: Tracing
+STATEMENT: >>>
+As a Zephyr RTOS user, I want to be able to trace different OS operations.
+<<<
