@@ -45,9 +45,6 @@ TITLE: Support Subset of Standard C Library
 STATEMENT: >>>
 The Zephyr RTOS shall support a subset of the standard C library.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want to have a selection of standard C library implementations e.g. a full extend and a minimal with a smaller footprint or a particular fast executing implementation.
-<<<
 REVIEW_COMMENT: >>>
 Can we limit the type of C library implementations? Testing might be hell if we do not limit ourselves to the ones defined? Like "minimal libc" and "newlib". Will it make sense to pull minimal Libc into the certification scope?
 
@@ -55,6 +52,9 @@ Clarification: Would prefer to cover the scope part first. Talking about the hoo
 
 TBD: The requirement needs refinement.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-129
 
 [REQUIREMENT]
 UID: ZEP-36
