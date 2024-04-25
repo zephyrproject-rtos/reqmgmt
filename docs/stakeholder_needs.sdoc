@@ -127,3 +127,12 @@ TITLE: Multiple CPU scheduling
 STATEMENT: >>>
 As a Zephyr RTOS user I want Zephyr OS to run on MCUs/CPUs with one or more CPU cores.
 <<<
+
+[STAKEHOLDER_NEED]
+UID: ZEP-138
+STATUS: Draft
+TYPE: Need
+TITLE: Scheduling
+STATEMENT: >>>
+As a Zephyr RTOS user, I want to be able to control which thread will run on which CPU.
+<<<

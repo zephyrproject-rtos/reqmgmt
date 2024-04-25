@@ -178,9 +178,9 @@ TITLE: Scheduling
 STATEMENT: >>>
 The Zephyr RTOS shall provide an interface to assign a thread to a specific CPU.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user, I want to be able to control which thread will run on which CPU.
-<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-138
 
 [/SECTION]
 
