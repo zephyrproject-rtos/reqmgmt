@@ -55,3 +55,12 @@ TITLE: Support Subset of Standard C Library
 STATEMENT: >>>
 As a Zephyr RTOS user I want to have a selection of standard C library implementations e.g. a full extend and a minimal with a smaller footprint or a particular fast executing implementation.
 <<<
+
+[STAKEHOLDER_NEED]
+UID: ZEP-130
+STATUS: Draft
+TYPE: Need
+TITLE: Device Driver Abstraction
+STATEMENT: >>>
+As a Zephyr RTOS user I want my application to be portable between different MCU architectures (ARM Cortex-M/A, Intel x86, RISCV etc.) and MCU vendors (STM, NXP, Intel, etc.) without having to change the MCU peripherals access.
+<<<

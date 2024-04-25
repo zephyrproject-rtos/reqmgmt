@@ -65,12 +65,12 @@ TITLE: Device Driver Abstraction
 STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for managing device drivers and peripherals.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want my application to be portable between different MCU architectures (ARM Cortex-M/A, Intel x86, RISCV etc.) and MCU vendors (STM, NXP, Intel, etc.) without having to change the MCU peripherals access.
-<<<
 REVIEW_COMMENT: >>>
 TBD: Title seems to need refinement. Also, this requirement's user story seems to be identical to that of ZEP-1.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-130
 
 [REQUIREMENT]
 UID: ZEP-37
