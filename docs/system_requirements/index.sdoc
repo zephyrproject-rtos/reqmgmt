@@ -120,12 +120,12 @@ TITLE: Logging
 STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for logging events.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want to be able to log application defined events as well as framework exceptions.
-<<<
 REVIEW_COMMENT: >>>
 Nicole: TBD: we need to have logging in the safety scope?
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-134
 
 [REQUIREMENT]
 UID: ZEP-41

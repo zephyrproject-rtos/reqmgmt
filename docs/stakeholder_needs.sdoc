@@ -91,3 +91,12 @@ TITLE: Interrupt Service Routine
 STATEMENT: >>>
 As a Zephyr RTOS user I want interrupts to be handled synchronously in response to a hardware or software interrupt request with a minimum latency, preempting threads and, as far as the hardware allows, lower priority interrupt service routines.
 <<<
+
+[STAKEHOLDER_NEED]
+UID: ZEP-134
+STATUS: Draft
+TYPE: Need
+TITLE: Logging
+STATEMENT: >>>
+As a Zephyr RTOS user I want to be able to log application defined events as well as framework exceptions.
+<<<
