@@ -42,6 +42,9 @@ FILE: data_passing.sdoc
 FILE: mutex.sdoc
 
 [DOCUMENT_FROM_FILE]
+FILE: semaphore.sdoc
+
+[DOCUMENT_FROM_FILE]
 FILE: power_management.sdoc
 
 [DOCUMENT_FROM_FILE]
