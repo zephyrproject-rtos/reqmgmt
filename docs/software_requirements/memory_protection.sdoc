@@ -106,7 +106,7 @@ As a Zephyr RTOS user I want to be protected against other user threads changing
 UID: ZEP-76
 STATUS: Draft
 TYPE: Functional
-COMPONENT: TBD: Memory Protection --> Thread
+COMPONENT: Memory Protection
 TITLE: Prevent user threads creating supervisor threads
 STATEMENT: >>>
 The Zephyr RTOS shall prevent user threads from creating kernel threads.
@@ -119,7 +119,7 @@ As a Zephyr RTOS user I want to be protected against user threads creating highe
 UID: ZEP-77
 STATUS: Draft
 TYPE: Functional
-COMPONENT: TBD: Memory Protection --> Thread
+COMPONENT: Memory Protection
 TITLE: Reduced Privilege Level Threads
 STATEMENT: >>>
 The Zephyr RTOS shall allow the creation of threads that run in reduced privilege level.
