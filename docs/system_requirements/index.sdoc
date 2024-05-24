@@ -97,12 +97,20 @@ UID: ZEP-39
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Interrupts
-TITLE: Interrupt Service Routine
+TITLE: Interrupt Management
 STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for interrupt management.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS user I want interrupts to be handled synchronously in response to a hardware or software interrupt request with a minimum latency, preempting threads and, as far as the hardware allows, lower priority interrupt service routines.
+As the Zephyr RTOS user I want the Kernel to mask the HAL interfaces so I can exclusively use Zephyr Kernel calls to configure and enable interrupt hardware and install interrupt software handlers.
+<<<
+REVIEW_COMMENT: >>>
+Tim: The user story depends on understanding the role of the HAL and Architecture Interfaces.  
+This understanding will also impact the Software Requirements. Should we add:
+'Given that interrupt configuration and behavior is hardware dependent, handled by the 
+platform specific HAL, and accessed by a predefined set of Architecture interfaces.' OR
+
+Do interrupts belong under Architecture.
 <<<
 
 [REQUIREMENT]
