@@ -91,13 +91,35 @@ UID: ZEP-SYRS-7
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Interrupts
-TITLE: Interrupt Service Routine
+TITLE: Interrupt Management
 STATEMENT: >>>
-The Zephyr RTOS shall provide a framework for interrupt management.
+The Zephyr RTOS shall provide a framework for interrupt and interrupt service routine management.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS user I want interrupts to be handled synchronously in response to a hardware or software interrupt request with a minimum latency, preempting threads and, as far as the hardware allows, lower priority interrupt service routines.
+As the Zephyr RTOS user I want the Kernel to provide abstracted interfaces to 
+the platform enabling me to implement standard interrupts interrupt service routines 
+without detailed knowledge of the platform architecture and programming model. 
 <<<
+
+[REQUIREMENT]
+UID: ZEP-SYRS-20
+STATUS: Draft
+TYPE: High Level
+COMPONENT: Interrupts
+TITLE: Direct ISR, Platform Specific helpers.
+STATEMENT: >>>
+Zephyr RTOS shall support development of direct ISRs by providing platform specific 
+code fragments and factory functions including, minimal header instructions, 
+minimal footer instructions, low power termination, and ISR construction.
+<<<
+USER_STORY: >>>
+As the Zephyr RTOS user I want the Kernel to provide support for implementing standard low latency
+and low power interrupt service routines without detailed knowledge of the platform architecture 
+and programming model.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-7
 
 [REQUIREMENT]
 UID: ZEP-SYRS-8
