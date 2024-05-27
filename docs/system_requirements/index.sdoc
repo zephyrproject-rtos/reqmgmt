@@ -209,9 +209,6 @@ TITLE: Thread support
 STATEMENT: >>>
 The Zephyr RTOS shall support threads.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user, I want to be able to have support for the kernel objects named threads for processing work.
-<<<
 
 [REQUIREMENT]
 UID: ZEP-SYRS-16
@@ -222,9 +219,6 @@ TITLE: Thread management
 STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for managing multiple threads of execution.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user, I want to be able to manage the execute of multiple threads with different priorities.
-<<<
 
 [REQUIREMENT]
 UID: ZEP-SYRS-17
@@ -234,9 +228,6 @@ COMPONENT: Threads
 TITLE: Thread priority
 STATEMENT: >>>
 Threads shall have a priority.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user, I want to be able to give my threads different priorities for execution.
 <<<
 
 [/SECTION]
