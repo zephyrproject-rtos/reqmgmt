@@ -203,7 +203,7 @@ TITLE: Threads
 [REQUIREMENT]
 UID: ZEP-SYRS-15
 STATUS: Draft
-TYPE: High Level
+TYPE: Non-Functional
 COMPONENT: Threads
 TITLE: Thread support
 STATEMENT: >>>
@@ -213,7 +213,7 @@ The Zephyr RTOS shall support threads.
 [REQUIREMENT]
 UID: ZEP-SYRS-16
 STATUS: Draft
-TYPE: High Level
+TYPE: Non-Functional
 COMPONENT: Threads
 TITLE: Thread management
 STATEMENT: >>>
@@ -223,7 +223,7 @@ The Zephyr RTOS shall provide a framework for managing multiple threads of execu
 [REQUIREMENT]
 UID: ZEP-SYRS-17
 STATUS: Draft
-TYPE: High Level
+TYPE: Non-Functional
 COMPONENT: Threads
 TITLE: Thread priority
 STATEMENT: >>>
