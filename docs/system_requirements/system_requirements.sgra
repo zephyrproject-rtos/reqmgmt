@@ -23,8 +23,5 @@ ELEMENTS:
   - TITLE: USER_STORY
     TYPE: String
     REQUIRED: False
-  - TITLE: REVIEW_COMMENT
-    TYPE: String
-    REQUIRED: False
   RELATIONS:
   - TYPE: Parent
