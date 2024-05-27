@@ -17,9 +17,6 @@ The Zephyr RTOS shall support memory protection features to isolate a thread's m
 USER_STORY: >>>
 As a Zephyr RTOS user I want memory to be allocated and protected to my application threads preventing mistakenly access to foreign memory as far as the hardware allows.
 <<<
-REVIEW_COMMENT: >>>
-Functional it is memory management, but it also strongly relates to the architecture abstraction and memory access
-<<<
 
 [REQUIREMENT]
 UID: ZEP-70
@@ -32,9 +29,6 @@ The Zephyr RTOS shall provide a mechanism to grant user threads access to kernel
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user I want, from the user space, under certain conditions, access to kernel objects.
-<<<
-REVIEW_COMMENT: >>>
-What are the conditions to a user thread to get access to a kernel object?
 <<<
 
 [REQUIREMENT]
@@ -61,9 +55,6 @@ The Zephyr RTOS shall have a defined behaviour when an invocation of an unimplem
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user I want Zephyr OS to indicate any unimplemented system call by an appropriate error message.
-<<<
-REVIEW_COMMENT: >>>
-What is an "unimplemented system call"? An empty system call function? Can I call something that is not there it all? Isn't this more a topic for security? - makes sense to handle this from the safety perspective, but still raises some questions here.
 <<<
 
 [REQUIREMENT]
@@ -153,9 +144,6 @@ The Zephyr RTOS shall support a defined mechanism for user mode handling a of de
 USER_STORY: >>>
 As a Zephyr RTOS user I want, when a stack overflow is detected, to be able to implement a graceful, application defined handling of the exception.
 <<<
-REVIEW_COMMENT: >>>
-Need for handlers and callbacks outside of thread.   Need to be able to answer "Can the safety application rely on Zephyr to reach the safe state after stack overflow occurred?"   Can it handle degraded mode.
-<<<
 
 [REQUIREMENT]
 UID: ZEP-80
@@ -169,9 +157,6 @@ The Zephyr RTOS shall support detection of stack overflows.
 USER_STORY: >>>
 As a Zephyr RTOS user I want to get an indication when a stack overflow occurs at least during debugging / the development phase, and for safety applications also in a release version of my application.
 <<<
-REVIEW_COMMENT: >>>
-RS: IMHO should be configurable due the to performance penalty introduced with it.   - DL:  THere are various modes,  canaries, and they can be turned off.  KS:  Clearly safety & security mechanism.
-<<<
 
 [REQUIREMENT]
 UID: ZEP-81
@@ -181,9 +166,6 @@ COMPONENT: Memory Protection
 TITLE: Boot Time Memory Access Policy
 STATEMENT: >>>
 The Zephyr RTOS shall support configurable access to memory during boot time.
-<<<
-REVIEW_COMMENT: >>>
-What does "policy" mean in this context? Does this mean to choose between different start up sequences?
 <<<
 
 [REQUIREMENT]
@@ -197,9 +179,6 @@ The Zephyr RTOS shall provide helper functions for system call handler functions
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user I want Zepyhr OS to validate system call parameters passed from the user mode to the kernel mode to avoid crashes and undefined behaviour.
-<<<
-REVIEW_COMMENT: >>>
-I do not understand that. What kind of helper functions? Kind of plausibility checks? Does it make sense to provide this functionality on OS level?   David:  These are likely just validation that the parameters are not going to be dangerous (security/safety).
 <<<
 
 [REQUIREMENT]
@@ -219,9 +198,6 @@ e.g.
 - verify the string length is smaller or equal to the syscalls defined max.
 - verify that the length type does not overflow when allocating one more byte ???
 <<<
-REVIEW_COMMENT: >>>
-Is this a helper function like mentioned in ZEP133? What does C string mean here? Like a string variable that's passed down from user mode to ??? by a system call?
-<<<
 
 [REQUIREMENT]
 UID: ZEP-84
@@ -233,9 +209,6 @@ STATEMENT: >>>
 The Zephyr RTOS shall track kernel objects that are used by user mode threads.
 
 Note: this means Zephyr shall track the resources used by the user mode thread (associate this with a user story).
-<<<
-REVIEW_COMMENT: >>>
-Does this mean that the user mode threads are monitored wrt to their usage of kernel objects?  Example/User story would help.
 <<<
 
 [REQUIREMENT]
@@ -262,7 +235,4 @@ The Zephyr RTOS shall support assigning a memory pool to act as that thread's re
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user I want to be able, during runtime from the kernel, to request a memory area/pool which is exclusively available to the requesting thread protected against access from other threads.
-<<<
-REVIEW_COMMENT: >>>
-What is the difference to ZEP 136? Read & Write, while ZEP136 is just read?
 <<<

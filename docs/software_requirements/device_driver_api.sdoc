@@ -16,11 +16,6 @@ The Zephyr RTOS shall provide abstraction of device drivers with common function
 
 Proposal for replacement: Zephyr shall provide an interface between application and individual device drivers to provide an abstraction of device drivers with common functionalities.
 <<<
-REVIEW_COMMENT: >>>
-What are common functionalities?
-
-Clarification: Abstract API drivers, UART. Set of files associated with that. Include drivers. 50+ files. Best place to look at is the documentation (not the files).
-<<<
 
 [REQUIREMENT]
 UID: ZEP-46
@@ -33,9 +28,4 @@ The Zephyr RTOS shall provide an interface for managing a defined set of hardwar
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user I want hardware exceptions (hardware failures, programming mistakes) to be handled gracefully (no program crashes as far as possible).
-<<<
-REVIEW_COMMENT: >>>
-What does "system" mean in this context? Architecture?
-
-NP: Now I think system means HW platform.
 <<<

@@ -43,9 +43,6 @@ The Zephyr RTOS logging shall support formatting of log messages to enable filte
 USER_STORY: >>>
 As a Zephyr RTOS user I want to be able my application to format texts (printf alike) into the log message.
 <<<
-REVIEW_COMMENT: >>>
-Question: formatting in which way? length, colour, tags, etc?
-<<<
 
 [REQUIREMENT]
 UID: ZEP-66
@@ -59,9 +56,6 @@ The Zephyr RTOS logging system shall support filtering based on severity level.
 USER_STORY: >>>
 As a Zephyr RTOS user I want to be able to distinguish between different severity level for my log messages (e.g. DEBUG, INFO, WARN, ERROR, PANIC).
 <<<
-REVIEW_COMMENT: >>>
-Question: Filtering during runtime or a kconfig option to initially set the filter for logging
-<<<
 
 [REQUIREMENT]
 UID: ZEP-67
@@ -74,9 +68,6 @@ The Zephyr RTOS shall support logging messages to multiple system resources.
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user I want to be able to simultaneously log to different channels which may store / redirect the information on / to different hardware (EEPROM, Flash, FRAM, UART, Ethernet, USB etc.).
-<<<
-REVIEW_COMMENT: >>>
-Question: What kind of backends shall be supported? More than one at a time?   Word choices.... backends/devices/channels/destinations/resources (devices, memory, ....) )
 <<<
 
 [REQUIREMENT]
