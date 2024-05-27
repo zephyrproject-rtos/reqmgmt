@@ -66,11 +66,6 @@ USER_STORY: >>>
 If MCU power state was meant here:
 As a Zephyr RTOS user I want to control the MCU's power saving mode such e.g. operation, sleep, deep sleep or similar as supported by the selected MCU.
 <<<
-REVIEW_COMMENT: >>>
-What is life cycle - power on, standby, power off?  or ????
-
-Clarification: Starting and Stopping, and putting it into Stand-By Mode (whatever the processor supports)
-<<<
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-1

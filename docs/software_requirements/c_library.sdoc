@@ -113,9 +113,6 @@ The Zephyr RTOS shall support a file i/O based interface for driver communicatio
 USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to use File I/O functions.
 <<<
-REVIEW_COMMENT: >>>
-A wrong C header seems to be included: stdint.h does not have to do with I/O.
-<<<
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-2

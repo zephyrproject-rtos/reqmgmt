@@ -30,9 +30,6 @@ The Zephyr RTOS shall support symmetric multiprocessing on multiple cores.
 USER_STORY: >>>
 As a Zephyr RTOS user I want to use Zephyr OS on multi core (SMP-)MCUs/MPUs.
 <<<
-REVIEW_COMMENT: >>>
-From the Docs: No special application code needs to be written to take advantage of this feature
-<<<
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-1
@@ -61,9 +58,6 @@ The Zephyr RTOS shall provide a framework for managing device drivers and periph
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user I want my application to be portable between different MCU architectures (ARM Cortex-M/A, Intel x86, RISCV etc.) and MCU vendors (STM, NXP, Intel, etc.) without having to change the MCU peripherals access.
-<<<
-REVIEW_COMMENT: >>>
-TBD: Title seems to need refinement. Also, this requirement's user story seems to be identical to that of ZEP-1.
 <<<
 
 [REQUIREMENT]
@@ -116,9 +110,6 @@ The Zephyr RTOS shall provide a framework for logging events.
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user I want to be able to log application defined events as well as framework exceptions.
-<<<
-REVIEW_COMMENT: >>>
-Nicole: TBD: we need to have logging in the safety scope?
 <<<
 
 [REQUIREMENT]
@@ -234,9 +225,6 @@ The Zephyr RTOS shall provide a framework for managing multiple threads of execu
 USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to manage the execute of multiple threads with different priorities.
 <<<
-REVIEW_COMMENT: >>>
-TBD: Nothing about priorities...
-<<<
 
 [REQUIREMENT]
 UID: ZEP-122
@@ -277,7 +265,4 @@ Zepyhr shall provide a framework mechanism for tracing low level system operatio
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to trace different OS operations.
-<<<
-REVIEW_COMMENT: >>>
-TBD: What are low level system operations in this context?
 <<<

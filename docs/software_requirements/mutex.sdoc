@@ -20,6 +20,3 @@ As a Zephyr RTOS user I want to be able to sychonize threads when accessing comm
 - immediately return with a negative message if the resource is not available and allow the thread to continue.
 - wait for a given time for the resource to become available or return with a negative message.
 <<<
-REVIEW_COMMENT: >>>
-Concern over phrase recursive.  What is it MUTEXing? Memory Management?
-<<<

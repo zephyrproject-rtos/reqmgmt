@@ -17,9 +17,6 @@ The Zephyr RTOS shall allow threads to dynamically allocate variable-sized memor
 USER_STORY: >>>
 As a Zephyr RTOS user I want my application to be able to dynamically allocate memory of a application defined size.
 <<<
-REVIEW_COMMENT: >>>
-Is dynamic memory allocation only allowed in memory pool objects?
-<<<
 
 [REQUIREMENT]
 UID: ZEP-88

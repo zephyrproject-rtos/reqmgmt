@@ -103,9 +103,6 @@ The Zephyr RTOS shall provide an interface for running user-supplied functions.
 USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to run functions in-order in a separated thread/threads.
 <<<
-REVIEW_COMMENT: >>>
-Where do we put this,  thread, scheduling or???
-<<<
 
 [REQUIREMENT]
 UID: ZEP-116
@@ -118,9 +115,6 @@ The Zephyr RTOS shall organize running threads into a fixed list of numeric prio
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user, I want that the OS organize running threads in a fixed list of numeric priorities.
-<<<
-REVIEW_COMMENT: >>>
-The Zephyr RTOS shall allow prioritizing threads
 <<<
 
 [REQUIREMENT]
@@ -160,9 +154,6 @@ The Zephyr RTOS shall support time sharing of CPU resources among threads of the
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to configure my RTOS in the way, that the CPU resources are shared evenly among executed threads of the same priority.
-<<<
-REVIEW_COMMENT: >>>
-what does traditional mean here?   Round robin?
 <<<
 
 [/SECTION]
