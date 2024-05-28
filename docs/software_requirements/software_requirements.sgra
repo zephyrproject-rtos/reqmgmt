@@ -4,22 +4,22 @@ ELEMENTS:
   FIELDS:
   - TITLE: UID
     TYPE: String
-    REQUIRED: False
+    REQUIRED: True
   - TITLE: STATUS
     TYPE: String
-    REQUIRED: False
+    REQUIRED: True
   - TITLE: TYPE
     TYPE: String
-    REQUIRED: False
+    REQUIRED: True
   - TITLE: COMPONENT
     TYPE: String
-    REQUIRED: False
+    REQUIRED: True
   - TITLE: TITLE
     TYPE: String
-    REQUIRED: False
+    REQUIRED: True
   - TITLE: STATEMENT
     TYPE: String
-    REQUIRED: False
+    REQUIRED: True
   - TITLE: USER_STORY
     TYPE: String
     REQUIRED: False
