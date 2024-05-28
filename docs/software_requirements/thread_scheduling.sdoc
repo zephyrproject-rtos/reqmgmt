@@ -1,6 +1,6 @@
 [DOCUMENT]
 TITLE: Thread Scheduling
-REQ_PREFIX: ZEP-
+REQ_PREFIX: ZEP-SRS-2-
 
 [GRAMMAR]
 IMPORT_FROM_FILE: software_requirements.sgra

@@ -1,6 +1,6 @@
 [DOCUMENT]
 TITLE: Zephyr System Requirements
-REQ_PREFIX: ZEP-
+REQ_PREFIX: ZEP-SYRS-
 
 [GRAMMAR]
 IMPORT_FROM_FILE: system_requirements.sgra
