@@ -6,7 +6,7 @@ REQ_PREFIX: ZEP-SRS-4-
 IMPORT_FROM_FILE: software_requirements.sgra
 
 [REQUIREMENT]
-UID: ZEP-27
+UID: ZEP-SRS-4-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Timers
@@ -22,7 +22,7 @@ RELATIONS:
   VALUE: ZEP-6
 
 [REQUIREMENT]
-UID: ZEP-28
+UID: ZEP-SRS-4-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Timers

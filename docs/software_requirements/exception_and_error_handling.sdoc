@@ -6,7 +6,7 @@ REQ_PREFIX: ZEP-SRS-16-
 IMPORT_FROM_FILE: software_requirements.sgra
 
 [REQUIREMENT]
-UID: ZEP-47
+UID: ZEP-SRS-16-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Exception and Error Handling
@@ -19,7 +19,7 @@ As a Zephyr RTOS user I want exceptions which I did not handle explicitly (by mi
 <<<
 
 [REQUIREMENT]
-UID: ZEP-48
+UID: ZEP-SRS-16-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Exception and Error Handling
@@ -29,7 +29,7 @@ The Zephyr RTOS shall provide default handlers for fatal errors that do not have
 <<<
 
 [REQUIREMENT]
-UID: ZEP-49
+UID: ZEP-SRS-16-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Exception and Error Handling
@@ -39,7 +39,7 @@ The Zephyr RTOS shall provide an interface to assign a specific handler with an 
 <<<
 
 [REQUIREMENT]
-UID: ZEP-50
+UID: ZEP-SRS-16-4
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Exception and Error Handling
