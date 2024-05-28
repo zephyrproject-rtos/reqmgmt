@@ -1,6 +1,6 @@
 [DOCUMENT]
 TITLE: Zephyr Software Requirements
-REQ_PREFIX: ZEP-
+REQ_PREFIX: ZEP-SRS-0-
 
 [GRAMMAR]
 IMPORT_FROM_FILE: software_requirements.sgra

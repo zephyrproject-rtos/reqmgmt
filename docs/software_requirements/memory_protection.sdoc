@@ -1,6 +1,6 @@
 [DOCUMENT]
 TITLE: Memory protection
-REQ_PREFIX: ZEP-
+REQ_PREFIX: ZEP-SRS-8-
 
 [GRAMMAR]
 IMPORT_FROM_FILE: software_requirements.sgra

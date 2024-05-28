@@ -1,6 +1,6 @@
 [DOCUMENT]
 TITLE: Semaphores
-REQ_PREFIX: ZEP-
+REQ_PREFIX: ZEP-SRS-5-
 
 [GRAMMAR]
 IMPORT_FROM_FILE: software_requirements.sgra

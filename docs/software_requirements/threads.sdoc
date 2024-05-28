@@ -1,6 +1,6 @@
 [DOCUMENT]
 TITLE: Threads
-REQ_PREFIX: ZEP-
+REQ_PREFIX: ZEP-SRS-1-
 
 [GRAMMAR]
 IMPORT_FROM_FILE: software_requirements.sgra
