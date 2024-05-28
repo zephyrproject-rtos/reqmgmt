@@ -16,7 +16,7 @@ The Zephyr RTOS shall provide a mechanism to define and initialize a semaphore a
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-2
@@ -29,7 +29,7 @@ The Zephyr RTOS shall provide a mechanism to define and initialize a semaphore a
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-3
@@ -53,7 +53,7 @@ can have shall be set.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-5
@@ -66,7 +66,7 @@ When initializing a counting semaphore, the initial semaphore value shall be set
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-6
@@ -79,7 +79,7 @@ The Zephyr RTOS shall provide a mechanism allowing threads to acquire a semaphor
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-7
@@ -93,7 +93,7 @@ the semaphore and decrement its count.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-8
@@ -106,7 +106,7 @@ While the semaphore's count is zero, the requesting thread shall be blocked unti
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-9
@@ -119,7 +119,7 @@ When attempting to acquire a semaphore, the Zephyr RTOS shall accept options tha
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-10
@@ -133,7 +133,7 @@ specified time, the Zephyr RTOS shall return an error indicating a timeout.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-11
@@ -147,7 +147,7 @@ shall return an error indicating the semaphore is busy.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-12
@@ -160,7 +160,7 @@ The Zephyr RTOS shall provide a mechanism allowing threads to release a semaphor
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-13
@@ -173,7 +173,7 @@ The Zephyr RTOS shall increment the semaphore's count upon release.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-14
@@ -187,7 +187,7 @@ shall be unblocked and acquire the semaphore.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-15
@@ -200,7 +200,7 @@ The Zephyr RTOS shall provide a mechanism for threads to check the current count
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-16
@@ -213,7 +213,7 @@ The Zephyr RTOS shall provide a mechanism that resets the semaphore count to zer
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-17
@@ -227,7 +227,7 @@ of the semaphore returning a resource contention error code.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-18
@@ -241,4 +241,4 @@ then the Zephyr RTOS shall return an error indicating invalid values.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-99
+  VALUE: ZEP-SYRS-14

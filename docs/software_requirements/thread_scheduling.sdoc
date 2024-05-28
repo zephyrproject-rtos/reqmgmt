@@ -63,7 +63,7 @@ As a Zephyr RTOS user, I want to be able to execute work which reacts on events 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-123
+  VALUE: ZEP-SYRS-15
 
 [REQUIREMENT]
 UID: ZEP-SRS-2-5

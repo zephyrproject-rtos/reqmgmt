@@ -19,7 +19,7 @@ As a Zephyr RTOS user, I want to be able to track the passed real time in the OS
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-6
+  VALUE: ZEP-SYRS-18
 
 [REQUIREMENT]
 UID: ZEP-SRS-4-2
@@ -35,4 +35,4 @@ As a Zephyr RTOS user, I want to be able to execute functions in the interrupt c
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-6
+  VALUE: ZEP-SYRS-18

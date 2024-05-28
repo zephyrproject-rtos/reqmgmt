@@ -6,7 +6,7 @@ REQ_PREFIX: ZEP-SYRS-
 IMPORT_FROM_FILE: system_requirements.sgra
 
 [REQUIREMENT]
-UID: ZEP-1
+UID: ZEP-SYRS-1
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Hardware Architecture Interface
@@ -19,7 +19,7 @@ As a Zephyr RTOS user I want to be able to easily switch my application to a dif
 <<<
 
 [REQUIREMENT]
-UID: ZEP-3
+UID: ZEP-SYRS-2
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Hardware Architecture Interface
@@ -32,10 +32,10 @@ As a Zephyr RTOS user I want to use Zephyr OS on multi core (SMP-)MCUs/MPUs.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-1
+  VALUE: ZEP-SYRS-1
 
 [REQUIREMENT]
-UID: ZEP-2
+UID: ZEP-SYRS-3
 STATUS: Draft
 TYPE: High Level
 COMPONENT: C Library
@@ -48,7 +48,7 @@ As a Zephyr RTOS user I want to have a selection of standard C library implement
 <<<
 
 [REQUIREMENT]
-UID: ZEP-36
+UID: ZEP-SYRS-4
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Device Drivers
@@ -61,7 +61,7 @@ As a Zephyr RTOS user I want my application to be portable between different MCU
 <<<
 
 [REQUIREMENT]
-UID: ZEP-37
+UID: ZEP-SYRS-5
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Exception and Error Handling
@@ -74,7 +74,7 @@ As a Zephyr RTOS user I want errors and exceptions to handled and react accordin
 <<<
 
 [REQUIREMENT]
-UID: ZEP-38
+UID: ZEP-SYRS-6
 STATUS: Draft
 TYPE: High Level
 COMPONENT: File Systems
@@ -87,7 +87,7 @@ As a Zephyr RTOS user I want a posix / c like file system access to store data.
 <<<
 
 [REQUIREMENT]
-UID: ZEP-39
+UID: ZEP-SYRS-7
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Interrupts
@@ -100,7 +100,7 @@ As a Zephyr RTOS user I want interrupts to be handled synchronously in response 
 <<<
 
 [REQUIREMENT]
-UID: ZEP-40
+UID: ZEP-SYRS-8
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Logging
@@ -113,7 +113,7 @@ As a Zephyr RTOS user I want to be able to log application defined events as wel
 <<<
 
 [REQUIREMENT]
-UID: ZEP-41
+UID: ZEP-SYRS-9
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Memory Management
@@ -126,7 +126,7 @@ As a Zephyr RTOS user I want memory to be allocated and protected to my applicat
 <<<
 
 [REQUIREMENT]
-UID: ZEP-42
+UID: ZEP-SYRS-10
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Power Management
@@ -142,7 +142,7 @@ As a Zephyr RTOS user I want to be able to control the power mode of the MCU and
 TITLE: Multi core and SMP
 
 [REQUIREMENT]
-UID: ZEP-44
+UID: ZEP-SYRS-11
 STATUS: Draft
 TYPE: High Level
 COMPONENT: SMP and Multi core
@@ -155,7 +155,7 @@ As a Zephyr RTOS user I want Zephyr OS to run on MCUs/CPUs with one or more CPU 
 <<<
 
 [REQUIREMENT]
-UID: ZEP-4
+UID: ZEP-SYRS-12
 STATUS: Draft
 TYPE: High Level
 COMPONENT: SMP and Multi core
@@ -173,7 +173,7 @@ As a Zephyr RTOS user, I want to be able to control which thread will run on whi
 TITLE: Thread Synchronization
 
 [REQUIREMENT]
-UID: ZEP-43
+UID: ZEP-SYRS-13
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Mutex
@@ -186,7 +186,7 @@ As a Zephyr RTOS user I want to able to exchange information between threads in 
 <<<
 
 [REQUIREMENT]
-UID: ZEP-99
+UID: ZEP-SYRS-14
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Semaphore
@@ -201,7 +201,7 @@ The system shall implement a semaphore synchronization primitive for coordinatin
 TITLE: Threads
 
 [REQUIREMENT]
-UID: ZEP-123
+UID: ZEP-SYRS-15
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Threads
@@ -214,7 +214,7 @@ As a Zephyr RTOS user, I want to be able to have support for the kernel objects 
 <<<
 
 [REQUIREMENT]
-UID: ZEP-5
+UID: ZEP-SYRS-16
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Threads
@@ -227,7 +227,7 @@ As a Zephyr RTOS user, I want to be able to manage the execute of multiple threa
 <<<
 
 [REQUIREMENT]
-UID: ZEP-122
+UID: ZEP-SYRS-17
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Threads
@@ -242,7 +242,7 @@ As a Zephyr RTOS user, I want to be able to give my threads different priorities
 [/SECTION]
 
 [REQUIREMENT]
-UID: ZEP-6
+UID: ZEP-SYRS-18
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Timers
@@ -255,7 +255,7 @@ As a Zephyr RTOS user, I want to start, suspend, resume and stop timers which sh
 <<<
 
 [REQUIREMENT]
-UID: ZEP-7
+UID: ZEP-SYRS-19
 STATUS: Draft
 TYPE: High Level
 COMPONENT: Tracing
