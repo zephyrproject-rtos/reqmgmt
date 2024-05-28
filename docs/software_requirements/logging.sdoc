@@ -6,7 +6,7 @@ REQ_PREFIX: ZEP-SRS-11-
 IMPORT_FROM_FILE: software_requirements.sgra
 
 [REQUIREMENT]
-UID: ZEP-63
+UID: ZEP-SRS-11-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Logging
@@ -19,7 +19,7 @@ As a Zephyr RTOS user I want to be able to configure logging of events so the ex
 <<<
 
 [REQUIREMENT]
-UID: ZEP-64
+UID: ZEP-SRS-11-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Logging
@@ -32,7 +32,7 @@ As a Zephyr RTOS user I want the logging information to be stored in a format wh
 <<<
 
 [REQUIREMENT]
-UID: ZEP-65
+UID: ZEP-SRS-11-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Logging
@@ -45,7 +45,7 @@ As a Zephyr RTOS user I want to be able my application to format texts (printf a
 <<<
 
 [REQUIREMENT]
-UID: ZEP-66
+UID: ZEP-SRS-11-4
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Logging
@@ -58,7 +58,7 @@ As a Zephyr RTOS user I want to be able to distinguish between different severit
 <<<
 
 [REQUIREMENT]
-UID: ZEP-67
+UID: ZEP-SRS-11-5
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Logging
@@ -71,7 +71,7 @@ As a Zephyr RTOS user I want to be able to simultaneously log to different chann
 <<<
 
 [REQUIREMENT]
-UID: ZEP-68
+UID: ZEP-SRS-11-6
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Logging

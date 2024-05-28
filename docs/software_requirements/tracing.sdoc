@@ -6,7 +6,7 @@ REQ_PREFIX: ZEP-SRS-10-
 IMPORT_FROM_FILE: software_requirements.sgra
 
 [REQUIREMENT]
-UID: ZEP-29
+UID: ZEP-SRS-10-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Tracing
@@ -16,7 +16,7 @@ Zephyr shall provide an interface to initialize a trace.
 <<<
 
 [REQUIREMENT]
-UID: ZEP-30
+UID: ZEP-SRS-10-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Tracing
@@ -26,7 +26,7 @@ Zephyr shall provide an interface to trigger a trace.
 <<<
 
 [REQUIREMENT]
-UID: ZEP-31
+UID: ZEP-SRS-10-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Tracing
@@ -36,7 +36,7 @@ Zephyr shall provide an interface to dump results from a trace.
 <<<
 
 [REQUIREMENT]
-UID: ZEP-32
+UID: ZEP-SRS-10-4
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Tracing
@@ -46,7 +46,7 @@ Zephyr shall provide an interface to remove trace data.
 <<<
 
 [REQUIREMENT]
-UID: ZEP-33
+UID: ZEP-SRS-10-5
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Tracing
@@ -59,7 +59,7 @@ As a Zepyhr OS user, I want to be able to give each object which I create a name
 <<<
 
 [REQUIREMENT]
-UID: ZEP-34
+UID: ZEP-SRS-10-6
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Tracing

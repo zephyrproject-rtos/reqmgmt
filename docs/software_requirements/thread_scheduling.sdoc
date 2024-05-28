@@ -9,7 +9,7 @@ IMPORT_FROM_FILE: software_requirements.sgra
 TITLE: Thread Scheduling
 
 [REQUIREMENT]
-UID: ZEP-104
+UID: ZEP-SRS-2-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Multi Core
@@ -19,7 +19,7 @@ The Zephyr RTOS shall support operation on more than one physical CPU sharing th
 <<<
 
 [REQUIREMENT]
-UID: ZEP-105
+UID: ZEP-SRS-2-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Multi Core
@@ -32,7 +32,7 @@ As a Zephyr RTOS user I want Zephyr OS to be able to specify the CPU core or the
 <<<
 
 [REQUIREMENT]
-UID: ZEP-106
+UID: ZEP-SRS-2-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Multi Core
@@ -50,7 +50,7 @@ As a Zephyr RTOS user I want Zephyr OS to provide synchronization mechanisms bet
 TITLE: Thread Scheduling
 
 [REQUIREMENT]
-UID: ZEP-112
+UID: ZEP-SRS-2-4
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
@@ -66,7 +66,7 @@ RELATIONS:
   VALUE: ZEP-123
 
 [REQUIREMENT]
-UID: ZEP-114
+UID: ZEP-SRS-2-5
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
@@ -79,7 +79,7 @@ As a Zephyr RTOS user, I want to be able to schedule threads by earliest deadlin
 <<<
 
 [REQUIREMENT]
-UID: ZEP-115
+UID: ZEP-SRS-2-6
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
@@ -92,7 +92,7 @@ As a Zephyr RTOS user, I want to be able to add work items in a thread work queu
 <<<
 
 [REQUIREMENT]
-UID: ZEP-24
+UID: ZEP-SRS-2-7
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
@@ -105,7 +105,7 @@ As a Zephyr RTOS user, I want to be able to run functions in-order in a separate
 <<<
 
 [REQUIREMENT]
-UID: ZEP-116
+UID: ZEP-SRS-2-8
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
@@ -118,7 +118,7 @@ As a Zephyr RTOS user, I want that the OS organize running threads in a fixed li
 <<<
 
 [REQUIREMENT]
-UID: ZEP-117
+UID: ZEP-SRS-2-9
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
@@ -131,7 +131,7 @@ As a Zephyr RTOS user, I want that the OS preempt running threads by a thread wi
 <<<
 
 [REQUIREMENT]
-UID: ZEP-118
+UID: ZEP-SRS-2-10
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling
@@ -144,7 +144,7 @@ As a Zephyr RTOS user, I want to be able to configure thread prioritizes which c
 <<<
 
 [REQUIREMENT]
-UID: ZEP-119
+UID: ZEP-SRS-2-11
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Scheduling

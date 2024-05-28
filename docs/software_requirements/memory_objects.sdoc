@@ -6,7 +6,7 @@ REQ_PREFIX: ZEP-SRS-9-
 IMPORT_FROM_FILE: software_requirements.sgra
 
 [REQUIREMENT]
-UID: ZEP-87
+UID: ZEP-SRS-9-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Objects
@@ -19,7 +19,7 @@ As a Zephyr RTOS user I want my application to be able to dynamically allocate m
 <<<
 
 [REQUIREMENT]
-UID: ZEP-88
+UID: ZEP-SRS-9-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Objects

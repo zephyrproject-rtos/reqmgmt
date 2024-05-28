@@ -6,7 +6,7 @@ REQ_PREFIX: ZEP-SRS-14-
 IMPORT_FROM_FILE: software_requirements.sgra
 
 [REQUIREMENT]
-UID: ZEP-45
+UID: ZEP-SRS-14-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Device Driver API
@@ -18,7 +18,7 @@ Proposal for replacement: Zephyr shall provide an interface between application 
 <<<
 
 [REQUIREMENT]
-UID: ZEP-46
+UID: ZEP-SRS-14-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Device Driver API

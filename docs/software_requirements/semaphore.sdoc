@@ -6,7 +6,7 @@ REQ_PREFIX: ZEP-SRS-5-
 IMPORT_FROM_FILE: software_requirements.sgra
 
 [REQUIREMENT]
-UID: ZEP-12001
+UID: ZEP-SRS-5-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -19,7 +19,7 @@ RELATIONS:
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12002
+UID: ZEP-SRS-5-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -32,7 +32,7 @@ RELATIONS:
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12003
+UID: ZEP-SRS-5-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -42,7 +42,7 @@ The Zephyr RTOS shall define the maximum limit of a semaphore when the semaphore
 <<<
 
 [REQUIREMENT]
-UID: ZEP-12004
+UID: ZEP-SRS-5-4
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -56,7 +56,7 @@ RELATIONS:
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12005
+UID: ZEP-SRS-5-5
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -69,7 +69,7 @@ RELATIONS:
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12006
+UID: ZEP-SRS-5-6
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -82,7 +82,7 @@ RELATIONS:
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12007
+UID: ZEP-SRS-5-7
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -96,7 +96,7 @@ RELATIONS:
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12008
+UID: ZEP-SRS-5-8
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -109,21 +109,20 @@ RELATIONS:
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12009
+UID: ZEP-SRS-5-9
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
 TITLE: Semaphore acquisition timeout
 STATEMENT: >>>
 When attempting to acquire a semaphore, the Zephyr RTOS shall accept options that specify timeout periods, allowing threads to set a maximum wait time for semaphore acquisition.
-
 <<<
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12010
+UID: ZEP-SRS-5-10
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -137,7 +136,7 @@ RELATIONS:
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12011
+UID: ZEP-SRS-5-11
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -151,7 +150,7 @@ RELATIONS:
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12012
+UID: ZEP-SRS-5-12
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -164,7 +163,7 @@ RELATIONS:
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12013
+UID: ZEP-SRS-5-13
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -177,7 +176,7 @@ RELATIONS:
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12014
+UID: ZEP-SRS-5-14
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -191,7 +190,7 @@ RELATIONS:
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12015
+UID: ZEP-SRS-5-15
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -204,7 +203,7 @@ RELATIONS:
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12023
+UID: ZEP-SRS-5-16
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -217,7 +216,7 @@ RELATIONS:
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12024
+UID: ZEP-SRS-5-17
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
@@ -231,7 +230,7 @@ RELATIONS:
   VALUE: ZEP-99
 
 [REQUIREMENT]
-UID: ZEP-12025
+UID: ZEP-SRS-5-18
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore

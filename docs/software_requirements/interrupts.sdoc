@@ -6,7 +6,7 @@ REQ_PREFIX: ZEP-SRS-7-
 IMPORT_FROM_FILE: software_requirements.sgra
 
 [REQUIREMENT]
-UID: ZEP-58
+UID: ZEP-SRS-7-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts
@@ -16,7 +16,7 @@ The Zephyr RTOS shall provide support a service routine for handling interrupts 
 <<<
 
 [REQUIREMENT]
-UID: ZEP-59
+UID: ZEP-SRS-7-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts
@@ -26,7 +26,7 @@ The Zephyr RTOS shall support multi-level preemptive interrupt priorities, when 
 <<<
 
 [REQUIREMENT]
-UID: ZEP-60
+UID: ZEP-SRS-7-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts
@@ -36,7 +36,7 @@ The Zephyr RTOS shall provide an interface for associating application code with
 <<<
 
 [REQUIREMENT]
-UID: ZEP-61
+UID: ZEP-SRS-7-4
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts
@@ -49,7 +49,7 @@ As a Zephyr RTOS user I want to be able to enable each individual and a global i
 <<<
 
 [REQUIREMENT]
-UID: ZEP-62
+UID: ZEP-SRS-7-5
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts

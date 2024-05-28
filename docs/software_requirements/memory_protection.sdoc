@@ -6,7 +6,7 @@ REQ_PREFIX: ZEP-SRS-8-
 IMPORT_FROM_FILE: software_requirements.sgra
 
 [REQUIREMENT]
-UID: ZEP-69
+UID: ZEP-SRS-8-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -19,7 +19,7 @@ As a Zephyr RTOS user I want memory to be allocated and protected to my applicat
 <<<
 
 [REQUIREMENT]
-UID: ZEP-70
+UID: ZEP-SRS-8-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -32,7 +32,7 @@ As a Zephyr RTOS user I want, from the user space, under certain conditions, acc
 <<<
 
 [REQUIREMENT]
-UID: ZEP-71
+UID: ZEP-SRS-8-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -45,7 +45,7 @@ As a Zephyr RTOS user I want, from the kernel space, unconditioned access to ker
 <<<
 
 [REQUIREMENT]
-UID: ZEP-72
+UID: ZEP-SRS-8-4
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -58,7 +58,7 @@ As a Zephyr RTOS user I want Zephyr OS to indicate any unimplemented system call
 <<<
 
 [REQUIREMENT]
-UID: ZEP-73
+UID: ZEP-SRS-8-5
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -71,7 +71,7 @@ As a Zephyr RTOS user I want Zephyr OS to indicate invalid system call by an app
 <<<
 
 [REQUIREMENT]
-UID: ZEP-74
+UID: ZEP-SRS-8-6
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -81,7 +81,7 @@ The Zephyr RTOS shall prevent user threads from creating new threads that are hi
 <<<
 
 [REQUIREMENT]
-UID: ZEP-75
+UID: ZEP-SRS-8-7
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -94,7 +94,7 @@ As a Zephyr RTOS user I want to be protected against other user threads changing
 <<<
 
 [REQUIREMENT]
-UID: ZEP-76
+UID: ZEP-SRS-8-8
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -107,7 +107,7 @@ As a Zephyr RTOS user I want to be protected against user threads creating highe
 <<<
 
 [REQUIREMENT]
-UID: ZEP-77
+UID: ZEP-SRS-8-9
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -120,7 +120,7 @@ As a Zephyr RTOS user I want to be able to create lower privileged threads than 
 <<<
 
 [REQUIREMENT]
-UID: ZEP-78
+UID: ZEP-SRS-8-10
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -133,7 +133,7 @@ As a Zephyr RTOS user I want to be able to perform privileged operations in the 
 <<<
 
 [REQUIREMENT]
-UID: ZEP-79
+UID: ZEP-SRS-8-11
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -146,7 +146,7 @@ As a Zephyr RTOS user I want, when a stack overflow is detected, to be able to i
 <<<
 
 [REQUIREMENT]
-UID: ZEP-80
+UID: ZEP-SRS-8-12
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -159,7 +159,7 @@ As a Zephyr RTOS user I want to get an indication when a stack overflow occurs a
 <<<
 
 [REQUIREMENT]
-UID: ZEP-81
+UID: ZEP-SRS-8-13
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -169,7 +169,7 @@ The Zephyr RTOS shall support configurable access to memory during boot time.
 <<<
 
 [REQUIREMENT]
-UID: ZEP-82
+UID: ZEP-SRS-8-14
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -182,7 +182,7 @@ As a Zephyr RTOS user I want Zepyhr OS to validate system call parameters passed
 <<<
 
 [REQUIREMENT]
-UID: ZEP-83
+UID: ZEP-SRS-8-15
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -200,7 +200,7 @@ e.g.
 <<<
 
 [REQUIREMENT]
-UID: ZEP-84
+UID: ZEP-SRS-8-16
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -212,7 +212,7 @@ Note: this means Zephyr shall track the resources used by the user mode thread (
 <<<
 
 [REQUIREMENT]
-UID: ZEP-85
+UID: ZEP-SRS-8-17
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
@@ -225,7 +225,7 @@ As a Zephyr RTOS user I want to be able to request read-only or read-write acces
 <<<
 
 [REQUIREMENT]
-UID: ZEP-86
+UID: ZEP-SRS-8-18
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection

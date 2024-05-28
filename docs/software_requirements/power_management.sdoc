@@ -6,7 +6,7 @@ REQ_PREFIX: ZEP-SRS-13-
 IMPORT_FROM_FILE: software_requirements.sgra
 
 [REQUIREMENT]
-UID: ZEP-92
+UID: ZEP-SRS-13-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Power Management
@@ -21,7 +21,7 @@ When the power state is changed I want to get an notification in order for speci
 <<<
 
 [REQUIREMENT]
-UID: ZEP-93
+UID: ZEP-SRS-13-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Power Management
@@ -31,7 +31,7 @@ TBD
 <<<
 
 [REQUIREMENT]
-UID: ZEP-94
+UID: ZEP-SRS-13-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Power Management

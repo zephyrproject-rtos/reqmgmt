@@ -6,7 +6,7 @@ REQ_PREFIX: ZEP-SRS-19-
 IMPORT_FROM_FILE: software_requirements.sgra
 
 [REQUIREMENT]
-UID: ZEP-8
+UID: ZEP-SRS-19-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Hardware Architecture Interface
@@ -22,7 +22,7 @@ RELATIONS:
   VALUE: ZEP-1
 
 [REQUIREMENT]
-UID: ZEP-9
+UID: ZEP-SRS-19-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Hardware Architecture Interface
@@ -38,7 +38,7 @@ RELATIONS:
   VALUE: ZEP-1
 
 [REQUIREMENT]
-UID: ZEP-10
+UID: ZEP-SRS-19-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Hardware Architecture Interface
@@ -54,7 +54,7 @@ RELATIONS:
   VALUE: ZEP-1
 
 [REQUIREMENT]
-UID: ZEP-11
+UID: ZEP-SRS-19-4
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Hardware Architecture Interface

@@ -6,7 +6,7 @@ REQ_PREFIX: ZEP-SRS-3-
 IMPORT_FROM_FILE: software_requirements.sgra
 
 [REQUIREMENT]
-UID: ZEP-96
+UID: ZEP-SRS-3-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
@@ -19,7 +19,7 @@ USER_STORY: >>>
 <<<
 
 [REQUIREMENT]
-UID: ZEP-97
+UID: ZEP-SRS-3-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
@@ -32,7 +32,7 @@ USER_STORY: >>>
 <<<
 
 [REQUIREMENT]
-UID: ZEP-100
+UID: ZEP-SRS-3-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
@@ -45,7 +45,7 @@ As a Zephyr RTOS user I want my thread to wait for one of several defined events
 <<<
 
 [REQUIREMENT]
-UID: ZEP-101
+UID: ZEP-SRS-3-4
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
@@ -59,7 +59,7 @@ As a Zephyr RTOS user I want to send a byte stream from one thread to another in
 <<<
 
 [REQUIREMENT]
-UID: ZEP-102
+UID: ZEP-SRS-3-5
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication
@@ -69,7 +69,7 @@ The Zephyr RTOS shall provide a a communication primitive that allow threads and
 <<<
 
 [REQUIREMENT]
-UID: ZEP-103
+UID: ZEP-SRS-3-6
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Thread Communication

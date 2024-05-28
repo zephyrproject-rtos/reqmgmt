@@ -6,7 +6,7 @@ REQ_PREFIX: ZEP-SRS-6-
 IMPORT_FROM_FILE: software_requirements.sgra
 
 [REQUIREMENT]
-UID: ZEP-91
+UID: ZEP-SRS-6-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mutex

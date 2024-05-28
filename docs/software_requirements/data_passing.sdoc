@@ -6,7 +6,7 @@ REQ_PREFIX: ZEP-SRS-15-
 IMPORT_FROM_FILE: software_requirements.sgra
 
 [REQUIREMENT]
-UID: ZEP-89
+UID: ZEP-SRS-15-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Data Passing
@@ -19,7 +19,7 @@ As a Zephyr RTOS user I want to be able to exchange 1 to N data objects between 
 <<<
 
 [REQUIREMENT]
-UID: ZEP-90
+UID: ZEP-SRS-15-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Data Passing
