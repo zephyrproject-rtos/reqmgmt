@@ -19,7 +19,7 @@ As a Zephyr RTOS user I want to read from or write into a memory areas without b
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-1
+  VALUE: ZEP-SYRS-1
 
 [REQUIREMENT]
 UID: ZEP-SRS-19-2
@@ -35,7 +35,7 @@ As a Zephyr RTOS user I want to execute code concurrently in one or more threads
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-1
+  VALUE: ZEP-SYRS-1
 
 [REQUIREMENT]
 UID: ZEP-SRS-19-3
@@ -51,7 +51,7 @@ As a Zephyr RTOS user I want to catch any software exception and handle it accor
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-1
+  VALUE: ZEP-SYRS-1
 
 [REQUIREMENT]
 UID: ZEP-SRS-19-4
@@ -68,4 +68,4 @@ As a Zephyr RTOS user I want to control the MCU's power saving mode such e.g. op
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-1
+  VALUE: ZEP-SYRS-1

@@ -16,9 +16,9 @@ The Zephyr RTOS shall provide an interface to create (start) a thread.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-123
+  VALUE: ZEP-SYRS-15
 - TYPE: Parent
-  VALUE: ZEP-5
+  VALUE: ZEP-SYRS-16
 
 [REQUIREMENT]
 UID: ZEP-SRS-1-2
@@ -31,7 +31,7 @@ The Zephyr RTOS shall provide an interface to set a thread's priority.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-122
+  VALUE: ZEP-SYRS-17
 
 [REQUIREMENT]
 UID: ZEP-SRS-1-3
@@ -44,9 +44,9 @@ The Zephyr RTOS shall provide an interface to suspend a thread.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-123
+  VALUE: ZEP-SYRS-15
 - TYPE: Parent
-  VALUE: ZEP-5
+  VALUE: ZEP-SYRS-16
 
 [REQUIREMENT]
 UID: ZEP-SRS-1-4
@@ -59,9 +59,9 @@ The Zephyr RTOS shall provide an interface to resume a suspended thread.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-123
+  VALUE: ZEP-SYRS-15
 - TYPE: Parent
-  VALUE: ZEP-5
+  VALUE: ZEP-SYRS-16
 
 [REQUIREMENT]
 UID: ZEP-SRS-1-5
@@ -74,9 +74,9 @@ The Zephyr RTOS shall provide an interface to resume a suspended thread after a 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-123
+  VALUE: ZEP-SYRS-15
 - TYPE: Parent
-  VALUE: ZEP-5
+  VALUE: ZEP-SYRS-16
 
 [REQUIREMENT]
 UID: ZEP-SRS-1-6
@@ -89,9 +89,9 @@ The Zephyr RTOS shall provide an interface to delete (end) a thread.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-123
+  VALUE: ZEP-SYRS-15
 - TYPE: Parent
-  VALUE: ZEP-5
+  VALUE: ZEP-SYRS-16
 
 [REQUIREMENT]
 UID: ZEP-SRS-1-7
@@ -107,9 +107,9 @@ As a Zephyr RTOS user, I want to know in what state a specific thread is.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-123
+  VALUE: ZEP-SYRS-15
 - TYPE: Parent
-  VALUE: ZEP-5
+  VALUE: ZEP-SYRS-16
 
 [REQUIREMENT]
 UID: ZEP-SRS-1-8
@@ -125,9 +125,9 @@ As a Zephyr RTOS user I want to be able to configure the stack size of a thread.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-123
+  VALUE: ZEP-SYRS-15
 - TYPE: Parent
-  VALUE: ZEP-5
+  VALUE: ZEP-SYRS-16
 
 [REQUIREMENT]
 UID: ZEP-SRS-1-9
@@ -140,9 +140,9 @@ The Zephyr RTOS shall provide an interface to create threads with defined privil
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-123
+  VALUE: ZEP-SYRS-15
 - TYPE: Parent
-  VALUE: ZEP-5
+  VALUE: ZEP-SYRS-16
 
 [REQUIREMENT]
 UID: ZEP-SRS-1-10
@@ -155,7 +155,7 @@ The Zephyr RTOS shall provide an interface to schedule multiple threads.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-5
+  VALUE: ZEP-SYRS-16
 
 [REQUIREMENT]
 UID: ZEP-SRS-1-11
@@ -171,9 +171,9 @@ As a Zephyr RTOS user, I want to be able to pass specific option to a thread.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-123
+  VALUE: ZEP-SYRS-15
 - TYPE: Parent
-  VALUE: ZEP-5
+  VALUE: ZEP-SYRS-16
 
 [REQUIREMENT]
 UID: ZEP-SRS-1-12
@@ -189,6 +189,6 @@ As a Zephyr RTOS user, I want to be able to set a thread specific custom area fo
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-123
+  VALUE: ZEP-SYRS-15
 - TYPE: Parent
-  VALUE: ZEP-5
+  VALUE: ZEP-SYRS-16
