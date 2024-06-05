@@ -99,19 +99,33 @@ TYPE: High Level
 COMPONENT: Interrupts
 TITLE: Interrupt Management
 STATEMENT: >>>
-The Zephyr RTOS shall provide a framework for interrupt management.
+The Zephyr RTOS shall provide a framework for interrupt and interrupt service routine management.
 <<<
 USER_STORY: >>>
-As the Zephyr RTOS user I want the Kernel to mask the HAL interfaces so I can exclusively use Zephyr Kernel calls to configure and enable interrupt hardware and install interrupt software handlers.
+As the Zephyr RTOS user I want the Kernel to provide abstracted interfaces to 
+the platform enabling me to implement standard interrupts interrupt service routines 
+without detailed knowledge of the platform architecture and programming model. 
 <<<
-REVIEW_COMMENT: >>>
-Tim: The user story depends on understanding the role of the HAL and Architecture Interfaces.  
-This understanding will also impact the Software Requirements. Should we add:
-'Given that interrupt configuration and behavior is hardware dependent, handled by the 
-platform specific HAL, and accessed by a predefined set of Architecture interfaces.' OR
 
-Do interrupts belong under Architecture.
+[REQUIREMENT]
+UID: ZEP-39-1
+STATUS: Draft
+TYPE: High Level
+COMPONENT: Interrupts
+TITLE: Direct ISR, Platform Specific helpers.
+STATEMENT: >>>
+Zephyr RTOS shall support development of direct ISRs by providing platform specific 
+code fragments and factory functions including, minimal header instructions, 
+minimal footer instructions, low power termination, and ISR construction.
 <<<
+USER_STORY: >>>
+As the Zephyr RTOS user I want the Kernel to provide support for implementing standard low latency
+and low power interrupt service routines without detailed knowledge of the platform architecture 
+and programming model.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-39
 
 [REQUIREMENT]
 UID: ZEP-40
