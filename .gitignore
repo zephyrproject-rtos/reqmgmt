@@ -11,3 +11,7 @@ Copy of Zephyr LTS Requirements - 20220301.xlsx
 output/
 output.zip
 
+# My Misc
+ReqDocsHtml.bat
+ReqDocsHtml2Pdf.bat
+docs-Copy/
