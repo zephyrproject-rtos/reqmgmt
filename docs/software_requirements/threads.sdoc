@@ -68,7 +68,7 @@ TYPE: Functional
 COMPONENT: Threads
 TITLE: Creating threads
 STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to create (start) a thread.
+The Zephyr RTOS shall provide a mechanism to create a thread.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -156,10 +156,7 @@ TYPE: Functional
 COMPONENT: Threads
 TITLE: Thread states
 STATEMENT: >>>
-Threads shall have different states to fulfill the Life-cycle of a thread
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user, I want to know in what state a specific thread is.
+Threads shall have different states during their lifetime.
 <<<
 RELATIONS:
 - TYPE: Parent
