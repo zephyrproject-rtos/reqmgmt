@@ -4,7 +4,7 @@ ELEMENTS:
   FIELDS:
   - TITLE: UID
     TYPE: String
-    REQUIRED: True
+    REQUIRED: False
   - TITLE: STATUS
     TYPE: String
     REQUIRED: True
