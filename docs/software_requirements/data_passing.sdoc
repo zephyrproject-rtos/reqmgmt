@@ -5,6 +5,11 @@ REQ_PREFIX: ZEP-SRS-15-
 [GRAMMAR]
 IMPORT_FROM_FILE: software_requirements.sgra
 
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
 [REQUIREMENT]
 UID: ZEP-SRS-15-1
 STATUS: Draft

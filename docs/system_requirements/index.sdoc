@@ -5,6 +5,11 @@ REQ_PREFIX: ZEP-SYRS-
 [GRAMMAR]
 IMPORT_FROM_FILE: system_requirements.sgra
 
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
 [REQUIREMENT]
 UID: ZEP-SYRS-1
 STATUS: Draft
