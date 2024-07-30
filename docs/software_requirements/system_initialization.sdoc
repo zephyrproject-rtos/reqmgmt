@@ -10,8 +10,7 @@ STATEMENT: >>>
 SPDX-License-Identifier: Apache-2.0
 <<<
 
-[FREETEXT]
-
+[TEXT]
+STATEMENT: >>>
 TBD
-
-[/FREETEXT]
+<<<
