@@ -9,7 +9,7 @@ ELEMENTS:
     TYPE: String
     REQUIRED: True
   - TITLE: TYPE
-    TYPE: String
+    TYPE: SingleChoice(Functional, Non-Functional)
     REQUIRED: True
   - TITLE: COMPONENT
     TYPE: String
