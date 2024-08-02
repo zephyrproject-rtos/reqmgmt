@@ -103,7 +103,7 @@ The Zephyr RTOS shall provide a framework for interrupt and interrupt service ro
 USER_STORY: >>>
 As the Zephyr RTOS user I want the Kernel to provide abstracted interfaces to 
 the platform enabling me to implement standard interrupts interrupt service routines 
-without detailed knowledge of the platform architecture and programming model. 
+without detailed knowledge of the platform architecture and programming model.
 <<<
 
 [REQUIREMENT]
@@ -268,18 +268,20 @@ As a Zephyr RTOS user, I want to be able to give my threads different priorities
 
 [/SECTION]
 
+[SECTION]
+TITLE: Timers
+
 [REQUIREMENT]
 UID: ZEP-SYRS-18
 STATUS: Draft
-TYPE: High Level
+TYPE: Non-Functional
 COMPONENT: Timers
-TITLE: Timers
+TITLE: Time based events
 STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for managing time-based events.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user, I want to start, suspend, resume and stop timers which shall trigger an event on a set expiration time.
-<<<
+
+[/SECTION]
 
 [REQUIREMENT]
 UID: ZEP-SYRS-19
