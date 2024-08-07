@@ -293,3 +293,18 @@ Zepyhr shall provide a framework mechanism for tracing low level system operatio
 USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to trace different OS operations.
 <<<
+
+[SECTION]
+TITLE: Condition Variables
+
+[REQUIREMENT]
+UID: ZEP-SYRS-21
+STATUS: Draft
+TYPE: Non-Functional
+COMPONENT: Condition Variables
+TITLE: Condition Variables
+STATEMENT: >>>
+The Zephyr RTOS shall provide a framework to synchronize threads based on a condition variable.
+<<<
+
+[/SECTION]

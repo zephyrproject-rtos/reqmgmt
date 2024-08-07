@@ -1,0 +1,123 @@
+[DOCUMENT]
+TITLE: Condition Variables
+REQ_PREFIX: ZEP-SRS-21-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[REQUIREMENT]
+UID: ZEP-SRS-21-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Condition Variables
+TITLE: Dynamic initialization of condition variables
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a condition variable dynamically (at runtime).
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-20
+
+[REQUIREMENT]
+UID: ZEP-SRS-21-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Condition Variables
+TITLE: Static initialization of condition variables
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a condition variable statically (at compile time).
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-20
+
+[REQUIREMENT]
+UID: ZEP-SRS-21-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Condition Variables
+TITLE: Signal one waiting thread
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to signal one waiting thread when a condition is met.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-20
+
+[REQUIREMENT]
+UID: ZEP-SRS-21-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Condition Variables
+TITLE: Signal multiple waiting threads
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to signal all waiting threads when a condition is met.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-20
+
+[REQUIREMENT]
+UID: ZEP-SRS-21-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Condition Variables
+TITLE: Wait on a condition variable
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for a thread to wait on a condition variable.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-20
+
+[REQUIREMENT]
+UID: ZEP-SRS-21-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Condition Variables
+TITLE: Wait timeout on a condition variable
+STATEMENT: >>>
+When waiting on a condition variable, a timeout value shall be specified.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-20
+
+[REQUIREMENT]
+UID: ZEP-SRS-21-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Condition Variables
+TITLE: Wait timeout occurence
+STATEMENT: >>>
+When a timeout occurs while waiting on a condition variable, the thread shall be unblocked and a timeout error shall be returned.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-20
+
+[REQUIREMENT]
+UID: ZEP-SRS-21-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Condition Variables
+TITLE: Release mutex on wait
+STATEMENT: >>>
+If a thread is waiting on a condition variable, the thread shall release the current owned mutex independently.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-20
+
+[REQUIREMENT]
+UID: ZEP-SRS-21-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Condition Variables
+TITLE: Unblock a waiting thread
+STATEMENT: >>>
+A waiting thread shall only be unblocked if a signal is sent to the condition variable.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-20
