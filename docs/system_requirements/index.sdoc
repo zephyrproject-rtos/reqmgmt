@@ -13,7 +13,7 @@ SPDX-License-Identifier: Apache-2.0
 [REQUIREMENT]
 UID: ZEP-SYRS-1
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 TITLE: Architecture Layer Interface
 STATEMENT: >>>
@@ -26,7 +26,7 @@ As a Zephyr RTOS user I want to be able to easily switch my application to a dif
 [REQUIREMENT]
 UID: ZEP-SYRS-2
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 TITLE: Support multiprocessor management
 STATEMENT: >>>
@@ -42,7 +42,7 @@ RELATIONS:
 [REQUIREMENT]
 UID: ZEP-SYRS-3
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: C Library
 TITLE: Support Subset of Standard C Library
 STATEMENT: >>>
@@ -55,7 +55,7 @@ As a Zephyr RTOS user I want to have a selection of standard C library implement
 [REQUIREMENT]
 UID: ZEP-SYRS-4
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Device Drivers
 TITLE: Device Driver Abstraction
 STATEMENT: >>>
@@ -68,7 +68,7 @@ As a Zephyr RTOS user I want my application to be portable between different MCU
 [REQUIREMENT]
 UID: ZEP-SYRS-5
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Exception and Error Handling
 TITLE: Fatal error and exception handling
 STATEMENT: >>>
@@ -81,7 +81,7 @@ As a Zephyr RTOS user I want errors and exceptions to handled and react accordin
 [REQUIREMENT]
 UID: ZEP-SYRS-6
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: File Systems
 TITLE: Common File system operation support
 STATEMENT: >>>
@@ -94,32 +94,32 @@ As a Zephyr RTOS user I want a posix / c like file system access to store data.
 [REQUIREMENT]
 UID: ZEP-SYRS-7
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Interrupt Management
 STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for interrupt and interrupt service routine management.
 <<<
 USER_STORY: >>>
-As the Zephyr RTOS user I want the Kernel to provide abstracted interfaces to 
-the platform enabling me to implement standard interrupts interrupt service routines 
-without detailed knowledge of the platform architecture and programming model. 
+As the Zephyr RTOS user I want the Kernel to provide abstracted interfaces to
+the platform enabling me to implement standard interrupts interrupt service routines
+without detailed knowledge of the platform architecture and programming model.
 <<<
 
 [REQUIREMENT]
 UID: ZEP-SYRS-20
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Direct ISR, Platform Specific helpers.
 STATEMENT: >>>
-Zephyr RTOS shall support development of direct ISRs by providing platform specific 
-code fragments and factory functions including, minimal header instructions, 
+Zephyr RTOS shall support development of direct ISRs by providing platform specific
+code fragments and factory functions including, minimal header instructions,
 minimal footer instructions, low power termination, and ISR construction.
 <<<
 USER_STORY: >>>
 As the Zephyr RTOS user I want the Kernel to provide support for implementing standard low latency
-and low power interrupt service routines without detailed knowledge of the platform architecture 
+and low power interrupt service routines without detailed knowledge of the platform architecture
 and programming model.
 <<<
 RELATIONS:
@@ -129,7 +129,7 @@ RELATIONS:
 [REQUIREMENT]
 UID: ZEP-SYRS-8
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Logging
 TITLE: Logging
 STATEMENT: >>>
@@ -142,7 +142,7 @@ As a Zephyr RTOS user I want to be able to log application defined events as wel
 [REQUIREMENT]
 UID: ZEP-SYRS-9
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Memory Management
 TITLE: Memory Management framework
 STATEMENT: >>>
@@ -155,7 +155,7 @@ As a Zephyr RTOS user I want memory to be allocated and protected to my applicat
 [REQUIREMENT]
 UID: ZEP-SYRS-10
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Power Management
 TITLE: Power Management
 STATEMENT: >>>
@@ -171,7 +171,7 @@ TITLE: Multi core and SMP
 [REQUIREMENT]
 UID: ZEP-SYRS-11
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: SMP and Multi core
 TITLE: Multiple CPU scheduling
 STATEMENT: >>>
@@ -184,7 +184,7 @@ As a Zephyr RTOS user I want Zephyr OS to run on MCUs/CPUs with one or more CPU 
 [REQUIREMENT]
 UID: ZEP-SYRS-12
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: SMP and Multi core
 TITLE: Scheduling
 STATEMENT: >>>
@@ -202,7 +202,7 @@ TITLE: Thread Synchronization
 [REQUIREMENT]
 UID: ZEP-SYRS-13
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Mutex
 TITLE: Mutex
 STATEMENT: >>>
@@ -215,7 +215,7 @@ As a Zephyr RTOS user I want to able to exchange information between threads in 
 [REQUIREMENT]
 UID: ZEP-SYRS-14
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Semaphore
 TITLE: Counting Semaphore
 STATEMENT: >>>
@@ -230,7 +230,7 @@ TITLE: Threads
 [REQUIREMENT]
 UID: ZEP-SYRS-15
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Threads
 TITLE: Thread support
 STATEMENT: >>>
@@ -243,7 +243,7 @@ As a Zephyr RTOS user, I want to be able to have support for the kernel objects 
 [REQUIREMENT]
 UID: ZEP-SYRS-16
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Threads
 TITLE: Thread management
 STATEMENT: >>>
@@ -256,7 +256,7 @@ As a Zephyr RTOS user, I want to be able to manage the execute of multiple threa
 [REQUIREMENT]
 UID: ZEP-SYRS-17
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Threads
 TITLE: Thread priority
 STATEMENT: >>>
@@ -271,7 +271,7 @@ As a Zephyr RTOS user, I want to be able to give my threads different priorities
 [REQUIREMENT]
 UID: ZEP-SYRS-18
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Timers
 TITLE: Timers
 STATEMENT: >>>
@@ -284,7 +284,7 @@ As a Zephyr RTOS user, I want to start, suspend, resume and stop timers which sh
 [REQUIREMENT]
 UID: ZEP-SYRS-19
 STATUS: Draft
-TYPE: High Level
+TYPE: Functional
 COMPONENT: Tracing
 TITLE: Tracing
 STATEMENT: >>>
