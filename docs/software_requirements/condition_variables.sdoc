@@ -38,7 +38,7 @@ TYPE: Functional
 COMPONENT: Condition Variables
 TITLE: Signal one waiting thread
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to signal one waiting thread when a condition is met.
+The Zephyr RTOS shall provide a mechanism to signal the highest priorite waiting thread when a condition is met.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -77,7 +77,7 @@ TYPE: Functional
 COMPONENT: Condition Variables
 TITLE: Wait timeout on a condition variable
 STATEMENT: >>>
-When waiting on a condition variable, a timeout value shall be specified.
+When waiting on a condition variable, the thread shall specify a timeout value.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -116,7 +116,7 @@ TYPE: Functional
 COMPONENT: Condition Variables
 TITLE: Unblock a waiting thread
 STATEMENT: >>>
-A waiting thread shall only be unblocked if a signal is sent to the condition variable.
+henever some thread signals a condition variable the Zephyr RTOS shall unblock the highest priority thread currently waiting for this condition variable.
 <<<
 RELATIONS:
 - TYPE: Parent
