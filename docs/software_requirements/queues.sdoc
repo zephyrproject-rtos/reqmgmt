@@ -77,7 +77,7 @@ TYPE: Functional
 COMPONENT: Queues
 TITLE: Queue get item
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to get a data item from a queue.
+The Zephyr RTOS shall provide a mechanism to get and remove a data item from a queue.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -90,7 +90,7 @@ TYPE: Functional
 COMPONENT: Queues
 TITLE: Queue get item timeout
 STATEMENT: >>>
-When a timout for the get mechanism to get a data item is configured, the zephyr RTOS shall wait
+When a timout for the get mechanism to get a data item is configured, the Zephyr RTOS shall wait
 that period to optain the data item from the queue.
 <<<
 RELATIONS:
@@ -167,9 +167,9 @@ UID: ZEP-SRS-20-13
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Queues
-TITLE: Queue add list
+TITLE: Queue merge slist to queue
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to a complete list of data items to a queue.
+The Zephyr RTOS shall provide a mechanism to merge a list of data items in slist format to a queue.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -180,13 +180,15 @@ UID: ZEP-SRS-20-14
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Queues
-TITLE: Queue add original list empty
+TITLE: Original list empty using queue merge slist
 STATEMENT: >>>
-If a list is added to the queue via the add mechanism, the original list of data items shall be empty.
+If a list is added to the queue via the merge slist mechanism, the original list of data items shall be empty.
 <<<
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-21
+- TYPE: Parent
+  VALUE: ZEP-SRS-20-13
 
 [REQUIREMENT]
 UID: ZEP-SRS-20-15
