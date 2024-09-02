@@ -101,8 +101,8 @@ STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for interrupt and interrupt service routine management.
 <<<
 USER_STORY: >>>
-As the Zephyr RTOS user I want the Kernel to provide abstracted interfaces to
-the platform enabling me to implement standard interrupts interrupt service routines
+As the Zephyr RTOS user I want the Kernel to provide abstracted interfaces to 
+the platform enabling me to implement standard interrupts interrupt service routines 
 without detailed knowledge of the platform architecture and programming model.
 <<<
 
@@ -293,3 +293,18 @@ Zepyhr shall provide a framework mechanism for tracing low level system operatio
 USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to trace different OS operations.
 <<<
+
+[SECTION]
+TITLE: Queues
+
+[REQUIREMENT]
+UID: ZEP-SYRS-21
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queues data passing
+STATEMENT: >>>
+The Zephyr RTOS shall implement a queue which can be used to pass data between threads and interrupt service routines.
+<<<
+
+[/SECTION]
