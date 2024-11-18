@@ -26,7 +26,7 @@ As a Zephyr OS user I want to be able to create a new file or overwrite an exist
 [REQUIREMENT]
 UID: ZEP-SRS-17-2
 STATUS: Draft
-TYPE: Functional
+TYPE: Non-Functional
 COMPONENT: File System
 TITLE: Open files
 STATEMENT: >>>
