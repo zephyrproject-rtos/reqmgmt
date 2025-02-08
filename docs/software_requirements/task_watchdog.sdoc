@@ -1,0 +1,102 @@
+[DOCUMENT]
+TITLE: Task Watchdog
+REQ_PREFIX: ZEP-SRS-20-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Task Watchdog
+TITLE: Start monitoring task
+STATEMENT: >>>
+The Zephyr RTOS shall provide a method to create and start a watchdog channel's timer.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want to guarantee that my background task is running as intended.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Task Watchdog
+TITLE: Stop monitoring task
+STATEMENT: >>>
+The Zephyr RTOS shall provide a method to stop and destroy a watchdog channel's timer.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want the option of canceling the monitoring of my background task.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Task Watchdog
+TITLE: Restart monitoring task
+STATEMENT: >>>
+The Zephyr RTOS shall provide a method to restart a watchdog channel's timer.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want my background task to periodically inform the Task Watchdog feature that it is still running to avoid any corrective actions.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Task Watchdog
+TITLE: Notify on task failure
+STATEMENT: >>>
+When the application specifies a notification method, if a watchdog channel's timer expires, the Zephyr RTOS shall notify the application.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want the option to get a notification if my background task stops running as intended so that I can take corrective action.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Task Watchdog
+TITLE: Reset on task failure
+STATEMENT: >>>
+When the application does not specify a notification method, if a watchdog channel's timer expires, the Zephyr RTOS shall reset.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want the option of having the Zephyr RTOS reset if my background task stops running as intended.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Task Watchdog
+TITLE: Hardware watchdog fallback
+STATEMENT: >>>
+When the hardware watchdog fallback feature is enabled, if the Task Watchdog stops working, the Zephyr RTOS shall reset.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want a hardware watchdog to cause a reset if the Zephyr scheduler stops scheduling all tasks at once or if the watchdog channel timers stop running.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Task Watchdog
+TITLE: Detect RAM corruption
+STATEMENT: >>>
+When the RAM corruption detection feature is enabled, if any internal Task Watchdog variables are corrupted, the Zephyr RTOS shall reset.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want to guarantee that RAM corruption will not compromise the Task Watchdog module's ability to meet its requirements.
+<<<
