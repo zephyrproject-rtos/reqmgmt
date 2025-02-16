@@ -20,7 +20,7 @@ STATEMENT: >>>
 The Zephyr RTOS shall provide a method to create and start a watchdog channel's timer.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS user, I want to guarantee that my background task is running as intended.
+As a Zephyr RTOS user, I want to guarantee that my task is running as intended.
 <<<
 
 [REQUIREMENT]
@@ -33,7 +33,7 @@ STATEMENT: >>>
 The Zephyr RTOS shall provide a method to stop and destroy a watchdog channel's timer.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS user, I want the option of canceling the monitoring of my background task.
+As a Zephyr RTOS user, I want the option of canceling the monitoring of my task.
 <<<
 
 [REQUIREMENT]
@@ -46,7 +46,7 @@ STATEMENT: >>>
 The Zephyr RTOS shall provide a method to restart a watchdog channel's timer.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS user, I want my background task to periodically inform the Task Watchdog feature that it is still running to avoid any corrective actions.
+As a Zephyr RTOS user, I want my task to periodically inform the Task Watchdog feature that it is still running to avoid any corrective actions.
 <<<
 
 [REQUIREMENT]
@@ -59,7 +59,7 @@ STATEMENT: >>>
 When the application specifies a notification method, if a watchdog channel's timer expires, the Zephyr RTOS shall notify the application.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS user, I want the option to get a notification if my background task stops running as intended so that I can take corrective action.
+As a Zephyr RTOS user, I want the option to get a notification if my task stops running as intended so that I can take corrective action.
 <<<
 
 [REQUIREMENT]
@@ -72,7 +72,7 @@ STATEMENT: >>>
 When the application does not specify a notification method, if a watchdog channel's timer expires, the Zephyr RTOS shall reset.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS user, I want the option of having the Zephyr RTOS reset if my background task stops running as intended.
+As a Zephyr RTOS user, I want the option of having the Zephyr RTOS reset if my task stops running as intended.
 <<<
 
 [REQUIREMENT]
