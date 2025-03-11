@@ -5,6 +5,11 @@ This repository contains a preliminary work on the Zephyr Project requirements.
 The requirements are captured using
 [StrictDoc](https://github.com/strictdoc-project/strictdoc).
 
+## Deployed Documentation
+
+The requirements documentation is available online at:
+[https://zephyrproject-rtos.github.io/reqmgmt](https://zephyrproject-rtos.github.io/reqmgmt)
+
 ## System requirements
 
 The requirements shall be browsable and editable on all major operating systems
