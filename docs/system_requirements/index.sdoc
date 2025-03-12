@@ -268,18 +268,20 @@ As a Zephyr RTOS user, I want to be able to give my threads different priorities
 
 [/SECTION]
 
+[SECTION]
+TITLE: Timers
+
 [REQUIREMENT]
 UID: ZEP-SYRS-18
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Timers
-TITLE: Timers
+TITLE: Time based events
 STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for managing time-based events.
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user, I want to start, suspend, resume and stop timers which shall trigger an event on a set expiration time.
-<<<
+
+[/SECTION]
 
 [REQUIREMENT]
 UID: ZEP-SYRS-19
