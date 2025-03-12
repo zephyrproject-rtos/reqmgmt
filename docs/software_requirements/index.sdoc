@@ -71,4 +71,4 @@ FILE: tracing.sdoc
 FILE: condition_variables.sdoc
 
 [DOCUMENT_FROM_FILE]
-FILE: mailbox.sdoc
+FILE: mailboxes.sdoc
