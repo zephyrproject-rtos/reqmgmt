@@ -78,3 +78,6 @@ FILE: lifos.sdoc
 
 [DOCUMENT_FROM_FILE]
 FILE: fifos.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: mailbox.sdoc
