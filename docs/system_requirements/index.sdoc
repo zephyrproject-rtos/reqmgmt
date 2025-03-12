@@ -353,3 +353,14 @@ The Zephyr RTOS shall implement FIFOs which can be used to pass data between thr
 <<<
 
 [[/SECTION]]
+[/SECTION]
+
+[SECTION]
+TITLE: Mailboxes
+COMPONENT: Mailboxes
+TITLE: Mailboxes
+STATEMENT: >>>
+The Zephyr RTOS shall provide a framework to pass messages between threads.
+<<<
+
+[/SECTION]
