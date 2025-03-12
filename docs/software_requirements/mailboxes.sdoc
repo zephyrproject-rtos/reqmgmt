@@ -22,6 +22,9 @@ The Mailbox module shall provide a mechanism to define and initialize a mailbox 
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to be able to initialize a mailbox instance so that it is ready to be used for message exchange between threads.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-2
@@ -35,6 +38,9 @@ The Mailbox module shall provide a mechanism to statically define and initialize
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to be able to statically define and initialize a mailbox at compile time so that it is available immediately without runtime initialization.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-3
@@ -45,6 +51,9 @@ TITLE: Queue Initialization
 STATEMENT: >>>
 When a mailbox is initialized, the Mailbox module shall set both the send queue and receive queue of that mailbox to empty.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-4
@@ -55,6 +64,9 @@ TITLE: Message Size Support
 STATEMENT: >>>
 The Mailbox module shall support message data containing zero or more bytes.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-5
@@ -68,6 +80,9 @@ The Mailbox module shall support messages of any size that the application requi
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to be able to send messages of different sizes using the same mailbox so that I can efficiently communicate different types of information between threads.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-6
@@ -78,6 +93,9 @@ TITLE: Message Descriptor Usage
 STATEMENT: >>>
 The Mailbox module shall use message descriptors to specify where a message's data is located and how the message is to be handled by the mailbox.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-7
@@ -88,6 +106,9 @@ TITLE: Message Descriptor Updates
 STATEMENT: >>>
 The Mailbox module shall update message descriptor fields during the exchange to allow both threads to know what has occurred during the message exchange process.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-8
@@ -98,6 +119,9 @@ TITLE: Buffer Data Transfer
 STATEMENT: >>>
 Where message data is in a buffer, the Mailbox module shall correctly handle the data transfer between the sending and receiving threads.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-9
@@ -111,6 +135,9 @@ Where message data is non-existent (i.e., an empty message), the Mailbox module 
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to be able to send signals or notifications that don't carry data so that I can trigger actions in other threads without the overhead of data transfer.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-10
@@ -124,6 +151,9 @@ The Mailbox module shall provide a mechanism for a thread to send a message in a
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to be able to send a message and wait for it to be processed so that I can be sure the message was received before continuing execution.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-11
@@ -134,6 +164,9 @@ TITLE: Synchronous Sending Behavior
 STATEMENT: >>>
 When k_mbox_put is called, the Mailbox module shall block the sending thread until a receiver processes the message or the timeout expires.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-12
@@ -147,6 +180,9 @@ If the synchronous message send operation times out before a receiver processes 
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to be able to limit how long my thread waits for a message to be received so that I can implement fallback behavior if communication takes too long.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-13
@@ -160,6 +196,9 @@ The Mailbox module shall provide a mechanism for a thread to send a message in a
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to be able to send a message without waiting for it to be processed so that my thread can continue execution immediately.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-14
@@ -170,6 +209,9 @@ TITLE: Asynchronous Sending Behavior
 STATEMENT: >>>
 When an asynchronous message is sent, the Mailbox module shall not wait for a receiver to process the message before returning to the caller.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-15
@@ -183,6 +225,9 @@ When an asynchronous send command receives a semaphore, the Mailbox module shall
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to be notified when my asynchronously sent message has been fully processed so that I can perform follow-up actions without polling.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-16
@@ -196,6 +241,9 @@ The Mailbox module shall provide a mechanism for a thread to receive a message w
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to be able to receive messages from other threads with control over how long to wait for a message to arrive.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-17
@@ -209,6 +257,9 @@ The Mailbox module shall provide a mechanism for a thread to retrieve mailbox me
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to be able to extract message data into my buffer after message reception so that I can process the information contained in the message.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-18
@@ -219,6 +270,9 @@ TITLE: Message Reception Blocking
 STATEMENT: >>>
 When message reception is requested and no message is available, the Mailbox module shall block the receiving thread until a message is available or the timeout expires.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-19
@@ -232,6 +286,9 @@ If the message receive operation times out before a message becomes available, t
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to be able to limit how long my thread waits for a message to arrive so that I can implement fallback behavior if communication takes too long.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-20
@@ -242,6 +299,9 @@ TITLE: Thread-Only Message Exchange
 STATEMENT: >>>
 The Mailbox module shall allow only threads, not ISRs, to exchange messages using the mailbox functions.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-21
@@ -252,6 +312,9 @@ TITLE: Single-Receiver Message Delivery
 STATEMENT: >>>
 The Mailbox module shall ensure that each message may be received by only one thread (i.e., point-to-multipoint and broadcast messaging is not supported).
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-22
@@ -265,6 +328,9 @@ The Mailbox module shall handle messages non-anonymously, allowing both the send
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to be able to identify the source or destination of messages so that I can implement thread-specific handling of message content.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-23
@@ -275,6 +341,9 @@ TITLE: Receiver Thread Queuing
 STATEMENT: >>>
 While a thread is waiting to receive a message, the Mailbox module shall keep the thread in the receive queue until a matching message arrives or the waiting period expires.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-24
@@ -288,6 +357,9 @@ When multiple threads are waiting on an empty mailbox, the Mailbox module shall 
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want message delivery to respect thread priorities so that higher priority tasks receive messages before lower priority ones.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-25
@@ -298,6 +370,9 @@ TITLE: FIFO Message Delivery
 STATEMENT: >>>
 When multiple messages are available in the send queue, the Mailbox module shall deliver them in FIFO (First In, First Out) order to waiting threads.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-26
@@ -311,6 +386,9 @@ The Mailbox module shall support an arbitrary number of mailboxes, limited only 
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to be able to create as many mailboxes as my application needs without arbitrary limitations so that I can design my communication architecture freely.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-27
@@ -324,6 +402,9 @@ The Mailbox module shall ensure proper cleanup of message resources when operati
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want the system to automatically clean up resources when operations fail or time out so that my application doesn't experience memory leaks.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-28
@@ -337,6 +418,9 @@ If an error occurs during any mailbox operation, the Mailbox module shall return
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to receive specific error codes when mailbox operations fail so that I can implement appropriate error handling and recovery.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-22-29
@@ -350,3 +434,6 @@ The Mailbox module shall handle invalid parameters by returning appropriate erro
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want the system to validate my inputs and return errors rather than crash when I provide invalid parameters so that I can develop more robust applications.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
