@@ -368,3 +368,18 @@ The Zephyr RTOS shall provide a framework to pass messages of arbitrary size bet
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Scheduling
+
+[REQUIREMENT]
+UID: ZEP-SYRS-26
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Scheduling
+TITLE: Scheduling
+STATEMENT: >>>
+The Zephyr RTOS shall provide a framework to allow an application's threads to share the CPU.
+<<<
+
+[[/SECTION]]
