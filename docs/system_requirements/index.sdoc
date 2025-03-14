@@ -308,3 +308,18 @@ The Zephyr RTOS shall provide a framework to synchronize threads based on a cond
 <<<
 
 [/SECTION]
+
+[SECTION]
+TITLE: Scheduling
+
+[REQUIREMENT]
+UID: ZEP-SYRS-23
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Scheduling
+TITLE: Scheduling
+STATEMENT: >>>
+The Zephyr RTOS shall provide a framework to allow an application's threads to share the CPU.
+<<<
+
+[/SECTION]
