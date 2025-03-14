@@ -30,7 +30,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Deadline Enforcement (EDF)
 STATEMENT: >>>
-When EDF scheduling is enabled, the system shall prioritize threads with equal static priority based on earliest deadline.
+When earliest-deadline-first (EDF) scheduling is enabled, the scheduler shall prioritize threads with equal static priority based on earliest deadline.
 <<<
 
 [REQUIREMENT]
@@ -40,13 +40,13 @@ TYPE: Non-Functional
 COMPONENT: Scheduling
 TITLE: Ready Queue Scalability
 STATEMENT: >>>
-The scheduler shall support configurable ready queue implementations (DUMB/RBTREE/MULTIQ) with O(1) or O(log n) time complexity as documented.
+The scheduler shall support configurable ready queue implementations.
 <<<
 
 [/SECTION]
 
 [SECTION]
-TITLE: Rescheduling Points
+TITLE: Reschedule Points
 
 [REQUIREMENT]
 UID: ZEP-SRS-23-004
@@ -55,7 +55,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Mandatory Context Switch Triggers
 STATEMENT: >>>
-The system shall trigger rescheduling during: thread state transitions (→SUSPENDED/WAITING), ISR returns, explicit k_yield() calls, and time slice expiration.
+The scheduler shall trigger rescheduling during: thread state transitions (→SUSPENDED/WAITING), ISR returns, explicit k_yield() calls, and time slice expiration.
 <<<
 
 [REQUIREMENT]
@@ -65,7 +65,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Atomic Rescheduling
 STATEMENT: >>>
-Rescheduling shall occur atomically at designated points to prevent partial state corruption during thread swaps.
+The scheduler shall perform rescheduling atomically at designated points to prevent partial state corruption during thread swaps.
 <<<
 
 [/SECTION]
@@ -80,7 +80,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Cooperative Thread Non-Preemption
 STATEMENT: >>>
-Cooperative threads (negative priority) shall retain execution until explicitly yielding or entering unready state.
+The scheduler shall ensure Cooperative threads (negative priority) retain execution until explicitly yielding or entering unready state.
 <<<
 
 [REQUIREMENT]
@@ -90,7 +90,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Preemptive Thread Interruption
 STATEMENT: >>>
-Preemptive threads (≥0 priority) shall be interrupted immediately by higher-priority ready threads.
+The scheduler shall allow Preemptive threads (≥0 priority) to be interrupted immediately by higher-priority ready threads.
 <<<
 
 [/SECTION]
@@ -105,7 +105,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Cooperative Voluntary Yielding
 STATEMENT: >>>
-Cooperative threads invoking k_yield() shall allow equal/higher priority threads to execute before resuming.
+The scheduler shall provide a mechanism for Cooperative threads to allow equal/higher priority threads to execute before resuming.
 <<<
 
 [REQUIREMENT]
@@ -115,7 +115,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Preemptive Time Quantum
 STATEMENT: >>>
-Preemptive threads shall relinquish CPU after a configurable time slice (system ticks) if equal-priority threads are ready.
+The scheduler shall ensure Preemptive threads relinquish CPU after a configurable time slice (system ticks) if equal-priority threads are ready.
 <<<
 
 [/SECTION]
@@ -130,7 +130,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Non-Preemptible Critical Sections
 STATEMENT: >>>
-k_sched_lock() shall treat preemptive threads as cooperative until k_sched_unlock().
+The scheduler shall provide a mechanism to treat preemptive threads as cooperative until a unlock function is called.
 <<<
 
 [/SECTION]
@@ -143,9 +143,19 @@ UID: ZEP-SRS-23-011
 STATUS: Active
 TYPE: Functional
 COMPONENT: Scheduling
-TITLE: Sleep Duration Accuracy
+TITLE: Thread Sleeping
 STATEMENT: >>>
-k_sleep() shall delay thread execution within ±1 tick of requested duration.
+The scheduler shall provide a mechanism to delay thread execution within ±1 tick of requested duration.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-23-011
+STATUS: Active
+TYPE: Functional
+COMPONENT: Scheduling
+TITLE: Thread Waking
+STATEMENT: >>>
+The scheduler shall provide a mechanism to for a thread to wake another thread. Note: A wakeup can be attempted on a thread that is already awake - this has no effect.
 <<<
 
 [REQUIREMENT]
@@ -155,7 +165,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Busy Wait Non-Relinquishing
 STATEMENT: >>>
-k_busy_wait() shall not yield CPU or trigger rescheduling during delay.
+The scheduler shall provide a mechanism to perform a busy wait where the scheduler will not yield CPU or trigger rescheduling during delay.
 <<<
 
 [/SECTION]
@@ -180,7 +190,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Cross-CPU Atomicity
 STATEMENT: >>>
-Spinlocks shall enforce cross-CPU mutual exclusion for scheduler data structures.
+The scheduler shall ensure that Spinlocks enforce cross-CPU mutual exclusion for scheduler data structures.
 <<<
 
 [/SECTION]
@@ -190,16 +200,6 @@ TITLE: Safety and Compliance
 
 [REQUIREMENT]
 UID: ZEP-SRS-23-015
-STATUS: Active
-TYPE: Non-Functional
-COMPONENT: Scheduling
-TITLE: MISRA-C:2012 Adherence
-STATEMENT: >>>
-All scheduler code shall comply with MISRA-C:2012 guidelines with documented deviations.
-<<<
-
-[REQUIREMENT]
-UID: ZEP-SRS-23-016
 STATUS: Active
 TYPE: Functional
 COMPONENT: Scheduling
