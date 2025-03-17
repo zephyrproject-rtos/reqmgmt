@@ -360,7 +360,7 @@ TITLE: Mailboxes
 COMPONENT: Mailboxes
 TITLE: Mailboxes
 STATEMENT: >>>
-The Zephyr RTOS shall provide a framework to pass messages between threads.
+The Zephyr RTOS shall provide a framework to pass messages of arbitrary size between threads.
 <<<
 
 [/SECTION]
