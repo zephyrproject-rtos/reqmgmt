@@ -15,9 +15,9 @@ UID: ZEP-SRS-22-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Mailbox Initialization - Run Time
+TITLE: Mailbox Initialization At Run Time
 STATEMENT: >>>
-The Mailbox module shall provide a mechanism to define and initialize a mailbox at run time.
+The Zephyr RTOS shall provide a mechanism to define and initialize a mailbox at run time.
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to be able to initialize a mailbox instance so that it is ready to be used for message exchange between threads.
@@ -31,9 +31,9 @@ UID: ZEP-SRS-22-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Mailbox Initialization - Compile Time
+TITLE: Mailbox Initialization At Compile Time
 STATEMENT: >>>
-The Mailbox module shall provide a mechanism to statically define and initialize a mailbox at  compile time.
+The Zephyr RTOS shall provide a mechanism to statically define and initialize a mailbox object at compile time.
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want to be able to statically define and initialize a mailbox at compile time so that it is available immediately without runtime initialization.
@@ -49,7 +49,7 @@ TYPE: Functional
 COMPONENT: Mailboxes
 TITLE: Queue Initialization
 STATEMENT: >>>
-When a mailbox is initialized, the Mailbox module shall set both the send queue and receive queue of that mailbox to empty.
+When a mailbox is initialized, the Zephyr RTOS shall set both the send queue and receive queue of that mailbox to empty.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -62,7 +62,10 @@ TYPE: Functional
 COMPONENT: Mailboxes
 TITLE: Message Size Support
 STATEMENT: >>>
-The Mailbox module shall support message data containing zero or more bytes.
+The Zephyr RTOS shall support messages containing zero or more bytes of data.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS developer, I want to be able to send messages of different sizes using the same mailbox so that I can efficiently communicate different types of information between threads.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -73,12 +76,9 @@ UID: ZEP-SRS-22-5
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Variable Message Size
+TITLE: Message Descriptor Usage
 STATEMENT: >>>
-The Mailbox module shall support messages of any size that the application requires.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS developer, I want to be able to send messages of different sizes using the same mailbox so that I can efficiently communicate different types of information between threads.
+The Zephyr RTOS shall use message descriptors to specify where a message's data is located and how the message is to be handled by the mailbox.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -89,9 +89,9 @@ UID: ZEP-SRS-22-6
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Message Descriptor Usage
+TITLE: Mailbox Data Transfer
 STATEMENT: >>>
-The Mailbox module shall use message descriptors to specify where a message's data is located and how the message is to be handled by the mailbox.
+The Zephyr RTOS shall handle the data transfer between mailbox objects of the sending and receiving threads.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -102,9 +102,12 @@ UID: ZEP-SRS-22-7
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Message Descriptor Updates
+TITLE: Empty Message Support
 STATEMENT: >>>
-The Mailbox module shall update message descriptor fields during the exchange to allow both threads to know what has occurred during the message exchange process.
+Where message data is non-existent (i.e., an empty message), the Zephyr RTOS shall correctly handle the message exchange without requiring buffer allocation.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS developer, I want to be able to send signals or notifications that don't carry data so that I can trigger actions in other threads without the overhead of data transfer.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -115,9 +118,12 @@ UID: ZEP-SRS-22-8
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Buffer Data Transfer
+TITLE: Synchronous Message Sending
 STATEMENT: >>>
-Where message data is in a buffer, the Mailbox module shall correctly handle the data transfer between the sending and receiving threads.
+The Zephyr RTOS shall provide a mechanism for a thread to send message via a mailbox object in a synchronous manner with a timeout parameter.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS developer, I want to be able to send a message and wait for it to be processed so that I can be sure the message was received before continuing execution.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -128,12 +134,9 @@ UID: ZEP-SRS-22-9
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Empty Message Support
+TITLE: Synchronous Sending Behavior
 STATEMENT: >>>
-Where message data is non-existent (i.e., an empty message), the Mailbox module shall correctly handle the message exchange without requiring buffer allocation.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS developer, I want to be able to send signals or notifications that don't carry data so that I can trigger actions in other threads without the overhead of data transfer.
+When a synchronous message is sent, the Zephyr RTOS shall block the sending thread until a receiver processes the message or the timeout expires.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -144,12 +147,12 @@ UID: ZEP-SRS-22-10
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Synchronous Message Sending
+TITLE: Synchronous Send Timeout Handling
 STATEMENT: >>>
-The Mailbox module shall provide a mechanism for a thread to send a message in a synchronous manner with a timeout parameter.
+If the synchronous message send operation times out before a receiver processes the message, the Zephyr RTOS shall return an appropriate timeout error code to the sending thread.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS developer, I want to be able to send a message and wait for it to be processed so that I can be sure the message was received before continuing execution.
+As a Zephyr RTOS developer, I want to be able to limit how long my thread waits for a message to be received so that I can implement fallback behavior if communication takes too long.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -160,9 +163,12 @@ UID: ZEP-SRS-22-11
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Synchronous Sending Behavior
+TITLE: Asynchronous Message Sending
 STATEMENT: >>>
-When k_mbox_put is called, the Mailbox module shall block the sending thread until a receiver processes the message or the timeout expires.
+The Zephyr RTOS shall provide a mechanism for a thread to send a message in an asynchronous manner.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS developer, I want to be able to send a message without waiting for it to be processed so that my thread can continue execution immediately.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -173,12 +179,9 @@ UID: ZEP-SRS-22-12
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Synchronous Send Timeout Handling
+TITLE: Asynchronous Sending Behavior
 STATEMENT: >>>
-If the synchronous message send operation times out before a receiver processes the message, the Mailbox module shall return an appropriate timeout error code to the sending thread.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS developer, I want to be able to limit how long my thread waits for a message to be received so that I can implement fallback behavior if communication takes too long.
+When an asynchronous message is sent, the Zephyr RTOS shall not wait for a receiver to process the message before returning to the caller.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -189,12 +192,12 @@ UID: ZEP-SRS-22-13
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Asynchronous Message Sending
+TITLE: Asynchronous Completion Signaling
 STATEMENT: >>>
-The Mailbox module shall provide a mechanism for a thread to send a message in an asynchronous manner.
+When a sending thread provides a semaphore during an asynchronous send command using a mailbox object, the Zephyr RTOS shall give the semaphore when the message has been both received and completely processed by the receiver.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS developer, I want to be able to send a message without waiting for it to be processed so that my thread can continue execution immediately.
+As a Zephyr RTOS developer, I want to be notified when my asynchronously sent message has been fully processed so that I can perform follow-up actions without polling.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -205,9 +208,12 @@ UID: ZEP-SRS-22-14
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Asynchronous Sending Behavior
+TITLE: Message Reception
 STATEMENT: >>>
-When an asynchronous message is sent, the Mailbox module shall not wait for a receiver to process the message before returning to the caller.
+The Zephyr RTOS shall provide a mechanism for a thread to receive a message via a mailbox object with a timeout parameter.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS developer, I want to be able to receive messages from other threads with control over how long to wait for a message to arrive.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -218,12 +224,12 @@ UID: ZEP-SRS-22-15
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Asynchronous Completion Signaling
+TITLE: Message Data Retrieval
 STATEMENT: >>>
-When an asynchronous send command receives a semaphore, the Mailbox module shall give the semaphore when the message has been both received and completely processed by the receiver.
+The Zephyr RTOS shall provide a mechanism for a thread to retrieve message data via a mailbox object into a buffer and complete the message processing.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS developer, I want to be notified when my asynchronously sent message has been fully processed so that I can perform follow-up actions without polling.
+As a Zephyr RTOS developer, I want to be able to extract message data into my buffer after message reception so that I can process the information contained in the message.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -234,12 +240,9 @@ UID: ZEP-SRS-22-16
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Message Reception
+TITLE: Message Reception Blocking
 STATEMENT: >>>
-The Mailbox module shall provide a mechanism for a thread to receive a message with a timeout parameter.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS developer, I want to be able to receive messages from other threads with control over how long to wait for a message to arrive.
+When a receiving thread requests a message via a mailbox object and no message is available, the Zephyr RTOS shall block the receiving thread until a message is available or the timeout expires.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -250,12 +253,12 @@ UID: ZEP-SRS-22-17
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Message Data Retrieval
+TITLE: Message Reception Timeout Handling
 STATEMENT: >>>
-The Mailbox module shall provide a mechanism for a thread to retrieve mailbox message data into a buffer and complete the message processing.
+If the message receive operation times out before a message becomes available, the Zephyr RTOS shall return an appropriate timeout error code to the receiving thread.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS developer, I want to be able to extract message data into my buffer after message reception so that I can process the information contained in the message.
+As a Zephyr RTOS developer, I want to be able to limit how long my thread waits for a message to arrive so that I can implement fallback behavior if communication takes too long.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -266,9 +269,12 @@ UID: ZEP-SRS-22-18
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Message Reception Blocking
+TITLE: Non-Anonymous Messaging
 STATEMENT: >>>
-When message reception is requested and no message is available, the Mailbox module shall block the receiving thread until a message is available or the timeout expires.
+The Zephyr RTOS shall handle message exchange via a mailbox object non-anonymously, allowing both the sending and receiving threads to know the identity of the other thread.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS developer, I want to be able to identify the source or destination of messages so that I can implement thread-specific handling of message content.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -279,12 +285,9 @@ UID: ZEP-SRS-22-19
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Message Reception Timeout Handling
+TITLE: Receiver Thread Queuing
 STATEMENT: >>>
-If the message receive operation times out before a message becomes available, the Mailbox module shall return an appropriate timeout error code to the receiving thread.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS developer, I want to be able to limit how long my thread waits for a message to arrive so that I can implement fallback behavior if communication takes too long.
+While a thread is waiting to receive a message via a mailbox object, the Zephyr RTOS shall keep the thread in the receive queue until a matching message arrives or the waiting period expires.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -295,9 +298,12 @@ UID: ZEP-SRS-22-20
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Thread-Only Message Exchange
+TITLE: Priority-Based Message Delivery
 STATEMENT: >>>
-The Mailbox module shall allow only threads, not ISRs, to exchange messages using the mailbox functions.
+When multiple threads are waiting on an empty mailbox object, the Zephyr RTOS shall deliver the next message to the highest priority thread.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS developer, I want message delivery to respect thread priorities so that higher priority tasks receive messages before lower priority ones.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -308,9 +314,9 @@ UID: ZEP-SRS-22-21
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Single-Receiver Message Delivery
+TITLE: Priority-Based Message Delivery
 STATEMENT: >>>
-The Mailbox module shall ensure that each message may be received by only one thread (i.e., point-to-multipoint and broadcast messaging is not supported).
+When multiple threads of equal priority are waiting on an empty mailbox object, the Zephyr RTOS shall deliver the next message to the thread that has waited the longest.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -321,12 +327,9 @@ UID: ZEP-SRS-22-22
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Non-Anonymous Messaging
+TITLE: FIFO Message Delivery
 STATEMENT: >>>
-The Mailbox module shall handle messages non-anonymously, allowing both the sending and receiving threads to know the identity of the other thread.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS developer, I want to be able to identify the source or destination of messages so that I can implement thread-specific handling of message content.
+When multiple messages are available in the send queue from the same sender, the Zephyr RTOS shall deliver them in FIFO (First In, First Out) order to waiting threads.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -337,9 +340,12 @@ UID: ZEP-SRS-22-23
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Receiver Thread Queuing
+TITLE: Mailbox Quantity Support
 STATEMENT: >>>
-While a thread is waiting to receive a message, the Mailbox module shall keep the thread in the receive queue until a matching message arrives or the waiting period expires.
+The Zephyr RTOS shall support an arbitrary number of mailbox objects, limited only by available RAM in the system.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS developer, I want to be able to create as many mailboxes as my application needs without arbitrary limitations so that I can design my communication architecture freely.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -350,86 +356,9 @@ UID: ZEP-SRS-22-24
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: Priority-Based Message Delivery
-STATEMENT: >>>
-When multiple threads are waiting on an empty mailbox, the Mailbox module shall deliver the next message to the highest priority thread that has waited longest.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS developer, I want message delivery to respect thread priorities so that higher priority tasks receive messages before lower priority ones.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-22
-
-[REQUIREMENT]
-UID: ZEP-SRS-22-25
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Mailboxes
-TITLE: FIFO Message Delivery
-STATEMENT: >>>
-When multiple messages are available in the send queue, the Mailbox module shall deliver them in FIFO (First In, First Out) order to waiting threads.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-22
-
-[REQUIREMENT]
-UID: ZEP-SRS-22-26
-STATUS: Draft
-TYPE: Non-Functional
-COMPONENT: Mailboxes
-TITLE: Mailbox Quantity Support
-STATEMENT: >>>
-The Mailbox module shall support an arbitrary number of mailboxes, limited only by available RAM in the system.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS developer, I want to be able to create as many mailboxes as my application needs without arbitrary limitations so that I can design my communication architecture freely.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-22
-
-[REQUIREMENT]
-UID: ZEP-SRS-22-27
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Mailboxes
-TITLE: Resource Cleanup
-STATEMENT: >>>
-The Mailbox module shall ensure proper cleanup of message resources when operations are canceled or time out to prevent resource leaks.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS developer, I want the system to automatically clean up resources when operations fail or time out so that my application doesn't experience memory leaks.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-22
-
-[REQUIREMENT]
-UID: ZEP-SRS-22-28
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Mailboxes
-TITLE: Error Reporting
-STATEMENT: >>>
-If an error occurs during any mailbox operation, the Mailbox module shall return an appropriate error code indicating the type of failure.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS developer, I want to receive specific error codes when mailbox operations fail so that I can implement appropriate error handling and recovery.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-22
-
-[REQUIREMENT]
-UID: ZEP-SRS-22-29
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Mailboxes
 TITLE: Invalid Parameter Handling
 STATEMENT: >>>
-The Mailbox module shall handle invalid parameters by returning appropriate error codes rather than causing system failures.
+The Zephyr RTOS shall handle invalid parameters by returning appropriate error codes rather than causing system failures.
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS developer, I want the system to validate my inputs and return errors rather than crash when I provide invalid parameters so that I can develop more robust applications.
