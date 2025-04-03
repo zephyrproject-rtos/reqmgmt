@@ -20,7 +20,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Priority-Based Selection
 STATEMENT: >>>
-The scheduler shall select the highest priority ready thread as the current thread from the ready queue.
+The Zephyr RTOS shall select the highest priority ready thread as the current thread from the ready queue.
 <<<
 
 [REQUIREMENT]
@@ -30,7 +30,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Deadline Enforcement (EDF)
 STATEMENT: >>>
-When earliest-deadline-first (EDF) scheduling is enabled, the scheduler shall prioritize threads with equal static priority based on earliest deadline.
+When earliest-deadline-first (EDF) scheduling is enabled, the Zephyr RTOS shall prioritize threads with equal static priority based on earliest deadline.
 <<<
 
 [REQUIREMENT]
@@ -40,7 +40,7 @@ TYPE: Non-Functional
 COMPONENT: Scheduling
 TITLE: Ready Queue Scalability
 STATEMENT: >>>
-The scheduler shall support configurable ready queue implementations.
+The Zephyr RTOS shall support configurable ready queue implementations.
 <<<
 
 [/SECTION]
@@ -55,7 +55,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Mandatory Context Switch Triggers
 STATEMENT: >>>
-The scheduler shall trigger rescheduling during: thread state transitions (→SUSPENDED/WAITING), ISR returns, explicit k_yield() calls, and time slice expiration.
+The Zephyr RTOS shall trigger rescheduling during: thread state transitions (→SUSPENDED/WAITING), ISR returns, explicit k_yield() calls, and time slice expiration.
 <<<
 
 [REQUIREMENT]
@@ -65,7 +65,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Atomic Rescheduling
 STATEMENT: >>>
-The scheduler shall perform rescheduling atomically at designated points to prevent partial state corruption during thread swaps.
+The Zephyr RTOS shall perform rescheduling atomically at designated points to prevent partial state corruption during thread swaps.
 <<<
 
 [/SECTION]
@@ -80,7 +80,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Cooperative Thread Non-Preemption
 STATEMENT: >>>
-The scheduler shall ensure Cooperative threads (negative priority) retain execution until explicitly yielding or entering unready state.
+The Zephyr RTOS shall ensure Cooperative threads (negative priority) retain execution until explicitly yielding or entering unready state.
 <<<
 
 [REQUIREMENT]
@@ -90,7 +90,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Preemptive Thread Interruption
 STATEMENT: >>>
-The scheduler shall allow Preemptive threads (≥0 priority) to be interrupted immediately by higher-priority ready threads.
+The Zephyr RTOS shall allow Preemptive threads (≥0 priority) to be interrupted immediately by higher-priority ready threads.
 <<<
 
 [/SECTION]
@@ -105,7 +105,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Cooperative Voluntary Yielding
 STATEMENT: >>>
-The scheduler shall provide a mechanism for Cooperative threads to allow equal/higher priority threads to execute before resuming.
+The Zephyr RTOS shall provide a mechanism for Cooperative threads to allow equal/higher priority threads to execute before resuming.
 <<<
 
 [REQUIREMENT]
@@ -115,13 +115,13 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Preemptive Time Quantum
 STATEMENT: >>>
-The scheduler shall ensure Preemptive threads relinquish CPU after a configurable time slice (system ticks) if equal-priority threads are ready.
+The Zephyr RTOS shall ensure Preemptive threads relinquish CPU after a configurable time slice (system ticks) if equal-priority threads are ready.
 <<<
 
 [/SECTION]
 
 [SECTION]
-TITLE: Scheduler Locking
+TITLE: Zephyr RTOS Locking
 
 [REQUIREMENT]
 UID: ZEP-SRS-23-010
@@ -130,7 +130,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Non-Preemptible Critical Sections
 STATEMENT: >>>
-The scheduler shall provide a mechanism to treat preemptive threads as cooperative until a unlock function is called.
+The Zephyr RTOS shall provide a mechanism to treat preemptive threads as cooperative until a unlock function is called.
 <<<
 
 [/SECTION]
@@ -145,7 +145,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Thread Sleeping
 STATEMENT: >>>
-The scheduler shall provide a mechanism to delay thread execution within ±1 tick of requested duration.
+The Zephyr RTOS shall provide a mechanism to delay thread execution within ±1 tick of requested duration.
 <<<
 
 [REQUIREMENT]
@@ -155,7 +155,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Thread Waking
 STATEMENT: >>>
-The scheduler shall provide a mechanism to for a thread to wake another thread. Note: A wakeup can be attempted on a thread that is already awake - this has no effect.
+The Zephyr RTOS shall provide a mechanism to for a thread to wake another thread. Note: A wakeup can be attempted on a thread that is already awake - this has no effect.
 <<<
 
 [REQUIREMENT]
@@ -165,7 +165,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Busy Wait Non-Relinquishing
 STATEMENT: >>>
-The scheduler shall provide a mechanism to perform a busy wait where the scheduler will not yield CPU or trigger rescheduling during delay.
+The Zephyr RTOS shall provide a mechanism to perform a busy wait where the Zephyr RTOS will not yield CPU or trigger rescheduling during delay.
 <<<
 
 [/SECTION]
@@ -180,7 +180,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Affinity Awareness
 STATEMENT: >>>
-The scheduler shall honor thread-CPU affinity masks in SMP configurations.
+The Zephyr RTOS shall honor thread-CPU affinity masks in SMP configurations.
 <<<
 
 [REQUIREMENT]
@@ -190,7 +190,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Cross-CPU Atomicity
 STATEMENT: >>>
-The scheduler shall ensure that Spinlocks enforce cross-CPU mutual exclusion for scheduler data structures.
+The Zephyr RTOS shall ensure that Spinlocks enforce cross-CPU mutual exclusion for Zephyr RTOS data structures.
 <<<
 
 [/SECTION]
