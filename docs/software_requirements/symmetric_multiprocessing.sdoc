@@ -1,0 +1,80 @@
+[DOCUMENT]
+TITLE: Symmetric Multiprocessing
+REQ_PREFIX: ZEP-SRS-24-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-24-
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Support operation on more than one CPU
+STATEMENT: >>>
+The Zephyr RTOS shall support operation on more than one physical CPU sharing the same kernel state.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-2-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Running threads on specific CPUs
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface for running threads on specific sets of CPUs ( default is 1 CPU).
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want Zephyr OS to be able to specify the CPU core or the set of CPU cores on which a thread shall be executed.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-2-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Exclusion between physical CPUs
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface for mutual exclusion between multiple physical CPUs.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want Zephyr OS to provide synchronization mechanisms between the CPU cores and the access to common resources.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-24-
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Scheduling
+TITLE: Affinity Awareness
+STATEMENT: >>>
+The Zephyr RTOS shall honor thread-CPU affinity masks in SMP configurations.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-24-
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Symmetric Multiprocessing
+TITLE: Cross-CPU Atomicity
+STATEMENT: >>>
+The Zephyr RTOS shall ensure that Spinlocks enforce cross-CPU mutual exclusion for Zephyr RTOS data structures.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-24-
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Symmetric Multiprocessing
+TITLE: Time sharing of CPU resources
+STATEMENT: >>>
+The Zephyr RTOS shall support time sharing of CPU resources among threads of the same priority.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want to be able to configure my RTOS in the way, that the CPU resources are shared evenly among executed threads of the same priority.
+<<<

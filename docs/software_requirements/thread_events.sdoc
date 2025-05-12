@@ -1,0 +1,28 @@
+[DOCUMENT]
+TITLE: Thread Events
+REQ_PREFIX: ZEP-SRS-25-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-25-
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Events
+TITLE: Scheduling a thread based on an event
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to schedule a thread based on an event.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want to be able to execute work which reacts on events and interrupts the current executed work.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+
