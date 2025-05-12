@@ -17,7 +17,7 @@ TITLE: Thread Scheduling Algorithm
 UID: ZEP-SRS-23-001
 STATUS: Active
 TYPE: Functional
-COMPONENT: Scheduling
+COMPONENT: Thread Scheduling
 TITLE: Priority-Based Selection
 STATEMENT: >>>
 The Zephyr RTOS shall select the highest priority ready thread as the current thread from the ready queue.
@@ -28,9 +28,12 @@ UID: ZEP-SRS-23-002
 STATUS: Active
 TYPE: Functional
 COMPONENT: Scheduling
-TITLE: Deadline Enforcement (EDF)
+TITLE: Earliest Deadline First Scheduling
 STATEMENT: >>>
 When earliest-deadline-first (EDF) scheduling is enabled, the Zephyr RTOS shall prioritize threads with equal static priority based on earliest deadline.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want to be able to schedule threads by earliest deadline first.
 <<<
 
 [REQUIREMENT]
@@ -82,6 +85,9 @@ TITLE: Cooperative Thread Non-Preemption
 STATEMENT: >>>
 The Zephyr RTOS shall ensure Cooperative threads (negative priority) retain execution until explicitly yielding or entering unready state.
 <<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want to be able to configure thread prioritizes which cannot be preempted by other user threads.
+<<<
 
 [REQUIREMENT]
 UID: ZEP-SRS-23-007
@@ -91,6 +97,9 @@ COMPONENT: Scheduling
 TITLE: Preemptive Thread Interruption
 STATEMENT: >>>
 The Zephyr RTOS shall allow Preemptive threads (≥0 priority) to be interrupted immediately by higher-priority ready threads.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want that the OS preempt running threads by a thread with higher priority.
 <<<
 
 [/SECTION]
@@ -121,7 +130,20 @@ The Zephyr RTOS shall ensure Preemptive threads relinquish CPU after a configura
 [/SECTION]
 
 [SECTION]
-TITLE: Zephyr RTOS Locking
+TITLE: Thread Management
+
+[REQUIREMENT]
+UID: ZEP-SRS-23-
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Scheduling
+TITLE: Scheduling multiple threads
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to schedule multiple threads.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
 
 [REQUIREMENT]
 UID: ZEP-SRS-23-010
@@ -132,11 +154,6 @@ TITLE: Non-Preemptible Critical Sections
 STATEMENT: >>>
 The Zephyr RTOS shall provide a mechanism to treat preemptive threads as cooperative until a unlock function is called.
 <<<
-
-[/SECTION]
-
-[SECTION]
-TITLE: Thread Management
 
 [REQUIREMENT]
 UID: ZEP-SRS-23-011
@@ -172,31 +189,6 @@ The Zephyr RTOS shall provide a mechanism to perform a busy wait where the Zephy
 
 [SECTION]
 TITLE: SMP Considerations
-
-[REQUIREMENT]
-UID: ZEP-SRS-23-013
-STATUS: Active
-TYPE: Functional
-COMPONENT: Scheduling
-TITLE: Affinity Awareness
-STATEMENT: >>>
-The Zephyr RTOS shall honor thread-CPU affinity masks in SMP configurations.
-<<<
-
-[REQUIREMENT]
-UID: ZEP-SRS-23-014
-STATUS: Active
-TYPE: Functional
-COMPONENT: Scheduling
-TITLE: Cross-CPU Atomicity
-STATEMENT: >>>
-The Zephyr RTOS shall ensure that Spinlocks enforce cross-CPU mutual exclusion for Zephyr RTOS data structures.
-<<<
-
-[/SECTION]
-
-[SECTION]
-TITLE: Safety and Compliance
 
 [REQUIREMENT]
 UID: ZEP-SRS-23-015
