@@ -5,6 +5,10 @@ This repository contains a preliminary work on the Zephyr Project requirements.
 The requirements are captured using
 [StrictDoc](https://github.com/strictdoc-project/strictdoc).
 
+See the [Zephyr Safety Working Group Wiki](https://github.com/zephyrproject-rtos/zephyr/wiki/Safety-Working-Group) for information on connecting to the team.
+
+The guidelines around writing requirements are located here: [Safety Requirements](https://docs.zephyrproject.org/latest/safety/safety_requirements.html)
+
 ## Deployed Documentation
 
 The requirements documentation is available online at:
