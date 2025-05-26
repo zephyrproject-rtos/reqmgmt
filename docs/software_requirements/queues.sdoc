@@ -36,9 +36,9 @@ UID: ZEP-SRS-20-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Queues
-TITLE: Queue append item to the end
+TITLE: Queue enqueue item to the back
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to append a data item to the end of a queue.
+The Zephyr RTOS shall provide a mechanism to enqueue a data item to the back of a queue (i.e. append).
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -49,9 +49,9 @@ UID: ZEP-SRS-20-4
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Queues
-TITLE: Queue append item to the start
+TITLE: Queue enqueue item to the front
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to append a data item in the first place of a queue.
+The Zephyr RTOS shall provide a mechanism to enqueue a data item to the front of a queue (i.e. prepend).
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -64,20 +64,7 @@ TYPE: Functional
 COMPONENT: Queues
 TITLE: Queue remove item
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to remove a data item from a queue.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-21
-
-[REQUIREMENT]
-UID: ZEP-SRS-20-6
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Queues
-TITLE: Queue get item
-STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to get and remove a data item from a queue.
+The Zephyr RTOS shall provide a mechanism to remove a specific data item from a queue.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -88,10 +75,9 @@ UID: ZEP-SRS-20-7
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Queues
-TITLE: Queue get item timeout
+TITLE: Queue get and dequeue item from front
 STATEMENT: >>>
-When a timout for the get mechanism to get a data item is configured, the Zephyr RTOS shall wait
-that period to optain the data item from the queue.
+The Zephyr RTOS shall provide a mechanism to get and dequeue a data item from the front of a queue, within a timeout.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -115,9 +101,9 @@ UID: ZEP-SRS-20-9
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Queues
-TITLE: Queue look up last item
+TITLE: Queue peek item at back
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to look up the last data item in the queue.
+The Zephyr RTOS shall provide a mechanism to peek at the data data item at the back of a queue.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -128,9 +114,9 @@ UID: ZEP-SRS-20-10
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Queues
-TITLE: Queue look up first item
+TITLE: Queue peek item at front
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to look up the first data item in the queue.
+The Zephyr RTOS shall provide a mechanism to peek at the data data item at the front of a queue.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -143,7 +129,7 @@ TYPE: Functional
 COMPONENT: Queues
 TITLE: Queue insert
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to insert a data item behind another specific data item in the queue.
+The Zephyr RTOS shall provide a mechanism to insert a data item behind another specific data item in a queue.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -154,9 +140,9 @@ UID: ZEP-SRS-20-12
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Queues
-TITLE: Queue append complete list
+TITLE: Queue append item list to the back
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to append a complete list of data items to the end of a queue.
+The Zephyr RTOS shall provide a mechanism to append a list of data items to the back of a queue.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -167,28 +153,13 @@ UID: ZEP-SRS-20-13
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Queues
-TITLE: Queue merge slist to queue
+TITLE: Queue append and empty item list to the back
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to merge a list of data items in slist format to a queue.
+The Zephyr RTOS shall provide a mechanism to append a list of data items to the back of a queue and then empty the list.
 <<<
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-21
-
-[REQUIREMENT]
-UID: ZEP-SRS-20-14
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Queues
-TITLE: Original list empty using queue merge slist
-STATEMENT: >>>
-If a list is added to the queue via the merge slist mechanism, the original list of data items shall be empty.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-21
-- TYPE: Parent
-  VALUE: ZEP-SRS-20-13
 
 [REQUIREMENT]
 UID: ZEP-SRS-20-15

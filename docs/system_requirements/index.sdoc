@@ -313,7 +313,7 @@ The Zephyr RTOS shall provide a framework to synchronize threads based on a cond
 TITLE: Queues
 
 [REQUIREMENT]
-UID: ZEP-SYRS-21
+UID: ZEP-SYRS-22
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Queues
