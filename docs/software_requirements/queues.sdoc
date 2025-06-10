@@ -1,0 +1,189 @@
+[DOCUMENT]
+TITLE: Tracing
+REQ_PREFIX: ZEP-SRS-20-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a queue at compile time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue definition at run time.
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a queue at run time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue enqueue item to the back
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to enqueue a data item to the back of a queue (i.e. append).
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue enqueue item to the front
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to enqueue a data item to the front of a queue (i.e. prepend).
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue remove item
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to remove a specific data item from a queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue get and dequeue item from front
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to get and dequeue a data item from the front of a queue, within a timeout.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue empty check
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to check if a queue is empty.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue peek item at back
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to peek at the data data item at the back of a queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue peek item at front
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to peek at the data data item at the front of a queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue insert
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to insert a data item behind another specific data item in a queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue append item list to the back
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to append a list of data items to the back of a queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue append and empty item list to the back
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to append a list of data items to the back of a queue and then empty the list.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue append unique data item
+STATEMENT: >>>
+There shall be a mechanism to append a data item uniquely to the queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue implicit memory allocation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a dedicated mechanism to implicite allocate memory from a thread when appending
+data items to a queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
