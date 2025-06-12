@@ -266,6 +266,49 @@ USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to give my threads different priorities for execution.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-SYRS-
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Workqueue Threads
+TITLE: Work Queue utility capable of running preemptible work items
+STATEMENT: >>>
+The Zephyr RTOS shall provide a thread-pooled work queue utility capable of running preemptible work items with specific scheduler priorities.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want to be able to add work items in a thread work queue with different priorities and these shall be scheduled according their priorities.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SYRS-23
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Scheduling
+TITLE: Thread Scheduling
+STATEMENT: >>>
+The Zephyr RTOS shall provide a scheduler that determines which thread is allowed to execute at any point in time.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SYRS-
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Events
+TITLE: Thread Events
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for threads to synchronize and communicate by signaling and waiting for the occurrence of defined events.
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SYRS-
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Symmetric Multiprocessing
+TITLE: Symmetric Multiprocessing
+STATEMENT: >>>
+The Zephyr RTOS shall provide the functionality to support the use of multiple physical CPUs with Zephyr Application code.
+<<<
+
 [/SECTION]
 
 [REQUIREMENT]
@@ -308,3 +351,4 @@ The Zephyr RTOS shall provide a framework to synchronize threads based on a cond
 <<<
 
 [/SECTION]
+

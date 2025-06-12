@@ -69,3 +69,6 @@ FILE: tracing.sdoc
 
 [DOCUMENT_FROM_FILE]
 FILE: condition_variables.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: scheduling.sdoc
