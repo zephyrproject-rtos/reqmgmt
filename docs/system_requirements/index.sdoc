@@ -308,3 +308,18 @@ The Zephyr RTOS shall provide a framework to synchronize threads based on a cond
 <<<
 
 [/SECTION]
+
+[SECTION]
+TITLE: Mailboxes
+
+[REQUIREMENT]
+UID: ZEP-SYRS-22
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mailboxes
+TITLE: Mailboxes
+STATEMENT: >>>
+The Zephyr RTOS shall provide a framework to pass messages of arbitrary size between threads.
+<<<
+
+[/SECTION]
