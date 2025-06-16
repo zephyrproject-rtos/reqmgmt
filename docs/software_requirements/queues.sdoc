@@ -168,7 +168,7 @@ TYPE: Functional
 COMPONENT: Queues
 TITLE: Queue append unique data item
 STATEMENT: >>>
-There shall be a mechanism to append a data item uniquely to the queue.
+The Zephyr RTOS shall provide a mechanism to append a data item uniquely to the queue.
 <<<
 RELATIONS:
 - TYPE: Parent
