@@ -201,7 +201,7 @@ TYPE: Functional
 COMPONENT: Timers
 TITLE: Timer expire functions in interrupt context
 STATEMENT: >>>
-When the timer expiry function is defined, it shall be called in the interrupt context.
+When a timer expiry function is called, the Zephyr RTOS shall do so in the interrupt context.
 <<<
 RELATIONS:
 - TYPE: Parent
