@@ -72,3 +72,6 @@ FILE: condition_variables.sdoc
 
 [DOCUMENT_FROM_FILE]
 FILE: queues.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: fifos.sdoc
