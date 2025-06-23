@@ -324,6 +324,9 @@ The Zephyr RTOS shall implement a queue which can be used to pass data between t
 
 [/SECTION]
 
+[SECTION]
+TITLE: FIFOs
+
 [REQUIREMENT]
 UID: ZEP-SYRS-23
 STATUS: Draft
