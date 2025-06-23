@@ -1,0 +1,71 @@
+[DOCUMENT]
+TITLE: Tracing
+REQ_PREFIX: ZEP-SRS-23-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[REQUIREMENT]
+UID: ZEP-SRS-23-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: LIFOs
+TITLE: LIFO definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a LIFO at compile time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-23
+
+[REQUIREMENT]
+UID: ZEP-SRS-23-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: LIFOs
+TITLE: LIFO enqueue item to the back
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to enqueue a data item to the back of a LIFO (i.e. prepend).
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-23
+
+[REQUIREMENT]
+UID: ZEP-SRS-23-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: LIFOs
+TITLE: LIFO implicit memory allocation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to allocate memory from a thread when enqueuing data items to a LIFO.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-23
+
+[REQUIREMENT]
+UID: ZEP-SRS-23-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: LIFOs
+TITLE: LIFO get and dequeue item from front
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to get and dequeue a data item from the back of a LIFO, within a timeout.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-23
+
+[REQUIREMENT]
+UID: ZEP-SRS-23-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a LIFO at compile time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-23
