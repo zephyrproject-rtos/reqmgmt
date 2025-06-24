@@ -1,1 +1,2 @@
-strictdoc
+strictdoc>=0.9.1
+
