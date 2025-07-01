@@ -15,12 +15,9 @@ UID: ZEP-SRS-4-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Timers
-TITLE: Kernel Clock
+TITLE: Timer definition at run time
 STATEMENT: >>>
-The Zephyr RTOS shall provide a interface for checking the current value of the real-time clock.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user, I want to be able to track the passed real time in the OS with a dedicated hardware counter and interrupt.
+The Zephyr RTOS shall provide a mechanism to define and initialize timers at run time.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -31,12 +28,308 @@ UID: ZEP-SRS-4-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Timers
-TITLE: Call functions in interrupt context
+TITLE: Timer definition at compile time
 STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to schedule user mode call back function triggered by a real time clock value.
+The Zephyr RTOS shall provide a mechanism to define and static initialize timers (compile time).
 <<<
-USER_STORY: >>>
-As a Zephyr RTOS user, I want to be able to execute functions in the interrupt context and the interrupt context shall be base on a real-time counter.
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-3
+STATUS: Draft
+TYPE: Non-Functional
+COMPONENT: Timers
+TITLE: Timer status
+STATEMENT: >>>
+A Zephyr RTOS timer shall have a status which indicates the expiration of the timer.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Timer period
+STATEMENT: >>>
+A Zephyr RTOS timer shall support repeated expiration of the timer given by a timer-specific time period.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Timer duration
+STATEMENT: >>>
+A Zephyr RTOS timer shall have a duration which indicates when the timer expires for the first time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Timer expiry function
+STATEMENT: >>>
+A Zephyr RTOS timer shall support a user-settable expiry function that gets called whenever the timer expires.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Timer stop function
+STATEMENT: >>>
+A Zephyr RTOS timer shall support a user-settable stop function that gets called when the timer is stopped while running.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Initialialization with expiry function
+STATEMENT: >>>
+When initializing a Zephyr RTOS timer, the expiry function a timer can have shall be settable.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Initialialization with stop function
+STATEMENT: >>>
+When initializing a Zephyr RTOS timer, the stop function a timer can have shall be settable.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Timer start
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to start a defined and initialized timer.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Start timer status reset
+STATEMENT: >>>
+Whenever a not running timer is started the timer's status shall be reset to zero.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Start timer counting values
+STATEMENT: >>>
+Whenever a Zephyr RTOS timer is started, the timer shall start running with the duration and period values provided during timer initialization.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Timer stop
+STATEMENT: >>>
+A Zephyr RTOS timer that is running shall be stoppable
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Timer status read
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to read the number of times a timer that is running has already expired.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Timer status read reset
+STATEMENT: >>>
+When the timer is read via the timer status read mechanism, the status shall be reset.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Timer thread synchronization
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to synchronize a thread with a defined and initialized timer.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Synchronized thread blocks until timer has expired
+STATEMENT: >>>
+When the thread synchronization mechanism is used, the thread shall be blocked until the timer expires.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-18
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Synchronized thread is unblocked when timer is stopped.
+STATEMENT: >>>
+When the thread synchronization mechanism is used, the synchronized thread shall be unblocked when the timer is stopped.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Timer thread synchronization status reset
+STATEMENT: >>>
+When the thread synchronization mechanism is used, the status of the timer shall be reset.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Provide timer remaining expiration time in units of system ticks
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to get the timer's remaining time until its next expiry in system ticks.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-21
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Provide timer remaining expiration time in milliseconds
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to get the timer's remaining time until its next expiry in milliseconds.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-22
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Timer set user data
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to set user data to a timer.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-23
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Timer get user data
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to get user data from a timer.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-24
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Timer expire functions in interrupt context
+STATEMENT: >>>
+When the timer expiry function is defined, it shall be called in the interrupt context.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-25
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Provide timer next expiration time in units of system ticks
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to get the timer's next time of expiration in system ticks.
 <<<
 RELATIONS:
 - TYPE: Parent
