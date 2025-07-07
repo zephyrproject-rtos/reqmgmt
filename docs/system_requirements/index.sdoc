@@ -165,7 +165,7 @@ USER_STORY: >>>
 As a Zephyr RTOS user I want to be able to control the power mode of the MCU and its peripherals to take advantage of the hardware features and to be able to implement low power or battery driven long life applications.
 <<<
 
-[SECTION]
+[[SECTION]]
 TITLE: Multi core and SMP
 
 [REQUIREMENT]
@@ -194,9 +194,9 @@ USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to control which thread will run on which CPU.
 <<<
 
-[/SECTION]
+[[/SECTION]]
 
-[SECTION]
+[[SECTION]]
 TITLE: Thread Synchronization
 
 [REQUIREMENT]
@@ -222,9 +222,9 @@ STATEMENT: >>>
 The system shall implement a semaphore synchronization primitive for coordinating access to shared resources among multiple threads.
 <<<
 
-[/SECTION]
+[[/SECTION]]
 
-[SECTION]
+[[SECTION]]
 TITLE: Threads
 
 [REQUIREMENT]
@@ -266,9 +266,9 @@ USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to give my threads different priorities for execution.
 <<<
 
-[/SECTION]
+[[/SECTION]]
 
-[SECTION]
+[[SECTION]]
 TITLE: Timers
 
 [REQUIREMENT]
@@ -281,7 +281,7 @@ STATEMENT: >>>
 The Zephyr RTOS shall provide a framework for managing time-based events.
 <<<
 
-[/SECTION]
+[[/SECTION]]
 
 [REQUIREMENT]
 UID: ZEP-SYRS-19
@@ -296,7 +296,7 @@ USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to trace different OS operations.
 <<<
 
-[SECTION]
+[[SECTION]]
 TITLE: Condition Variables
 
 [REQUIREMENT]
@@ -309,4 +309,4 @@ STATEMENT: >>>
 The Zephyr RTOS shall provide a framework to synchronize threads based on a condition variable.
 <<<
 
-[/SECTION]
+[[/SECTION]]
