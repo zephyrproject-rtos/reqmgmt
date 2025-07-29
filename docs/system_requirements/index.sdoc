@@ -325,6 +325,21 @@ The Zephyr RTOS shall implement a queue which can be used to pass data between t
 [[/SECTION]]
 
 [[SECTION]]
+TITLE: LIFOs
+
+[REQUIREMENT]
+UID: ZEP-SYRS-23
+STATUS: Draft
+TYPE: Functional
+COMPONENT: LIFOs
+TITLE: LIFOs data passing
+STATEMENT: >>>
+The Zephyr RTOS shall implement a LIFOs which can be used to pass data between threads and interrupt service routines.
+<<<
+
+[[/SECTION]]
+
+[[SECTION]]
 TITLE: FIFOs
 
 [REQUIREMENT]
@@ -335,6 +350,6 @@ COMPONENT: FIFOs
 TITLE: FIFOs data passing
 STATEMENT: >>>
 The Zephyr RTOS shall implement FIFOs which can be used to pass data between threads and interrupt service routines.
-<<<
+
 
 [[/SECTION]]
