@@ -10,7 +10,7 @@ STATEMENT: >>>
 SPDX-License-Identifier: Apache-2.0
 <<<
 
-[SECTION]
+[[SECTION]]
 TITLE: Thread Scheduling
 
 [REQUIREMENT]
@@ -49,9 +49,9 @@ USER_STORY: >>>
 As a Zephyr RTOS user I want Zephyr OS to provide synchronization mechanisms between the CPU cores and the access to common resources.
 <<<
 
-[/SECTION]
+[[/SECTION]]
 
-[SECTION]
+[[SECTION]]
 TITLE: Thread Scheduling
 
 [REQUIREMENT]
@@ -161,4 +161,4 @@ USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to configure my RTOS in the way, that the CPU resources are shared evenly among executed threads of the same priority.
 <<<
 
-[/SECTION]
+[[/SECTION]]
