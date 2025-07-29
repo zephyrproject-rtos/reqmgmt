@@ -1,0 +1,149 @@
+[DOCUMENT]
+TITLE: Tracing
+REQ_PREFIX: ZEP-SRS-24-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[REQUIREMENT]
+UID: ZEP-SRS-24-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: FIFOs
+TITLE: FIFO definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a FIFO at compile time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-24
+
+[REQUIREMENT]
+UID: ZEP-SRS-24-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: FIFOs
+TITLE: FIFO cancel waiting thread
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for the first thread waiting to get and dequeue a data item to return as if the timeout had expired.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-24
+
+[REQUIREMENT]
+UID: ZEP-SRS-24-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: FIFOs
+TITLE: FIFO enqueue item to the back
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to enqueue a data item to the back of a FIFO (i.e. append).
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-24
+
+[REQUIREMENT]
+UID: ZEP-SRS-24-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: FIFOs
+TITLE: FIFO implicit memory allocation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to allocate memory from a thread when enqueuing data items to a FIFO.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-24
+
+[REQUIREMENT]
+UID: ZEP-SRS-24-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: FIFOs
+TITLE: FIFO append item list to the back
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to append a list of data items to the back of a FIFO.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-24
+
+[REQUIREMENT]
+UID: ZEP-SRS-24-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: FIFOs
+TITLE: FIFO append and empty item list to the back
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to append a list of data items to the back of a FIFO and then empty the list.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-24
+
+[REQUIREMENT]
+UID: ZEP-SRS-24-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: FIFOs
+TITLE: FIFO get and dequeue item from front
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to get and dequeue a data item from the front of a FIFO, within a timeout.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-24
+
+[REQUIREMENT]
+UID: ZEP-SRS-24-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: FIFOs
+TITLE: FIFO empty check
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to check if a FIFO is empty.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-24
+
+[REQUIREMENT]
+UID: ZEP-SRS-24-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: FIFOs
+TITLE: FIFO peek item at front
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to peek at the data data item at the front of a FIFO.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-24
+
+[REQUIREMENT]
+UID: ZEP-SRS-24-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: FIFOs
+TITLE: FIFO peek item at back
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to peek at the data item at the back of a FIFO.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-24
+
+[REQUIREMENT]
+UID: ZEP-SRS-24-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a FIFO at compile time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
