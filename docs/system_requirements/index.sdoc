@@ -350,6 +350,6 @@ COMPONENT: FIFOs
 TITLE: FIFOs data passing
 STATEMENT: >>>
 The Zephyr RTOS shall implement FIFOs which can be used to pass data between threads and interrupt service routines.
-
+<<<
 
 [[/SECTION]]
