@@ -80,7 +80,4 @@ FILE: lifos.sdoc
 FILE: fifos.sdoc
 
 [DOCUMENT_FROM_FILE]
-FILE: mailbox.sdoc
-
-[DOCUMENT_FROM_FILE]
 FILE: mailboxes.sdoc

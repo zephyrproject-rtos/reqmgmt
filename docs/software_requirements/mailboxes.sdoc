@@ -1,6 +1,6 @@
 [DOCUMENT]
 TITLE: Mailboxes
-REQ_PREFIX: ZEP-SRS-22-
+REQ_PREFIX: ZEP-SRS-25-
 
 [GRAMMAR]
 IMPORT_FROM_FILE: software_requirements.sgra
@@ -11,7 +11,7 @@ SPDX-License-Identifier: Apache-2.0
 <<<
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-1
+UID: ZEP-SRS-25-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -24,10 +24,10 @@ As a Zephyr RTOS developer, I want to be able to initialize a mailbox instance s
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-2
+UID: ZEP-SRS-25-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -40,10 +40,10 @@ As a Zephyr RTOS developer, I want to be able to statically define and initializ
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-4
+UID: ZEP-SRS-25-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -56,10 +56,10 @@ As a Zephyr RTOS developer, I want to be able to send messages of different size
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-6
+UID: ZEP-SRS-25-4
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -69,10 +69,10 @@ The Zephyr RTOS shall handle the data transfer between mailbox objects of the se
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-8
+UID: ZEP-SRS-25-5
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -85,10 +85,10 @@ As a Zephyr RTOS developer, I want to be able to send a message and wait for it 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-10
+UID: ZEP-SRS-25-6
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -101,10 +101,10 @@ As a Zephyr RTOS developer, I want to be able to limit how long my thread waits 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-11
+UID: ZEP-SRS-25-7
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -117,10 +117,10 @@ As a Zephyr RTOS developer, I want to be able to send a message without waiting 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-13
+UID: ZEP-SRS-25-8
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -133,10 +133,10 @@ As a Zephyr RTOS developer, I want to be notified when my asynchronously sent me
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-14
+UID: ZEP-SRS-25-9
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -149,10 +149,10 @@ As a Zephyr RTOS developer, I want to be able to receive messages from other thr
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-15
+UID: ZEP-SRS-25-10
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -165,10 +165,10 @@ As a Zephyr RTOS developer, I want to be able to extract message data into my bu
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-16
+UID: ZEP-SRS-25-11
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -178,10 +178,10 @@ When a receiving thread requests a message via a mailbox object and no message i
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-17
+UID: ZEP-SRS-25-12
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -194,10 +194,10 @@ As a Zephyr RTOS developer, I want to be able to limit how long my thread waits 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-18
+UID: ZEP-SRS-25-13
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -210,10 +210,10 @@ As a Zephyr RTOS developer, I want to be able to identify the source or destinat
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-20
+UID: ZEP-SRS-25-14
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -226,10 +226,10 @@ As a Zephyr RTOS developer, I want message delivery to respect thread priorities
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-21
+UID: ZEP-SRS-25-15
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -239,10 +239,10 @@ When multiple threads of equal priority are waiting on an empty mailbox object, 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-22
+UID: ZEP-SRS-25-16
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -252,10 +252,10 @@ When multiple messages are available in the send queue from the same sender, the
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-23
+UID: ZEP-SRS-25-17
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -268,10 +268,10 @@ As a Zephyr RTOS developer, I want to be able to create as many mailboxes as my 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-22-24
+UID: ZEP-SRS-25-18
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
@@ -284,4 +284,4 @@ As a Zephyr RTOS developer, I want the system to validate my inputs and return e
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-22
+  VALUE: ZEP-SYRS-25
