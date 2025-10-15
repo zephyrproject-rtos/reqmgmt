@@ -246,19 +246,6 @@ UID: ZEP-SRS-25-16
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
-TITLE: FIFO Message Delivery
-STATEMENT: >>>
-When multiple messages are available in the send queue from the same sender, the Zephyr RTOS shall deliver them in FIFO (First In, First Out) order to waiting threads.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-25
-
-[REQUIREMENT]
-UID: ZEP-SRS-25-17
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Mailboxes
 TITLE: Mailbox Quantity Support
 STATEMENT: >>>
 The Zephyr RTOS shall support an arbitrary number of mailbox objects, limited only by available RAM in the system.
@@ -271,7 +258,7 @@ RELATIONS:
   VALUE: ZEP-SYRS-25
 
 [REQUIREMENT]
-UID: ZEP-SRS-25-18
+UID: ZEP-SRS-25-17
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Mailboxes
