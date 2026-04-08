@@ -127,6 +127,16 @@ STATEMENT: >>>
 Where time slicing is enabled, preemptive threads shall relinquish the CPU after not more than a configurable number of system ticks if there is another ready thread of equal priority.
 <<<
 
+[REQUIREMENT]
+UID: ZEP-SRS-23-017
+STATUS: Active
+TYPE: Functional
+COMPONENT: Scheduling
+TITLE: Time Slice Priority Exemption
+STATEMENT: >>>
+Where time slicing is enabled, threads with priority higher than a configurable threshold shall be exempt from preemptive time slicing.
+<<<
+
 [/SECTION]
 
 [SECTION]
@@ -152,7 +162,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Non-Preemptible Critical Sections
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to treat preemptive threads as cooperative until a unlock function is called.
+The Zephyr RTOS shall provide a mechanism to temporarily prevent preemption of a preemptive thread until the mechanism is explicitly released. If the thread becomes unready while preemption is prevented, the non-preemptible status shall be maintained when the thread resumes.
 <<<
 
 [REQUIREMENT]
