@@ -20,7 +20,7 @@ TYPE: Functional
 COMPONENT: Thread Scheduling
 TITLE: Priority-Based Selection
 STATEMENT: >>>
-The Zephyr RTOS shall select the highest priority ready thread as the current thread from the ready queue.
+The Zephyr RTOS shall select the highest-priority ready thread permitted to execute on the current CPU as the current thread.
 <<<
 
 [REQUIREMENT]
@@ -30,7 +30,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Earliest Deadline First Scheduling
 STATEMENT: >>>
-When earliest-deadline-first (EDF) scheduling is enabled, the Zephyr RTOS shall prioritize threads with equal static priority based on earliest deadline.
+When earliest-deadline-first (EDF) scheduling is enabled, the scheduler shall only consider the deadline when prioritizing between threads of equal static priority. The thread with the earliest deadline shall be considered to have the higher priority.
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to schedule threads by earliest deadline first.
@@ -43,7 +43,7 @@ TYPE: Non-Functional
 COMPONENT: Scheduling
 TITLE: Ready Queue Scalability
 STATEMENT: >>>
-The Zephyr RTOS shall support configurable ready queue implementations.
+The Zephyr RTOS shall support ready queue implementations that are configurable at build time.
 <<<
 
 [/SECTION]
@@ -58,7 +58,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Mandatory Context Switch Triggers
 STATEMENT: >>>
-The Zephyr RTOS shall trigger rescheduling during: thread state transitions (→SUSPENDED/WAITING), ISR returns, explicit k_yield() calls, and time slice expiration.
+The Zephyr RTOS shall trigger rescheduling when: a thread becomes blocked or ready, a thread's static priority is modified, an ISR returns to thread context, a thread voluntarily yields, a time slice expires, or the scheduler is unlocked.
 <<<
 
 [REQUIREMENT]
@@ -68,7 +68,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Atomic Rescheduling
 STATEMENT: >>>
-The Zephyr RTOS shall perform rescheduling atomically at designated points to prevent partial state corruption during thread swaps.
+Rescheduling shall both occur at designated points and be atomic to prevent partial state corruption during thread swaps.
 <<<
 
 [/SECTION]
@@ -83,7 +83,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Cooperative Thread Non-Preemption
 STATEMENT: >>>
-The Zephyr RTOS shall ensure Cooperative threads (negative priority) retain execution until explicitly yielding or entering unready state.
+The Zephyr RTOS shall ensure cooperative threads (negative static priority) retain execution until explicitly yielding or entering an unready state, except when preempted by Meta-IRQ threads.
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to configure thread prioritizes which cannot be preempted by other user threads.
@@ -94,9 +94,9 @@ UID: ZEP-SRS-23-007
 STATUS: Active
 TYPE: Functional
 COMPONENT: Scheduling
-TITLE: Preemptive Thread Interruption
+TITLE: Preemptive Thread Preemption
 STATEMENT: >>>
-The Zephyr RTOS shall allow Preemptive threads (≥0 priority) to be interrupted immediately by higher-priority ready threads.
+The Zephyr RTOS shall preempt preemptive threads (non-negative static priority) when a higher-priority ready thread becomes available at a reschedule point.
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user, I want that the OS preempt running threads by a thread with higher priority.
@@ -112,9 +112,9 @@ UID: ZEP-SRS-23-008
 STATUS: Active
 TYPE: Functional
 COMPONENT: Scheduling
-TITLE: Cooperative Voluntary Yielding
+TITLE: Voluntary Yielding
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism for Cooperative threads to allow equal/higher priority threads to execute before resuming.
+The Zephyr RTOS shall provide a mechanism for a thread to voluntarily cede control of the CPU to a thread of equal or higher priority if any exist.
 <<<
 
 [REQUIREMENT]
@@ -124,7 +124,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Preemptive Time Quantum
 STATEMENT: >>>
-The Zephyr RTOS shall ensure Preemptive threads relinquish CPU after a configurable time slice (system ticks) if equal-priority threads are ready.
+Where time slicing is enabled, preemptive threads shall relinquish the CPU after not more than a configurable number of system ticks if there is another ready thread of equal priority.
 <<<
 
 [/SECTION]
@@ -162,11 +162,11 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Thread Sleeping
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to delay thread execution within ±1 tick of requested duration.
+The Zephyr RTOS shall provide a mechanism to delay thread execution for a specified time period, relinquishing the CPU to other ready threads. A sleeping thread may be awakened prematurely by another thread.
 <<<
 
 [REQUIREMENT]
-UID: ZEP-SRS-23-011
+UID: ZEP-SRS-23-013
 STATUS: Active
 TYPE: Functional
 COMPONENT: Scheduling
@@ -182,7 +182,7 @@ TYPE: Functional
 COMPONENT: Scheduling
 TITLE: Busy Wait Non-Relinquishing
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to perform a busy wait where the Zephyr RTOS will not yield CPU or trigger rescheduling during delay.
+The Zephyr RTOS shall provide a mechanism to delay thread execution for a specified duration without relinquishing the CPU or triggering rescheduling.
 <<<
 
 [/SECTION]
@@ -198,6 +198,16 @@ COMPONENT: Scheduling
 TITLE: Deterministic Latency
 STATEMENT: >>>
 Worst-case context switch latency shall be ≤X μs (platform-specific).
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-23-016
+STATUS: Active
+TYPE: Functional
+COMPONENT: Scheduling
+TITLE: Scheduler Data Structure Mutual Exclusion
+STATEMENT: >>>
+Scheduler data structures that require cross-CPU mutual exclusion shall be guarded by spinlocks.
 <<<
 
 [/SECTION]
