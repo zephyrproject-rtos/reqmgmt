@@ -1,0 +1,582 @@
+[DOCUMENT]
+TITLE: Atomic Service
+REQ_PREFIX: ZEP-SRS-26-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic variable
+STATEMENT: >>>
+The Zephyr RTOS shall define an atomic variable type with the same size and alignment as the C `long` type for the target architecture.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic value
+STATEMENT: >>>
+The Zephyr RTOS shall define a signed integer type, whose size is determined by the target processor architecture, used as the parameter and return type of operations on atomic variables.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Consistency
+STATEMENT: >>>
+The Zephyr RTOS shall guarantee that each operation on an atomic variable is free from torn reads or writes.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Consistency
+STATEMENT: >>>
+The Zephyr RTOS shall guarantee that each operation on an atomic variable results is visible to all processors in the system.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Indivisibility
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for performing all operations on an atomic variable in an indivisible manner.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Memory ordering
+STATEMENT: >>>
+When performing an operation on an atomic variable, the Zephyr RTOS shall guarantee that neither the compiler nor the hardware reorders memory operations across the atomic operation.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Platform independence
+STATEMENT: >>>
+The Zephyr RTOS shall support executing atomic operations on hardware that does not provide native atomic instruction support.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Platform independence
+STATEMENT: >>>
+The Zephyr RTOS shall support executing atomic operations using native hardware atomic instruction support.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Compute size of atomic variables
+STATEMENT: >>>
+The Zephyr RTOS shall provide a compile-time mechanism for computing the minimum number of atomic variables necessary to represent a bit array of a given number of bits.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Define an array of atomic variables
+STATEMENT: >>>
+The Zephyr RTOS shall provide a compile-time mechanism for defining an array of atomic variables with the minimum size necessary to represent a bit array of a given number of bits.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Initialize atomic variable
+STATEMENT: >>>
+The Zephyr RTOS shall provide a compile-time mechanism for initializing an atomic variable.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-1
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-2
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Set atomic variable
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for setting an atomic variable and returning its previous value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-3
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-4
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-5
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Get atomic variable
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for getting the value from an atomic variable.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-3
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-4
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-5
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic bitwise operations
+STATEMENT: >>>
+When performing a bitwise operation on an atomic variable, the Zephyr RTOS shall store the result in the atomic variable and return its previous value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-3
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-4
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-5
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic bitwise AND operation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for performing a bitwise AND operation on an atomic variable.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-14
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic bitwise OR operation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for performing a bitwise OR operation on an atomic variable.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-14
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic bitwise NAND operation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for performing a bitwise NAND operation on an atomic variable.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-14
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-18
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic bitwise XOR operation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for performing a bitwise XOR operation on an atomic variable.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-14
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic addition
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for adding a value to an atomic variable and returning its previous value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-3
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-4
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-5
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic increment
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for incrementing an atomic variable by 1 and returning its previous value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-19
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-21
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic subtraction
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for subtracting a value from an atomic variable and returning its previous value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-3
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-4
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-5
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-22
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic decrement
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for decrementing an atomic variable by 1 and returning its previous value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-21
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-23
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic compare and set
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for setting an atomic variable to a new value if and only if its current value equals an expected value, leaving the atomic variable unchanged otherwise, and returning whether the atomic variable was updated.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-3
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-4
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-5
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-24
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic clear
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for setting an atomic variable to zero and returning its previous value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-3
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-4
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-5
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-25
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic bit operations
+STATEMENT: >>>
+The Zephyr RTOS shall support performing bit-level operation on individual bits within either a single atomic variable or an array of atomic variables.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-3
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-4
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-5
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-6
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-26
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic set bit
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for setting a specific bit to 1, returning nothing.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-25
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-27
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic clear bit
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for clearing a specific bit to 0, returning nothing.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-25
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-28
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic set bit to a given state
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for setting a specific bit to a given boolean value, returning nothing.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-25
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-29
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic test bit
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for getting the state of a specific bit, returning its current state as a boolean value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-25
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-30
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic test and set bit
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for setting a specific bit to 1 and returning its previous state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-25
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-31
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic test and clear bit
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for clearing a specific bit to 0 and returning its previous state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-25
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-32
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic pointer
+STATEMENT: >>>
+The Zephyr RTOS shall define an atomic variable type for storing a pointer value atomically.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-33
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic pointer value
+STATEMENT: >>>
+The Zephyr RTOS shall define a pointer type used as the parameter and return type of all atomic pointer operations.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-34
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Initialize atomic pointer
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for initializing an atomic pointer to a specific pointer value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-32
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-33
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-35
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic pointer operations
+STATEMENT: >>>
+The Zephyr RTOS shall provide operations that read and write atomic pointers using the atomic pointer value type.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-32
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-33
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-3
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-4
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-5
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-36
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Get atomic pointer
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for getting the pointer value from an atomic pointer.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-35
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-37
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Set atomic pointer
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for setting an atomic pointer and returning its previous pointer value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-35
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-38
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic pointer compare and set
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for setting an atomic pointer to a new value if and only if its current value equals an expected value, leaving the atomic pointer unchanged otherwise, and returning whether the atomic pointer was updated.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-35
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-39
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic pointer clear
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for setting an atomic pointer to NULL and returning its previous pointer value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SRS-26-35
