@@ -7,7 +7,7 @@ The requirements are captured using
 
 See the [Zephyr Safety Working Group Wiki](https://github.com/zephyrproject-rtos/zephyr/wiki/Safety-Working-Group) for information on connecting to the team.
 
-The guidelines around writing requirements are located here: [Safety Requirements](https://docs.zephyrproject.org/latest/safety/safety_requirements.html)
+The guidelines around writing requirements are located here: [Safety Requirements](https://docs.zephyrproject.org/latest/safety/safety_requirements/index.html)
 
 ## Deployed Documentation
 
