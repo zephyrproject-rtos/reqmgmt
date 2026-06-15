@@ -1,0 +1,138 @@
+[DOCUMENT]
+TITLE: Stacks
+PREFIX: ZEP-SRS-30-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Stack definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a stack at compile time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Stack initialization at run time with an user-defined memory area
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a stack at run time, using a data buffer provided by the user.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Stack initialization at run time with automatically allocated memory area
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a stack at run time, with automatic allocation of the stack memory.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Releasing a dynamically allocated stack buffer
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to deallocate all resources previously allocated by a run-time stack definition.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Push an item to the stack
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to add a new item on top of the stack.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+- TYPE: Parent
+  VALUE: ZEP-SRS-30-7
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Pop an item from the stack
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to retrieve the current item from the top of the stack and to remove such item from the stack.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+- TYPE: Parent
+  VALUE: ZEP-SRS-30-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Pushing onto a full stack
+STATEMENT: >>>
+If the stack is full when an item is pushed, the Zephyr RTOS shall return an error and not add the item.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Concurrent access protection
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to push items to or pop items from the same stack object from multiple execution contexts which can run concurrently.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want to access a stack from different execution contexts (like threads), including interrupt handlers.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Stack data retrieval with timeout
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to allow waiting for a stack item availability within a specified timeout.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want to share a stack object between a producer and a consumer threads. The producer thread pushes items into the stack, while the consumer thread is waiting for an item to appear in the stack.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26

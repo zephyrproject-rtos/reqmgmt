@@ -368,3 +368,18 @@ The Zephyr RTOS shall provide a framework to pass messages of arbitrary size bet
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Stacks
+
+[REQUIREMENT]
+UID: ZEP-SYRS-26
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Stacks
+STATEMENT: >>>
+The Zephyr RTOS shall implement a stack which can be used to pass data between threads and interrupt service routines.
+<<<
+
+[[/SECTION]]
