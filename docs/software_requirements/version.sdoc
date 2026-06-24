@@ -1,0 +1,37 @@
+[DOCUMENT]
+TITLE: Kernel Version
+REQ_PREFIX: ZEP-SRS-26-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Version
+TITLE: Kernel version information retrieval
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to retrieve the kernel version information for the present build.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Version
+TITLE: Kernel version element extraction
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to obtain the major, minor, and patch level elements of the kernel version information for the present build.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
