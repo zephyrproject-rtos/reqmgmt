@@ -368,3 +368,18 @@ The Zephyr RTOS shall provide a framework to pass messages of arbitrary size bet
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: System Initialization
+
+[REQUIREMENT]
+UID: ZEP-SYRS-34
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: System Initialization
+STATEMENT: >>>
+The Zephyr RTOS shall initialize its kernel, registered subsystems, and devices during boot before the application is started.
+<<<
+
+[[/SECTION]]
