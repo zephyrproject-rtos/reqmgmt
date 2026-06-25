@@ -247,3 +247,29 @@ then the Zephyr RTOS shall return an error indicating invalid values.
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-14
+
+[REQUIREMENT]
+UID: ZEP-SRS-5-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Semaphore
+TITLE: Semaphore release at maximum count
+STATEMENT: >>>
+When a semaphore is released while its count is already at the maximum permitted count, the Zephyr RTOS shall leave the count unchanged.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-14
+
+[REQUIREMENT]
+UID: ZEP-SRS-5-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Semaphore
+TITLE: Semaphore operations from interrupt context
+STATEMENT: >>>
+The Zephyr RTOS shall allow a semaphore to be released from an interrupt service routine, and to be acquired from an interrupt service routine when no waiting is requested.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-14
