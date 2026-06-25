@@ -56,6 +56,15 @@ FILE: power_management.sdoc
 FILE: thread_communication.sdoc
 
 [DOCUMENT_FROM_FILE]
+FILE: message_queue.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: pipe.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: poll.sdoc
+
+[DOCUMENT_FROM_FILE]
 FILE: thread_scheduling.sdoc
 
 [DOCUMENT_FROM_FILE]

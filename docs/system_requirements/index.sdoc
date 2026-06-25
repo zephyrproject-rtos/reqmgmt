@@ -368,3 +368,48 @@ The Zephyr RTOS shall provide a framework to pass messages of arbitrary size bet
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Message Queues
+
+[REQUIREMENT]
+UID: ZEP-SYRS-31
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Message Queues
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for threads and interrupt service routines to asynchronously exchange fixed-size data items.
+<<<
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Pipes
+
+[REQUIREMENT]
+UID: ZEP-SYRS-32
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Pipes
+TITLE: Pipes
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to transfer a stream of bytes between threads.
+<<<
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Polling
+
+[REQUIREMENT]
+UID: ZEP-SYRS-33
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Polling
+TITLE: Polling
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for a thread to wait concurrently for any one of multiple conditions to be satisfied.
+<<<
+
+[[/SECTION]]

@@ -1,0 +1,141 @@
+[DOCUMENT]
+TITLE: Pipes
+REQ_PREFIX: ZEP-SRS-32-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-32-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Pipes
+TITLE: Pipe definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a pipe at compile time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-32
+
+[REQUIREMENT]
+UID: ZEP-SRS-32-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Pipes
+TITLE: Pipe initialization at run time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a pipe at run time using a caller-provided buffer.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-32
+
+[REQUIREMENT]
+UID: ZEP-SRS-32-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Pipes
+TITLE: Writing data to a pipe
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for a thread to write up to a requested number of bytes into a pipe.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-32
+
+[REQUIREMENT]
+UID: ZEP-SRS-32-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Pipes
+TITLE: Reading data from a pipe
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for a thread to read up to a requested number of bytes from a pipe.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-32
+
+[REQUIREMENT]
+UID: ZEP-SRS-32-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Pipes
+TITLE: Pipe write timeout
+STATEMENT: >>>
+When writing to a pipe, the Zephyr RTOS shall accept a timeout that specifies the maximum time to wait for space to become available.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-32
+
+[REQUIREMENT]
+UID: ZEP-SRS-32-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Pipes
+TITLE: Pipe read timeout
+STATEMENT: >>>
+When reading from a pipe, the Zephyr RTOS shall accept a timeout that specifies the maximum time to wait for data to become available.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-32
+
+[REQUIREMENT]
+UID: ZEP-SRS-32-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Pipes
+TITLE: Resetting a pipe
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to reset a pipe, discarding any unread data and unblocking threads waiting on the pipe.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-32
+
+[REQUIREMENT]
+UID: ZEP-SRS-32-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Pipes
+TITLE: Closing a pipe
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to close a pipe, unblocking threads waiting on the pipe.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-32
+
+[REQUIREMENT]
+UID: ZEP-SRS-32-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Pipes
+TITLE: Operations on a closed pipe
+STATEMENT: >>>
+If a read or write operation is attempted on a closed pipe, then the Zephyr RTOS shall return an error indicating that the pipe is closed.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-32
+
+[REQUIREMENT]
+UID: ZEP-SRS-32-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Pipes
+TITLE: Operations interrupted by a reset
+STATEMENT: >>>
+When a read or write operation is interrupted by a pipe reset, the Zephyr RTOS shall return an error indicating that the operation was cancelled.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-32

@@ -1,0 +1,151 @@
+[DOCUMENT]
+TITLE: Polling
+REQ_PREFIX: ZEP-SRS-33-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[[SECTION]]
+TITLE: Waiting on Poll Events
+
+[REQUIREMENT]
+UID: ZEP-SRS-33-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Polling
+TITLE: Waiting for any of multiple poll events
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for a thread to wait until any one of a specified set of poll events is ready.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-33
+
+[REQUIREMENT]
+UID: ZEP-SRS-33-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Polling
+TITLE: Supported poll event conditions
+STATEMENT: >>>
+The Zephyr RTOS shall support poll events that wait for the availability of a semaphore, a FIFO, a message queue, a pipe, and a poll signal.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-33
+
+[REQUIREMENT]
+UID: ZEP-SRS-33-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Polling
+TITLE: Poll wait timeout
+STATEMENT: >>>
+When a thread waits on a set of poll events, the Zephyr RTOS shall accept a timeout that specifies the maximum time to wait for an event to become ready.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-33
+
+[REQUIREMENT]
+UID: ZEP-SRS-33-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Polling
+TITLE: Reporting ready poll events
+STATEMENT: >>>
+When a poll wait completes, the Zephyr RTOS shall report the state of each poll event so the caller can determine which events are ready.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-33
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Poll Signals
+
+[REQUIREMENT]
+UID: ZEP-SRS-33-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Polling
+TITLE: Poll signal object
+STATEMENT: >>>
+The Zephyr RTOS shall provide a poll signal object that a thread can wait on as a poll event.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-33
+
+[REQUIREMENT]
+UID: ZEP-SRS-33-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Polling
+TITLE: Poll signal initialization
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a poll signal object to the unsignaled state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-33
+
+[REQUIREMENT]
+UID: ZEP-SRS-33-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Polling
+TITLE: Raising a poll signal
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to raise a poll signal with a caller-supplied result value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-33
+
+[REQUIREMENT]
+UID: ZEP-SRS-33-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Polling
+TITLE: Persistence of a raised poll signal
+STATEMENT: >>>
+While a poll signal has been raised and not reset, the Zephyr RTOS shall keep the signal in the signaled state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-33
+
+[REQUIREMENT]
+UID: ZEP-SRS-33-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Polling
+TITLE: Resetting a poll signal
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to reset a poll signal to the unsignaled state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-33
+
+[REQUIREMENT]
+UID: ZEP-SRS-33-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Polling
+TITLE: Querying a poll signal
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to fetch the signaled state and result value of a poll signal.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-33
+
+[[/SECTION]]
