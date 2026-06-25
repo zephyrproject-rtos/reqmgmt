@@ -500,3 +500,18 @@ The Zephyr RTOS shall provide a mechanism for a thread to wait concurrently for 
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: System Initialization
+
+[REQUIREMENT]
+UID: ZEP-SYRS-34
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: System Initialization
+STATEMENT: >>>
+The Zephyr RTOS shall initialize its kernel, registered subsystems, and devices during boot before the application is started.
+<<<
+
+[[/SECTION]]
