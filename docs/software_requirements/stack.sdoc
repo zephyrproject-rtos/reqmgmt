@@ -1,0 +1,141 @@
+[DOCUMENT]
+TITLE: Stacks
+REQ_PREFIX: ZEP-SRS-30-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Stack definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a stack at compile time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-30
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Stack initialization at run time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a stack at run time using a caller-provided buffer.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-30
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Stack buffer dynamic allocation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a stack with a buffer that is dynamically allocated for a requested number of values.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-30
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Pushing a value onto a stack
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for threads and interrupt service routines to add an integer data value onto a stack.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-30
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Pushing onto a full stack
+STATEMENT: >>>
+When a value is pushed onto a stack that has reached its maximum number of values, the Zephyr RTOS shall return an error indicating that the stack is full.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-30
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Popping a value from a stack
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for threads and interrupt service routines to remove an integer data value from a stack.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-30
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Stack retrieval order
+STATEMENT: >>>
+When a value is removed from a stack, the Zephyr RTOS shall return the most recently added value that has not yet been removed.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-30
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Stack pop timeout
+STATEMENT: >>>
+When removing a value from a stack, the Zephyr RTOS shall accept a timeout that specifies the maximum time to wait for a value to become available.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-30
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Stack pop timeout expiry
+STATEMENT: >>>
+When no value becomes available on a stack within the specified time, the Zephyr RTOS shall return an error indicating that no value was retrieved.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-30
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Releasing a dynamically allocated stack buffer
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to release the buffer of a stack that was dynamically allocated.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-30

@@ -355,6 +355,21 @@ The Zephyr RTOS shall implement FIFOs which can be used to pass data between thr
 [[/SECTION]]
 
 [[SECTION]]
+TITLE: Stacks
+
+[REQUIREMENT]
+UID: ZEP-SYRS-30
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Stacks data passing
+STATEMENT: >>>
+The Zephyr RTOS shall implement a stack which can be used to pass a limited number of integer data values between threads and interrupt service routines.
+<<<
+
+[[/SECTION]]
+
+[[SECTION]]
 TITLE: Mailboxes
 
 [REQUIREMENT]
