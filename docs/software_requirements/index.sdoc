@@ -62,6 +62,9 @@ FILE: message_queue.sdoc
 FILE: pipe.sdoc
 
 [DOCUMENT_FROM_FILE]
+FILE: poll.sdoc
+
+[DOCUMENT_FROM_FILE]
 FILE: thread_scheduling.sdoc
 
 [DOCUMENT_FROM_FILE]

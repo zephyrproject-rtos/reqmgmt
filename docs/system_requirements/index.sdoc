@@ -428,3 +428,18 @@ The Zephyr RTOS shall provide a mechanism to transfer a stream of bytes between 
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Polling
+
+[REQUIREMENT]
+UID: ZEP-SYRS-33
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Polling
+TITLE: Polling
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for a thread to wait concurrently for any one of multiple conditions to be satisfied.
+<<<
+
+[[/SECTION]]
