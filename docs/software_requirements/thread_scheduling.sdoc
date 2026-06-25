@@ -159,4 +159,82 @@ RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-16
 
+[REQUIREMENT]
+UID: ZEP-SRS-2-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Scheduling
+TITLE: Selecting the current thread
+STATEMENT: >>>
+The Zephyr RTOS shall select the highest-priority ready thread to be the current thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-2-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Scheduling
+TITLE: Scheduling threads of equal priority
+STATEMENT: >>>
+When several ready threads share the highest priority, the Zephyr RTOS shall run the thread that became ready earliest until it yields, blocks, or is preempted.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-2-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Scheduling
+TITLE: Cooperative threads
+STATEMENT: >>>
+The Zephyr RTOS shall support cooperative threads that, once scheduled, remain the current thread until they yield or block.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-17
+
+[REQUIREMENT]
+UID: ZEP-SRS-2-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Scheduling
+TITLE: Yielding the CPU
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface for the current thread to voluntarily relinquish the CPU to other ready threads of the same or higher priority.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-2-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Scheduling
+TITLE: Locking the scheduler
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface for a preemptible thread to temporarily prevent itself from being preempted by other threads.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-2-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Scheduling
+TITLE: Setting a thread deadline
+STATEMENT: >>>
+Where earliest-deadline-first scheduling is enabled, the Zephyr RTOS shall provide an interface to set a thread's deadline.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-17
+
 [[/SECTION]]
