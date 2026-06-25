@@ -172,7 +172,7 @@ UID: ZEP-SRS-5-13
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
-TITLE: Semaphore release
+TITLE: Semaphore count increment on release
 STATEMENT: >>>
 The Zephyr RTOS shall increment the semaphore's count upon release.
 <<<
@@ -185,7 +185,7 @@ UID: ZEP-SRS-5-14
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
-TITLE: Semaphore release with priority inheritance
+TITLE: Highest-priority waiter unblocked on release
 STATEMENT: >>>
 When there are threads waiting on the semaphore, the highest-priority waiting thread
 shall be unblocked and acquire the semaphore.

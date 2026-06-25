@@ -16,7 +16,7 @@ The Zephyr RTOS shall provide a mechanism to define and initialize a condition v
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-20
+  VALUE: ZEP-SYRS-21
 
 [REQUIREMENT]
 UID: ZEP-SRS-21-2
@@ -29,7 +29,7 @@ The Zephyr RTOS shall provide a mechanism to define and initialize a condition v
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-20
+  VALUE: ZEP-SYRS-21
 
 [REQUIREMENT]
 UID: ZEP-SRS-21-3
@@ -38,11 +38,11 @@ TYPE: Functional
 COMPONENT: Condition Variables
 TITLE: Signal one waiting thread
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to signal the highest priorite waiting thread when a condition is met.
+The Zephyr RTOS shall provide a mechanism to signal the highest priority waiting thread when a condition is met.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-20
+  VALUE: ZEP-SYRS-21
 
 [REQUIREMENT]
 UID: ZEP-SRS-21-4
@@ -55,7 +55,7 @@ The Zephyr RTOS shall provide a mechanism to signal all waiting threads when a c
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-20
+  VALUE: ZEP-SYRS-21
 
 [REQUIREMENT]
 UID: ZEP-SRS-21-5
@@ -68,7 +68,7 @@ The Zephyr RTOS shall provide a mechanism for a thread to wait on a condition va
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-20
+  VALUE: ZEP-SYRS-21
 
 [REQUIREMENT]
 UID: ZEP-SRS-21-6
@@ -81,7 +81,7 @@ When waiting on a condition variable, the thread shall specify a timeout value.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-20
+  VALUE: ZEP-SYRS-21
 
 [REQUIREMENT]
 UID: ZEP-SRS-21-7
@@ -94,7 +94,7 @@ When a timeout occurs while waiting on a condition variable, the thread shall be
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-20
+  VALUE: ZEP-SYRS-21
 
 [REQUIREMENT]
 UID: ZEP-SRS-21-8
@@ -103,11 +103,11 @@ TYPE: Functional
 COMPONENT: Condition Variables
 TITLE: Release mutex on wait
 STATEMENT: >>>
-If a thread is waiting on a condition variable, the thread shall release the current owned mutex independently.
+When a thread waits on a condition variable, the Zephyr RTOS shall atomically release the associated mutex while the thread is blocked and re-acquire it before the thread resumes.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-20
+  VALUE: ZEP-SYRS-21
 
 [REQUIREMENT]
 UID: ZEP-SRS-21-9
@@ -116,8 +116,8 @@ TYPE: Functional
 COMPONENT: Condition Variables
 TITLE: Unblock a waiting thread
 STATEMENT: >>>
-henever some thread signals a condition variable the Zephyr RTOS shall unblock the highest priority thread currently waiting for this condition variable.
+Whenever a thread signals a condition variable, the Zephyr RTOS shall unblock the highest priority thread currently waiting on that condition variable.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-20
+  VALUE: ZEP-SYRS-21
