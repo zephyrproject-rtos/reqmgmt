@@ -19,6 +19,9 @@ TITLE: Initializing a trace
 STATEMENT: >>>
 Zephyr shall provide an interface to initialize a trace.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-19
 
 [REQUIREMENT]
 UID: ZEP-SRS-10-2
@@ -29,6 +32,9 @@ TITLE: Triggering a trace
 STATEMENT: >>>
 Zephyr shall provide an interface to trigger a trace.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-19
 
 [REQUIREMENT]
 UID: ZEP-SRS-10-3
@@ -39,6 +45,9 @@ TITLE: Dumping trace results
 STATEMENT: >>>
 Zephyr shall provide an interface to dump results from a trace.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-19
 
 [REQUIREMENT]
 UID: ZEP-SRS-10-4
@@ -49,6 +58,9 @@ TITLE: Removing trace data
 STATEMENT: >>>
 Zephyr shall provide an interface to remove trace data.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-19
 
 [REQUIREMENT]
 UID: ZEP-SRS-10-5
@@ -62,6 +74,9 @@ Zephyr shall provide an interface to identify the objects being traced.
 USER_STORY: >>>
 As a Zephyr OS user, I want to be able to give each object which I create a name / label in order to be able to identify them in a trace log.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-19
 
 [REQUIREMENT]
 UID: ZEP-SRS-10-6
@@ -75,3 +90,6 @@ Zephyr shall prevent the tracing functionality from interfering with normal oper
 USER_STORY: >>>
 As a Zephyr OS user, I want that the trace functionality do not interfere or slow down the operation system functionality.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-19
