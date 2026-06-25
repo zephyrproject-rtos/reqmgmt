@@ -17,9 +17,7 @@ TYPE: Functional
 COMPONENT: Device Driver API
 TITLE: Device Driver Abstraction
 STATEMENT: >>>
-The Zephyr RTOS shall provide abstraction of device drivers with common functionalities as an intermediate interface between applications and device drivers, where such interface is implemented by individual device drivers.
-
-Proposal for replacement: Zephyr shall provide an interface between application and individual device drivers to provide an abstraction of device drivers with common functionalities.
+The Zephyr RTOS shall provide an interface between applications and individual device drivers that abstracts common device driver functionality.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -36,6 +34,58 @@ The Zephyr RTOS shall provide an interface for managing a defined set of hardwar
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user I want hardware exceptions (hardware failures, programming mistakes) to be handled gracefully (no program crashes as far as possible).
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-4
+
+[REQUIREMENT]
+UID: ZEP-SRS-14-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Device Driver API
+TITLE: Defining a device instance
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define a device instance together with its initialization function and its driver API.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-4
+
+[REQUIREMENT]
+UID: ZEP-SRS-14-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Device Driver API
+TITLE: Obtaining a device by name
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to obtain a reference to a device instance by its name.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-4
+
+[REQUIREMENT]
+UID: ZEP-SRS-14-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Device Driver API
+TITLE: Obtaining a device from a devicetree node
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to obtain a reference to a device instance from its devicetree node.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-4
+
+[REQUIREMENT]
+UID: ZEP-SRS-14-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Device Driver API
+TITLE: Checking device readiness
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to determine whether a device instance is ready to be used.
 <<<
 RELATIONS:
 - TYPE: Parent
