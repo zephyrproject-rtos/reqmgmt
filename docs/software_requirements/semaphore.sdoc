@@ -45,6 +45,9 @@ TITLE: Maximum limit of a semaphore
 STATEMENT: >>>
 The Zephyr RTOS shall define the maximum limit of a semaphore when the semaphore is used for counting purposes and does not have an explicit limit.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-14
 
 [REQUIREMENT]
 UID: ZEP-SRS-5-4
