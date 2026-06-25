@@ -24,6 +24,9 @@ See ZEP104
 +
 When the power state is changed I want to get an notification in order for specific parts of my application to react accordingly.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
 
 [REQUIREMENT]
 UID: ZEP-SRS-13-2
@@ -34,6 +37,9 @@ TITLE: Power Management
 STATEMENT: >>>
 TBD
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
 
 [REQUIREMENT]
 UID: ZEP-SRS-13-3
@@ -44,3 +50,6 @@ TITLE: Notification of changes to system power states
 STATEMENT: >>>
 The Zephyr RTOS shall provide notification of changes to system power states.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
