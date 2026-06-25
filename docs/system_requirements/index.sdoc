@@ -368,3 +368,21 @@ The Zephyr RTOS shall provide a framework to pass messages of arbitrary size bet
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Work Queues
+
+[REQUIREMENT]
+UID: ZEP-SYRS-26
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work Queues
+STATEMENT: >>>
+The Zephyr RTOS shall provide a framework to offload the processing of work items to a dedicated thread.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want an ISR or a high-priority thread to defer non-urgent processing to a lower-priority thread so that time-sensitive processing is not impacted.
+<<<
+
+[[/SECTION]]
