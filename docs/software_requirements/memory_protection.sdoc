@@ -249,7 +249,7 @@ UID: ZEP-SRS-8-16
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
-TITLE: Tracking kernel objects in used by user mode threads
+TITLE: Tracking kernel objects in use by user mode threads
 STATEMENT: >>>
 The Zephyr RTOS shall track the kernel objects that are in use by each user mode thread.
 <<<
@@ -284,6 +284,84 @@ The Zephyr RTOS shall support assigning a memory pool to act as that thread's re
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user I want to be able, during runtime from the kernel, to request a memory area/pool which is exclusively available to the requesting thread protected against access from other threads.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Memory partition definition
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define a memory partition that describes a region of memory together with its access attributes.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Memory domain definition
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a memory domain composed of a set of memory partitions.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-21
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Adding a partition to a memory domain
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to add a memory partition to a memory domain.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-22
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Removing a partition from a memory domain
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to remove a memory partition from a memory domain.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-23
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Assigning a thread to a memory domain
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to assign a thread to a memory domain so that the thread gains access to the domain's partitions.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-24
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Default user thread memory isolation
+STATEMENT: >>>
+While a thread runs in user mode, the Zephyr RTOS shall restrict its memory accesses to its own stack and the partitions of the memory domain to which it is assigned.
 <<<
 RELATIONS:
 - TYPE: Parent
