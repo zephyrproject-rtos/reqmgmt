@@ -422,3 +422,21 @@ As a Zephyr RTOS user I want to measure elapsed time and to delay a thread for a
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Floating Point Services
+
+[REQUIREMENT]
+UID: ZEP-SYRS-29
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Floating Point Services
+TITLE: Floating Point Services
+STATEMENT: >>>
+Where the target architecture provides a floating point unit, the Zephyr RTOS shall manage the floating point context of threads.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want threads to be able to use the floating point unit without corrupting each other's floating point context so that I can perform floating point computations safely.
+<<<
+
+[[/SECTION]]

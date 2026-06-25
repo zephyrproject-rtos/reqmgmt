@@ -90,3 +90,6 @@ FILE: events.sdoc
 
 [DOCUMENT_FROM_FILE]
 FILE: kernel_timing.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: floating_point.sdoc
