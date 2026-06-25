@@ -84,3 +84,6 @@ FILE: mailboxes.sdoc
 
 [DOCUMENT_FROM_FILE]
 FILE: work_queues.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: events.sdoc

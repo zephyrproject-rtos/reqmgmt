@@ -386,3 +386,21 @@ As a Zephyr RTOS user I want an ISR or a high-priority thread to defer non-urgen
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Events
+
+[REQUIREMENT]
+UID: ZEP-SYRS-27
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Events
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to synchronize threads based on a set of events.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want a thread to wait until one or more application-defined events have occurred so that it can coordinate its execution with other threads and ISRs.
+<<<
+
+[[/SECTION]]
