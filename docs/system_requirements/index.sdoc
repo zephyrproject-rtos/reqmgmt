@@ -470,3 +470,18 @@ The Zephyr RTOS shall provide a mechanism for threads and interrupt service rout
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Pipes
+
+[REQUIREMENT]
+UID: ZEP-SYRS-32
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Pipes
+TITLE: Pipes
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to transfer a stream of bytes between threads.
+<<<
+
+[[/SECTION]]
