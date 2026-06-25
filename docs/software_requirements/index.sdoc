@@ -59,6 +59,9 @@ FILE: thread_communication.sdoc
 FILE: message_queue.sdoc
 
 [DOCUMENT_FROM_FILE]
+FILE: pipe.sdoc
+
+[DOCUMENT_FROM_FILE]
 FILE: thread_scheduling.sdoc
 
 [DOCUMENT_FROM_FILE]
