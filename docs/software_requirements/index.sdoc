@@ -87,3 +87,6 @@ FILE: work_queues.sdoc
 
 [DOCUMENT_FROM_FILE]
 FILE: events.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: kernel_timing.sdoc

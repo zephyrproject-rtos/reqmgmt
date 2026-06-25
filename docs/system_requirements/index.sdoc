@@ -404,3 +404,21 @@ As a Zephyr RTOS user I want a thread to wait until one or more application-defi
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Kernel Timing
+
+[REQUIREMENT]
+UID: ZEP-SYRS-28
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Kernel Timing
+STATEMENT: >>>
+The Zephyr RTOS shall provide services to measure the passage of time and to suspend the execution of a thread for a period of time.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user I want to measure elapsed time and to delay a thread for a defined period so that I can implement time-dependent application behavior.
+<<<
+
+[[/SECTION]]

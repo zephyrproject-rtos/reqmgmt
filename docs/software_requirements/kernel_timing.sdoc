@@ -1,0 +1,200 @@
+[DOCUMENT]
+TITLE: Kernel Timing
+REQ_PREFIX: ZEP-SRS-28-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[[SECTION]]
+TITLE: System Uptime
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: System uptime in milliseconds
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to obtain the time elapsed since the system booted, expressed in milliseconds.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-28
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: System uptime in system ticks
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to obtain the time elapsed since the system booted, expressed in system ticks.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-28
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: System uptime in seconds
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to obtain the time elapsed since the system booted, expressed in seconds.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-28
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Elapsed time relative to a reference
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to obtain the time elapsed since a caller-provided reference time and to update that reference time to the current uptime.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-28
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Hardware Clock
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Hardware clock cycle count
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to read the current value of the system's hardware clock as a 32-bit cycle count.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-28
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: 64-bit hardware clock cycle count
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to read the current value of the system's hardware clock as a 64-bit cycle count.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-28
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Time Unit Conversion
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Conversion between time units
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to convert time values between milliseconds, microseconds, nanoseconds, system ticks, and hardware cycles.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-28
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Thread Sleeping
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Suspending a thread for a duration
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to suspend the execution of the calling thread for a specified duration.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-28
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Suspending a thread with microsecond resolution
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to suspend the execution of the calling thread for a duration specified in microseconds.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-28
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Thread readiness after sleep
+STATEMENT: >>>
+When the duration for which a thread was suspended elapses, the Zephyr RTOS shall make the thread eligible for execution again.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-28
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Waking a sleeping thread
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to prematurely wake a thread that is suspended for a duration.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-28
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Reporting remaining time on premature wake
+STATEMENT: >>>
+When a suspended thread is woken before its requested duration has elapsed, the Zephyr RTOS shall report the amount of time that was remaining.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-28
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Busy waiting
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for the calling thread to busy wait for a specified number of microseconds without relinquishing the CPU.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-28
+
+[[/SECTION]]
