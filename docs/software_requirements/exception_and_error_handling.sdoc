@@ -22,6 +22,9 @@ The Zephyr RTOS shall provide default handlers for exceptions.
 USER_STORY: >>>
 As a Zephyr RTOS user I want exceptions which I did not handle explicitly (by mistake or on purpose) to be caught by a default handler, defined either by Zephyr OS or by myself.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-5
 
 [REQUIREMENT]
 UID: ZEP-SRS-16-2
@@ -32,6 +35,9 @@ TITLE: Default handler for fatal errors
 STATEMENT: >>>
 The Zephyr RTOS shall provide default handlers for fatal errors that do not have a dedicated handler.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-5
 
 [REQUIREMENT]
 UID: ZEP-SRS-16-3
@@ -42,6 +48,9 @@ TITLE: Assigning a specific handler
 STATEMENT: >>>
 The Zephyr RTOS shall provide an interface to assign a specific handler with an exception.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-5
 
 [REQUIREMENT]
 UID: ZEP-SRS-16-4
@@ -52,3 +61,6 @@ TITLE: Assigning a specific handler (2)
 STATEMENT: >>>
 The Zephyr RTOS shall provide an interface to assign a specific handler for a fatal error.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-5
