@@ -17,7 +17,7 @@ TYPE: Functional
 COMPONENT: Threads
 TITLE: Creating threads
 STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to create (start) a thread.
+The Zephyr RTOS shall provide an interface to create a thread at run time.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -73,9 +73,9 @@ UID: ZEP-SRS-1-5
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Threads
-TITLE: Resuming a suspended thread after a timeout
+TITLE: Delayed thread start
 STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to resume a suspended thread after a timeout.
+When a thread is created, the Zephyr RTOS shall accept a scheduling delay after which the thread is started.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -88,9 +88,9 @@ UID: ZEP-SRS-1-6
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Threads
-TITLE: Deleting a thread
+TITLE: Aborting a thread
 STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to delete (end) a thread.
+The Zephyr RTOS shall provide an interface to abort (terminate) a thread.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -105,7 +105,7 @@ TYPE: Functional
 COMPONENT: Threads
 TITLE: Thread states
 STATEMENT: >>>
-Threads shall have different states to fulfill the Life-cycle of a thread
+The Zephyr RTOS shall maintain a state for each thread that reflects its position in the thread life cycle.
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user, I want to know in what state a specific thread is.
@@ -123,10 +123,10 @@ TYPE: Functional
 COMPONENT: Threads
 TITLE: Thread stack objects
 STATEMENT: >>>
-Every Thread shall have it's own stack.
+Each thread shall have its own dedicated stack.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS user I want to be able to configure the stack size of a thread. And every thread shall have it's own dedicated stack.
+As a Zephyr RTOS user I want to be able to configure the stack size of a thread, and every thread shall have its own dedicated stack.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -146,19 +146,6 @@ The Zephyr RTOS shall provide an interface to create threads with defined privil
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-15
-- TYPE: Parent
-  VALUE: ZEP-SYRS-16
-
-[REQUIREMENT]
-UID: ZEP-SRS-1-10
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Threads
-TITLE: Scheduling multiple threads
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to schedule multiple threads.
-<<<
-RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-16
 
@@ -191,6 +178,139 @@ Every thread shall have a custom data area.
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to set a thread specific custom area for every thread I create and which can be used only by the thread itself or the can be used by the application
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Defining a thread at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to define a thread at compile time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Starting an inactive thread
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to start a thread that was created without being scheduled to start.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Passing parameters to a thread entry point
+STATEMENT: >>>
+When a thread is created, the Zephyr RTOS shall pass a defined set of parameters to the thread's entry point function.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Getting thread priority
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to get a thread's priority.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-17
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Assigning a thread name
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to assign a name to a thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-18
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Retrieving a thread name
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to retrieve the name of a thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Identifying the current thread
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to identify the thread that is currently executing.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Waiting for a thread to terminate
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface for a thread to wait until another thread has terminated, subject to a specified timeout.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-21
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Querying a thread state
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to obtain a human-readable representation of a thread's current state.
 <<<
 RELATIONS:
 - TYPE: Parent
