@@ -1,0 +1,221 @@
+[DOCUMENT]
+TITLE: Events
+REQ_PREFIX: ZEP-SRS-27-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[[SECTION]]
+TITLE: Event Object Definition
+
+[REQUIREMENT]
+UID: ZEP-SRS-27-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Event object definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize an event object at compile time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-27
+
+[REQUIREMENT]
+UID: ZEP-SRS-27-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Event object definition at run time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize an event object at run time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-27
+
+[REQUIREMENT]
+UID: ZEP-SRS-27-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Number of distinct events
+STATEMENT: >>>
+An event object shall track up to 32 distinct events.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-27
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Delivering Events
+
+[REQUIREMENT]
+UID: ZEP-SRS-27-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Posting events
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to post one or more events to an event object, merging them with the events currently tracked by the event object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-27
+
+[REQUIREMENT]
+UID: ZEP-SRS-27-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Setting events
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to set the events tracked by an event object to a specified value, replacing the events currently tracked by the event object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-27
+
+[REQUIREMENT]
+UID: ZEP-SRS-27-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Setting and clearing events using a mask
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to set and clear individual events tracked by an event object as determined by a mask.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-27
+
+[REQUIREMENT]
+UID: ZEP-SRS-27-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Clearing events
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to clear specified events tracked by an event object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-27
+
+[REQUIREMENT]
+UID: ZEP-SRS-27-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Reporting the previous events
+STATEMENT: >>>
+When events are posted to or set in an event object, the Zephyr RTOS shall report the value of the events that were tracked by the event object before the operation.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-27
+
+[REQUIREMENT]
+UID: ZEP-SRS-27-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Unpending threads whose conditions are met
+STATEMENT: >>>
+When events posted to or set in an event object satisfy the waiting condition of a thread waiting on that event object, the Zephyr RTOS shall unpend that thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-27
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Waiting for Events
+
+[REQUIREMENT]
+UID: ZEP-SRS-27-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Waiting for any of a set of events
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for a thread to wait until any of a specified set of events is tracked by an event object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-27
+
+[REQUIREMENT]
+UID: ZEP-SRS-27-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Waiting for all of a set of events
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for a thread to wait until all of a specified set of events are tracked by an event object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-27
+
+[REQUIREMENT]
+UID: ZEP-SRS-27-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Event wait timeout
+STATEMENT: >>>
+When a thread waits on an event object, the Zephyr RTOS shall accept a timeout that specifies the maximum time to wait for the desired set of events.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-27
+
+[REQUIREMENT]
+UID: ZEP-SRS-27-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Event wait timeout expiry
+STATEMENT: >>>
+When the timeout of a thread waiting on an event object elapses before the desired set of events is satisfied, the Zephyr RTOS shall report that no matching events were delivered.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-27
+
+[REQUIREMENT]
+UID: ZEP-SRS-27-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Reporting matching events on wait completion
+STATEMENT: >>>
+When a thread waiting on an event object completes its wait successfully, the Zephyr RTOS shall report the set of events that matched the waiting condition.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-27
+
+[REQUIREMENT]
+UID: ZEP-SRS-27-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Events
+TITLE: Resetting events before waiting
+STATEMENT: >>>
+When a thread waits on an event object, the Zephyr RTOS shall accept an option to clear the events tracked by the event object before the wait begins.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-27
+
+[[/SECTION]]

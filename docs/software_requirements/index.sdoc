@@ -23,6 +23,9 @@ FILE: condition_variables.sdoc
 FILE: device_driver_api.sdoc
 
 [DOCUMENT_FROM_FILE]
+FILE: events.sdoc
+
+[DOCUMENT_FROM_FILE]
 FILE: exception_and_error_handling.sdoc
 
 [DOCUMENT_FROM_FILE]
