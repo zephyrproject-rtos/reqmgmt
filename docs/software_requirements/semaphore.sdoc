@@ -230,8 +230,8 @@ TYPE: Functional
 COMPONENT: Semaphore
 TITLE: Semaphore acquisitions abort after reset
 STATEMENT: >>>
-When a semaphore is reset, the Zephyr RTOS shall abort all existing acquisitions
-of the semaphore returning a resource contention error code.
+When a semaphore is reset, the Zephyr RTOS shall abort all pending take operations on the
+semaphore, returning to the affected threads the same error used to indicate a wait timeout.
 <<<
 RELATIONS:
 - TYPE: Parent
