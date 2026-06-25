@@ -21,6 +21,9 @@ The Zephyr RTOS shall provide abstraction of device drivers with common function
 
 Proposal for replacement: Zephyr shall provide an interface between application and individual device drivers to provide an abstraction of device drivers with common functionalities.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-4
 
 [REQUIREMENT]
 UID: ZEP-SRS-14-2
@@ -34,3 +37,6 @@ The Zephyr RTOS shall provide an interface for managing a defined set of hardwar
 USER_STORY: >>>
 As a Zephyr RTOS user I want hardware exceptions (hardware failures, programming mistakes) to be handled gracefully (no program crashes as far as possible).
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-4
