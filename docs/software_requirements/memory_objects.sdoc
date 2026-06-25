@@ -41,3 +41,198 @@ As a Zephyr RTOS user I want a most efficient and least fragmentation prone dyna
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a memory heap at compile time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap initialization at run time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a memory heap at run time over a caller-provided memory region.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap allocation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to allocate a block of memory of a requested size from a heap.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap aligned allocation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to allocate a block of memory from a heap with a requested alignment.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap allocation timeout
+STATEMENT: >>>
+When allocating memory from a heap, the Zephyr RTOS shall accept a timeout that specifies the maximum time to wait for sufficient memory to become available.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap allocation failure
+STATEMENT: >>>
+When sufficient memory cannot be allocated from a heap within the specified time, the Zephyr RTOS shall report that the allocation failed.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap reallocation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to resize a previously allocated heap block while preserving its contents up to the smaller of the old and new sizes.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap free
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to release a previously allocated block of memory back to its heap.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: System heap allocation and release
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to allocate memory from and release memory to a shared system heap.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Memory slab definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a memory slab of fixed-size blocks at compile time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Memory slab initialization at run time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a memory slab at run time over a caller-provided memory region.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Memory slab block allocation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to allocate a fixed-size block from a memory slab, accepting a timeout that specifies the maximum time to wait for a free block.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Memory slab allocation timeout expiry
+STATEMENT: >>>
+When no block becomes available in a memory slab within the specified time, the Zephyr RTOS shall return an error indicating that no block was allocated.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Memory slab block free
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to release a previously allocated block back to its memory slab.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Memory slab usage statistics
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to query the number of used and free blocks in a memory slab.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
