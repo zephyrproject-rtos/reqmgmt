@@ -126,7 +126,7 @@ STATEMENT: >>>
 Each thread shall have its own dedicated stack.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS user I want to be able to configure the stack size of a thread. And every thread shall have it's own dedicated stack.
+As a Zephyr RTOS user I want to be able to configure the stack size of a thread, and every thread shall have its own dedicated stack.
 <<<
 RELATIONS:
 - TYPE: Parent
