@@ -1,0 +1,89 @@
+[DOCUMENT]
+TITLE: Floating Point Services
+REQ_PREFIX: ZEP-SRS-29-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-29-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Floating Point Services
+TITLE: Enabling floating point context preservation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to enable preservation of the floating point context for a specified thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-29
+
+[REQUIREMENT]
+UID: ZEP-SRS-29-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Floating Point Services
+TITLE: Selecting floating point register sets
+STATEMENT: >>>
+When enabling floating point context preservation for a thread, the Zephyr RTOS shall accept options that select which floating point register sets are preserved.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-29
+
+[REQUIREMENT]
+UID: ZEP-SRS-29-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Floating Point Services
+TITLE: Disabling floating point context preservation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to disable preservation of the floating point context for a specified thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-29
+
+[REQUIREMENT]
+UID: ZEP-SRS-29-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Floating Point Services
+TITLE: Preserving the floating point context across context switches
+STATEMENT: >>>
+While floating point context preservation is enabled for a thread, the Zephyr RTOS shall preserve that thread's floating point context across context switches.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-29
+
+[REQUIREMENT]
+UID: ZEP-SRS-29-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Floating Point Services
+TITLE: Reporting unsupported floating point management
+STATEMENT: >>>
+If floating point context management is requested on a target that does not implement it, then the Zephyr RTOS shall return an error indicating that the operation is not supported.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-29
+
+[REQUIREMENT]
+UID: ZEP-SRS-29-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Floating Point Services
+TITLE: Reporting invalid floating point management requests
+STATEMENT: >>>
+If a request to enable or disable floating point context preservation cannot be performed, then the Zephyr RTOS shall return an error indicating that the request is invalid.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-29
