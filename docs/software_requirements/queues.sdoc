@@ -16,7 +16,7 @@ The Zephyr RTOS shall provide a mechanism to define and initialize a queue at co
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-21
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-20-2
@@ -29,7 +29,7 @@ The Zephyr RTOS shall provide a mechanism to define and initialize a queue at ru
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-21
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-20-3
@@ -42,7 +42,7 @@ The Zephyr RTOS shall provide a mechanism to enqueue a data item to the back of 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-21
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-20-4
@@ -55,7 +55,7 @@ The Zephyr RTOS shall provide a mechanism to enqueue a data item to the front of
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-21
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-20-5
@@ -68,7 +68,7 @@ The Zephyr RTOS shall provide a mechanism to remove a specific data item from a 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-21
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-20-6
@@ -81,7 +81,7 @@ The Zephyr RTOS shall provide a mechanism to get and dequeue a data item from th
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-21
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-20-7
@@ -94,7 +94,7 @@ The Zephyr RTOS shall provide a mechanism to check if a queue is empty.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-21
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-20-8
@@ -103,11 +103,11 @@ TYPE: Functional
 COMPONENT: Queues
 TITLE: Queue peek item at back
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to peek at the data data item at the back of a queue.
+The Zephyr RTOS shall provide a mechanism to peek at the data item at the back of a queue.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-21
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-20-9
@@ -116,11 +116,11 @@ TYPE: Functional
 COMPONENT: Queues
 TITLE: Queue peek item at front
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to peek at the data data item at the front of a queue.
+The Zephyr RTOS shall provide a mechanism to peek at the data item at the front of a queue.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-21
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-20-10
@@ -133,7 +133,7 @@ The Zephyr RTOS shall provide a mechanism to insert a data item behind another s
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-21
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-20-11
@@ -146,7 +146,7 @@ The Zephyr RTOS shall provide a mechanism to append a list of data items to the 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-21
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-20-12
@@ -159,7 +159,7 @@ The Zephyr RTOS shall provide a mechanism to append a list of data items to the 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-21
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-20-13
@@ -172,7 +172,7 @@ The Zephyr RTOS shall provide a mechanism to append a data item uniquely to the 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-21
+  VALUE: ZEP-SYRS-22
 
 [REQUIREMENT]
 UID: ZEP-SRS-20-14
@@ -186,4 +186,4 @@ data items to a queue.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-21
+  VALUE: ZEP-SYRS-22
