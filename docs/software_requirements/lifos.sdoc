@@ -56,16 +56,3 @@ The Zephyr RTOS shall provide a mechanism to get and dequeue a data item from th
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-23
-
-[REQUIREMENT]
-UID: ZEP-SRS-23-5
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Queues
-TITLE: Queue definition at compile time
-STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to define and initialize a LIFO at compile time.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-23
