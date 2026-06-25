@@ -91,11 +91,11 @@ RELATIONS:
 [REQUIREMENT]
 UID: ZEP-SRS-4-7
 STATUS: Draft
-TYPE: Non-Functional
+TYPE: Functional
 COMPONENT: Timers
 TITLE: Timer status
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to read the number of times a timer has expired and then reset this number to 0.
+The Zephyr RTOS shall provide a mechanism to read the number of times a timer has expired and then reset this count to zero.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -104,11 +104,11 @@ RELATIONS:
 [REQUIREMENT]
 UID: ZEP-SRS-4-8
 STATUS: Draft
-TYPE: Non-Functional
+TYPE: Functional
 COMPONENT: Timers
 TITLE: Timer status reinitialization
 STATEMENT: >>>
-When a timer is initialized, started or synchronized to a thread, the Zephyr RTOS shall reset the timer number of times it has expired to 0.
+When a timer is initialized, started, or read via the timer status or synchronization mechanism, the Zephyr RTOS shall reset the timer's expiration count to zero.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -121,9 +121,9 @@ TYPE: Functional
 COMPONENT: Timers
 TITLE: Timer thread synchronization
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to synchronize a thread to a timer and then block the thread execution until any of the following conditions is satisfied:
+The Zephyr RTOS shall provide a mechanism to synchronize a thread to a timer and then block the thread's execution until any of the following conditions is satisfied:
 - The timer is stopped
-- The timer number of times it has expired is superior to 0
+- The timer's expiration count is greater than zero
 <<<
 RELATIONS:
 - TYPE: Parent
