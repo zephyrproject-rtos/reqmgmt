@@ -28,3 +28,146 @@ As a Zephyr RTOS user I want to be able to synchronize threads when accessing co
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-13
+
+[REQUIREMENT]
+UID: ZEP-SRS-6-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Mutex definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a mutex at compile time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-13
+
+[REQUIREMENT]
+UID: ZEP-SRS-6-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Mutex definition at run time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a mutex at run time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-13
+
+[REQUIREMENT]
+UID: ZEP-SRS-6-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Locking a mutex
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for a thread to lock a mutex and become its owner.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-13
+
+[REQUIREMENT]
+UID: ZEP-SRS-6-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Locking an unowned mutex
+STATEMENT: >>>
+While a mutex is not owned by any thread, a thread that locks it shall acquire ownership of the mutex.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-13
+
+[REQUIREMENT]
+UID: ZEP-SRS-6-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Locking a mutex owned by another thread
+STATEMENT: >>>
+While a mutex is owned by another thread, a thread that attempts to lock it shall be blocked until the mutex becomes available or the specified timeout elapses.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-13
+
+[REQUIREMENT]
+UID: ZEP-SRS-6-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Mutex lock timeout
+STATEMENT: >>>
+When locking a mutex, the Zephyr RTOS shall accept a timeout that specifies the maximum time to wait for the mutex to become available.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-13
+
+[REQUIREMENT]
+UID: ZEP-SRS-6-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Mutex lock timeout expiry
+STATEMENT: >>>
+When a mutex does not become available within the specified time, the Zephyr RTOS shall return an error indicating that the mutex was not locked.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-13
+
+[REQUIREMENT]
+UID: ZEP-SRS-6-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Recursive mutex locking
+STATEMENT: >>>
+While a thread owns a mutex, the Zephyr RTOS shall allow that thread to lock the same mutex again, and shall require the thread to unlock it the same number of times before it is released.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-13
+
+[REQUIREMENT]
+UID: ZEP-SRS-6-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Unlocking a mutex
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for the owning thread to unlock a mutex.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-13
+
+[REQUIREMENT]
+UID: ZEP-SRS-6-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Unlocking by a non-owner
+STATEMENT: >>>
+If a thread that does not own a mutex attempts to unlock it, then the Zephyr RTOS shall return an error and shall not release the mutex.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-13
+
+[REQUIREMENT]
+UID: ZEP-SRS-6-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Priority inheritance
+STATEMENT: >>>
+While a higher-priority thread is blocked waiting on a mutex, the Zephyr RTOS shall raise the priority of the owning thread to that of the highest-priority waiting thread until the mutex is released.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-13
