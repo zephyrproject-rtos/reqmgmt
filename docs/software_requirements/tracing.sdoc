@@ -67,12 +67,12 @@ UID: ZEP-SRS-10-5
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Tracing
-TITLE: Tracing Object  Identification
+TITLE: Tracing Object Identification
 STATEMENT: >>>
 Zephyr shall provide an interface to identify the objects being traced.
 <<<
 USER_STORY: >>>
-As a Zepyhr OS user, I want to be able to give each object which I create a name / label in order to be able to identify them in a trace log.
+As a Zephyr OS user, I want to be able to give each object which I create a name / label in order to be able to identify them in a trace log.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -85,10 +85,10 @@ TYPE: Functional
 COMPONENT: Tracing
 TITLE: Tracing Non-Interference
 STATEMENT: >>>
-Zepyhr shall prevent the tracing functionality from interfering with normal operations.
+Zephyr shall prevent the tracing functionality from interfering with normal operations.
 <<<
 USER_STORY: >>>
-As a Zepyhr OS user, I want that the trace functionality do not interfere or slow down the operation system functionality.
+As a Zephyr OS user, I want that the trace functionality do not interfere or slow down the operation system functionality.
 <<<
 RELATIONS:
 - TYPE: Parent
