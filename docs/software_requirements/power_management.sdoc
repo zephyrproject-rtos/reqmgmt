@@ -20,22 +20,7 @@ STATEMENT: >>>
 The Zephyr RTOS shall provide control over changes to system power states.
 <<<
 USER_STORY: >>>
-See ZEP104
-+
-When the power state is changed I want to get an notification in order for specific parts of my application to react accordingly.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-10
-
-[REQUIREMENT]
-UID: ZEP-SRS-13-2
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Power Management
-TITLE: Power Management
-STATEMENT: >>>
-TBD
+When the power state is changed I want to get a notification so that specific parts of my application can react accordingly.
 <<<
 RELATIONS:
 - TYPE: Parent
