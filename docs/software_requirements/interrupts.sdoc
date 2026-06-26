@@ -38,7 +38,7 @@ RELATIONS:
   VALUE: ZEP-SYRS-7
 
 [REQUIREMENT]
-UID: ZEP-SRS-7-3 
+UID: ZEP-SRS-7-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts
@@ -48,7 +48,7 @@ Zephyr RTOS shall provide a mechanism to initialize a direct IRQ handler,
 providing all parameters needed to configure the hardware and software.
 <<<
 USER_STORY: >>>
-As the developer of low-power and low-latency applications, I need to implement ISRs 
+As the developer of low-power and low-latency applications, I need to implement ISRs
 that avoid the normal interrupt and power management overhead.
 <<<
 RELATIONS:
@@ -75,7 +75,7 @@ TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Installing dynamic IRQ service routines (ISR).
 STATEMENT: >>>
-Zephyr RTOS shall provide a mechanism to initialize a dynamic IRQ service routine, 
+Zephyr RTOS shall provide a mechanism to initialize a dynamic IRQ service routine,
 providing all parameters needed to configure the hardware and software.
 <<<
 RELATIONS:
@@ -102,7 +102,7 @@ TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Uninstalling dynamic IRQ service routines (ISR).
 STATEMENT: >>>
-Zephyr RTOS shall provide a mechanism to uninstall a dynamic ISR. 
+Zephyr RTOS shall provide a mechanism to uninstall a dynamic ISR.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -115,8 +115,7 @@ TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Global IRQ disable
 STATEMENT: >>>
-Zephyr RTOS shall provide a mechanism to Disable all IRQs on a CPU, and 
-return the state the IRQ hardware prior to being disabled.
+Zephyr RTOS shall provide a mechanism to disable all IRQs on a CPU and return the state of the IRQ hardware prior to being disabled.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -129,8 +128,7 @@ TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Global IRQ enable
 STATEMENT: >>>
-Zephyr RTOS shall provide a mechanism to Enable all IRQs on a CPU 
-and return them to thier previous state.
+Zephyr RTOS shall provide a mechanism to enable all IRQs on a CPU and return them to their previous state.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -143,65 +141,89 @@ TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Specific IRQ disable
 STATEMENT: >>>
-Zephyr RTOS shall provide a mechanism to Disable a specified IRQ.
+Zephyr RTOS shall provide a mechanism to disable a specified IRQ.
 <<<
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-7
 
 [REQUIREMENT]
-UID: ZEP-SRS-7-11 
+UID: ZEP-SRS-7-11
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Specific IRQ enable
 STATEMENT: >>>
-Zephyr RTOS shall provide a mechanism to Enable a specified IRQ.
+Zephyr RTOS shall provide a mechanism to enable a specified IRQ.
 <<<
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-7
 
 [REQUIREMENT]
-UID: ZEP-SRS-7-12 
+UID: ZEP-SRS-7-12
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts
 TITLE: IRQ Enabled status
 STATEMENT: >>>
-Zephyr RTOS shall provide mechanisms that returns the Enabled status 
-of a specified IRQ, where the status is Enabled or Disabled.
+Zephyr RTOS shall provide a mechanism that returns the enabled status of a specified IRQ, where the status is enabled or disabled.
 <<<
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-7
 
 [REQUIREMENT]
-UID: ZEP-SRS-7-13 
+UID: ZEP-SRS-7-13
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts
 TITLE: ISR Context status
 STATEMENT: >>>
-Zephyr RTOS shall provide mechanisms that returns the execution context, 
-where the context is In-ISR or Not In-ISR.
+Zephyr RTOS shall provide a mechanism that returns the execution context, where the context is In-ISR or Not In-ISR.
 <<<
 USER_STORY: >>>
-As the developer of functions that may run in either ISR or THREAD context, 
-I need to know the current context to enable condition behavior.
+As the developer of functions that may run in either ISR or THREAD context,
+I need to know the current context to enable conditional behavior.
 <<<
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-7
 
 [REQUIREMENT]
-UID: ZEP-SRS-7-14 
+UID: ZEP-SRS-7-14
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Interrupts
 TITLE: Multi-level interrupts
 STATEMENT: >>>
 The Zephyr RTOS shall support multi-level preemptive interrupt priorities, when supported by hardware.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-7
+
+[REQUIREMENT]
+UID: ZEP-SRS-7-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Interrupts
+TITLE: Interrupt service routine invocation
+STATEMENT: >>>
+When an enabled IRQ that has a connected interrupt service routine is asserted, the Zephyr RTOS shall invoke the associated interrupt service routine.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-7
+
+[REQUIREMENT]
+UID: ZEP-SRS-7-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Interrupts
+TITLE: Interrupt service routine parameter
+STATEMENT: >>>
+When the Zephyr RTOS invokes a static or dynamic interrupt service routine, it shall pass to the routine the parameter that was registered with it.
 <<<
 RELATIONS:
 - TYPE: Parent

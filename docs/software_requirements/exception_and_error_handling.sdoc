@@ -40,7 +40,7 @@ TYPE: Functional
 COMPONENT: Exception and Error Handling
 TITLE: Assigning a specific handler
 STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to assign a specific handler with an exception.
+The Zephyr RTOS shall provide an interface to assign a specific handler for an exception.
 <<<
 
 [REQUIREMENT]
@@ -48,7 +48,7 @@ UID: ZEP-SRS-16-4
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Exception and Error Handling
-TITLE: Assigning a specific handler (2)
+TITLE: Assigning a specific handler for a fatal error
 STATEMENT: >>>
 The Zephyr RTOS shall provide an interface to assign a specific handler for a fatal error.
 <<<
