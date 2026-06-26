@@ -202,3 +202,29 @@ The Zephyr RTOS shall support multi-level preemptive interrupt priorities, when 
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-7
+
+[REQUIREMENT]
+UID: ZEP-SRS-7-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Interrupts
+TITLE: Interrupt service routine invocation
+STATEMENT: >>>
+When an enabled IRQ that has a connected interrupt service routine is asserted, the Zephyr RTOS shall invoke the associated interrupt service routine.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-7
+
+[REQUIREMENT]
+UID: ZEP-SRS-7-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Interrupts
+TITLE: Interrupt service routine parameter
+STATEMENT: >>>
+When the Zephyr RTOS invokes a static or dynamic interrupt service routine, it shall pass to the routine the parameter that was registered with it.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-7
