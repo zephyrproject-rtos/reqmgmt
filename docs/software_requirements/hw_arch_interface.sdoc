@@ -17,7 +17,7 @@ TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 TITLE: Atomic Operations
 STATEMENT: >>>
-The Zephyr RTOS shall provide an interface functionality to access memory while ensuring mutual exclusion. Note: Implementation by atomic variables and accessing them by APIs.
+The Zephyr RTOS shall provide an interface to access memory while ensuring mutual exclusion.
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user I want to read from or write into a memory areas without being disturbed by other threads or ISRs.
