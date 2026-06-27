@@ -105,3 +105,94 @@ As a Zephyr RTOS user I want a minimal influence of logging activities to the ti
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Severity levels
+STATEMENT: >>>
+The Zephyr RTOS logging shall support emitting log messages at multiple severity levels, including error, warning, informational, and debug.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Immediate logging support
+STATEMENT: >>>
+The Zephyr RTOS logging shall support immediate logging, in which a log message is processed in the context that generated it.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Compile-time severity filtering
+STATEMENT: >>>
+The Zephyr RTOS logging shall support a configurable compile-time severity level below which log messages are removed from the build.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Runtime severity filtering
+STATEMENT: >>>
+The Zephyr RTOS logging shall support adjusting the severity filtering level at run time, per source and per backend.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Log source registration
+STATEMENT: >>>
+The Zephyr RTOS logging shall allow software modules and instances to register as independent log sources.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Binary data logging
+STATEMENT: >>>
+The Zephyr RTOS logging shall support logging a block of binary data as a hexadecimal dump.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Flushing pending log messages
+STATEMENT: >>>
+The Zephyr RTOS logging shall provide a mechanism to flush pending log messages, including before the system halts on a fatal error.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
