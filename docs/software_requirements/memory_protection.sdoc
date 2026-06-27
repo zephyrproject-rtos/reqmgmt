@@ -366,3 +366,29 @@ While a thread runs in user mode, the Zephyr RTOS shall restrict its memory acce
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-25
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Stack canary protection
+STATEMENT: >>>
+Where stack canary protection is enabled, the Zephyr RTOS shall detect corruption of a function's stack frame using a guard value and treat the corruption as a fatal error.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-26
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Per-thread stack canary values
+STATEMENT: >>>
+Where thread-local stack canaries are enabled, the Zephyr RTOS shall assign each thread its own stack canary value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
