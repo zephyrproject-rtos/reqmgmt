@@ -184,3 +184,94 @@ The Zephyr RTOS shall allow a thread's CPU affinity to be modified only while th
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-12
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Deferred secondary CPU boot
+STATEMENT: >>>
+Where deferred secondary CPU boot is enabled, the Zephyr RTOS shall not bring up the secondary CPUs during kernel initialization, leaving them to be started later at run time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-11
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Single-CPU pin-only affinity
+STATEMENT: >>>
+Where single-CPU pin-only affinity is enabled, the Zephyr RTOS shall restrict each thread to run on a single assigned CPU.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-12
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Selective inter-processor reschedule signaling
+STATEMENT: >>>
+Where optimized inter-processor reschedule signaling is enabled, when a thread becomes ready to run the Zephyr RTOS shall signal only those CPUs that need to reschedule in response.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-11
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Directed inter-processor reschedule signaling
+STATEMENT: >>>
+Where the architecture supports directed inter-processor interrupts, the Zephyr RTOS shall send a reschedule signal to a specific target CPU instead of broadcasting it to all other CPUs.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-11
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-18
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Reschedule signaling for affinity-constrained threads
+STATEMENT: >>>
+When a thread restricted by its CPU affinity to a subset of CPUs preempts a thread on one CPU, the Zephyr RTOS shall issue the additional reschedule signals needed for the highest-priority runnable threads to be selected across all CPUs.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-11
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Coherent memory for shared kernel data
+STATEMENT: >>>
+Where coherent memory placement is enabled on a cache-incoherent multiprocessor, the Zephyr RTOS shall place shared kernel data in cache-coherent memory.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-11
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Fair spinlock acquisition order
+STATEMENT: >>>
+Where ticket spinlocks are enabled, the Zephyr RTOS shall grant a contended spinlock to requesting CPUs in first-come, first-served order.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-11
