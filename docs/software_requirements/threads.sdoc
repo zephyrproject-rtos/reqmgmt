@@ -317,3 +317,136 @@ RELATIONS:
   VALUE: ZEP-SYRS-15
 - TYPE: Parent
   VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-22
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Single-thread operation
+STATEMENT: >>>
+Where multithreading is disabled, the Zephyr RTOS shall execute the application as a single thread of control.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-23
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Thread-local storage
+STATEMENT: >>>
+Where thread-local storage is enabled, the Zephyr RTOS shall give each thread its own instance of variables declared as thread-local.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-24
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Allocating a thread stack at run time
+STATEMENT: >>>
+Where dynamic threads are enabled, the Zephyr RTOS shall provide a mechanism to allocate a thread stack at run time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-25
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Releasing a run-time allocated thread stack
+STATEMENT: >>>
+Where dynamic threads are enabled, the Zephyr RTOS shall provide a mechanism to release a thread stack that was allocated at run time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-26
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Iterating over threads
+STATEMENT: >>>
+Where thread monitoring is enabled, the Zephyr RTOS shall provide a mechanism to iterate over all threads in the system, invoking a caller-supplied function for each thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-27
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Querying thread stack usage
+STATEMENT: >>>
+Where thread stack information is enabled, the Zephyr RTOS shall provide a mechanism to determine the amount of stack space a thread has used.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-28
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Thread runtime statistics
+STATEMENT: >>>
+Where thread runtime statistics are enabled, the Zephyr RTOS shall provide a mechanism to query per-thread runtime usage statistics.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-29
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Total system runtime statistics
+STATEMENT: >>>
+Where thread runtime statistics are enabled, the Zephyr RTOS shall provide a mechanism to query the total runtime usage statistics across all threads.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-30
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Runtime stack safety monitoring
+STATEMENT: >>>
+Where thread runtime stack safety is enabled, the Zephyr RTOS shall provide a mechanism to check at run time whether a thread's unused stack space has fallen below a configured threshold.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
