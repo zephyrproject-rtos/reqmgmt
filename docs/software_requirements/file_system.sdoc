@@ -119,3 +119,172 @@ As a Zephyr OS user I want to be able to delete an existing file.
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-17-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Seek within a file
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to change the read/write position within an open file.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-17-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Query file position
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to obtain the current read/write position within an open file.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-17-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Truncate a file
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to change the size of an open file.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-17-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Synchronize a file
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to flush cached data of an open file to the underlying storage.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-17-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Create a directory
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to create a directory on the file system.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-17-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Open a directory
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to open a directory for reading its entries.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-17-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Read directory entries
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to read the entries of an open directory.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-17-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Close a directory
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to close an open directory.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-17-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Query file or directory status
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to obtain status information about a file or directory.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-17-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Query file system volume statistics
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to obtain statistics about a mounted file system volume.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-17-18
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Mount a file system
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to mount a file system at a specified mount point.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-17-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Unmount a file system
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to unmount a mounted file system.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-6
+
+[REQUIREMENT]
+UID: ZEP-SRS-17-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: File System
+TITLE: Register a file system type
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to register and unregister a file system implementation.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-6
