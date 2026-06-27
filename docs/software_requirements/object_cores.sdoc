@@ -1,0 +1,102 @@
+[DOCUMENT]
+TITLE: Object Cores
+REQ_PREFIX: ZEP-SRS-35-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Object Cores
+TITLE: Registering an object in the object core framework
+STATEMENT: >>>
+Where the object core framework is enabled, the Zephyr RTOS shall provide a mechanism to register a kernel object with the framework so that it is tracked as a member of its object type.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-35
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Object Cores
+TITLE: Unregistering an object from the object core framework
+STATEMENT: >>>
+Where the object core framework is enabled, the Zephyr RTOS shall provide a mechanism to unregister a kernel object from the framework.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-35
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Object Cores
+TITLE: Finding an object type
+STATEMENT: >>>
+Where the object core framework is enabled, the Zephyr RTOS shall provide a mechanism to obtain a reference to a registered object type.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-35
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Object Cores
+TITLE: Iterating over objects of a type
+STATEMENT: >>>
+Where the object core framework is enabled, the Zephyr RTOS shall provide a mechanism to iterate over all registered objects of a given object type, invoking a caller-supplied function for each object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-35
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Object Cores
+TITLE: Querying object statistics
+STATEMENT: >>>
+Where object core statistics are enabled, the Zephyr RTOS shall provide a mechanism to query the run-time statistics associated with a registered object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-35
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Object Cores
+TITLE: Enabling and disabling object statistics
+STATEMENT: >>>
+Where object core statistics are enabled, the Zephyr RTOS shall provide a mechanism to enable and disable statistics collection for a registered object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-35
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Object Cores
+TITLE: Resetting object statistics
+STATEMENT: >>>
+Where object core statistics are enabled, the Zephyr RTOS shall provide a mechanism to reset the run-time statistics associated with a registered object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-35
