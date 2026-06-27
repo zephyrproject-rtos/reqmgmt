@@ -111,3 +111,6 @@ FILE: floating_point.sdoc
 
 [DOCUMENT_FROM_FILE]
 FILE: object_cores.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: virtual_memory.sdoc
