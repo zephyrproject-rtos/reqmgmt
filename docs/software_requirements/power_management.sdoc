@@ -38,3 +38,133 @@ The Zephyr RTOS shall provide notification of changes to system power states.
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Multiple system power states
+STATEMENT: >>>
+The Zephyr RTOS shall support multiple system power states that differ in power consumption and wake-up latency.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Entering a low-power state when idle
+STATEMENT: >>>
+When all CPUs become idle, the Zephyr RTOS shall place the system into a low-power state selected by the power management policy.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Power state selection by anticipated idle time
+STATEMENT: >>>
+The Zephyr RTOS shall select the system power state based on the time remaining until the next scheduled kernel event.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Forcing a power state
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to override the power management policy and force the system into a specified power state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Preventing entry into a power state
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to prevent the system from entering a specified power state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Wake-up latency constraint
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to impose a maximum wake-up latency constraint that the power management policy shall respect when selecting a power state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Device power states
+STATEMENT: >>>
+The Zephyr RTOS shall support device power states, including active, suspended, and off.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Device power state transitions
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to request a device to transition between its power states.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Runtime device power management
+STATEMENT: >>>
+The Zephyr RTOS shall provide runtime device power management that resumes a device when it is requested for use and suspends it when it is no longer in use.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Querying device power state
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to query the current power state of a device.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
