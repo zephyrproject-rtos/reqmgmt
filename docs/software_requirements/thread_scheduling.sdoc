@@ -11,56 +11,6 @@ SPDX-License-Identifier: Apache-2.0
 <<<
 
 [[SECTION]]
-TITLE: Multi Core and SMP
-
-[REQUIREMENT]
-UID: ZEP-SRS-2-1
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Multi Core
-TITLE: Support operation on more than one CPU
-STATEMENT: >>>
-The Zephyr RTOS shall support operation on more than one physical CPU sharing the same kernel state.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-11
-
-[REQUIREMENT]
-UID: ZEP-SRS-2-2
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Multi Core
-TITLE: Running threads on specific CPUs
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface for running threads on specific sets of CPUs ( default is 1 CPU).
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want Zephyr OS to be able to specify the CPU core or the set of CPU cores on which a thread shall be executed.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-12
-
-[REQUIREMENT]
-UID: ZEP-SRS-2-3
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Multi Core
-TITLE: Exclusion between physical CPUs
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface for mutual exclusion between multiple physical CPUs.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want Zephyr OS to provide synchronization mechanisms between the CPU cores and the access to common resources.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-11
-
-[[/SECTION]]
-
-[[SECTION]]
 TITLE: Thread Scheduling
 
 [REQUIREMENT]

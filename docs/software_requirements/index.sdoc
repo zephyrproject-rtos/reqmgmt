@@ -68,6 +68,9 @@ FILE: poll.sdoc
 FILE: thread_scheduling.sdoc
 
 [DOCUMENT_FROM_FILE]
+FILE: smp.sdoc
+
+[DOCUMENT_FROM_FILE]
 FILE: threads.sdoc
 
 [DOCUMENT_FROM_FILE]
