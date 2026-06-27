@@ -232,3 +232,16 @@ If a timer is cleaned up while one or more threads are still waiting on it, then
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-18
+
+[REQUIREMENT]
+UID: ZEP-SRS-4-18
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Timers
+TITLE: Observing timer lifecycle events
+STATEMENT: >>>
+Where timer observers are enabled, the Zephyr RTOS shall provide a mechanism to register observers that are notified of timer lifecycle events, including timer initialization, start, stop, and expiry.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-18

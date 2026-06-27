@@ -353,4 +353,17 @@ RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-26
 
+[REQUIREMENT]
+UID: ZEP-SRS-26-26
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work item timeout monitoring
+STATEMENT: >>>
+Where workqueue work timeout monitoring is enabled, the Zephyr RTOS shall monitor the execution duration of each work item and, if a work item handler runs longer than the configured timeout, abort the work queue thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
 [[/SECTION]]

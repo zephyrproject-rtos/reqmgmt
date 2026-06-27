@@ -187,4 +187,17 @@ RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-17
 
+[REQUIREMENT]
+UID: ZEP-SRS-2-18
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Scheduling
+TITLE: Per-thread time slice
+STATEMENT: >>>
+Where per-thread time slicing is enabled, the Zephyr RTOS shall provide an interface to set an individual time slice duration and expiry callback for a specific thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
 [[/SECTION]]
