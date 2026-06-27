@@ -90,3 +90,81 @@ The Zephyr RTOS shall provide a mechanism to determine whether a device instance
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-4
+
+[REQUIREMENT]
+UID: ZEP-SRS-14-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Device Driver API
+TITLE: Deferred device initialization
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to defer a device's initialization so that it is not initialized during system startup but can be initialized later at runtime.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-4
+
+[REQUIREMENT]
+UID: ZEP-SRS-14-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Device Driver API
+TITLE: Reporting deferred initialization failure
+STATEMENT: >>>
+If a deferred device initialization fails, then the Zephyr RTOS shall report the failure and leave the device in a not-ready state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-4
+
+[REQUIREMENT]
+UID: ZEP-SRS-14-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Device Driver API
+TITLE: De-initializing a device
+STATEMENT: >>>
+Where device de-initialization is enabled, the Zephyr RTOS shall provide a mechanism to de-initialize a device at runtime.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-4
+
+[REQUIREMENT]
+UID: ZEP-SRS-14-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Device Driver API
+TITLE: Rejecting de-initialization of an unsupported device
+STATEMENT: >>>
+If de-initialization is requested for a device that does not provide a de-initialization function, then the Zephyr RTOS shall report that the operation is not supported.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-4
+
+[REQUIREMENT]
+UID: ZEP-SRS-14-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Device Driver API
+TITLE: Querying device dependency relationships
+STATEMENT: >>>
+Where device dependencies are stored, the Zephyr RTOS shall provide a mechanism to query the set of devices that a device depends on and the set of devices that depend on it.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-4
+
+[REQUIREMENT]
+UID: ZEP-SRS-14-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Device Driver API
+TITLE: Obtaining a device by devicetree node label
+STATEMENT: >>>
+Where devicetree device metadata is stored, the Zephyr RTOS shall provide a mechanism to obtain a reference to a device instance by its devicetree node label.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-4
