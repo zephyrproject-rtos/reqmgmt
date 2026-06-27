@@ -64,3 +64,55 @@ The Zephyr RTOS shall provide an interface to assign a specific handler for a fa
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-5
+
+[REQUIREMENT]
+UID: ZEP-SRS-16-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Exception and Error Handling
+TITLE: Triggering a fatal error in the current context
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for code to trigger a fatal error that terminates the currently running context.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-5
+
+[REQUIREMENT]
+UID: ZEP-SRS-16-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Exception and Error Handling
+TITLE: Triggering a fatal system error
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for code to trigger a fatal error that terminates the system.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-5
+
+[REQUIREMENT]
+UID: ZEP-SRS-16-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Exception and Error Handling
+TITLE: Fatal error reason
+STATEMENT: >>>
+When a fatal error handler is invoked, the Zephyr RTOS shall provide a reason code identifying the type of error.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-5
+
+[REQUIREMENT]
+UID: ZEP-SRS-16-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Exception and Error Handling
+TITLE: Default fatal error policy
+STATEMENT: >>>
+When a fatal error occurs and the application does not provide a different policy, the Zephyr RTOS shall terminate the offending thread if the error occurred in a thread context, and otherwise halt the system.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-5
