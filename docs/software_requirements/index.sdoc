@@ -108,3 +108,6 @@ FILE: kernel_timing.sdoc
 
 [DOCUMENT_FROM_FILE]
 FILE: floating_point.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: object_cores.sdoc

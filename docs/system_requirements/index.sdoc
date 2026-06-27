@@ -515,3 +515,21 @@ The Zephyr RTOS shall initialize its kernel, registered subsystems, and devices 
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Object Cores
+
+[REQUIREMENT]
+UID: ZEP-SYRS-35
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Object Cores
+TITLE: Object core framework
+STATEMENT: >>>
+The Zephyr RTOS shall provide a framework for registering kernel objects so that they can be discovered, inspected, and have run-time statistics gathered at run time.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want to discover and inspect kernel objects at run time for monitoring and diagnostics.
+<<<
+
+[[/SECTION]]
