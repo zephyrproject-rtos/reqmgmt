@@ -54,3 +54,133 @@ As a Zephyr RTOS user I want Zephyr OS to provide synchronization mechanisms bet
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-11
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Configurable maximum number of CPUs
+STATEMENT: >>>
+The Zephyr RTOS shall support a configurable maximum number of CPUs.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-2
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Secondary CPU bring-up during initialization
+STATEMENT: >>>
+During kernel initialization, the Zephyr RTOS shall bring up the secondary CPUs and make them available for thread scheduling.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-11
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Per-CPU initialization
+STATEMENT: >>>
+Before a CPU begins to participate in thread scheduling, the Zephyr RTOS shall initialize that CPU's per-CPU kernel data.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-11
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Starting a CPU at run time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to start, at run time, a CPU that is in an off state, after which the CPU participates in thread scheduling and execution.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-11
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Invoking a function on a started CPU
+STATEMENT: >>>
+When starting a CPU at run time, the Zephyr RTOS shall invoke a caller-supplied function on that CPU before the CPU enters the scheduler.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-11
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Resuming a suspended CPU
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to resume a previously started CPU that has reached an idle or off state, without re-initializing the kernel's per-CPU data for that CPU.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-11
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Concurrent scheduling across CPUs
+STATEMENT: >>>
+Where symmetric multiprocessing is enabled, the Zephyr RTOS shall schedule the highest-priority ready threads to run concurrently across the available CPUs.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-11
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Inter-processor reschedule signaling
+STATEMENT: >>>
+When a scheduling change makes a thread eligible to run on a different CPU, the Zephyr RTOS shall signal that CPU to perform a reschedule, by an inter-processor interrupt where the hardware supports it.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-11
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Pinning a thread to a CPU
+STATEMENT: >>>
+Where CPU affinity is enabled, the Zephyr RTOS shall provide a mechanism to pin a thread so that it runs on a single specified CPU.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-12
+
+[REQUIREMENT]
+UID: ZEP-SRS-34-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Restriction on changing CPU affinity
+STATEMENT: >>>
+The Zephyr RTOS shall allow a thread's CPU affinity to be modified only while the thread is not runnable.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-12
