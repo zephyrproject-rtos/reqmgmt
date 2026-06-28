@@ -367,3 +367,34 @@ RELATIONS:
   VALUE: ZEP-SYRS-26
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Triggered Work
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-27
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Submitting a triggered work item
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to submit a work item that is processed when any of a specified set of poll events becomes ready or when a specified timeout elapses, and to report the triggering outcome to the work item handler.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-28
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Cancelling a triggered work item
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to cancel a submitted triggered work item before any of its poll events becomes ready.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[[/SECTION]]
