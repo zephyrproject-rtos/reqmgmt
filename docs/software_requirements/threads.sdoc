@@ -450,3 +450,48 @@ RELATIONS:
   VALUE: ZEP-SYRS-15
 - TYPE: Parent
   VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-31
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Main thread
+STATEMENT: >>>
+Where multithreading is enabled, the Zephyr RTOS shall provide a main thread that executes the application entry point after system initialization.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-32
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Idle thread
+STATEMENT: >>>
+The Zephyr RTOS shall provide an idle thread that executes when no other thread is ready to run.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-33
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Querying a thread's pending timeout
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to query the time remaining until, and the absolute system tick of, a thread's pending timeout.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
