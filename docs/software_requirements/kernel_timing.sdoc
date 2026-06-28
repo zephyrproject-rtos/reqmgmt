@@ -198,3 +198,21 @@ RELATIONS:
   VALUE: ZEP-SYRS-28
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Timeouts
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Absolute timeouts
+STATEMENT: >>>
+Where 64-bit timeouts are enabled, the Zephyr RTOS shall accept timeouts specified as an absolute point in time, in addition to timeouts specified as a relative duration.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-28
+
+[[/SECTION]]
