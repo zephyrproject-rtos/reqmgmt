@@ -196,3 +196,172 @@ The Zephyr RTOS logging shall provide a mechanism to flush pending log messages,
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Message timestamping
+STATEMENT: >>>
+The Zephyr RTOS logging shall attach a timestamp to each log message at the time the message is generated.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Custom timestamp source
+STATEMENT: >>>
+The Zephyr RTOS logging shall provide a mechanism to configure a custom function and frequency used to obtain the timestamp for log messages.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Alternative output formats
+STATEMENT: >>>
+The Zephyr RTOS logging shall support rendering log message output in alternative machine-readable formats, including a MIPI SyS-T format and a dictionary-based format.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Runtime output format selection
+STATEMENT: >>>
+The Zephyr RTOS logging shall provide a mechanism to select the output format used by a logging backend at run time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-18
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Custom output format
+STATEMENT: >>>
+Where a custom output format is enabled, the Zephyr RTOS logging shall use an application-provided function to format log message output.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Logging from user mode
+STATEMENT: >>>
+Where user mode is enabled, the Zephyr RTOS logging shall allow user mode threads to generate log messages.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Routing printk output through logging
+STATEMENT: >>>
+Where printk integration is enabled, the Zephyr RTOS shall route printk output through the logging subsystem.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-21
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Runtime backend activation
+STATEMENT: >>>
+The Zephyr RTOS logging shall provide a mechanism to enable or disable a logging backend at run time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-22
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Dropped message accounting on buffer overflow
+STATEMENT: >>>
+While operating in deferred mode, if the log message buffer is full, then the Zephyr RTOS logging shall drop log messages and account for the number of messages dropped.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-23
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Blocking on a full message buffer
+STATEMENT: >>>
+Where blocking mode is enabled, when a thread-context log call is made while the message buffer is full, the Zephyr RTOS logging shall block the caller until buffer space becomes available so that the message is not dropped.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-24
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Multi-domain log aggregation
+STATEMENT: >>>
+Where multi-domain logging is enabled, the Zephyr RTOS logging shall aggregate log messages originating from multiple domains, including remote domains.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-25
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Enumerating log domains and sources
+STATEMENT: >>>
+The Zephyr RTOS logging shall provide a mechanism to query the number and names of registered log domains and log sources.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
+
+[REQUIREMENT]
+UID: ZEP-SRS-11-26
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Logging
+TITLE: Time-ordered processing of linked-domain messages
+STATEMENT: >>>
+Where multi-domain logging with dedicated link buffers is enabled, the Zephyr RTOS logging shall process messages received from log links in timestamp order.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-8
