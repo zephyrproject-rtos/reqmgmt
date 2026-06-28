@@ -392,3 +392,16 @@ Where thread-local stack canaries are enabled, the Zephyr RTOS shall assign each
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-27
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Stack pointer randomization
+STATEMENT: >>>
+Where stack pointer randomization is enabled, the Zephyr RTOS shall apply a randomized offset to a thread's initial stack pointer.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
