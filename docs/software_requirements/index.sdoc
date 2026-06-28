@@ -38,6 +38,9 @@ FILE: file_system.sdoc
 FILE: floating_point.sdoc
 
 [DOCUMENT_FROM_FILE]
+FILE: futex.sdoc
+
+[DOCUMENT_FROM_FILE]
 FILE: hw_arch_interface.sdoc
 
 [DOCUMENT_FROM_FILE]
