@@ -495,3 +495,18 @@ RELATIONS:
   VALUE: ZEP-SYRS-15
 - TYPE: Parent
   VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-1-34
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Threads
+TITLE: Enabling and disabling thread runtime statistics
+STATEMENT: >>>
+Where thread runtime statistics are enabled, the Zephyr RTOS shall provide a mechanism to enable and disable runtime statistics collection for an individual thread and for the system as a whole.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16

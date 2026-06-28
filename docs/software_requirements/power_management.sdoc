@@ -168,3 +168,16 @@ The Zephyr RTOS shall provide a mechanism to query the current power state of a 
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Idling the current CPU
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface for the calling thread to place the current CPU into a low-power idle state until an interrupt occurs, including a variant that atomically re-enables interrupts as the CPU enters the idle state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
