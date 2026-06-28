@@ -187,3 +187,16 @@ data items to a queue.
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue cancel waiting thread
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to cause a thread that is blocked waiting to get an item from a queue to return without an item.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
