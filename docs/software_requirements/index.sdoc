@@ -114,3 +114,6 @@ FILE: object_cores.sdoc
 
 [DOCUMENT_FROM_FILE]
 FILE: virtual_memory.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: futex.sdoc

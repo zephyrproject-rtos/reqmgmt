@@ -533,3 +533,21 @@ As a Zephyr RTOS user, I want to discover and inspect kernel objects at run time
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Futex
+
+[REQUIREMENT]
+UID: ZEP-SYRS-36
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Futex
+TITLE: Futex
+STATEMENT: >>>
+The Zephyr RTOS shall provide a low-overhead synchronization primitive that user mode threads can operate on directly.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want a fast user-space synchronization primitive that does not require a system call in the uncontended case.
+<<<
+
+[[/SECTION]]

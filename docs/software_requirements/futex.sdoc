@@ -1,0 +1,50 @@
+[DOCUMENT]
+TITLE: Futex
+REQ_PREFIX: ZEP-SRS-37-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-37-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Futex
+TITLE: Pending on a futex
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for a thread to atomically test a futex against an expected value and, if they match, block until the futex is woken or a specified timeout elapses.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-36
+
+[REQUIREMENT]
+UID: ZEP-SRS-37-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Futex
+TITLE: Waking threads pending on a futex
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to wake either the highest-priority thread or all threads pending on a futex.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-36
+
+[REQUIREMENT]
+UID: ZEP-SRS-37-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Futex
+TITLE: Futex operation from user mode
+STATEMENT: >>>
+The Zephyr RTOS shall allow user mode threads to operate on a futex located in memory they can access, and shall reject futex operations on memory the calling thread cannot access.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-36
