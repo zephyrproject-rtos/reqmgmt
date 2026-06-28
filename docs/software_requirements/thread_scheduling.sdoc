@@ -200,4 +200,30 @@ RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-16
 
+[REQUIREMENT]
+UID: ZEP-SRS-2-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Scheduling
+TITLE: Forcing a scheduling decision
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to force a scheduling decision on the current CPU so that the next thread to execute is determined immediately.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
+[REQUIREMENT]
+UID: ZEP-SRS-2-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Thread Scheduling
+TITLE: Querying thread preemptibility
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to determine whether the currently executing context can be preempted.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-16
+
 [[/SECTION]]
