@@ -126,3 +126,16 @@ Where symmetric multiprocessing is enabled, the Zephyr RTOS shall execute the SM
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-12-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Static object construction at startup
+STATEMENT: >>>
+Where GNU-compatible static initialization is enabled, the Zephyr RTOS shall invoke statically registered object constructors during system initialization, in their configured priority order, before the application entry point runs.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
