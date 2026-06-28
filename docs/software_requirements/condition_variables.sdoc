@@ -121,3 +121,17 @@ Whenever a thread signals a condition variable, the Zephyr RTOS shall unblock th
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-21
+
+[REQUIREMENT]
+UID: ZEP-SRS-21-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Condition Variables
+TITLE: Re-acquiring the mutex on return from wait
+STATEMENT: >>>
+When a wait on a condition variable by a thread that owns the associated mutex
+returns, the Zephyr RTOS shall ensure that the calling thread owns the mutex.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-21
