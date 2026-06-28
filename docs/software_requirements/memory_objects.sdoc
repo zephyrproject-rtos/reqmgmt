@@ -236,3 +236,16 @@ The Zephyr RTOS shall provide a mechanism to query the number of used and free b
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-18
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Enumerating defined heaps
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to obtain the set of heaps that were defined at compile time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
