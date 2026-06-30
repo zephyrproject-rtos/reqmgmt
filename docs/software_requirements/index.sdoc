@@ -56,9 +56,6 @@ FILE: power_management.sdoc
 FILE: thread_communication.sdoc
 
 [DOCUMENT_FROM_FILE]
-FILE: thread_scheduling.sdoc
-
-[DOCUMENT_FROM_FILE]
 FILE: threads.sdoc
 
 [DOCUMENT_FROM_FILE]
@@ -81,3 +78,6 @@ FILE: fifos.sdoc
 
 [DOCUMENT_FROM_FILE]
 FILE: mailboxes.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: scheduling.sdoc

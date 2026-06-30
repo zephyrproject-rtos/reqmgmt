@@ -17,7 +17,7 @@ TYPE: Functional
 COMPONENT: Threads
 TITLE: Creating threads
 STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to create (start) a thread.
+The Zephyr RTOS shall provide an interface to create a thread.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -150,19 +150,6 @@ RELATIONS:
   VALUE: ZEP-SYRS-16
 
 [REQUIREMENT]
-UID: ZEP-SRS-1-10
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Threads
-TITLE: Scheduling multiple threads
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to schedule multiple threads.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-16
-
-[REQUIREMENT]
 UID: ZEP-SRS-1-11
 STATUS: Draft
 TYPE: Functional
@@ -197,3 +184,4 @@ RELATIONS:
   VALUE: ZEP-SYRS-15
 - TYPE: Parent
   VALUE: ZEP-SYRS-16
+
