@@ -523,3 +523,16 @@ As a Zephyr RTOS user I want an ISR or a high-priority thread to defer non-urgen
 <<<
 
 [[/SECTION]]
+
+[REQUIREMENT]
+UID: ZEP-SYRS-39
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Spinlock Service
+TITLE: Spinlock
+STATEMENT: >>>
+The Zephyr RTOS shall provide a low-level spinlock synchronization mechanism to protect critical sections across multi-core systems while managing local CPU interrupt states.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want to be able to protect code execution against concurrent execution in a multi-core systems.
+<<<
