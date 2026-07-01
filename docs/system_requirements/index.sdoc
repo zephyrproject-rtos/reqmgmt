@@ -368,3 +368,18 @@ The Zephyr RTOS shall provide a framework to pass messages of arbitrary size bet
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Atomic Service
+
+[REQUIREMENT]
+UID: ZEP-SYRS-26
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Atomic Service
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface for reading and modifying variables in threads and interrupt service routines in an uninterruptible manner.
+<<<
+
+[[/SECTION]]
