@@ -134,16 +134,3 @@ The Zephyr RTOS shall provide a mechanism to peek at the data item at the back o
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-24
-
-[REQUIREMENT]
-UID: ZEP-SRS-24-11
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Queues
-TITLE: Queue definition at compile time
-STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism to define and initialize a FIFO at compile time.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-22
