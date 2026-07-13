@@ -136,3 +136,29 @@ As a Zephyr RTOS user I want to share a stack object between a producer and a co
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Stack retrieval order
+STATEMENT: >>>
+When an item is popped from a stack, the Zephyr RTOS shall return the most recently pushed item that has not yet been popped.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
+
+[REQUIREMENT]
+UID: ZEP-SRS-30-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Stacks
+TITLE: Stack pop timeout expiry
+STATEMENT: >>>
+When no item becomes available on a stack within the specified time, the Zephyr RTOS shall return an error indicating that no item was retrieved.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
