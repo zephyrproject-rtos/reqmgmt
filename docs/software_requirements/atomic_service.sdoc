@@ -516,3 +516,16 @@ The Zephyr RTOS shall provide a mechanism for setting an atomic pointer to NULL 
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SRS-26-35
+
+[REQUIREMENT]
+UID: ZEP-SRS-26-40
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Atomic Service
+TITLE: Usable from threads and interrupt service routines
+STATEMENT: >>>
+The Zephyr RTOS shall support performing atomic operations from threads and from interrupt service routines, guaranteeing correct results when multiple contexts operate concurrently on the same atomic variable.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-26
