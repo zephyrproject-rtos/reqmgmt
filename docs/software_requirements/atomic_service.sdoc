@@ -17,7 +17,7 @@ TYPE: Functional
 COMPONENT: Atomic Service
 TITLE: Atomic variable
 STATEMENT: >>>
-The Zephyr RTOS shall define an atomic variable type with the same size and alignment as the C `long` type for the target architecture.
+The Zephyr RTOS shall define an atomic variable type whose size matches the native word size of the target architecture: 32 bits on 32-bit architectures and 64 bits on 64-bit architectures.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -41,7 +41,7 @@ UID: ZEP-SRS-26-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Atomic Service
-TITLE: Consistency
+TITLE: Tearing freedom
 STATEMENT: >>>
 The Zephyr RTOS shall guarantee that each operation on an atomic variable is free from torn reads or writes.
 <<<
@@ -54,9 +54,9 @@ UID: ZEP-SRS-26-4
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Atomic Service
-TITLE: Consistency
+TITLE: Cross-CPU visibility
 STATEMENT: >>>
-The Zephyr RTOS shall guarantee that each operation on an atomic variable results is visible to all processors in the system.
+The Zephyr RTOS shall guarantee that the result of each operation on an atomic variable is visible to all processors in the system.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -82,7 +82,7 @@ TYPE: Functional
 COMPONENT: Atomic Service
 TITLE: Memory ordering
 STATEMENT: >>>
-When performing an operation on an atomic variable, the Zephyr RTOS shall guarantee that neither the compiler nor the hardware reorders memory operations across the atomic operation.
+When performing an operation on an atomic variable, the Zephyr RTOS shall provide full memory barrier semantics, such that memory operations issued before the atomic operation are observed before it and memory operations issued after it are observed after it.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -93,7 +93,7 @@ UID: ZEP-SRS-26-7
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Atomic Service
-TITLE: Platform independence
+TITLE: Software implementation fallback
 STATEMENT: >>>
 The Zephyr RTOS shall support executing atomic operations on hardware that does not provide native atomic instruction support.
 <<<
@@ -106,9 +106,9 @@ UID: ZEP-SRS-26-8
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Atomic Service
-TITLE: Platform independence
+TITLE: Native atomic instructions
 STATEMENT: >>>
-The Zephyr RTOS shall support executing atomic operations using native hardware atomic instruction support.
+Where the target hardware provides native atomic instructions, the Zephyr RTOS shall support implementing atomic operations using those instructions.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -219,7 +219,7 @@ TYPE: Functional
 COMPONENT: Atomic Service
 TITLE: Atomic bitwise AND operation
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism for performing a bitwise AND operation on an atomic variable.
+The Zephyr RTOS shall provide a mechanism for performing a bitwise AND operation on an atomic variable with a given value.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -232,7 +232,7 @@ TYPE: Functional
 COMPONENT: Atomic Service
 TITLE: Atomic bitwise OR operation
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism for performing a bitwise OR operation on an atomic variable.
+The Zephyr RTOS shall provide a mechanism for performing a bitwise OR operation on an atomic variable with a given value.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -245,7 +245,7 @@ TYPE: Functional
 COMPONENT: Atomic Service
 TITLE: Atomic bitwise NAND operation
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism for performing a bitwise NAND operation on an atomic variable.
+The Zephyr RTOS shall provide a mechanism for performing a bitwise NAND operation on an atomic variable with a given value.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -258,7 +258,7 @@ TYPE: Functional
 COMPONENT: Atomic Service
 TITLE: Atomic bitwise XOR operation
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism for performing a bitwise XOR operation on an atomic variable.
+The Zephyr RTOS shall provide a mechanism for performing a bitwise XOR operation on an atomic variable with a given value.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -373,7 +373,7 @@ TYPE: Functional
 COMPONENT: Atomic Service
 TITLE: Atomic bit operations
 STATEMENT: >>>
-The Zephyr RTOS shall support performing bit-level operation on individual bits within either a single atomic variable or an array of atomic variables.
+The Zephyr RTOS shall support performing bit-level operations on individual bits within either a single atomic variable or an array of atomic variables.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -394,7 +394,7 @@ TYPE: Functional
 COMPONENT: Atomic Service
 TITLE: Atomic set bit
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism for setting a specific bit to 1, returning nothing.
+The Zephyr RTOS shall provide a mechanism for setting a specific bit within an atomic variable or an array of atomic variables to 1.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -407,7 +407,7 @@ TYPE: Functional
 COMPONENT: Atomic Service
 TITLE: Atomic clear bit
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism for clearing a specific bit to 0, returning nothing.
+The Zephyr RTOS shall provide a mechanism for clearing a specific bit within an atomic variable or an array of atomic variables to 0.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -420,7 +420,7 @@ TYPE: Functional
 COMPONENT: Atomic Service
 TITLE: Atomic set bit to a given state
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism for setting a specific bit to a given boolean value, returning nothing.
+The Zephyr RTOS shall provide a mechanism for setting a specific bit within an atomic variable or an array of atomic variables to a given boolean value.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -433,7 +433,7 @@ TYPE: Functional
 COMPONENT: Atomic Service
 TITLE: Atomic test bit
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism for getting the state of a specific bit, returning its current state as a boolean value.
+The Zephyr RTOS shall provide a mechanism for getting the state of a specific bit within an atomic variable or an array of atomic variables, returning its current state as a boolean value.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -446,7 +446,7 @@ TYPE: Functional
 COMPONENT: Atomic Service
 TITLE: Atomic test and set bit
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism for setting a specific bit to 1 and returning its previous state.
+The Zephyr RTOS shall provide a mechanism for setting a specific bit within an atomic variable or an array of atomic variables to 1 and returning its previous state.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -459,7 +459,7 @@ TYPE: Functional
 COMPONENT: Atomic Service
 TITLE: Atomic test and clear bit
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism for clearing a specific bit to 0 and returning its previous state.
+The Zephyr RTOS shall provide a mechanism for clearing a specific bit within an atomic variable or an array of atomic variables to 0 and returning its previous state.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -498,7 +498,7 @@ TYPE: Functional
 COMPONENT: Atomic Service
 TITLE: Initialize atomic pointer
 STATEMENT: >>>
-The Zephyr RTOS shall provide a mechanism for initializing an atomic pointer to a specific pointer value.
+The Zephyr RTOS shall provide a compile-time mechanism for initializing an atomic pointer to a specific pointer value.
 <<<
 RELATIONS:
 - TYPE: Parent
