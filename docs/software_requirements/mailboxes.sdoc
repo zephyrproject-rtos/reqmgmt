@@ -24,7 +24,7 @@ As a Zephyr RTOS developer, I want to be able to initialize a mailbox instance s
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-2
@@ -40,7 +40,7 @@ As a Zephyr RTOS developer, I want to be able to statically define and initializ
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-3
@@ -56,7 +56,7 @@ As a Zephyr RTOS developer, I want to be able to send messages of different size
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-4
@@ -69,7 +69,7 @@ The Zephyr RTOS shall handle the data transfer between mailbox objects of the se
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-5
@@ -85,7 +85,7 @@ As a Zephyr RTOS developer, I want to be able to send a message and wait for it 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-6
@@ -101,7 +101,7 @@ As a Zephyr RTOS developer, I want to be able to limit how long my thread waits 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-7
@@ -117,7 +117,7 @@ As a Zephyr RTOS developer, I want to be able to send a message without waiting 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-8
@@ -133,7 +133,7 @@ As a Zephyr RTOS developer, I want to be notified when my asynchronously sent me
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-9
@@ -149,7 +149,7 @@ As a Zephyr RTOS developer, I want to be able to receive messages from other thr
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-10
@@ -165,7 +165,7 @@ As a Zephyr RTOS developer, I want to be able to extract message data into my bu
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-11
@@ -178,7 +178,7 @@ When a receiving thread requests a message via a mailbox object and no message i
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-12
@@ -194,7 +194,7 @@ As a Zephyr RTOS developer, I want to be able to limit how long my thread waits 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-13
@@ -210,7 +210,7 @@ As a Zephyr RTOS developer, I want to be able to identify the source or destinat
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-14
@@ -226,7 +226,7 @@ As a Zephyr RTOS developer, I want message delivery to respect thread priorities
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-15
@@ -239,7 +239,7 @@ When multiple threads of equal priority are waiting on an empty mailbox object, 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-16
@@ -255,7 +255,7 @@ As a Zephyr RTOS developer, I want to be able to create as many mailboxes as my 
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
 
 [REQUIREMENT]
 UID: ZEP-SRS-25-17
@@ -271,4 +271,4 @@ As a Zephyr RTOS developer, I want the system to validate my inputs and return e
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-25
+  VALUE: ZEP-SWARCH-MBOX
