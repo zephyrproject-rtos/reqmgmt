@@ -87,3 +87,6 @@ FILE: stacks.sdoc
 
 [DOCUMENT_FROM_FILE]
 FILE: atomic_service.sdoc
+
+[DOCUMENT_FROM_FILE]
+FILE: work_queues.sdoc
