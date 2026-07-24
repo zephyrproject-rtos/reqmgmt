@@ -1,0 +1,604 @@
+[DOCUMENT]
+TITLE: Work Queues
+REQ_PREFIX: ZEP-SRS-38-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[[SECTION]]
+TITLE: Work Queue Management
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work queue initialization
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a work queue that is served by a dedicated thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-29
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work queue start
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to start an initialized work queue, dedicating a thread to process its work items.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+- TYPE: Parent
+  VALUE: ZEP-SYRS-15
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-41
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Processing a work queue in the calling thread
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to process the work items of a work queue in the context of the calling thread, returning only when the work queue is stopped.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work queue thread priority
+STATEMENT: >>>
+When a work queue is started, the Zephyr RTOS shall allow the priority of its dedicated thread to be configured.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-30
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work queue thread naming
+STATEMENT: >>>
+When a work queue is started, the Zephyr RTOS shall allow a name to be assigned to the work queue's dedicated thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-31
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work queue essential thread
+STATEMENT: >>>
+When a work queue is started, the Zephyr RTOS shall allow the work queue's dedicated thread to be marked as essential to system operation.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work item processing order
+STATEMENT: >>>
+The Zephyr RTOS shall process the work items of a work queue in the order in which they were submitted.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work queue thread yielding
+STATEMENT: >>>
+While yielding between work items is not disabled for a work queue, the Zephyr RTOS shall cause the work queue thread to yield to other ready threads between processing successive work items.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work queue draining
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to wait until all work items submitted to a work queue have been processed.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-32
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work item submission while draining
+STATEMENT: >>>
+While a work queue is draining, the Zephyr RTOS shall reject submission of work items to that work queue unless the submission originates from the work queue's own thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work queue submission blocking on drain
+STATEMENT: >>>
+When a drain operation is initiated with submission blocking enabled, the Zephyr RTOS shall continue to prevent submission of work items to the work queue after the drain completes, until submissions are explicitly re-enabled.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work queue submission unblocking
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to allow work items to be submitted again to a work queue whose submissions were previously blocked.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work queue stop
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to stop the dedicated thread of a work queue that has been drained and is blocking new submissions.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Work Item Submission and Processing
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work item initialization at run time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a work item at run time, associating a handler function to be executed when the work item is processed.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-34
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work item definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a work item at compile time, associating a handler function to be executed when the work item is processed.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-33
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: System work queue
+STATEMENT: >>>
+The Zephyr RTOS shall provide a system work queue that is started during kernel initialization and is available to application and kernel code.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work item submission to the system work queue
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to submit a work item to the system work queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work item submission to a specified work queue
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to submit a work item to a specified work queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work item submission from threads and interrupt service routines
+STATEMENT: >>>
+The Zephyr RTOS shall allow a work item to be submitted from either a thread or an interrupt service routine.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work item handler invocation
+STATEMENT: >>>
+When the work queue thread removes a work item from the queue, the Zephyr RTOS shall invoke that work item's handler function in the context of the work queue thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Resubmission of an already queued work item
+STATEMENT: >>>
+If a work item is submitted while it is already queued and has not yet started running, then the Zephyr RTOS shall retain the work item at its current position in the queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Waiting for a work item to complete
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to wait until a submitted work item's handler function has finished executing.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Work Item Status and Cancellation
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work item pending status
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to determine whether a work item is currently pending, where a work item is pending while it is waiting for its delay to elapse, queued to a work queue, running, being cancelled, or being flushed.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Cancellation of a queued work item
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to cancel a work item that has been submitted but has not yet started running, so that its handler function is not invoked.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-18
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Cancellation of a running work item handler
+STATEMENT: >>>
+If a work item's handler function has already started running when the work item is cancelled, then the Zephyr RTOS shall not interrupt the execution of that handler function.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Cancellation with wait for completion
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to cancel a work item and wait until the work item is no longer pending.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Delayable Work
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Delayable work item initialization at run time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a delayable work item at run time, associating a handler function to be executed when the work item is processed.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-35
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Delayable work item definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a delayable work item at compile time, associating a handler function to be executed when the work item is processed.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-21
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Scheduling a delayable work item on a specified work queue
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to schedule a delayable work item to be submitted to a specified work queue after a specified delay.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-36
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Scheduling a delayable work item on the system work queue
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to schedule a delayable work item to be submitted to the system work queue after a specified delay.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-22
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Submission of a delayable work item on delay expiry
+STATEMENT: >>>
+When the scheduled delay of a delayable work item elapses, the Zephyr RTOS shall submit the work item to its work queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-23
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Rescheduling a delayable work item
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to reschedule a delayable work item to a new delay, replacing any previously scheduled delay.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-24
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Cancellation of a delayable work item
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to cancel a delayable work item that has been scheduled but not yet submitted to its work queue, so that it is not submitted.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-42
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Waiting for a delayable work item to complete
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to wait until a delayable work item's handler function has finished executing; when the work item is scheduled but not yet submitted, it shall first be submitted immediately to its work queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-43
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Cancellation of a delayable work item with wait for completion
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to cancel a delayable work item and wait until the work item is no longer pending.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-25
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Querying the remaining delay of a delayable work item
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to query the time remaining until a scheduled delayable work item is submitted to its work queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-26
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Work item timeout monitoring
+STATEMENT: >>>
+Where workqueue work timeout monitoring is enabled, the Zephyr RTOS shall monitor the execution duration of each work item and, if a work item handler runs longer than the configured timeout, abort the work queue thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Triggered Work
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-27
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Submitting a triggered work item
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to submit a work item that is processed when any of a specified set of poll events becomes ready or when a specified timeout elapses, and to report the triggering outcome to the work item handler.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-28
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: Cancelling a triggered work item
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to cancel a submitted triggered work item before any of its poll events becomes ready.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: User Mode Work Queues
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-37
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: User work item initialization at run time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize, at run time, a work item usable by user mode threads, associating a handler function to be executed when the work item is processed.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-38
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: User work item definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize, at compile time, a work item usable by user mode threads, associating a handler function to be executed when the work item is processed.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-39
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: User work queue start
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to start a work queue whose dedicated thread runs in user mode.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[REQUIREMENT]
+UID: ZEP-SRS-38-40
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Work Queues
+TITLE: User work item submission
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for user mode threads to submit a work item to a user mode work queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-37
+
+[[/SECTION]]
