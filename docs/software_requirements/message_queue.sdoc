@@ -1,0 +1,297 @@
+[DOCUMENT]
+TITLE: Message Queues
+REQ_PREFIX: ZEP-SRS-31-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[[SECTION]]
+TITLE: Message Queue Definition
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Message queue definition at compile time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define and initialize a message queue at compile time, for a specified message size, maximum number of messages, and buffer alignment.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Message queue initialization at run time
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a message queue at run time using a caller-provided buffer, a message size, and a maximum number of messages.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Message queue initialization at run time with a dynamically allocated buffer
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a message queue at run time, allocating the message buffer on behalf of the caller for a requested message size and maximum number of messages.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Sending Messages
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Sending a message to the back
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for threads and interrupt service routines to send a message to the back of a message queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Sending a message to the front
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for threads and interrupt service routines to send a message to the front of a message queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Send timeout
+STATEMENT: >>>
+When sending a message to a message queue, the Zephyr RTOS shall accept a timeout that specifies the maximum time to wait for space to become available.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Send timeout expiry
+STATEMENT: >>>
+When sending a message to a message queue, the Zephyr RTOS shall return an error indicating that the message was not sent when either of the following conditions is satisfied:
+
+- the caller is a thread and space does not become available in the message queue within the specified maximum time
+- the caller is an interrupt service routine and no space is available in the message queue
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Receiving Messages
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Receiving a message
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for threads and interrupt service routines to receive and remove the message at the front of a message queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Message retrieval order
+STATEMENT: >>>
+The Zephyr RTOS shall return messages from a message queue to receivers in front-to-back order: messages sent to the back are received in the order in which they were sent, and a message sent to the front is received before the messages already in the queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Receive timeout
+STATEMENT: >>>
+When receiving a message from a message queue, the Zephyr RTOS shall accept a timeout that specifies the maximum time to wait for a message to become available.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Receive timeout expiry
+STATEMENT: >>>
+When receiving a message from a message queue, the Zephyr RTOS shall return an error indicating that no message was received when either of the following conditions is satisfied:
+
+- the caller is a thread and no message becomes available in the message queue within the specified maximum time
+- the caller is an interrupt service routine and no message is available in the message queue
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Inspecting and Managing a Message Queue
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Peeking at a message
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for threads and interrupt service routines to read the message at the front of a message queue without removing it.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Peeking at a message by index
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism for threads and interrupt service routines to read a message at a specified index of a message queue without removing it.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Purging a message queue
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to discard all messages currently in a message queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Purging with blocked senders
+STATEMENT: >>>
+When a message queue is purged, the Zephyr RTOS shall unblock any threads waiting to send a message to that queue and return an error to them indicating that the message was not sent.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Querying used message count
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to query the number of messages currently in a message queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Querying free message count
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to query the number of free message slots in a message queue.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-21
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Querying message queue attributes
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to query the attributes of a message queue, including its message size, its maximum number of messages, and the number of messages currently stored.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Releasing a dynamically allocated message queue buffer
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to release the buffer of a message queue that was dynamically allocated.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[REQUIREMENT]
+UID: ZEP-SRS-31-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Message Queues
+TITLE: Releasing a buffer with waiting threads
+STATEMENT: >>>
+When releasing the buffer of a message queue, if threads are waiting on the message queue, then the Zephyr RTOS shall not release the buffer and shall return an error indicating that the message queue is in use.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-31
+
+[[/SECTION]]
