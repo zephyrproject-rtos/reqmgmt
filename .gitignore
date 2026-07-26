@@ -1,5 +1,7 @@
 # Python
-venv/
+/*venv/
+__pycache__/
+
 # PyCharm
 .idea/
 # OpenOffice
