@@ -65,12 +65,125 @@ TYPE: Functional
 COMPONENT: Hardware Architecture Interface
 TITLE: Processor Mode Support
 STATEMENT: >>>
-The Zephyr RTOS shall provide an interface for managing processor modes.
+The Zephyr RTOS shall provide an interface for managing processor execution modes.
 <<<
 USER_STORY: >>>
-If MCU power state was meant here:
-As a Zephyr RTOS user I want to control the MCU's power saving mode such e.g. operation, sleep, deep sleep or similar as supported by the selected MCU.
+As a Zephyr RTOS user I want the kernel to execute code at the appropriate processor privilege level (for example supervisor and user mode) so that privileged and unprivileged execution are kept separate.
 <<<
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-1
+
+[[SECTION]]
+TITLE: Cache Management
+
+[REQUIREMENT]
+UID: ZEP-SRS-19-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Hardware Architecture Interface
+TITLE: Data cache maintenance
+STATEMENT: >>>
+Where a data cache is present, the Zephyr RTOS shall provide an interface to perform data cache maintenance operations, including flush, invalidate, and combined flush-and-invalidate, over the entire cache or a specified address range.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-1
+
+[REQUIREMENT]
+UID: ZEP-SRS-19-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Hardware Architecture Interface
+TITLE: Instruction cache maintenance
+STATEMENT: >>>
+Where an instruction cache is present, the Zephyr RTOS shall provide an interface to perform instruction cache maintenance operations, including flush, invalidate, and combined flush-and-invalidate, over the entire cache or a specified address range.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-1
+
+[REQUIREMENT]
+UID: ZEP-SRS-19-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Hardware Architecture Interface
+TITLE: Cache activation control
+STATEMENT: >>>
+Where a cache is present, the Zephyr RTOS shall provide an interface to enable and disable the data cache and the instruction cache.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-1
+
+[REQUIREMENT]
+UID: ZEP-SRS-19-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Hardware Architecture Interface
+TITLE: Cache line size query
+STATEMENT: >>>
+Where a cache is present, the Zephyr RTOS shall provide an interface to obtain the cache line size.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-1
+
+[REQUIREMENT]
+UID: ZEP-SRS-19-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Hardware Architecture Interface
+TITLE: Memory coherence reporting
+STATEMENT: >>>
+Where the architecture can determine memory coherence, the Zephyr RTOS shall provide an interface to report whether a memory region is coherent with respect to the data cache.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-1
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Diagnostics and Debug
+
+[REQUIREMENT]
+UID: ZEP-SRS-19-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Hardware Architecture Interface
+TITLE: Call stack unwinding
+STATEMENT: >>>
+Where stack unwinding is supported, the Zephyr RTOS shall provide an interface to walk the call stack of a thread and report each stack frame to a caller-supplied function.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-1
+
+[REQUIREMENT]
+UID: ZEP-SRS-19-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Hardware Architecture Interface
+TITLE: Core dump processor state capture
+STATEMENT: >>>
+Where core dump support is enabled, the Zephyr RTOS shall provide an interface to capture architecture-specific processor state for inclusion in a core dump.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-1
+
+[REQUIREMENT]
+UID: ZEP-SRS-19-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Hardware Architecture Interface
+TITLE: External debugger interface
+STATEMENT: >>>
+Where a debug stub is enabled, the Zephyr RTOS shall provide an architecture interface that allows an external debugger to read and write processor registers, manage breakpoints, and single-step execution.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-1
+
+[[/SECTION]]
