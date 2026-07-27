@@ -1,0 +1,216 @@
+[DOCUMENT]
+TITLE: Virtual Memory
+REQ_PREFIX: ZEP-SRS-36-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[[SECTION]]
+TITLE: Virtual Memory Mapping
+
+[REQUIREMENT]
+UID: ZEP-SRS-36-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Virtual Memory
+TITLE: Mapping physical memory into the virtual address space
+STATEMENT: >>>
+Where virtual memory is enabled, the Zephyr RTOS shall provide a mechanism to map a region of physical memory into the virtual address space with caller-specified access permissions.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-36-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Virtual Memory
+TITLE: Unmapping a virtual memory region
+STATEMENT: >>>
+Where virtual memory is enabled, the Zephyr RTOS shall provide a mechanism to unmap a previously mapped virtual memory region so that subsequent accesses to it are no longer permitted.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-36-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Virtual Memory
+TITLE: Reclaiming the virtual address region on unmap
+STATEMENT: >>>
+When a virtual memory region is unmapped, the Zephyr RTOS shall reclaim its virtual address range so that it can be reused by subsequent mappings.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-36-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Virtual Memory
+TITLE: Anonymous memory mapping
+STATEMENT: >>>
+Where virtual memory is enabled, the Zephyr RTOS shall provide a mechanism to allocate and map an anonymous region of memory and to release it back to the system.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-36-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Virtual Memory
+TITLE: Guard pages for anonymous memory mappings
+STATEMENT: >>>
+When an anonymous memory region is mapped, the Zephyr RTOS shall place inaccessible guard pages adjacent to the region so that accesses beyond its bounds are detected.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-36-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Virtual Memory
+TITLE: User-mode-accessible memory mappings
+STATEMENT: >>>
+Where user mode is enabled, the Zephyr RTOS shall provide a mechanism to map a memory region that is accessible from user mode threads.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-36-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Virtual Memory
+TITLE: Reporting failure when mappable memory is exhausted
+STATEMENT: >>>
+If a memory mapping request cannot be satisfied because available memory is exhausted, then the Zephyr RTOS shall report that the mapping failed.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Demand Paging
+
+[REQUIREMENT]
+UID: ZEP-SRS-36-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Virtual Memory
+TITLE: Servicing page faults through demand paging
+STATEMENT: >>>
+Where demand paging is enabled, the Zephyr RTOS shall service a page fault on a demand-paged region by bringing the required page into physical memory and resuming execution.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-36-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Virtual Memory
+TITLE: Paging out a memory region
+STATEMENT: >>>
+Where demand paging is enabled, the Zephyr RTOS shall provide a mechanism to evict a memory region from physical memory to the backing store.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-36-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Virtual Memory
+TITLE: Paging in a memory region
+STATEMENT: >>>
+Where demand paging is enabled, the Zephyr RTOS shall provide a mechanism to bring a memory region into physical memory ahead of access.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-36-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Virtual Memory
+TITLE: Pinning a memory region in physical memory
+STATEMENT: >>>
+Where demand paging is enabled, the Zephyr RTOS shall provide a mechanism to pin a memory region in physical memory so that it is never evicted to the backing store.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-36-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Virtual Memory
+TITLE: Unpinning a memory region
+STATEMENT: >>>
+Where demand paging is enabled, the Zephyr RTOS shall provide a mechanism to unpin a previously pinned memory region so that it becomes eligible for eviction again.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-36-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Virtual Memory
+TITLE: Collecting demand paging statistics
+STATEMENT: >>>
+Where demand paging statistics are enabled, the Zephyr RTOS shall provide a mechanism to query system-wide and per-thread demand paging statistics.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-36-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Virtual Memory
+TITLE: Collecting demand paging timing histograms
+STATEMENT: >>>
+Where demand paging timing histograms are enabled, the Zephyr RTOS shall provide a mechanism to query histograms of page eviction and backing store access times.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-36-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Virtual Memory
+TITLE: On-demand evictable code and data sections
+STATEMENT: >>>
+Where demand paging is enabled, the Zephyr RTOS shall support placing code and data in sections that are loaded into physical memory on demand and may be evicted when not in use.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[[/SECTION]]
