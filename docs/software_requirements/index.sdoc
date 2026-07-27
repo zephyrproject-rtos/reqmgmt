@@ -110,4 +110,7 @@ FILE: tracing.sdoc
 FILE: version.sdoc
 
 [DOCUMENT_FROM_FILE]
+FILE: virtual_memory.sdoc
+
+[DOCUMENT_FROM_FILE]
 FILE: work_queues.sdoc
