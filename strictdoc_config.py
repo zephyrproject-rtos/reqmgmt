@@ -7,5 +7,6 @@ def create_config() -> ProjectConfig:
         include_doc_paths=[
             "/docs/",
         ],
+        custom_css_path="assets/custom.css",
     )
     return config

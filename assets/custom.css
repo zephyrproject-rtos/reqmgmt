@@ -1,0 +1,9 @@
+/*
+ * Hides the "Project tree configuration" debug panel that StrictDoc
+ * renders on the project index page. It exposes internal details
+ * (gitignore-derived include/exclude globs, build-machine paths) that
+ * are not meaningful to readers of the published requirements site.
+ */
+.dashboard-aside .dashboard-block:has(.dashboard-block-title) {
+  display: none;
+}
