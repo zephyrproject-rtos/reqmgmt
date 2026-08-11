@@ -71,6 +71,9 @@ FILE: stacks.sdoc
 FILE: system_initialization.sdoc
 
 [DOCUMENT_FROM_FILE]
+FILE: task_watchdog.sdoc
+
+[DOCUMENT_FROM_FILE]
 FILE: thread_communication.sdoc
 
 [DOCUMENT_FROM_FILE]
