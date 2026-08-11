@@ -40,6 +40,19 @@ RELATIONS:
   VALUE: ZEP-SYRS-12
 
 [REQUIREMENT]
+UID: ZEP-SRS-34-21
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Multi Core
+TITLE: Default CPU eligibility
+STATEMENT: >>>
+When no CPU set has been specified for a thread, the Zephyr RTOS shall consider the thread eligible to execute on any CPU.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-12
+
+[REQUIREMENT]
 UID: ZEP-SRS-34-3
 STATUS: Draft
 TYPE: Functional
