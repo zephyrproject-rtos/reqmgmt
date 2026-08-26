@@ -21,7 +21,7 @@ The Zephyr RTOS shall provide a mechanism to register a function to be invoked a
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-34
+  VALUE: ZEP-SYRS-38
 
 [REQUIREMENT]
 UID: ZEP-SRS-12-11
@@ -34,7 +34,7 @@ The Zephyr RTOS shall support associating a distinct name with each registration
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-34
+  VALUE: ZEP-SYRS-38
 
 [REQUIREMENT]
 UID: ZEP-SRS-12-2
@@ -47,7 +47,7 @@ When registering a function for initialization, an initialization level shall be
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-34
+  VALUE: ZEP-SYRS-38
 
 [REQUIREMENT]
 UID: ZEP-SRS-12-12
@@ -60,7 +60,7 @@ When registering a function for initialization, a priority within the initializa
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-34
+  VALUE: ZEP-SYRS-38
 
 [REQUIREMENT]
 UID: ZEP-SRS-12-13
@@ -73,7 +73,7 @@ The Zephyr RTOS shall organize system initialization into an ordered sequence of
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-34
+  VALUE: ZEP-SYRS-38
 
 [REQUIREMENT]
 UID: ZEP-SRS-12-14
@@ -86,7 +86,7 @@ The Zephyr RTOS shall provide a mechanism to obtain the ordinal number of an ini
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-34
+  VALUE: ZEP-SYRS-38
 
 [REQUIREMENT]
 UID: ZEP-SRS-12-3
@@ -99,7 +99,7 @@ During system initialization, the Zephyr RTOS shall invoke registered initializa
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-34
+  VALUE: ZEP-SYRS-38
 
 [REQUIREMENT]
 UID: ZEP-SRS-12-4
@@ -112,7 +112,7 @@ Within an initialization level, the Zephyr RTOS shall invoke registered initiali
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-34
+  VALUE: ZEP-SYRS-38
 
 [REQUIREMENT]
 UID: ZEP-SRS-12-5
@@ -125,7 +125,7 @@ The Zephyr RTOS shall execute the early hardware and pre-kernel initialization l
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-34
+  VALUE: ZEP-SYRS-38
 
 [REQUIREMENT]
 UID: ZEP-SRS-12-6
@@ -138,7 +138,7 @@ The Zephyr RTOS shall execute the post-kernel and application initialization lev
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-34
+  VALUE: ZEP-SYRS-38
 
 [REQUIREMENT]
 UID: ZEP-SRS-12-7
@@ -151,7 +151,7 @@ The Zephyr RTOS shall initialize devices as part of system initialization, invok
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-34
+  VALUE: ZEP-SYRS-38
 
 [REQUIREMENT]
 UID: ZEP-SRS-12-8
@@ -164,7 +164,7 @@ The Zephyr RTOS shall complete all initialization levels before invoking the app
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-34
+  VALUE: ZEP-SYRS-38
 
 [REQUIREMENT]
 UID: ZEP-SRS-12-9
@@ -177,7 +177,7 @@ Where symmetric multiprocessing is enabled, the Zephyr RTOS shall bring up the s
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-34
+  VALUE: ZEP-SYRS-38
 
 [REQUIREMENT]
 UID: ZEP-SRS-12-10
@@ -190,4 +190,4 @@ Where GNU-compatible static initialization is enabled, the Zephyr RTOS shall inv
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-34
+  VALUE: ZEP-SYRS-38

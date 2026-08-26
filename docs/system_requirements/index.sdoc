@@ -388,7 +388,7 @@ As a Zephyr RTOS user I want to be able to control the power mode of the MCU and
 TITLE: Object Cores
 
 [REQUIREMENT]
-UID: ZEP-SYRS-35
+UID: ZEP-SYRS-39
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Object Cores
@@ -466,7 +466,7 @@ The Zephyr RTOS shall implement a stack which can be used to pass data between t
 TITLE: System Initialization
 
 [REQUIREMENT]
-UID: ZEP-SYRS-34
+UID: ZEP-SYRS-38
 STATUS: Draft
 TYPE: Functional
 COMPONENT: System Initialization
