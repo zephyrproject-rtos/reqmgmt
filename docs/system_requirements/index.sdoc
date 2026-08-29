@@ -234,6 +234,21 @@ As a Zephyr RTOS user I want to express when a kernel operation times out either
 [[/SECTION]]
 
 [[SECTION]]
+TITLE: Kernel Version
+
+[REQUIREMENT]
+UID: ZEP-SYRS-26
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Version
+TITLE: Kernel version information
+STATEMENT: >>>
+The Zephyr RTOS shall provide the kernel version for the present build.
+<<<
+
+[[/SECTION]]
+
+[[SECTION]]
 TITLE: LIFOs
 
 [REQUIREMENT]
