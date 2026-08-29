@@ -1,6 +1,6 @@
 [DOCUMENT]
 TITLE: Kernel Version
-REQ_PREFIX: ZEP-SRS-26-
+REQ_PREFIX: ZEP-SRS-39-
 
 [GRAMMAR]
 IMPORT_FROM_FILE: software_requirements.sgra
@@ -11,7 +11,7 @@ SPDX-License-Identifier: Apache-2.0
 <<<
 
 [REQUIREMENT]
-UID: ZEP-SRS-26-1
+UID: ZEP-SRS-39-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Kernel Version
@@ -21,10 +21,10 @@ The Zephyr RTOS shall provide a compile-time mechanism to define the kernel vers
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-26
+  VALUE: ZEP-SYRS-39
 
 [REQUIREMENT]
-UID: ZEP-SRS-26-2
+UID: ZEP-SRS-39-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Kernel Version
@@ -34,10 +34,10 @@ The Zephyr RTOS shall provide a mechanism to retrieve the kernel version code.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-26
+  VALUE: ZEP-SYRS-39
 
 [REQUIREMENT]
-UID: ZEP-SRS-26-3
+UID: ZEP-SRS-39-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Kernel Version
@@ -47,10 +47,10 @@ The Zephyr RTOS shall provide a mechanism to obtain the major component from the
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-26
+  VALUE: ZEP-SYRS-39
 
 [REQUIREMENT]
-UID: ZEP-SRS-26-4
+UID: ZEP-SRS-39-4
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Kernel Version
@@ -60,10 +60,10 @@ The Zephyr RTOS shall provide a mechanism to obtain the minor component from the
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-26
+  VALUE: ZEP-SYRS-39
 
 [REQUIREMENT]
-UID: ZEP-SRS-26-5
+UID: ZEP-SRS-39-5
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Kernel Version
@@ -73,4 +73,4 @@ The Zephyr RTOS shall provide a mechanism to obtain the patchlevel component fro
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-26
+  VALUE: ZEP-SYRS-39
