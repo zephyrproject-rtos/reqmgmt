@@ -1,0 +1,271 @@
+[DOCUMENT]
+TITLE: Spinlock Service
+REQ_PREFIX: ZEP-SRS-39-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Spinlock Service
+TITLE: Spinlock Acquisition
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mecanism to lock a specified spinlock and return a key that captures the local interrupt state prior to acquisition.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Spinlock Service
+TITLE: Spinlock Release
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mecanism to release a spinlock and to restore the local interrupt state captured in the key at acquisition.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Spinlock Service
+TITLE: Spinlock Mutual Exclusion
+STATEMENT: >>>
+When a spinlock is successfully acquired, the Zephyr RTOS shall guarantee that exactly one execution context holds the lock at any given time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Spinlock Service
+TITLE: Spinlock CPU State Protection
+STATEMENT: >>>
+While a spinlock is held, the Zephyr RTOS shall prevent the calling context execution from being suspended or interrupted on its current CPU.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Spinlock Service
+TITLE: Blocking Spinlock Acquisition in SMP
+STATEMENT: >>>
+While a spinlock is held by another CPU, when an execution context attempts to acquire it, it will be in a busy-wait state until the spinlock is released.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Spinlock Service
+TITLE: Blocking Spinlock Acquisition in SMP
+STATEMENT: >>>
+While a spinlock is held by another CPU, when an execution context attempts to acquire it, it will be in a busy-wait state until the spinlock is released.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Spinlock Service
+TITLE: Default Non-Deterministic Allocation in SMP
+STATEMENT: >>>
+When a spinlock is successfully released, and if multiple CPU are in busy-wait state for this spinlock, the allocation shall depend on atomic arbitration of the underlying hardware.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Spinlock Service
+TITLE: Fair FIFO Allocation in SMP
+STATEMENT: >>>
+When a spinlock is successfully released, and if multiple CPU are in busy-wait state for this spinlock, the Zephyr RTOS shall provide a mecanism to allocate the spinlock to the CPU blocked in busy-wait state in the chronological order of their acquisition attempt.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Spinlock Service
+TITLE: Non-Blocking Spinlock Attempt Success
+STATEMENT: >>>
+When a non-blocking acquisition attempt occurs where the spinlock is available, the Zephyr RTOS shall acquire the lock without spinning and return a key capturing the local interrupt state prior to acquisition.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Spinlock Service
+TITLE: Non-Blocking Spinlock Attempt Busy
+STATEMENT: >>>
+If a non-blocking acquisition attempt finds the spinlock held, then the Zephyr RTOS shall leave the local CPU's interrupt state unchanged and return an error indicating the spinlock is busy.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Spinlock Service
+TITLE: Spinlock Nesting Capability
+STATEMENT: >>>
+The Zephyr RTOS shall allow a context execution to acquire separate spinlocks while already holding one or more spinlocks, provided they are released in the strictly reverse order of their acquisition.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Spinlock Service
+TITLE: Scoped Spinlock Execution Completed
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to execute a block of code while holding a spinlock, automatically releasing the spinlock and restoring the prior interrupt state when the block completes.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Spinlock Service
+TITLE: Scoped Spinlock Execution Early Exit
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to execute a block of code while holding a spinlock, automatically releasing the spinlock and restoring the prior interrupt state when the block is exited early through the mechanism's provided early-exit facility.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-14
+STATUS: Draft
+TYPE: Non-Functional
+COMPONENT: Spinlock Service
+TITLE: Spinlock Lock Time Limit
+STATEMENT: >>>
+Where the spinlock validation framework is enabled and a spinlock lock time limit is configured, the Zephyr RTOS shall detect at runtime, by means of an assertion, when a spinlock has been held for longer than the configured limit at the time it is unlocked.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-15
+STATUS: Draft
+TYPE: Non-Functional
+COMPONENT: Spinlock Service
+TITLE: Spinlock Recursive Lock Detection
+STATEMENT: >>>
+Where the spinlock validation framework is enabled, the Zephyr RTOS shall detect at runtime, by means of an assertion, an attempt to lock a spinlock that is already held by the calling CPU.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-16
+STATUS: Draft
+TYPE: Non-Functional
+COMPONENT: Spinlock Service
+TITLE: Spinlock Context Switch Detection
+STATEMENT: >>>
+Where the spinlock validation framework is enabled, the Zephyr RTOS shall detect at runtime, by means of an assertion, a context switch occurring while a spinlock is held.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-17
+STATUS: Draft
+TYPE: Non-Functional
+COMPONENT: Spinlock Service
+TITLE: Spinlock Mis-nested Unlock Detection
+STATEMENT: >>>
+Where the spinlock validation framework is enabled, the Zephyr RTOS shall detect at runtime, by means of an assertion, an attempt to unlock a spinlock that is not the most recently locked spinlock.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-18
+STATUS: Draft
+TYPE: Non-Functional
+COMPONENT: Spinlock Service
+TITLE: Spinlock Invalid Key Detection
+STATEMENT: >>>
+Where the spinlock validation framework is enabled, the Zephyr RTOS shall detect at runtime, by means of an assertion, an attempt to unlock a spinlock using a key value other than the one returned when that specific spinlock was locked.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-19
+STATUS: Draft
+TYPE: Non-Functional
+COMPONENT: Spinlock Service
+TITLE: Scoped Spinlock Misuse Detection
+STATEMENT: >>>
+Where the spinlock validation framework is enabled, the Zephyr RTOS shall detect at runtime, by means of an assertion, any exit from a scoped spinlock guarded block that bypasses the mechanism's defined exit facilities.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-20
+STATUS: Draft
+TYPE: Non-Functional
+COMPONENT: Spinlock Service
+TITLE: Spinlock Unheld Release Detection
+STATEMENT: >>>
+Where the spinlock validation framework is enabled, the Zephyr RTOS shall detect at runtime, by means of an assertion, an attempt to unlock a spinlock that is not held by the calling context.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
