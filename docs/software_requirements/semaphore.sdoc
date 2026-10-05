@@ -190,8 +190,8 @@ TYPE: Functional
 COMPONENT: Semaphore
 TITLE: Highest-priority waiter unblocked on release
 STATEMENT: >>>
-When there are threads waiting on the semaphore, the highest-priority waiting thread
-shall be unblocked and acquire the semaphore.
+When a semaphore is released while one or more threads are waiting to acquire it,
+the highest-priority waiting thread shall be unblocked and acquire the semaphore.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -244,8 +244,9 @@ TYPE: Functional
 COMPONENT: Semaphore
 TITLE: Semaphore Initialization Option Validation
 STATEMENT: >>>
-When initializing a counting semaphore, where the maximum permitted count of a semaphore is invalid,
-then the Zephyr RTOS shall return an error indicating invalid values.
+When initializing a counting semaphore, if the maximum permitted count is zero
+or the initial count exceeds the maximum permitted count, the Zephyr RTOS shall
+return an error indicating invalid values.
 <<<
 RELATIONS:
 - TYPE: Parent
