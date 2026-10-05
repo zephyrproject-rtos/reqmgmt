@@ -270,9 +270,24 @@ UID: ZEP-SRS-5-20
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Semaphore
-TITLE: Semaphore operations from interrupt context
+TITLE: Semaphore release from interrupt context
 STATEMENT: >>>
-The Zephyr RTOS shall allow a semaphore to be released from an interrupt service routine, and to be acquired from an interrupt service routine when no waiting is requested.
+The Zephyr RTOS shall allow an interrupt service routine to release
+a semaphore.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-14
+
+[REQUIREMENT]
+UID: ZEP-SRS-5-21
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Semaphore
+TITLE: Semaphore acquisition from interrupt context
+STATEMENT: >>>
+The Zephyr RTOS shall allow an interrupt service routine to acquire
+a semaphore only when no waiting is requested.
 <<<
 RELATIONS:
 - TYPE: Parent
