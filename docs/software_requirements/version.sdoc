@@ -1,0 +1,76 @@
+[DOCUMENT]
+TITLE: Kernel Version
+REQ_PREFIX: ZEP-SRS-39-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Version
+TITLE: Kernel version compile-time definition
+STATEMENT: >>>
+The Zephyr RTOS shall provide a compile-time mechanism to define the kernel version.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Version
+TITLE: Kernel version code retrieval
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to retrieve the kernel version code.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Version
+TITLE: Kernel version major component extraction
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to obtain the major component from the kernel version code.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Version
+TITLE: Kernel version minor component extraction
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to obtain the minor component from the kernel version code.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
+
+[REQUIREMENT]
+UID: ZEP-SRS-39-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Version
+TITLE: Kernel version patchlevel component extraction
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to obtain the patchlevel component from the kernel version code.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-39
