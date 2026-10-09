@@ -10,6 +10,13 @@ STATEMENT: >>>
 SPDX-License-Identifier: Apache-2.0
 <<<
 
+[TEXT]
+STATEMENT: >>>
+Unless a requirement states otherwise, the requirements in this document
+apply where user mode support is enabled. The stack canary requirements
+and the write-XOR-execute enforcement do not depend on user mode support.
+<<<
+
 [REQUIREMENT]
 UID: ZEP-SRS-8-1
 STATUS: Draft
@@ -174,7 +181,7 @@ TYPE: Functional
 COMPONENT: Memory Protection
 TITLE: User mode handling of detected stack overflow
 STATEMENT: >>>
-The Zephyr RTOS shall support a defined mechanism for user mode handling a of detected stack overflow.
+The Zephyr RTOS shall support a defined mechanism for user mode handling of a detected stack overflow.
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user I want, when a stack overflow is detected, to be able to implement a graceful, application defined handling of the exception.
@@ -222,7 +229,7 @@ STATEMENT: >>>
 The Zephyr RTOS shall provide helper functions for system call handler functions to validate the inputs passed in from user mode before invoking the implementation function to protect the kernel.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS user I want Zepyhr OS to validate system call parameters passed from the user mode to the kernel mode to avoid crashes and undefined behaviour.
+As a Zephyr RTOS user I want Zephyr OS to validate system call parameters passed from the user mode to the kernel mode to avoid crashes and undefined behaviour.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -238,12 +245,7 @@ STATEMENT: >>>
 The Zephyr RTOS shall support system calls to be able to safely accept C strings passed in from user mode.
 <<<
 USER_STORY: >>>
-As a Zephyr RTOS user I want Zepyhr OS to validate system call string type parameters passed from the user mode to the kernel mode to avoid crashes and undefined behaviour.
-
-e.g.
-
-- verify the string length is smaller or equal to the syscalls defined max.
-- verify that the length type does not overflow when allocating one more byte ???
+As a Zephyr RTOS user I want Zephyr OS to validate system call string type parameters passed from the user mode to the kernel mode to avoid crashes and undefined behaviour, for example verifying that the string length does not exceed the maximum defined for the system call.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -254,11 +256,9 @@ UID: ZEP-SRS-8-16
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Memory Protection
-TITLE: Tracking kernel objects in used by user mode threads
+TITLE: Tracking kernel objects in use by user mode threads
 STATEMENT: >>>
-The Zephyr RTOS shall track kernel objects that are used by user mode threads.
-
-Note: this means Zephyr shall track the resources used by the user mode thread (associate this with a user story).
+The Zephyr RTOS shall track the kernel objects that are in use by each user mode thread.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -291,6 +291,175 @@ The Zephyr RTOS shall support assigning a memory pool to act as that thread's re
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user I want to be able, during runtime from the kernel, to request a memory area/pool which is exclusively available to the requesting thread protected against access from other threads.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Memory partition definition
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define a memory partition that describes a region of memory together with its access attributes.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Memory domain definition
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a memory domain at run time, composed of a set of memory partitions.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-21
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Adding a partition to a memory domain
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to add a memory partition to an initialized memory domain.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-28
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Rejecting writable and executable partitions
+STATEMENT: >>>
+Where write-XOR-execute enforcement is enabled, if a memory partition that permits both write and execute access is added to a memory domain, then the Zephyr RTOS shall reject the partition and return an error.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-29
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Rejecting overlapping partitions
+STATEMENT: >>>
+If a memory partition that overlaps an existing partition of the same memory domain is added, then the Zephyr RTOS shall reject the partition and return an error.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-22
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Removing a partition from a memory domain
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to remove a memory partition from a memory domain.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-23
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Assigning a thread to a memory domain
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to assign a thread to a memory domain so that the thread gains access to the domain's partitions.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-30
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Reassigning a thread to another memory domain
+STATEMENT: >>>
+When a thread that is assigned to a memory domain is assigned to another memory domain, the Zephyr RTOS shall remove the thread from its previous memory domain.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-24
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Default user thread memory isolation
+STATEMENT: >>>
+While a thread runs in user mode, the Zephyr RTOS shall restrict its memory accesses to its own stack and the partitions of the memory domain to which it is assigned.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-25
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Stack canary protection
+STATEMENT: >>>
+Where stack canary protection is enabled, the Zephyr RTOS shall detect corruption of a function's stack frame using a guard value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-31
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Stack canary corruption handling
+STATEMENT: >>>
+If stack frame corruption is detected, then the Zephyr RTOS shall treat the corruption as a fatal software error.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-26
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Per-thread stack canary values
+STATEMENT: >>>
+Where thread-local stack canaries are enabled, the Zephyr RTOS shall assign each thread its own stack canary value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-8-27
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Protection
+TITLE: Stack pointer randomization
+STATEMENT: >>>
+Where stack pointer randomization is enabled, the Zephyr RTOS shall apply a randomized offset to a thread's initial stack pointer.
 <<<
 RELATIONS:
 - TYPE: Parent
