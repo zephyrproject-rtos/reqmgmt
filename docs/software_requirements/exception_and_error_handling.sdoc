@@ -15,12 +15,10 @@ UID: ZEP-SRS-16-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Exception and Error Handling
-TITLE: Fatal Exception Error Handler
+TITLE: Default exception handlers
 STATEMENT: >>>
-The Zephyr RTOS shall provide default handlers for exceptions.
-<<<
-USER_STORY: >>>
-As a Zephyr RTOS user I want exceptions which I did not handle explicitly (by mistake or on purpose) to be caught by a default handler, defined either by Zephyr OS or by myself.
+The Zephyr RTOS shall provide a default handler for each CPU exception defined by
+the underlying architecture.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -31,9 +29,9 @@ UID: ZEP-SRS-16-2
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Exception and Error Handling
-TITLE: Default handler for fatal errors
+TITLE: Default fatal error handler
 STATEMENT: >>>
-The Zephyr RTOS shall provide default handlers for fatal errors that do not have a dedicated handler.
+The Zephyr RTOS shall provide a default fatal error handler.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -44,9 +42,10 @@ UID: ZEP-SRS-16-3
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Exception and Error Handling
-TITLE: Assigning a specific handler
+TITLE: Exceptions treated as fatal errors by default
 STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to assign a specific handler for an exception.
+When an exception is handled by the default exception handler, the Zephyr RTOS shall
+treat the exception as a fatal error.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -57,9 +56,10 @@ UID: ZEP-SRS-16-4
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Exception and Error Handling
-TITLE: Assigning a specific handler for a fatal error
+TITLE: Application-defined fatal error handler
 STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to assign a specific handler for a fatal error.
+The Zephyr RTOS shall allow an application to provide, at build time, its own fatal
+error handler in place of the default handler.
 <<<
 RELATIONS:
 - TYPE: Parent
