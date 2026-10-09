@@ -1,0 +1,82 @@
+[DOCUMENT]
+TITLE: Futex
+REQ_PREFIX: ZEP-SRS-37-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-37-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Futex
+TITLE: Pending on a futex with a changed value
+STATEMENT: >>>
+When a thread attempts to pend on a futex and the futex value differs from the expected
+value, the Zephyr RTOS shall return immediately with an error indicating the futex value
+changed.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-36
+
+[REQUIREMENT]
+UID: ZEP-SRS-37-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Futex
+TITLE: Waking threads pending on a futex
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to wake either the highest-priority thread or all threads pending on a futex.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-36
+
+[REQUIREMENT]
+UID: ZEP-SRS-37-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Futex
+TITLE: Futex operation from user mode
+STATEMENT: >>>
+The Zephyr RTOS shall allow user mode threads to operate on a futex located in memory
+they can access.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-36
+
+[REQUIREMENT]
+UID: ZEP-SRS-37-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Futex
+TITLE: Pending on a futex with a matching value
+STATEMENT: >>>
+When a thread attempts to pend on a futex and the futex value matches the expected
+value, the Zephyr RTOS shall block the thread until the futex is woken or the specified
+timeout elapses.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-36
+
+[REQUIREMENT]
+UID: ZEP-SRS-37-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Futex
+TITLE: Futex access control
+STATEMENT: >>>
+If a futex operation refers to memory the calling thread cannot access, then the Zephyr
+RTOS shall reject the operation with an error indicating the access is denied.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-36
