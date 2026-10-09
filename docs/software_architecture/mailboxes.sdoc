@@ -1,0 +1,30 @@
+[DOCUMENT]
+TITLE: Mailboxes — Software Architecture
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_architecture.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[COMPONENT]
+UID: ZEP-SWARCH-MBOX
+STATUS: Draft
+COMPONENT: Mailboxes
+TITLE: Mailbox Software Architecture
+STATEMENT: >>>
+Software architecture for the mailbox subsystem.
+
+Design documentation:
+`Mailboxes <https://docs.zephyrproject.org/latest/kernel/services/data_passing/mailboxes.html>`_
+
+API reference:
+`Mailbox APIs <https://docs.zephyrproject.org/latest/doxygen/html/group__mailbox__apis.html>`_
+
+Kernel source: kernel/mailbox.c
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYSARCH-MBOX
