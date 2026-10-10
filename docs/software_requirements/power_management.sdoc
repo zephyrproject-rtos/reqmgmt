@@ -10,6 +10,129 @@ STATEMENT: >>>
 SPDX-License-Identifier: Apache-2.0
 <<<
 
+[[SECTION]]
+TITLE: System Power States
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Multiple system power states
+STATEMENT: >>>
+The Zephyr RTOS shall define a set of system power states that differ in power
+consumption and wake-up latency.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Active state
+STATEMENT: >>>
+The Zephyr RTOS shall define an active state in which the system is fully powered
+and operational.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Runtime idle state
+STATEMENT: >>>
+The Zephyr RTOS shall define a runtime idle state in which the CPUs enter their
+deepest idle state and wait for interrupts, while devices remain in their current
+states.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Suspend-to-idle state
+STATEMENT: >>>
+The Zephyr RTOS shall define a suspend-to-idle state in which the CPUs enter their
+deepest idle state and peripherals may be placed into low-power states, without
+loss of CPU execution context.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-18
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Standby state
+STATEMENT: >>>
+The Zephyr RTOS shall define a standby state in which peripherals are placed into
+low-power states and all non-boot CPUs are powered off.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Suspend-to-RAM state
+STATEMENT: >>>
+The Zephyr RTOS shall define a suspend-to-RAM state in which the system is powered
+off except for the memory, which retains the saved state of the CPUs and devices.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Suspend-to-disk state
+STATEMENT: >>>
+The Zephyr RTOS shall define a suspend-to-disk state in which the system, including
+the memory, is powered off, with the memory contents saved to non-volatile storage
+and restored on resume.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-21
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Soft-off state
+STATEMENT: >>>
+The Zephyr RTOS shall define a soft-off state in which no system state is preserved
+and from which the system resumes by restarting as from initial power-up.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: System Power Management
+
 [REQUIREMENT]
 UID: ZEP-SRS-13-1
 STATUS: Draft
@@ -19,27 +142,189 @@ TITLE: Power State Control
 STATEMENT: >>>
 The Zephyr RTOS shall provide control over changes to system power states.
 <<<
-USER_STORY: >>>
-See ZEP104
-+
-When the power state is changed I want to get an notification in order for specific parts of my application to react accordingly.
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Entering a low-power state when idle
+STATEMENT: >>>
+When all CPUs become idle, the Zephyr RTOS shall place the system into a low-power
+state selected by the power management policy.
 <<<
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-10
 
 [REQUIREMENT]
-UID: ZEP-SRS-13-2
+UID: ZEP-SRS-13-7
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Power Management
-TITLE: Power Management
+TITLE: Overriding the policy with a specified state
 STATEMENT: >>>
-TBD
+The Zephyr RTOS shall provide a mechanism to bypass the power management policy and
+place the system into a specified power state.
 <<<
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-22
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Application-defined power management policy
+STATEMENT: >>>
+The Zephyr RTOS shall support replacing the default power management policy with an
+application-defined policy that selects the system power state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Power Management Policy
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Power state selection by anticipated idle time
+STATEMENT: >>>
+Where the default power management policy is used, the Zephyr RTOS shall select the
+system power state based on the time remaining until the next scheduled kernel
+event.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Preventing entry into a power state
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to prevent the system from entering a
+specified power state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-23
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Allowing entry into a power state again
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to lift a previously imposed restriction
+on entering a specified power state, allowing entry into the state again once all
+such restrictions have been lifted.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-24
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Querying whether a power state is prevented
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to query whether entry into a specified
+power state is currently prevented.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Wake-up latency constraint
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to impose a maximum wake-up latency
+constraint on system power state selection.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-25
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Wake-up latency constraint enforcement
+STATEMENT: >>>
+While a wake-up latency constraint is active, the Zephyr RTOS shall not enter a
+system power state whose wake-up latency exceeds the constraint.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-26
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Updating a wake-up latency constraint
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to update the value of an active wake-up
+latency constraint.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-27
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Removing a wake-up latency constraint
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to remove a previously imposed wake-up
+latency constraint.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-28
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Notification of wake-up latency constraint changes
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to be notified when the effective wake-up
+latency constraint changes.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Power State Notifications
 
 [REQUIREMENT]
 UID: ZEP-SRS-13-3
@@ -50,6 +335,268 @@ TITLE: Notification of changes to system power states
 STATEMENT: >>>
 The Zephyr RTOS shall provide notification of changes to system power states.
 <<<
+USER_STORY: >>>
+When the power state is changed I want to get a notification so that specific parts of my application can react accordingly.
+<<<
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-29
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Registering a power state notifier
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to register a notifier for system power
+state transitions.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-30
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Unregistering a power state notifier
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to unregister a previously registered
+power state notifier.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-31
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Power state entry notification
+STATEMENT: >>>
+When the system enters a power state, the Zephyr RTOS shall invoke the state entry
+callback of each registered notifier with the state being entered.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-32
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Power state exit notification
+STATEMENT: >>>
+When the system exits a power state, the Zephyr RTOS shall invoke the state exit
+callback of each registered notifier with the state being exited.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Device Power Management
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Device power states
+STATEMENT: >>>
+The Zephyr RTOS shall support device power states, including active, suspended, and
+off, and a transitional suspending state for devices that suspend asynchronously.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Device power state transitions
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to request a device to transition between
+its power states.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-33
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Unsupported device power state transition
+STATEMENT: >>>
+If a requested device power state transition is not supported by the device, then
+the Zephyr RTOS shall return an error indicating the operation is not supported.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-34
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Device already in requested power state
+STATEMENT: >>>
+If a device is already in the power state implied by a requested transition, then
+the Zephyr RTOS shall return an error indicating the device is already in that
+state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-35
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Device busy during power state transition
+STATEMENT: >>>
+If a device power state transition is requested while the device is changing its
+power state, then the Zephyr RTOS shall return an error indicating the device is
+busy.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Querying device power state
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to query the current power state of a
+device.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: Runtime Device Power Management
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-36
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Enabling runtime power management for a device
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to enable runtime power management for a
+device.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-37
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Disabling runtime power management for a device
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to disable runtime power management for a
+device.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Resuming a device on use
+STATEMENT: >>>
+When a device managed by runtime power management is claimed by its first user, the
+Zephyr RTOS shall resume the device.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-38
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Suspending an unused device
+STATEMENT: >>>
+When the last user of a device managed by runtime power management releases the
+device, the Zephyr RTOS shall suspend the device.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-39
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Asynchronous device release
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to release a device managed by runtime
+power management asynchronously, suspending it only after a specified delay has
+elapsed.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[[/SECTION]]
+
+[[SECTION]]
+TITLE: CPU Idle
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Idling the current CPU
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to place the current CPU into a
+low-power idle state until an interrupt occurs.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[REQUIREMENT]
+UID: ZEP-SRS-13-40
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Power Management
+TITLE: Idling the current CPU with atomic interrupt enable
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to place the current CPU into a
+low-power idle state, atomically re-enabling interrupts as the CPU enters the idle
+state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[[/SECTION]]
