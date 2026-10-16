@@ -104,4 +104,7 @@ FILE: timers.sdoc
 FILE: tracing.sdoc
 
 [DOCUMENT_FROM_FILE]
+FILE: version.sdoc
+
+[DOCUMENT_FROM_FILE]
 FILE: work_queues.sdoc
