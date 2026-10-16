@@ -10,7 +10,184 @@ STATEMENT: >>>
 SPDX-License-Identifier: Apache-2.0
 <<<
 
-[TEXT]
+[REQUIREMENT]
+UID: ZEP-SRS-12-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Registering initialization functions
 STATEMENT: >>>
-TBD
+The Zephyr RTOS shall provide a mechanism to register a function to be invoked automatically during system initialization.
 <<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-12-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Named registration of initialization functions
+STATEMENT: >>>
+The Zephyr RTOS shall support associating a distinct name with each registration of an initialization function, allowing the same function to be registered for initialization more than once.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-12-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Initialization levels
+STATEMENT: >>>
+When registering a function for initialization, an initialization level shall be provided, and the Zephyr RTOS shall associate the function with that level.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-12-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Initialization priority
+STATEMENT: >>>
+When registering a function for initialization, a priority within the initialization level shall be provided, and the Zephyr RTOS shall associate the function with that priority.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-12-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Defined initialization levels
+STATEMENT: >>>
+The Zephyr RTOS shall organize system initialization into an ordered sequence of initialization levels: early hardware initialization, pre-kernel initialization performed before kernel services are available, post-kernel initialization performed with kernel services available, and application initialization performed immediately before the application entry point is invoked.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-12-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Querying an initialization level ordinal
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to obtain the ordinal number of an initialization level.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-12-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Initialization order by level
+STATEMENT: >>>
+During system initialization, the Zephyr RTOS shall invoke registered initialization functions level by level, in the defined order of initialization levels.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-12-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Initialization order by priority
+STATEMENT: >>>
+Within an initialization level, the Zephyr RTOS shall invoke registered initialization functions in ascending order of their registered priority.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-12-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Initialization before kernel services
+STATEMENT: >>>
+The Zephyr RTOS shall execute the early hardware and pre-kernel initialization levels in a single-threaded context before the kernel scheduler is started.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-12-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Initialization after kernel services
+STATEMENT: >>>
+The Zephyr RTOS shall execute the post-kernel and application initialization levels in the context of a kernel thread after the kernel scheduler has started, with kernel services available.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-12-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Device initialization
+STATEMENT: >>>
+The Zephyr RTOS shall initialize devices as part of system initialization, invoking each device's initialization function according to its assigned initialization level and priority.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-12-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Application start after initialization
+STATEMENT: >>>
+The Zephyr RTOS shall complete all initialization levels before invoking the application entry point.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-12-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: SMP initialization
+STATEMENT: >>>
+Where symmetric multiprocessing is enabled, the Zephyr RTOS shall bring up the secondary CPUs during system initialization, before the application is started.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-12-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: System Initialization
+TITLE: Static object construction at startup
+STATEMENT: >>>
+Where GNU-compatible static initialization is enabled, the Zephyr RTOS shall invoke statically registered object constructors during system initialization, in their configured priority order, before the application entry point runs.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
