@@ -93,3 +93,55 @@ As a Zephyr OS user, I want that the trace functionality do not interfere or slo
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-19
+
+[REQUIREMENT]
+UID: ZEP-SRS-10-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Tracing
+TITLE: Tracing kernel events
+STATEMENT: >>>
+The Zephyr RTOS shall trace kernel events, including thread context switches, interrupt entry and exit, system call entry and exit, and kernel object operations.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-19
+
+[REQUIREMENT]
+UID: ZEP-SRS-10-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Tracing
+TITLE: Configurable tracing
+STATEMENT: >>>
+The Zephyr RTOS shall allow tracing to be enabled or disabled through configuration.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-19
+
+[REQUIREMENT]
+UID: ZEP-SRS-10-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Tracing
+TITLE: Tracing backends
+STATEMENT: >>>
+The Zephyr RTOS shall support emitting trace data through a selectable tracing backend.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-19
+
+[REQUIREMENT]
+UID: ZEP-SRS-10-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Tracing
+TITLE: Trace data emission modes
+STATEMENT: >>>
+The Zephyr RTOS shall support emitting trace data synchronously and through a buffered mode.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-19
