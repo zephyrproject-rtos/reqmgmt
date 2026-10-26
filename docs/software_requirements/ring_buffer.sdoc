@@ -1,0 +1,196 @@
+[DOCUMENT]
+TITLE: Ring Buffers
+REQ_PREFIX: ZEP-SRS-40-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-40-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Ring Buffer
+TITLE: Ring buffer definition
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define a ring buffer at compile time
+and to initialize a ring buffer at run time with caller-provided storage.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-40-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Ring Buffer
+TITLE: Storing bytes
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to store a sequence of bytes in a ring
+buffer, returning the number of bytes stored when the free space is insufficient
+for the whole sequence.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-40-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Ring Buffer
+TITLE: Retrieving bytes
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to retrieve and remove a sequence of
+bytes from a ring buffer, returning the number of bytes retrieved.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-40-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Ring Buffer
+TITLE: Reading without removal
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to read bytes from a ring buffer
+without removing them.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-40-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Ring Buffer
+TITLE: Direct write access
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to claim a contiguous region of a ring
+buffer for writing directly into its storage.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-40-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Ring Buffer
+TITLE: Committing directly written data
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to commit the amount of data written
+to a claimed region of a ring buffer, making it available for retrieval.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-40-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Ring Buffer
+TITLE: Direct read access
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to claim a contiguous region of a ring
+buffer for reading directly from its storage.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-40-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Ring Buffer
+TITLE: Releasing directly read data
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to release the amount of data consumed
+from a claimed region of a ring buffer, removing it from the ring buffer.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-40-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Ring Buffer
+TITLE: Storing data items
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to store variable-sized data items,
+each carrying an application-defined type identifier, in a ring buffer.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-40-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Ring Buffer
+TITLE: Retrieving data items
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to retrieve and remove a variable-sized
+data item, together with its application-defined type identifier, from a ring
+buffer.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-40-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Ring Buffer
+TITLE: Capacity queries
+STATEMENT: >>>
+The Zephyr RTOS shall provide mechanisms to query the free space of a ring buffer
+and whether it is empty.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-40-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Ring Buffer
+TITLE: Ring buffer reset
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to discard the contents of a ring
+buffer, returning it to its empty state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-40-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Ring Buffer
+TITLE: Concurrent producer and consumer
+STATEMENT: >>>
+The Zephyr RTOS shall support one context storing data into a ring buffer while
+one other context concurrently retrieves data from it, without additional
+synchronization.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22

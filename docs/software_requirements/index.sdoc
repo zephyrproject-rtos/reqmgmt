@@ -86,6 +86,9 @@ FILE: power_management.sdoc
 FILE: queues.sdoc
 
 [DOCUMENT_FROM_FILE]
+FILE: ring_buffer.sdoc
+
+[DOCUMENT_FROM_FILE]
 FILE: semaphore.sdoc
 
 [DOCUMENT_FROM_FILE]
