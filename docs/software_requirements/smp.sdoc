@@ -275,16 +275,3 @@ Where coherent memory placement is enabled on a cache-incoherent multiprocessor,
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-11
-
-[REQUIREMENT]
-UID: ZEP-SRS-34-20
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Multi Core
-TITLE: Fair spinlock acquisition order
-STATEMENT: >>>
-Where ticket spinlocks are enabled, the Zephyr RTOS shall grant a contended spinlock to requesting CPUs in first-come, first-served order.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-11
