@@ -404,7 +404,7 @@ As a Zephyr RTOS user I want to be able to control the power mode of the MCU and
 TITLE: Object Cores
 
 [REQUIREMENT]
-UID: ZEP-SYRS-39
+UID: ZEP-SYRS-40
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Object Cores
