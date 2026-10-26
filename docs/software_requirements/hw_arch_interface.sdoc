@@ -300,6 +300,55 @@ RELATIONS:
 [[/SECTION]]
 
 [[SECTION]]
+TITLE: Memory Barriers
+
+[REQUIREMENT]
+UID: ZEP-SRS-19-25
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Hardware Architecture Interface
+TITLE: Full data memory barrier
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to enforce sequentially consistent
+ordering of memory accesses around a point in the program (a full data memory
+barrier).
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-1
+
+[REQUIREMENT]
+UID: ZEP-SRS-19-26
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Hardware Architecture Interface
+TITLE: Data synchronization barrier
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to ensure that all outstanding memory
+accesses complete before subsequent instructions execute (a data synchronization
+barrier).
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-1
+
+[REQUIREMENT]
+UID: ZEP-SRS-19-27
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Hardware Architecture Interface
+TITLE: Cross-core synchronization barrier
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to synchronize memory accesses across
+all cores (a system-wide synchronization barrier).
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-1
+
+[[/SECTION]]
+
+[[SECTION]]
 TITLE: Diagnostics and Debug
 
 [REQUIREMENT]
