@@ -89,6 +89,9 @@ FILE: queues.sdoc
 FILE: ring_buffer.sdoc
 
 [DOCUMENT_FROM_FILE]
+FILE: scoped_cleanup.sdoc
+
+[DOCUMENT_FROM_FILE]
 FILE: semaphore.sdoc
 
 [DOCUMENT_FROM_FILE]
