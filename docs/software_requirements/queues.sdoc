@@ -187,3 +187,55 @@ data items to a queue.
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue data item handover order
+STATEMENT: >>>
+When a data item becomes available in a queue on which one or more threads are waiting to get and dequeue a data item, the Zephyr RTOS shall hand the data item to the highest-priority waiting thread. Among waiting threads of equal priority, the Zephyr RTOS shall hand the data item to the thread that has waited the longest.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Blocking get from an empty queue
+STATEMENT: >>>
+When a thread attempts to get and dequeue a data item from an empty queue and a waiting period is specified, the Zephyr RTOS shall block the thread until a data item becomes available or the waiting period elapses, whichever occurs first.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Get from an empty queue when the waiting period elapses
+STATEMENT: >>>
+When the waiting period of a thread blocked while getting and dequeuing a data item from an empty queue elapses before a data item becomes available, the Zephyr RTOS shall return to the thread without a data item.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-18
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Get from an empty queue without waiting
+STATEMENT: >>>
+When a thread attempts to get and dequeue a data item from an empty queue and no waiting period is specified, the Zephyr RTOS shall return to the thread immediately without a data item.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
