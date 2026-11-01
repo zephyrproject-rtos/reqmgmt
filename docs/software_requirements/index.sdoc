@@ -86,6 +86,9 @@ FILE: semaphore.sdoc
 FILE: smp.sdoc
 
 [DOCUMENT_FROM_FILE]
+FILE: spinlock.sdoc
+
+[DOCUMENT_FROM_FILE]
 FILE: stacks.sdoc
 
 [DOCUMENT_FROM_FILE]
