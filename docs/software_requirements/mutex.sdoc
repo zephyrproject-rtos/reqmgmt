@@ -171,3 +171,16 @@ While a higher-priority thread is blocked waiting on a mutex, the Zephyr RTOS sh
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-13
+
+[REQUIREMENT]
+UID: ZEP-SRS-6-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Mutex
+TITLE: Highest-priority waiter acquires a released mutex
+STATEMENT: >>>
+When a mutex is unlocked while one or more threads are waiting to lock it, the Zephyr RTOS shall grant ownership of the mutex to the highest-priority waiting thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-13
