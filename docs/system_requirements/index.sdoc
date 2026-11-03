@@ -540,7 +540,7 @@ TYPE: Functional
 COMPONENT: Tracing
 TITLE: Tracing
 STATEMENT: >>>
-Zepyhr shall provide a framework mechanism for tracing low level system operations  (NOTE: system calls, interrupts, kernel calls, thread, synchronization, etc.).
+Zephyr shall provide a framework mechanism for tracing low level system operations  (NOTE: system calls, interrupts, kernel calls, thread, synchronization, etc.).
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user, I want to be able to trace different OS operations.
