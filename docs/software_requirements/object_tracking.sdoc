@@ -1,0 +1,39 @@
+[DOCUMENT]
+TITLE: Object Tracking
+REQ_PREFIX: ZEP-SRS-41-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-41-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Object Tracking
+TITLE: Tracking static kernel objects
+STATEMENT: >>>
+Where kernel object tracking is enabled, the Zephyr RTOS shall track, for each
+tracked kernel object type, the statically defined objects of that type.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-19
+
+[REQUIREMENT]
+UID: ZEP-SRS-41-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Object Tracking
+TITLE: Enumerating tracked objects
+STATEMENT: >>>
+Where kernel object tracking is enabled, the Zephyr RTOS shall provide a
+mechanism to enumerate the tracked objects of a kernel object type.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-19
