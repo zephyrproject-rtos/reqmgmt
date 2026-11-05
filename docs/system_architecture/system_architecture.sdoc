@@ -1,0 +1,80 @@
+[DOCUMENT]
+TITLE: Zephyr RTOS — System Architecture
+REQ_PREFIX: ZEP-SYSARCH-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: system_architecture.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+
+This document defines the architectural decomposition of the Zephyr RTOS.
+It identifies the major subsystems of the RTOS and establishes traceable
+architectural nodes that link system requirements (ZEP-SYRS) to software
+requirements (ZEP-SRS).
+
+The initial scope of safety work is the Kernel subsystem. Other
+subsystems (networking, Bluetooth, etc.) will be added as safety
+certification scope expands.
+<<<
+
+[[SECTION]]
+TITLE: Kernel
+
+[TEXT]
+STATEMENT: >>>
+The kernel provides the core runtime: threading, scheduling, synchronization,
+data passing, memory management, timing, and device driver infrastructure.
+
+The decomposition below mirrors the Zephyr kernel documentation structure
+(doc/kernel/) as the authoritative design reference.
+<<<
+
+[[SECTION]]
+TITLE: Data Passing
+
+[TEXT]
+STATEMENT: >>>
+Kernel objects for passing data between threads and ISRs.
+
+`Kernel Services <https://docs.zephyrproject.org/latest/kernel/services/index.html>`_
+<<<
+
+[[SECTION]]
+TITLE: Mailboxes
+
+[TEXT]
+STATEMENT: >>>
+Enhanced message passing allowing threads to exchange messages of any size
+synchronously or asynchronously. Supports non-anonymous messaging, thread
+compatibility filtering, and deferred data retrieval.
+
+`Mailboxes <https://docs.zephyrproject.org/latest/kernel/services/data_passing/mailboxes.html>`_
+<<<
+
+[COMPONENT]
+UID: ZEP-SYSARCH-MBOX
+STATUS: Draft
+COMPONENT: Mailboxes
+TITLE: Mailbox Subsystem
+STATEMENT: >>>
+The kernel shall provide a mailbox subsystem that enables point-to-point
+message exchange between threads, supporting both synchronous and
+asynchronous send operations, with priority-ordered send and receive queues.
+<<<
+RATIONALE: >>>
+Mailboxes extend the data passing capabilities beyond message queues by
+supporting variable-size messages, non-anonymous thread identification,
+and deferred data retrieval. These properties are needed when the sender
+and receiver must coordinate on message content and identity.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-25
+
+[[/SECTION]]
+
+[[/SECTION]]
+
+[[/SECTION]]
