@@ -563,3 +563,21 @@ As a Zephyr RTOS user I want an ISR or a high-priority thread to defer non-urgen
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Scoped Cleanup
+
+[REQUIREMENT]
+UID: ZEP-SYRS-41
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Scoped Cleanup
+TITLE: Scope-based resource management
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to bind the release of a resource to the exit of a lexical scope.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want resources I acquire in a scope to be released automatically on every exit path, so that error handling cannot leak locks or memory.
+<<<
+
+[[/SECTION]]

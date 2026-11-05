@@ -1,0 +1,97 @@
+[DOCUMENT]
+TITLE: Scoped Cleanup
+REQ_PREFIX: ZEP-SRS-42-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-42-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Scoped Cleanup
+TITLE: Scoped guard types
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to define guard types that acquire a
+resource when a scope is entered and release it when the scope is exited.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-41
+
+[REQUIREMENT]
+UID: ZEP-SRS-42-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Scoped Cleanup
+TITLE: Guards for kernel synchronization objects
+STATEMENT: >>>
+The Zephyr RTOS shall provide scoped guards for kernel synchronization objects
+that acquire the object on scope entry and release it on scope exit.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-41
+
+[REQUIREMENT]
+UID: ZEP-SRS-42-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Scoped Cleanup
+TITLE: Conditional guards
+STATEMENT: >>>
+The Zephyr RTOS shall provide conditional scoped guards that attempt to acquire a
+resource without waiting, report whether the acquisition succeeded, and release
+the resource on scope exit only when it was acquired.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-41
+
+[REQUIREMENT]
+UID: ZEP-SRS-42-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Scoped Cleanup
+TITLE: Deferred function calls
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to defer a function call so that it is
+executed when the enclosing scope is exited.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-41
+
+[REQUIREMENT]
+UID: ZEP-SRS-42-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Scoped Cleanup
+TITLE: Cleanup on every exit path
+STATEMENT: >>>
+When a scope with registered guards or deferred calls is exited through any path,
+including early exits, the Zephyr RTOS shall execute the registered release and
+deferred actions.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-41
+
+[REQUIREMENT]
+UID: ZEP-SRS-42-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Scoped Cleanup
+TITLE: Application-defined cleanup types
+STATEMENT: >>>
+The Zephyr RTOS shall allow applications to define their own scoped guard and
+deferred call types.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-41
