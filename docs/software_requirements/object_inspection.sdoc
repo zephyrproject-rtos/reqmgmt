@@ -1,0 +1,102 @@
+[DOCUMENT]
+TITLE: Kernel Object Inspection
+REQ_PREFIX: ZEP-SRS-35-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Registering a kernel object for inspection
+STATEMENT: >>>
+Where kernel object inspection is enabled, the Zephyr RTOS shall provide a mechanism to register a kernel object so that it is associated with its object type.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Unregistering a kernel object from inspection
+STATEMENT: >>>
+Where kernel object inspection is enabled, the Zephyr RTOS shall provide a mechanism to unregister a previously registered kernel object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-3
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Finding a kernel object type
+STATEMENT: >>>
+Where kernel object inspection is enabled, the Zephyr RTOS shall provide a mechanism to obtain a reference to a registered kernel object type.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-4
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Iterating over kernel objects of a type
+STATEMENT: >>>
+Where kernel object inspection is enabled, the Zephyr RTOS shall provide a mechanism to iterate over all registered kernel objects of a given object type, invoking a caller-supplied function for each object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-5
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Querying kernel object statistics
+STATEMENT: >>>
+Where kernel object statistics are enabled, the Zephyr RTOS shall provide a mechanism to query the run-time statistics associated with a registered kernel object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-6
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Enabling and disabling kernel object statistics
+STATEMENT: >>>
+Where kernel object statistics are enabled, the Zephyr RTOS shall provide a mechanism to enable and disable statistics collection for a registered kernel object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-7
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Resetting kernel object statistics
+STATEMENT: >>>
+Where kernel object statistics are enabled, the Zephyr RTOS shall provide a mechanism to reset the run-time statistics associated with a registered kernel object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40

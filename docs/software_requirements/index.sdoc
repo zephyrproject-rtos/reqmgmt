@@ -71,7 +71,7 @@ FILE: message_queue.sdoc
 FILE: mutex.sdoc
 
 [DOCUMENT_FROM_FILE]
-FILE: object_cores.sdoc
+FILE: object_inspection.sdoc
 
 [DOCUMENT_FROM_FILE]
 FILE: pipe.sdoc

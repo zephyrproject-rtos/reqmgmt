@@ -401,16 +401,16 @@ As a Zephyr RTOS user I want to be able to control the power mode of the MCU and
 <<<
 
 [[SECTION]]
-TITLE: Object Cores
+TITLE: Kernel Object Inspection
 
 [REQUIREMENT]
 UID: ZEP-SYRS-40
 STATUS: Draft
 TYPE: Functional
-COMPONENT: Object Cores
-TITLE: Object core framework
+COMPONENT: Kernel Object Inspection
+TITLE: Kernel object inspection
 STATEMENT: >>>
-The Zephyr RTOS shall provide a framework for registering kernel objects so that they can be discovered, inspected, and have run-time statistics gathered at run time.
+The Zephyr RTOS shall provide a mechanism to register kernel objects so that they can be discovered, inspected, and have run-time statistics gathered at run time.
 <<<
 USER_STORY: >>>
 As a Zephyr RTOS user, I want to discover and inspect kernel objects at run time for monitoring and diagnostics.
