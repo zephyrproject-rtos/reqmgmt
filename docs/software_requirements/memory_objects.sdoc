@@ -392,3 +392,159 @@ If heap corruption is detected, then the Zephyr RTOS shall report a fatal error.
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-30
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap group creation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to create a heap group whose allocations are directed by a caller-supplied selection function.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-31
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Adding a heap to a heap group
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to add a heap, together with caller-supplied data, to a heap group at run time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-32
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap group allocation
+STATEMENT: >>>
+When allocating from a heap group, the Zephyr RTOS shall select the serving heap by invoking the caller-supplied selection function with the per-allocation configuration data.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-33
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap group aligned allocation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to allocate a block of memory from a heap group with a requested alignment.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-34
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap group block release
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to release a block allocated from a heap group back to the heap it was allocated from.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-35
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap group reallocation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to resize a block allocated from a heap group while preserving its contents up to the smaller of the old and new sizes.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-36
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Shared memory pool initialization
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to initialize a shared memory pool from which memory with specified capability attributes can be allocated.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-37
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Adding a region to the shared memory pool
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to add a memory region with an associated capability attribute to the shared memory pool at run time.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-38
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Shared memory pool allocation by attribute
+STATEMENT: >>>
+When allocating from the shared memory pool, the Zephyr RTOS shall provide memory from a region whose capability attribute matches the requested attribute.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-39
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Shared memory pool aligned allocation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to allocate memory from the shared memory pool with a requested alignment.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-40
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Shared memory pool reallocation
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to resize memory allocated from the shared memory pool while preserving its contents up to the smaller of the old and new sizes.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-41
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Shared memory pool free
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to release memory allocated from the shared memory pool.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
