@@ -15,9 +15,61 @@ UID: ZEP-SRS-35-1
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Kernel Object Inspection
-TITLE: Registering a kernel object for inspection
+TITLE: Associating a kernel object with its type
 STATEMENT: >>>
-Where kernel object inspection is enabled, the Zephyr RTOS shall provide a mechanism to register a kernel object so that it is associated with its object type.
+Where kernel object inspection is enabled, the Zephyr RTOS shall provide a mechanism to associate a kernel object with its object type.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-8
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Registering a kernel object for discovery
+STATEMENT: >>>
+Where kernel object inspection is enabled, the Zephyr RTOS shall provide a mechanism to register a kernel object associated with an object type so that it is reported when iterating over the objects of that type.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-9
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Reporting statically defined kernel objects
+STATEMENT: >>>
+Where kernel object inspection is enabled for a kernel object type, the Zephyr RTOS shall report the statically defined objects of that type during iteration without requiring run-time registration.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-10
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Kernel objects in stack storage
+STATEMENT: >>>
+If a kernel object being registered for discovery is located in a thread stack or in an interrupt stack, then the Zephyr RTOS shall not register the object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-11
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Registration capacity exhausted
+STATEMENT: >>>
+If the capacity for kernel objects registered at run time is exhausted, then the Zephyr RTOS shall not register the object being registered.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -37,6 +89,32 @@ RELATIONS:
   VALUE: ZEP-SYRS-40
 
 [REQUIREMENT]
+UID: ZEP-SRS-35-12
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Unregistering kernel objects in a memory range
+STATEMENT: >>>
+Where kernel object inspection is enabled, the Zephyr RTOS shall provide a mechanism to unregister all registered kernel objects located in a given memory range.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-13
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Unregistering kernel objects in released memory
+STATEMENT: >>>
+Where eviction of kernel objects on memory release is enabled, the Zephyr RTOS shall unregister registered kernel objects located in memory released by a kernel memory allocator.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
 UID: ZEP-SRS-35-3
 STATUS: Draft
 TYPE: Functional
@@ -44,6 +122,19 @@ COMPONENT: Kernel Object Inspection
 TITLE: Finding a kernel object type
 STATEMENT: >>>
 Where kernel object inspection is enabled, the Zephyr RTOS shall provide a mechanism to obtain a reference to a registered kernel object type.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-14
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Kernel object type not found
+STATEMENT: >>>
+If no kernel object type with the requested type identifier exists, then the Zephyr RTOS shall indicate that the type was not found.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -63,6 +154,58 @@ RELATIONS:
   VALUE: ZEP-SYRS-40
 
 [REQUIREMENT]
+UID: ZEP-SRS-35-15
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Iterating without synchronization
+STATEMENT: >>>
+Where kernel object inspection is enabled, the Zephyr RTOS shall provide a mechanism to iterate over the registered kernel objects of a given object type without synchronizing with concurrent registration changes, during which such changes may or may not be reflected.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Stopping an iteration early
+STATEMENT: >>>
+If the caller-supplied function invoked during an iteration over kernel objects returns a non-zero value, then the Zephyr RTOS shall stop the iteration and return that value to the caller.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Associating statistics storage with a kernel object
+STATEMENT: >>>
+Where kernel object statistics are enabled, the Zephyr RTOS shall provide a mechanism to associate caller-provided statistics storage with a kernel object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-18
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Removing statistics storage from a kernel object
+STATEMENT: >>>
+Where kernel object statistics are enabled, the Zephyr RTOS shall provide a mechanism to remove the statistics storage association from a kernel object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
 UID: ZEP-SRS-35-5
 STATUS: Draft
 TYPE: Functional
@@ -76,13 +219,39 @@ RELATIONS:
   VALUE: ZEP-SYRS-40
 
 [REQUIREMENT]
+UID: ZEP-SRS-35-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Querying raw kernel object statistics
+STATEMENT: >>>
+Where kernel object statistics are enabled, the Zephyr RTOS shall provide a mechanism to retrieve the unprocessed statistics data associated with a registered kernel object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
 UID: ZEP-SRS-35-6
 STATUS: Draft
 TYPE: Functional
 COMPONENT: Kernel Object Inspection
-TITLE: Enabling and disabling kernel object statistics
+TITLE: Enabling kernel object statistics
 STATEMENT: >>>
-Where kernel object statistics are enabled, the Zephyr RTOS shall provide a mechanism to enable and disable statistics collection for a registered kernel object.
+Where kernel object statistics are enabled, the Zephyr RTOS shall provide a mechanism to enable statistics collection for a registered kernel object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Disabling kernel object statistics
+STATEMENT: >>>
+Where kernel object statistics are enabled, the Zephyr RTOS shall provide a mechanism to disable statistics collection for a registered kernel object.
 <<<
 RELATIONS:
 - TYPE: Parent
@@ -96,6 +265,45 @@ COMPONENT: Kernel Object Inspection
 TITLE: Resetting kernel object statistics
 STATEMENT: >>>
 Where kernel object statistics are enabled, the Zephyr RTOS shall provide a mechanism to reset the run-time statistics associated with a registered kernel object.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-21
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Unsupported statistics operation
+STATEMENT: >>>
+If a statistics operation is requested on a kernel object whose object type does not support that operation, then the Zephyr RTOS shall return an error indicating the operation is not supported.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-22
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Statistics operation without associated storage
+STATEMENT: >>>
+If a statistics operation that requires associated statistics storage is requested on a kernel object that has none, then the Zephyr RTOS shall return an error.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-40
+
+[REQUIREMENT]
+UID: ZEP-SRS-35-23
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Statistics storage size mismatch
+STATEMENT: >>>
+If the size of the caller-provided statistics storage does not match the size defined for the object type, then the Zephyr RTOS shall return an error indicating an invalid argument.
 <<<
 RELATIONS:
 - TYPE: Parent
