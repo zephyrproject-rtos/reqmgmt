@@ -563,3 +563,21 @@ As a Zephyr RTOS user I want an ISR or a high-priority thread to defer non-urgen
 <<<
 
 [[/SECTION]]
+
+[[SECTION]]
+TITLE: Kernel Object Inspection
+
+[REQUIREMENT]
+UID: ZEP-SYRS-40
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Object Inspection
+TITLE: Kernel object inspection
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to register kernel objects so that they can be discovered, inspected, and have run-time statistics gathered at run time.
+<<<
+USER_STORY: >>>
+As a Zephyr RTOS user, I want to discover and inspect kernel objects at run time for monitoring and diagnostics.
+<<<
+
+[[/SECTION]]
