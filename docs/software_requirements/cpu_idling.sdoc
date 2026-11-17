@@ -1,0 +1,45 @@
+[DOCUMENT]
+TITLE: CPU Idling
+REQ_PREFIX: ZEP-SRS-41-
+
+[GRAMMAR]
+IMPORT_FROM_FILE: software_requirements.sgra
+
+[TEXT]
+STATEMENT: >>>
+SPDX-License-Identifier: Apache-2.0
+<<<
+
+[[SECTION]]
+TITLE: CPU Idling
+
+[REQUIREMENT]
+UID: ZEP-SRS-41-1
+STATUS: Draft
+TYPE: Functional
+COMPONENT: CPU Idling
+TITLE: Idling the current CPU
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to place the current
+CPU into a low-power idle state until an event wakes it.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-41
+
+[REQUIREMENT]
+UID: ZEP-SRS-41-2
+STATUS: Draft
+TYPE: Functional
+COMPONENT: CPU Idling
+TITLE: Atomically enabling interrupts and idling
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to place the current CPU into a
+low-power idle state, atomically re-enabling interrupts as the CPU enters the idle
+state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-41
+
+[[/SECTION]]

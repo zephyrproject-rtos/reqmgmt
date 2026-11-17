@@ -53,6 +53,24 @@ The Zephyr RTOS shall provide a framework to synchronize threads based on a cond
 
 [[/SECTION]]
 
+[[SECTION]]
+TITLE: CPU Idling
+
+[REQUIREMENT]
+UID: ZEP-SYRS-41
+STATUS: Draft
+TYPE: Functional
+COMPONENT: CPU Idling
+TITLE: CPU Idling
+STATEMENT: >>>
+The Zephyr RTOS shall provide an interface to place the current CPU into a low-power idle state.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-10
+
+[[/SECTION]]
+
 [REQUIREMENT]
 UID: ZEP-SYRS-4
 STATUS: Draft
