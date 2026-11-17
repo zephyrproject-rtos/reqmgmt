@@ -229,3 +229,74 @@ RELATIONS:
   VALUE: ZEP-SYRS-35
 
 [[/SECTION]]
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Suspension duration rounding
+STATEMENT: >>>
+When converting a requested suspension duration to system ticks, the Zephyr RTOS
+shall round up to the next tick boundary, so that the suspension is never shorter
+than the requested duration.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Suspension duration saturation
+STATEMENT: >>>
+When a requested suspension duration exceeds the representable timeout range, the
+Zephyr RTOS shall saturate the timeout at the maximum representable value.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-18
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Absolute timeout sequences without drift
+STATEMENT: >>>
+Where absolute timeouts are used for a sequence of suspensions, the Zephyr RTOS
+shall not accumulate rounding drift across the sequence.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Suspension during system initialization
+STATEMENT: >>>
+During system initialization after the kernel scheduler has started, the Zephyr
+RTOS shall support suspending the calling context for a requested duration.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
+
+[REQUIREMENT]
+UID: ZEP-SRS-28-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Kernel Timing
+TITLE: Timeout expiry ordering
+STATEMENT: >>>
+When multiple timeouts are pending, the Zephyr RTOS shall process them in the
+order of their expiry times, regardless of the order in which they were scheduled.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-34
