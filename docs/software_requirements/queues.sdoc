@@ -201,3 +201,63 @@ thread waiting to get an item from a queue to return as if its timeout had expir
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-16
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Queue data item handover order
+STATEMENT: >>>
+When a data item becomes available in a queue on which one or more threads are waiting to
+get and dequeue a data item, the Zephyr RTOS shall hand the data item to the
+highest-priority, longest-waiting thread.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-17
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Blocking get from an empty queue
+STATEMENT: >>>
+When a thread attempts to get and dequeue a data item from an empty queue with a timeout
+other than K_NO_WAIT, the Zephyr RTOS shall block the thread until a data item becomes
+available or the timeout expires, whichever occurs first.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-18
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Get from an empty queue when the timeout expires
+STATEMENT: >>>
+When the timeout of a thread blocked while getting and dequeuing a data item from an empty
+queue expires before a data item becomes available, the Zephyr RTOS shall return to the
+thread without a data item and indicate that no data item was obtained.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
+
+[REQUIREMENT]
+UID: ZEP-SRS-20-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Queues
+TITLE: Get from an empty queue with K_NO_WAIT
+STATEMENT: >>>
+When a thread attempts to get and dequeue a data item from an empty queue with a timeout
+of K_NO_WAIT, the Zephyr RTOS shall return to the thread immediately without a data item
+and indicate that no data item was obtained.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-22
