@@ -249,3 +249,146 @@ The Zephyr RTOS shall provide a mechanism to obtain the set of heaps that were d
 RELATIONS:
 - TYPE: Parent
   VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-19
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap usage statistics
+STATEMENT: >>>
+Where heap runtime statistics are enabled, the Zephyr RTOS shall provide a mechanism to query the amounts of currently allocated and free memory in a heap and the maximum amount of memory that has been allocated from it.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-20
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Resetting the heap allocation maximum
+STATEMENT: >>>
+Where heap runtime statistics are enabled, the Zephyr RTOS shall provide a mechanism to reset the recorded maximum amount of allocated memory of a heap to the amount currently allocated.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-21
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Largest allocatable block
+STATEMENT: >>>
+Where heap runtime statistics are enabled, the Zephyr RTOS shall provide a mechanism to query the size of the largest block that can currently be allocated from a heap.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-22
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Allocated heap block usable size
+STATEMENT: >>>
+The Zephyr RTOS shall provide a mechanism to query the usable size of an allocated heap block.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-23
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Registering a heap event listener
+STATEMENT: >>>
+Where heap event notification is enabled, the Zephyr RTOS shall provide a mechanism to register a listener for the memory events of a designated heap.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-24
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Unregistering a heap event listener
+STATEMENT: >>>
+Where heap event notification is enabled, the Zephyr RTOS shall provide a mechanism to unregister a previously registered heap event listener.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-25
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap event notification
+STATEMENT: >>>
+When memory is allocated from, released to, or resized within a heap for which a listener is registered, the Zephyr RTOS shall notify the registered listeners of the event.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-26
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Double free detection
+STATEMENT: >>>
+Where heap hardening is enabled, the Zephyr RTOS shall detect the release of a heap block that is not currently allocated.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-27
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap metadata corruption detection
+STATEMENT: >>>
+Where heap hardening is enabled, the Zephyr RTOS shall detect corruption of heap metadata during allocation and release operations.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-28
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap block overflow detection
+STATEMENT: >>>
+Where heap canaries are enabled, the Zephyr RTOS shall detect writes beyond the end of an allocated heap block when the block is released or resized.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
+
+[REQUIREMENT]
+UID: ZEP-SRS-9-29
+STATUS: Draft
+TYPE: Functional
+COMPONENT: Memory Objects
+TITLE: Heap corruption response
+STATEMENT: >>>
+If heap corruption is detected, then the Zephyr RTOS shall report a fatal error.
+<<<
+RELATIONS:
+- TYPE: Parent
+  VALUE: ZEP-SYRS-9
