@@ -580,37 +580,3 @@ RELATIONS:
   VALUE: ZEP-SYRS-10
 
 [[/SECTION]]
-
-[[SECTION]]
-TITLE: CPU Idle
-
-[REQUIREMENT]
-UID: ZEP-SRS-13-14
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Power Management
-TITLE: Idling the current CPU
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to place the current CPU into a
-low-power idle state until an interrupt occurs.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-10
-
-[REQUIREMENT]
-UID: ZEP-SRS-13-40
-STATUS: Draft
-TYPE: Functional
-COMPONENT: Power Management
-TITLE: Idling the current CPU with atomic interrupt enable
-STATEMENT: >>>
-The Zephyr RTOS shall provide an interface to place the current CPU into a
-low-power idle state, atomically re-enabling interrupts as the CPU enters the idle
-state.
-<<<
-RELATIONS:
-- TYPE: Parent
-  VALUE: ZEP-SYRS-10
-
-[[/SECTION]]
