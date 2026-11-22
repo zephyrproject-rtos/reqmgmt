@@ -25,7 +25,7 @@ CPU into a low-power idle state until an event wakes it.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-41
+  VALUE: ZEP-SYRS-42
 
 [REQUIREMENT]
 UID: ZEP-SRS-41-2
@@ -40,6 +40,6 @@ state.
 <<<
 RELATIONS:
 - TYPE: Parent
-  VALUE: ZEP-SYRS-41
+  VALUE: ZEP-SYRS-42
 
 [[/SECTION]]

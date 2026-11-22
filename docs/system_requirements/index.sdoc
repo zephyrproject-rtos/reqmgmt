@@ -57,7 +57,7 @@ The Zephyr RTOS shall provide a framework to synchronize threads based on a cond
 TITLE: CPU Idling
 
 [REQUIREMENT]
-UID: ZEP-SYRS-41
+UID: ZEP-SYRS-42
 STATUS: Draft
 TYPE: Functional
 COMPONENT: CPU Idling
